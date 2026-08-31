@@ -1,0 +1,14 @@
+{
+  "claim": "C1",
+  "exp": "exp-06",
+  "horizon": 6,
+  "initial": [-0.25, 0.5],
+  "protocol": "Seedless expected-pattern sanity matrix for identity, empty action scope, every nonzero sign combination of scalar A/B, zero/nonzero disturbance, and a deliberately widened child.",
+  "seed": null,
+  "signed_plants": [
+    {"a": 1.2, "b": 0.7, "disturbance": [-0.1, 0.1], "name": "positive_A_positive_B"},
+    {"a": -1.2, "b": 0.7, "disturbance": [-0.1, 0.1], "name": "negative_A_positive_B"},
+    {"a": 1.2, "b": -0.7, "disturbance": [-0.1, 0.1], "name": "positive_A_negative_B"},
+    {"a": -1.2, "b": -0.7, "disturbance": [-0.1, 0.1], "name": "negative_A_negative_B"}
+  ]
+}

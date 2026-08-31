@@ -1,6 +1,10 @@
 from zonecap.compiler import Architecture
 from zonecap.models import Interval, Plant1D
-from zonecap.reachability import monotonicity_violations, randomized_counterexample_search
+from zonecap.reachability import (
+    monotonicity_violations,
+    randomized_counterexample_search,
+    reachable_intervals_1d,
+)
 
 
 def test_attenuation_shrinks_reachable_intervals_with_signed_dynamics():
@@ -18,3 +22,19 @@ def test_seeded_counterexample_smoke_search():
     outcome = randomized_counterexample_search(parent, seed=7, cases=100, horizon=6)
     assert outcome["violations"] == []
 
+
+def test_empty_action_scope_has_no_postinitial_actuation_reachability():
+    architecture = Architecture.load("examples/dev_tank.json")
+    parent = architecture.compile_all()[0]
+    child = parent.attenuate(capability_id="empty", actions=set())
+    reachable = reachable_intervals_1d(
+        architecture.plant, architecture.initial_state, child, horizon=3
+    )
+    assert reachable == [architecture.initial_state, None, None, None]
+    assert monotonicity_violations(
+        architecture.plant,
+        architecture.initial_state,
+        parent,
+        child,
+        horizon=3,
+    ) == []

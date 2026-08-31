@@ -12,9 +12,19 @@ def reachable_intervals_1d(
     initial: Interval,
     capability: Capability,
     horizon: int,
-) -> list[Interval]:
+) -> list[Interval | None]:
     if horizon < 0:
         raise ValueError("horizon must be non-negative")
+    if not (
+        capability.conduits
+        and capability.assets
+        and capability.actions
+        and capability.modes
+    ):
+        # Reach_t is empty for t >= 1 when no structurally valid physical action
+        # exists under an actuation-event horizon. The common initial set remains
+        # Reach_0. Fixed-tick idle behavior belongs to the effect/plant adapter.
+        return [initial] + [None] * horizon
     reachable = [initial]
     current = initial
     for _ in range(horizon):
@@ -39,11 +49,13 @@ def monotonicity_violations(
     child_sets = reachable_intervals_1d(plant, initial, child, horizon)
     violations = []
     for tick, (parent_set, child_set) in enumerate(zip(parent_sets, child_sets)):
-        if not child_set.is_subset_of(parent_set, atol=1e-9):
+        if child_set is None:
+            continue
+        if parent_set is None or not child_set.is_subset_of(parent_set, atol=1e-9):
             violations.append(
                 {
                     "tick": tick,
-                    "parent": parent_set.to_list(),
+                    "parent": None if parent_set is None else parent_set.to_list(),
                     "child": child_set.to_list(),
                 }
             )

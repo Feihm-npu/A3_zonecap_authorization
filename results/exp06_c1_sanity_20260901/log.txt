@@ -1,0 +1,8 @@
+experiment=exp-06
+seed=none
+sanity_cases=9
+legal_case_inclusion_violations=0
+widened_child_syntax_rejected=true
+widened_child_physical_violation_detected=true
+expectation_mismatches=0
+registered_c1_counterexamples=0

@@ -1,0 +1,15 @@
+{
+  "claim": "C1",
+  "empty_action_case_passed": true,
+  "exp": "exp-06",
+  "expectation_mismatches": 0,
+  "identity_case_passed": true,
+  "legal_case_inclusion_violations": 0,
+  "legal_cases": 8,
+  "registered_c1_counterexamples": 0,
+  "sanity_cases": 9,
+  "seed": null,
+  "signed_plant_cases": 4,
+  "widened_child_physical_violation_detected": true,
+  "widened_child_syntax_rejected": true
+}

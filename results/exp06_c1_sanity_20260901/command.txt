@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp06 --config results/exp06_c1_sanity_20260901/config.json --output-dir results/exp06_c1_sanity_20260901

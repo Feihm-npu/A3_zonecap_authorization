@@ -1,0 +1,12 @@
+{
+  "files": {
+    "research/c1_sanity_matrix.md": "5cc45b8bef242b6d3663fcb96d91e13d6d377cede3dadb4ccd428faadcbf11c7",
+    "results/exp06_c1_sanity_20260901/config.json": "6ec1ee0f580b6630fb921b736e4371fe391adb4867b818ab50ee2c574901644d",
+    "src/zonecap/exp06.py": "3d4182208b8a545db82e0018ca3fb692d112168f2592261f9682f4d3206ae945",
+    "src/zonecap/reachability.py": "8aafd1ed612dc1b50b1e9382b4ff2074c4cc6d6d68576e62992f8187b1c5c080",
+    "tests/test_reachability.py": "948cf583a8052539a956791e3f2c2d687577b3af8de548f6a2c7ebed69eabeda"
+  },
+  "git_head": "2b348bd791681ef29a96dd4c25445a4409d81311",
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

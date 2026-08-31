@@ -1,0 +1,91 @@
+{
+  "cases": [
+    {
+      "case": "identity_child",
+      "expectation_matched": true,
+      "expected": "zero inclusion violations",
+      "observed": "zero inclusion violations",
+      "violations": []
+    },
+    {
+      "case": "empty_action_child",
+      "expectation_matched": true,
+      "expected": "Reach_0 is common and every postinitial set is empty",
+      "observed": [
+        [
+          -0.25,
+          0.5
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "violations": []
+    },
+    {
+      "case": "positive_A_positive_B",
+      "expectation_matched": true,
+      "expected": "zero inclusion violations",
+      "observed": "zero inclusion violations",
+      "violations": []
+    },
+    {
+      "case": "negative_A_positive_B",
+      "expectation_matched": true,
+      "expected": "zero inclusion violations",
+      "observed": "zero inclusion violations",
+      "violations": []
+    },
+    {
+      "case": "positive_A_negative_B",
+      "expectation_matched": true,
+      "expected": "zero inclusion violations",
+      "observed": "zero inclusion violations",
+      "violations": []
+    },
+    {
+      "case": "negative_A_negative_B",
+      "expectation_matched": true,
+      "expected": "zero inclusion violations",
+      "observed": "zero inclusion violations",
+      "violations": []
+    },
+    {
+      "case": "zero_disturbance",
+      "expectation_matched": true,
+      "expected": "zero inclusion violations",
+      "observed": "zero inclusion violations",
+      "violations": []
+    },
+    {
+      "case": "nonzero_asymmetric_disturbance",
+      "expectation_matched": true,
+      "expected": "zero inclusion violations",
+      "observed": "zero inclusion violations",
+      "violations": []
+    },
+    {
+      "case": "deliberately_widened_child",
+      "expectation_matched": true,
+      "expected": "syntax rejection and a one-step physical inclusion violation if bypassed",
+      "observed": {
+        "parent_reach_1": [
+          0.0,
+          1.0
+        ],
+        "physical_violation_detected": true,
+        "syntax_error": "invalid attenuation: parameter interval widened",
+        "syntax_rejected": true,
+        "widened_child_reach_1": [
+          -1.0,
+          2.0
+        ]
+      },
+      "violations": []
+    }
+  ],
+  "expectation_mismatches": []
+}
