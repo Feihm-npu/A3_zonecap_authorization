@@ -21,6 +21,15 @@ def test_compiler_rejects_zone_conduit_mismatch(tmp_path):
         Architecture.load(fixture).compile_all()
 
 
+def test_compiler_rejects_duplicate_zone_ids(tmp_path):
+    source = json.loads(open("examples/dev_tank.json", encoding="utf-8").read())
+    source["zones"].append(source["zones"][0])
+    fixture = tmp_path / "duplicate-zone.json"
+    fixture.write_text(json.dumps(source), encoding="utf-8")
+    with pytest.raises(CompilationError, match="duplicate zone"):
+        Architecture.load(fixture)
+
+
 def test_attenuation_rejects_widening():
     parent = Architecture.load("examples/dev_tank.json").compile_all()[0]
     with pytest.raises(ValueError, match="parameter interval widened"):
@@ -36,4 +45,3 @@ def test_pre_action_refinement_must_extend_parent_sequence():
     assert child.parent_id == parent.capability_id
     with pytest.raises(ValueError, match="pre-action"):
         parent.attenuate(capability_id="bad", required_sequence=("ack_operator",))
-

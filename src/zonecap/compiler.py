@@ -32,13 +32,16 @@ class Architecture:
         missing = sorted(required - doc.keys())
         if missing:
             raise CompilationError(f"missing architecture keys: {missing}")
+        zones = list(doc["zones"])
+        if len(set(zones)) != len(zones):
+            raise CompilationError("duplicate zone id")
         conduits = {item["id"]: item for item in doc["conduits"]}
         if len(conduits) != len(doc["conduits"]):
             raise CompilationError("duplicate conduit id")
         plant_doc = doc["plant_1d"]
         return cls(
             name=doc["name"],
-            zones=frozenset(doc["zones"]),
+            zones=frozenset(zones),
             conduits=conduits,
             policies=tuple(doc["policies"]),
             requests=tuple(doc.get("requests", [])),
@@ -95,4 +98,3 @@ class Architecture:
             modes=frozenset(policy["modes"]),
             required_sequence=tuple(policy.get("required_sequence", [])),
         )
-

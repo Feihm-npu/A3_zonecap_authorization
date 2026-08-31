@@ -1,0 +1,28 @@
+{
+  "exp": "exp-11",
+  "claim": "C2 sanity",
+  "seed": null,
+  "run_id": "exp11_c2_sanity_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp11 --config configs/exp11_c2_sanity.json --output-dir results/exp11_c2_sanity_20260901",
+  "frozen_hashes": {
+    "src/zonecap/compiler.py": "0c96cd2eda5f29fc284f88c6c9e741ddc78347a04f70b8432554ef695d6c44bd",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "src/zonecap/exp11.py": "f19c8311144481df4af9b930fe1612da425dc22ec15137b16ac1f5d6f1b175bc",
+    "tests/test_compiler.py": "501d613f03ca27342a9c37d6f5a8e9721812f8a6aea92202d0d31662adb47a18",
+    "tests/test_exp11.py": "60876652ed614c7f98f0fe670ef40f22f449f711e520e36fca85892ea048064d"
+  },
+  "expected_counts": {
+    "compile_cases": 11,
+    "expected_compile_successes": 2,
+    "expected_compile_rejections": 9,
+    "decision_cases": 11,
+    "expected_allows": 4,
+    "expected_denies": 7,
+    "total_cases": 22
+  },
+  "pass_criteria": {
+    "compile_expectation_mismatches": 0,
+    "decision_expectation_mismatches": 0
+  }
+}
