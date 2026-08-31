@@ -1,0 +1,2 @@
+pytest -q
+PYTHONPATH=src python -m zonecap.run --config configs/s1_smoke.json --output results/s1_smoke_20260831_seed7 --seed 7

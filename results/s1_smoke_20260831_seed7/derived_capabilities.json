@@ -1,0 +1,132 @@
+[
+  {
+    "actions": [
+      "set"
+    ],
+    "assets": [
+      "inlet_valve"
+    ],
+    "capability_id": "dev_tank:operate_inlet:root:d1",
+    "conduits": [
+      "ops_to_basic"
+    ],
+    "delegation_depth": 1,
+    "issuer": "site_authority",
+    "modes": [
+      "emergency",
+      "maintenance",
+      "normal"
+    ],
+    "parameter": [
+      0.1,
+      0.9
+    ],
+    "parent_id": "dev_tank:operate_inlet:root",
+    "required_sequence": [],
+    "source_zone": "operations",
+    "subject": "operator.alice.agent1",
+    "target_zone": "basic_control",
+    "ticks": [
+      0.0,
+      100.0
+    ]
+  },
+  {
+    "actions": [
+      "set"
+    ],
+    "assets": [
+      "inlet_valve"
+    ],
+    "capability_id": "dev_tank:operate_inlet:root:d2",
+    "conduits": [
+      "ops_to_basic"
+    ],
+    "delegation_depth": 2,
+    "issuer": "site_authority",
+    "modes": [
+      "emergency",
+      "maintenance",
+      "normal"
+    ],
+    "parameter": [
+      0.2,
+      0.8
+    ],
+    "parent_id": "dev_tank:operate_inlet:root:d1",
+    "required_sequence": [],
+    "source_zone": "operations",
+    "subject": "operator.alice.agent2",
+    "target_zone": "basic_control",
+    "ticks": [
+      0.0,
+      100.0
+    ]
+  },
+  {
+    "actions": [
+      "set"
+    ],
+    "assets": [
+      "arm_speed"
+    ],
+    "capability_id": "dev_robot_cell:bounded_arm_motion:root:d1",
+    "conduits": [
+      "maintenance_to_cell"
+    ],
+    "delegation_depth": 1,
+    "issuer": "cell_authority",
+    "modes": [
+      "maintenance"
+    ],
+    "parameter": [
+      0.1,
+      0.9
+    ],
+    "parent_id": "dev_robot_cell:bounded_arm_motion:root",
+    "required_sequence": [
+      "isolate_cell",
+      "ack_operator"
+    ],
+    "source_zone": "maintenance",
+    "subject": "engineer.bob.agent1",
+    "target_zone": "cell_control",
+    "ticks": [
+      20.0,
+      80.0
+    ]
+  },
+  {
+    "actions": [
+      "set"
+    ],
+    "assets": [
+      "arm_speed"
+    ],
+    "capability_id": "dev_robot_cell:bounded_arm_motion:root:d2",
+    "conduits": [
+      "maintenance_to_cell"
+    ],
+    "delegation_depth": 2,
+    "issuer": "cell_authority",
+    "modes": [
+      "maintenance"
+    ],
+    "parameter": [
+      0.2,
+      0.8
+    ],
+    "parent_id": "dev_robot_cell:bounded_arm_motion:root:d1",
+    "required_sequence": [
+      "isolate_cell",
+      "ack_operator"
+    ],
+    "source_zone": "maintenance",
+    "subject": "engineer.bob.agent2",
+    "target_zone": "cell_control",
+    "ticks": [
+      20.0,
+      80.0
+    ]
+  }
+]

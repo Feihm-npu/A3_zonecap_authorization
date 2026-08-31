@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zonecap"
+version = "0.1.0"
+description = "Minimal ZoneCap compiler, enforcement semantics, and reachability checks"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+zonecap-run = "zonecap.run:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
+testpaths = ["tests"]
+

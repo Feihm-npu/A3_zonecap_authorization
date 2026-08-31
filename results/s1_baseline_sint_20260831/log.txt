@@ -1,0 +1,4 @@
+SINT pinned source was cloned into a disposable directory.
+The documented root benchmark command initially failed because its child script expected a global pnpm executable. A direct corepack invocation then failed because workspace packages had not been built. After a recursive workspace build with the lockfile-pinned pnpm 9.15.0, both industrial test files passed (11 tests total).
+
+The microbenchmark completed, but its documented T0 p99 target below 1 ms did not reproduce on this shared AMD EPYC host: observed T0 p99 was 16.6542 ms. The output was duplicated by the Vitest reporter and sample counts were small. This is a reproducibility warning, not evidence that SINT is intrinsically slow; CPU affinity, isolation, Node version effects, and the benchmark's percentile methodology were not controlled in S1.

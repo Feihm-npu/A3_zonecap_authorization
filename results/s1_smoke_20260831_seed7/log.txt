@@ -1,0 +1,3 @@
+ZoneCap S1 smoke pipeline completed successfully.
+Pytest result before the recorded pipeline run: 8 passed, 0 failed.
+Outputs are development checks only and must not be cited as evidence.

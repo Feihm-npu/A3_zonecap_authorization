@@ -1,0 +1,15 @@
+{
+  "baseline": "SINT Protocol",
+  "repository": "https://github.com/sint-ai/sint-protocol.git",
+  "commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "node": "v24.12.0",
+  "pnpm": "9.15.0",
+  "host": {
+    "kernel": "Linux 5.15.0-1101-nvidia x86_64",
+    "cpu": "2 x AMD EPYC 7742, 256 logical CPUs",
+    "memory": "2.0 TiB"
+  },
+  "scope": "source build, industrial conformance tests, and shared-host microbenchmark only",
+  "evidence_status": "S1 baseline reproduction; not a fair hardware comparison with ZoneCap"
+}
+

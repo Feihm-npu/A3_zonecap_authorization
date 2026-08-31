@@ -1,0 +1,32 @@
+{
+  "abac_raw_decision_errors": 5,
+  "architectures_loaded": 2,
+  "capabilities_compiled": 2,
+  "decision_cases": 8,
+  "decision_expected_effect_agreement": 1.0,
+  "delegated_capabilities": 4,
+  "effect_counts": {
+    "allow": 2,
+    "attenuate": 1,
+    "defer": 2,
+    "deny": 2,
+    "rewrite": 1
+  },
+  "latency_iterations": 5000,
+  "latency_us": {
+    "maximum": 175.653,
+    "p50": 3.376,
+    "p99": 4.158
+  },
+  "random_counterexample_cases": 200,
+  "random_counterexample_violations": 0,
+  "rbac_raw_decision_errors": 6,
+  "reachability_inclusion_checks": 36,
+  "reachability_inclusion_violations": 0,
+  "run_kind": "S1 smoke only; not confirmatory evidence",
+  "seed": 7,
+  "unit_tests": {
+    "passed": 8,
+    "failed": 0
+  }
+}

@@ -1,0 +1,6 @@
+git clone --depth 1 https://github.com/sint-ai/sint-protocol.git <temporary-directory>/sint-protocol
+corepack pnpm@9.15.0 install --frozen-lockfile
+corepack pnpm@9.15.0 -r --if-present build
+corepack pnpm@9.15.0 --filter @pshkv/conformance-tests exec vitest run src/industrial-interoperability.test.ts src/industrial-benchmark-scenarios.test.ts --reporter=verbose
+corepack pnpm@9.15.0 --filter @pshkv/gate-policy-gateway exec vitest bench --run --reporter=verbose
+

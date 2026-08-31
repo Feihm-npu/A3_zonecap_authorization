@@ -1,0 +1,87 @@
+{
+  "name": "dev_robot_cell",
+  "source_basis": "Development-only IEC 62443-style maintenance-to-cell conduit; not a standards-conformance fixture.",
+  "evidence_scope": "S1 smoke only",
+  "zones": ["maintenance", "cell_control", "safety"],
+  "conduits": [
+    {
+      "id": "maintenance_to_cell",
+      "source": "maintenance",
+      "target": "cell_control",
+      "assets": ["arm_speed", "gripper_force"],
+      "actions": ["set"],
+      "parameter": [0.0, 2.0]
+    }
+  ],
+  "policies": [
+    {
+      "id": "bounded_arm_motion",
+      "issuer": "cell_authority",
+      "subject": "engineer.bob",
+      "source_zone": "maintenance",
+      "target_zone": "cell_control",
+      "conduit": "maintenance_to_cell",
+      "assets": ["arm_speed"],
+      "actions": ["set"],
+      "parameter": [0.0, 1.0],
+      "ticks": [20, 80],
+      "modes": ["maintenance"],
+      "required_sequence": ["isolate_cell", "ack_operator"]
+    }
+  ],
+  "plant_1d": {
+    "a": -0.4,
+    "b": -0.2,
+    "disturbance": [-0.02, 0.02],
+    "initial_state": [-0.1, 0.1]
+  },
+  "requests": [
+    {
+      "id": "robot_allow",
+      "capability": "bounded_arm_motion",
+      "subject": "engineer.bob",
+      "source_zone": "maintenance",
+      "target_zone": "cell_control",
+      "conduit": "maintenance_to_cell",
+      "asset": "arm_speed",
+      "action": "set",
+      "value": 0.2,
+      "tick": 30,
+      "mode": "maintenance",
+      "history": ["login", "isolate_cell", "inspect", "ack_operator"],
+      "expected_effect": "allow"
+    },
+    {
+      "id": "robot_deny_sequence",
+      "capability": "bounded_arm_motion",
+      "subject": "engineer.bob",
+      "source_zone": "maintenance",
+      "target_zone": "cell_control",
+      "conduit": "maintenance_to_cell",
+      "asset": "arm_speed",
+      "action": "set",
+      "value": 0.2,
+      "tick": 30,
+      "mode": "maintenance",
+      "history": ["login", "ack_operator"],
+      "expected_effect": "deny"
+    },
+    {
+      "id": "robot_defer_risk",
+      "capability": "bounded_arm_motion",
+      "subject": "engineer.bob",
+      "source_zone": "maintenance",
+      "target_zone": "cell_control",
+      "conduit": "maintenance_to_cell",
+      "asset": "arm_speed",
+      "action": "set",
+      "value": 0.2,
+      "tick": 30,
+      "mode": "maintenance",
+      "history": ["isolate_cell", "ack_operator"],
+      "high_risk": true,
+      "expected_effect": "defer"
+    }
+  ]
+}
+

@@ -1,0 +1,19 @@
+# Notebook
+
+Append only. Newest at the bottom. One line per entry:
+
+- `run:       date | run_id | exp | claim | outcome in one clause`
+- `explore:   date | run_id | what was tried | what was seen`
+- `deviation: date | what changed (plan / claim / eval) | why`
+- `bugcheck:  date | run_id | what was checked | result`
+
+---
+
+- `deviation: 2026-08-31 | README environment assumption | casadi is not installed in the active Python 3.10 environment; S1 reachability uses exact dependency-free interval arithmetic, and no confirmatory protocol was changed`
+- `explore:   2026-08-31 | s1_literature_refresh | located direct overlaps absent from README: Dodson 2021 CPS capabilities, ZTPM arXiv:2605.25653, and SINT v0.2; novelty narrowed to IEC 62443 compilation plus syntactic-to-physical refinement`
+- `run:       2026-08-31 | s1_baseline_sint_20260831 | baseline:SINT | pinned commit 2461a911b8c3d7ed9da3f7662b33678f688eb826 built; 11/11 industrial conformance tests passed; shared-host latency target did not reproduce`
+- `bugcheck:  2026-08-31 | s1_baseline_sint_20260831 | SINT benchmark command/documentation | root command required a global pnpm and tests required a prior workspace build; exact pnpm 9.15.0 plus recursive build resolved both issues`
+- `run:       2026-08-31 | s1_smoke_20260831_seed7 | infrastructure | development-only data → compile → delegate/enforce → reachability/eval → results pipeline completed with all eight unit tests passing`
+- `bugcheck:  2026-08-31 | s1_smoke_20260831_seed7 | randomized reachability generator | initial version incorrectly treated arbitrary random roots as children of the [0,1] fixture; fixed before the recorded smoke run, then all tests passed`
+- `explore:   2026-08-31 | baseline_availability | Lanotte/Merro artifact is public but full reported setup requires MATLAB/Simulink, ModelSim, NetFPGA-CML, and multiple OpenPLC/Raspberry Pi targets; no authorized matching environment, so no published-number reproduction was claimed`
+- `explore:   2026-08-31 | baseline_availability | CPAC and PLC-ABAC publication/project pages exposed papers but no complete runnable artifact and benchmark environment matching their reported evaluations; functional reference baselines are preregistered, published-number reproduction is currently unavailable`

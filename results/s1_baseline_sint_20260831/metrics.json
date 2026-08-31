@@ -1,0 +1,88 @@
+{
+  "baseline_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "build_exit_code": 0,
+  "industrial_conformance": {
+    "test_files_passed": 2,
+    "tests_passed": 11,
+    "tests_failed": 0,
+    "duration_ms": 5180
+  },
+  "benchmark_unit": "milliseconds per operation except hz, rme_percent, and samples",
+  "benchmark": {
+    "t0_observe_allow": {
+      "hz": 218.55,
+      "min": 2.4356,
+      "max": 16.9479,
+      "mean": 4.5756,
+      "p75": 4.8358,
+      "p99": 16.6542,
+      "p995": 16.9479,
+      "p999": 16.9479,
+      "rme_percent": 12.88,
+      "samples": 110
+    },
+    "t1_prepare_allow": {
+      "hz": 235.25,
+      "min": 2.5043,
+      "max": 39.4608,
+      "mean": 4.2507,
+      "p75": 3.9490,
+      "p99": 22.8651,
+      "p995": 39.4608,
+      "p999": 39.4608,
+      "rme_percent": 20.21,
+      "samples": 118
+    },
+    "t2_act_escalate": {
+      "hz": 268.93,
+      "min": 2.4140,
+      "max": 9.6731,
+      "mean": 3.7184,
+      "p75": 4.1480,
+      "p99": 9.2846,
+      "p995": 9.6731,
+      "p999": 9.6731,
+      "rme_percent": 7.20,
+      "samples": 135
+    },
+    "t3_commit_escalate": {
+      "hz": 279.27,
+      "min": 2.4272,
+      "max": 22.1598,
+      "mean": 3.5807,
+      "p75": 3.4437,
+      "p99": 18.9228,
+      "p995": 22.1598,
+      "p999": 22.1598,
+      "rme_percent": 12.21,
+      "samples": 142
+    },
+    "expired_token_deny": {
+      "hz": 329.12,
+      "min": 2.1312,
+      "max": 13.6110,
+      "mean": 3.0384,
+      "p75": 3.2367,
+      "p99": 10.4128,
+      "p995": 13.6110,
+      "p999": 13.6110,
+      "rme_percent": 9.54,
+      "samples": 165
+    },
+    "batch_100": {
+      "hz": 3.0627,
+      "min": 290.62,
+      "max": 379.80,
+      "mean": 326.51,
+      "p75": 340.26,
+      "p99": 379.80,
+      "p995": 379.80,
+      "p999": 379.80,
+      "rme_percent": 6.09,
+      "samples": 10
+    }
+  },
+  "documented_t0_p99_target_ms": 1.0,
+  "t0_target_reproduced": false
+}
+

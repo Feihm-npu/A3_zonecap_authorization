@@ -1,0 +1,76 @@
+# Plan
+
+## Protocol — fixed before any confirmatory run
+
+### Metrics
+
+- **C1:** proof obligations discharged; trace/reachable-set inclusion violations (must be 0); counterexamples with full model/token/seed retained; exact reachable-set containment at every horizon.
+- **C2:** compiler–oracle decision agreement; accepted privilege-widening mutations (must be 0); unsupported architecture constructs; per-dimension attenuation coverage.
+- **C3:** trace-inclusion and safety violations (must be 0); deadlocks; effect coverage; raw-request false-block rate and edit distance relative to deny-only enforcement.
+- **C4:** post-revocation executions, permission-union violations, deadlocks (all must be 0); resolution steps and timeout rate.
+- **C5:** decision latency p50/p99/max, scan-cycle occupancy, throughput, memory, token bytes, and exact decision agreement before/after optimization.
+
+### Splits (no learned component)
+
+- **Development only:** `examples/dev_tank.json` and `examples/dev_robot_cell.json`. These may be changed to debug infrastructure and can never support a claim.
+- **Validation:** a synthetic three-zone packaging cell used to debug the compiler/oracle interface. Results are exploratory.
+- **Held-out test A:** Cisco CPwE/CIP Security zone-and-conduit architecture, source frozen to the public design guide available at `https://www.cisco.com/c/en/us/td/docs/solutions/Verticals/CPwE/5-1/CIP_Security/DIG/` on 2026-08-31.
+- **Held-out test B:** ENISA, *Zoning and Conduits for Railways*, February 2022, source frozen to `https://www.enisa.europa.eu/sites/default/files/publications/Zoning%20and%20Conduits%20for%20Railways%20-%20Security%20Architecture.pdf` on 2026-08-31.
+- Test policies will be encoded once from the frozen sources, hashed, and then locked. The oracle is a separate implementation over the source policy table, not a call to the ZoneCap compiler. Test requests are the full valid cross-product plus every single-field boundary mutation; no case is removed after execution.
+
+### Seeds and repetitions
+
+- S1 smoke seed `7` is development-only and must not appear as confirmatory evidence.
+- S2 property/model checks use all five preregistered seeds: `104729`, `130363`, `155921`, `196613`, `262147`. No seed selection.
+- Exact enumeration/proof runs are seedless and must be marked `seed: none`.
+- Performance uses five fresh process launches per configuration, 10,000 warm-up decisions followed by 100,000 measured decisions. Report every repetition and the aggregate; pin CPU affinity and record clock/power settings.
+
+### Evaluation procedure
+
+1. Freeze code, test-source snapshots, generated policy tables, request generator, oracle, metrics, and environment manifest before any held-out run; record hashes in the run directory.
+2. Run development and validation only until infrastructure is stable. Any protocol change after a held-out result is a `deviation` in `NOTEBOOK.md`; the affected result becomes exploratory and requires fresh cases/seeds.
+3. C1/C3 are not accepted from randomized testing alone: a reviewed proof or mechanized proof is required, with counterexample search used only as falsification support.
+4. Baselines receive identical requests and physical context. Compare static RBAC, PLC ABAC, CPAC-style model-derived policy, Lanotte/Roop-style runtime enforcement, and SINT at pinned versions where runnable. Do not equate their different threat models; mark unavailable dimensions `N/A`.
+5. Latency excludes client network transit but includes parsing, token verification, revocation lookup, context lookup, decision, and audit enqueue. Also report end-to-end OpenPLC measurements separately.
+6. “Too good” triggers: perfect held-out agreement before mutation audit, p99 below timer resolution, or >10× baseline speedup. Stop and check leakage, dead-code elimination, disabled checks, and clock methodology.
+
+### Compute and hardware
+
+- Default compute remains at most 4×A100-80G, GPUs 0–3. No planned experiment requires a GPU; every row estimates `0 GPU-h`.
+- CPU/model-checking budget is approximately 85 CPU-h. It is guidance, not a hard limit.
+- C5 needs one Jetson AGX Orin-class target and one OpenPLC-capable PLC/Raspberry Pi target for at most two days. This is non-default hardware and requires human approval. Fallback: isolated x86 OpenPLC software-in-the-loop; the Jetson-specific C5 claim would then be untestable.
+
+## Matrix
+
+Rows run top to bottom. The first row is the cheapest experiment able to refute the first core claim.
+
+| exp | claim | type | design | strongest fair baseline | metric | est. GPU-h / other cost | tag | status |
+|---|---|---|---|---|---|---|---|---|
+| exp-01 | C1 | main | Audit and complete the syntactic-caveat → emitted-transition → trace/reachable-set proof; start with exact 1D LTI intervals. | Semantic subset lemma (to expose tautology risk) | proof obligations; counterexample or closed proof | 0 / 4 CPU-h | [S1] | todo |
+| exp-02 | C1 | ablation:A1 | Keep token syntax independent of reachability; mutate each caveat combiner/default and seek minimal counterexamples. | SINT/Dodson documented attenuation rules | mutation kills; inclusion violations | 0 / 3 CPU-h | [S1] | todo |
+| exp-03 | C1 | ablation:A2 | Lift to MIMO polytopes and state/history-dependent enabled-action relations; all five seeds. | Scalar interval result | per-seed/per-horizon inclusion | 0 / 10 CPU-h | [S1] | todo |
+| exp-04 | C1 | ablation:A3 | Remove rewrite closure and defer-stutter obligations one at a time; then restore them. | Suppression-only semantics | minimal counterexamples; restored violations=0 | 0 / 3 CPU-h | [S1] | todo |
+| exp-05 | C1 | baseline | Instantiate the common expressible subset of ZoneCap, Dodson/CHERI Macaroons, and SINT token scope on the same plants. | SINT v0.2; Dodson schema | proof-obligation coverage; reachable inclusion | 0 / 4 CPU-h | [S1] | todo |
+| exp-06 | C1 | sanity | Identity child, empty action set, signed A/B, zero/nonzero disturbance, and deliberately widened child. | N/A | expected pass/fail pattern | 0 / 1 CPU-h | [S1] | todo |
+| exp-07 | C2 | main | Compile held-out A/B and compare every request/mutation with independent oracle. | OPC UA roles + PLC ABAC | agreement; unsupported constructs | 0 / 8 CPU-h | [S1] | todo |
+| exp-08 | C2 | ablation:A1 | Generate full cross-product and single-field mutations from frozen source tables, not hand-written compiler fixtures. | Hand-authored fixtures | decision agreement; mutation coverage | 0 / 4 CPU-h | [S1] | todo |
+| exp-09 | C2 | ablation:A2 | Exercise depths 0/1/2, multi-conduit paths, and one attempted widening per authority dimension. | Depth-0 only | accepted widenings; dimension coverage | 0 / 3 CPU-h | [S1] | todo |
+| exp-10 | C2 | baseline | Expressiveness and decision comparison against PLC ABAC, OPC UA roles, and SINT industrial profiles. | SINT pinned commit; PLC ABAC | agreement by scenario; N/A dimensions | 0 / 5 CPU-h | [S1] | todo |
+| exp-11 | C2 | sanity | Duplicate/unknown zones, wrong conduit endpoints, empty scopes, boundary values, expired windows. | N/A | expected compile rejection/decision | 0 / 1 CPU-h | [S1] | todo |
+| exp-12 | C3 | main | Compose the five-effect automaton with compiled capabilities and bounded-check all held-out traces. | Lanotte edit automaton; SINT tiers | inclusion/safety/deadlock; effect coverage | 0 / 6 CPU-h | [S1] | todo |
+| exp-13 | C3 | ablation:A1 | Replace attenuate/rewrite/defer with deny-only behavior under identical requests. | Deny-only enforcer | false-block rate; safety; edit distance | 0 / 3 CPU-h | [S1] | todo |
+| exp-14 | C3 | ablation:A2 | Exhaustive bounded request/context sequences rather than named attack traces. | Hand-picked traces | states/transitions covered; violations | 0 / 6 CPU-h | [S1] | todo |
+| exp-15 | C3 | baseline | Re-express common properties in Lanotte/Roop enforcement and SINT decision tiers. | Lanotte artifact; SINT | property/effect coverage; decision delta | 0 / 5 CPU-h | [S1] | todo |
+| exp-16 | C3 | sanity | Force unauthorized rewrite, missing hold action, lost context, and approval timeout; require known counterexamples/fail-closed behavior. | N/A | expected counterexample/decision | 0 / 1 CPU-h | [S1] | todo |
+| exp-17 | C4 | main | Model revocation plus deterministic conflict order for 2–4 holders under all bounded interleavings. | SINT revocation + M-of-N approval | 3 safety violations; deadlocks; steps | 0 / 5 CPU-h | [S1] | todo |
+| exp-18 | C4 | ablation:A1 | Increase bound until state graph repeats or resource limit; exploit symmetry reduction. | Initial bound | new cycles/deadlocks | 0 / 4 CPU-h | [S1] | todo |
+| exp-19 | C4 | ablation:A2 | Replace benign scheduler with adversarial fair schedules and delayed revocation delivery. | Central FIFO scheduler | violations by schedule/delay | 0 / 4 CPU-h | [S1] | todo |
+| exp-20 | C4 | baseline | Same conflict/revocation traces against SINT's pinned implementation. | SINT pinned commit | decision/state-machine delta | 0 / 3 CPU-h | [S1] | todo |
+| exp-21 | C4 | sanity | Immediate revoke, duplicate revoke, simultaneous equal-priority commands, and permanent missing approval. | N/A | expected terminal state | 0 / 1 CPU-h | [S1] | todo |
+| exp-22 | C5 | main | Five isolated repetitions on approved Jetson/OpenPLC path with full checks enabled. | SINT; PLC ABAC | p50/p99/max; occupancy; equivalence | 0 / 2 hardware-days | [S1] | todo |
+| exp-23 | C5 | ablation:A1 | Cold/warm cache, signed/unsigned diagnostic, local/remote revocation, audit enabled/disabled diagnostic. | Full path | latency breakdown; equivalence | 0 / included above | [S1] | todo |
+| exp-24 | C5 | ablation:A2 | Scale 1/10/100/1000 policies and delegation depth 0/1/2. | Single-policy path | latency/memory/token bytes | 0 / included above | [S1] | todo |
+| exp-25 | C5 | baseline | Same request corpus on SINT, PLC ABAC/NGAC, and ZoneCap. | SINT pinned commit | latency and decision coverage | 0 / 1 hardware-day | [S1] | todo |
+| exp-26 | C5 | sanity | Timer calibration, empty function, forced slow check, disabled-check detector, CPU affinity verification. | Empty-call lower bound | expected timing order | 0 / 1 CPU-h | [S1] | todo |
+
+Total estimated GPU-h: **0**. Beyond default compute: **exp-22–exp-25 require non-default Jetson/OpenPLC hardware approval; all other work fits CPU/default resources.**

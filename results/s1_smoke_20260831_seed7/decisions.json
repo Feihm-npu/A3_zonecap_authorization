@@ -1,0 +1,137 @@
+[
+  {
+    "abac_allows_raw": true,
+    "architecture": "dev_tank",
+    "decision": {
+      "derived_capability": null,
+      "effect": "allow",
+      "reason": "request satisfies the effective capability",
+      "rewritten_value": null
+    },
+    "expected_effect": "allow",
+    "rbac_allows_raw": true,
+    "request_id": "tank_allow"
+  },
+  {
+    "abac_allows_raw": true,
+    "architecture": "dev_tank",
+    "decision": {
+      "derived_capability": null,
+      "effect": "rewrite",
+      "reason": "parameter rewritten to the nearest authorized boundary",
+      "rewritten_value": 1.0
+    },
+    "expected_effect": "rewrite",
+    "rbac_allows_raw": true,
+    "request_id": "tank_rewrite"
+  },
+  {
+    "abac_allows_raw": true,
+    "architecture": "dev_tank",
+    "decision": {
+      "derived_capability": {
+        "actions": [
+          "set"
+        ],
+        "assets": [
+          "inlet_valve"
+        ],
+        "capability_id": "dev_tank:operate_inlet:root:runtime",
+        "conduits": [
+          "ops_to_basic"
+        ],
+        "delegation_depth": 1,
+        "issuer": "site_authority",
+        "modes": [
+          "emergency",
+          "maintenance",
+          "normal"
+        ],
+        "parameter": [
+          0.0,
+          0.4
+        ],
+        "parent_id": "dev_tank:operate_inlet:root",
+        "required_sequence": [],
+        "source_zone": "operations",
+        "subject": "operator.alice",
+        "target_zone": "basic_control",
+        "ticks": [
+          0.0,
+          100.0
+        ]
+      },
+      "effect": "attenuate",
+      "reason": "live physical context requires a narrower parameter envelope",
+      "rewritten_value": null
+    },
+    "expected_effect": "attenuate",
+    "rbac_allows_raw": true,
+    "request_id": "tank_attenuate"
+  },
+  {
+    "abac_allows_raw": false,
+    "architecture": "dev_tank",
+    "decision": {
+      "derived_capability": null,
+      "effect": "deny",
+      "reason": "mode not authorized",
+      "rewritten_value": null
+    },
+    "expected_effect": "deny",
+    "rbac_allows_raw": true,
+    "request_id": "tank_deny_mode"
+  },
+  {
+    "abac_allows_raw": true,
+    "architecture": "dev_tank",
+    "decision": {
+      "derived_capability": null,
+      "effect": "defer",
+      "reason": "required runtime context is unavailable",
+      "rewritten_value": null
+    },
+    "expected_effect": "defer",
+    "rbac_allows_raw": true,
+    "request_id": "tank_defer_context"
+  },
+  {
+    "abac_allows_raw": true,
+    "architecture": "dev_robot_cell",
+    "decision": {
+      "derived_capability": null,
+      "effect": "allow",
+      "reason": "request satisfies the effective capability",
+      "rewritten_value": null
+    },
+    "expected_effect": "allow",
+    "rbac_allows_raw": true,
+    "request_id": "robot_allow"
+  },
+  {
+    "abac_allows_raw": true,
+    "architecture": "dev_robot_cell",
+    "decision": {
+      "derived_capability": null,
+      "effect": "deny",
+      "reason": "pre-action sequence unsatisfied",
+      "rewritten_value": null
+    },
+    "expected_effect": "deny",
+    "rbac_allows_raw": true,
+    "request_id": "robot_deny_sequence"
+  },
+  {
+    "abac_allows_raw": true,
+    "architecture": "dev_robot_cell",
+    "decision": {
+      "derived_capability": null,
+      "effect": "defer",
+      "reason": "high-risk request requires human approval",
+      "rewritten_value": null
+    },
+    "expected_effect": "defer",
+    "rbac_allows_raw": true,
+    "request_id": "robot_defer_risk"
+  }
+]

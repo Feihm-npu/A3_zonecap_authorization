@@ -1,0 +1,11 @@
+{
+  "architectures": [
+    "../examples/dev_tank.json",
+    "../examples/dev_robot_cell.json"
+  ],
+  "reachability_horizon": 8,
+  "random_cases": 200,
+  "latency_iterations": 5000,
+  "evidence_status": "exploratory S1 smoke; forbidden as confirmatory evidence"
+}
+

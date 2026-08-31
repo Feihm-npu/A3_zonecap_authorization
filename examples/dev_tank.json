@@ -1,0 +1,113 @@
+{
+  "name": "dev_tank",
+  "source_basis": "Development-only Purdue/IEC 62443-style water-treatment segmentation; not a standards-conformance fixture.",
+  "evidence_scope": "S1 smoke only",
+  "zones": ["operations", "basic_control", "safety"],
+  "conduits": [
+    {
+      "id": "ops_to_basic",
+      "source": "operations",
+      "target": "basic_control",
+      "assets": ["inlet_valve", "feed_pump"],
+      "actions": ["set"],
+      "parameter": [0.0, 1.0]
+    }
+  ],
+  "policies": [
+    {
+      "id": "operate_inlet",
+      "issuer": "site_authority",
+      "subject": "operator.alice",
+      "source_zone": "operations",
+      "target_zone": "basic_control",
+      "conduit": "ops_to_basic",
+      "assets": ["inlet_valve"],
+      "actions": ["set"],
+      "parameter": [0.0, 1.0],
+      "ticks": [0, 100],
+      "modes": ["normal", "maintenance", "emergency"],
+      "required_sequence": []
+    }
+  ],
+  "plant_1d": {
+    "a": 0.98,
+    "b": 0.12,
+    "disturbance": [-0.01, 0.01],
+    "initial_state": [0.3, 0.3]
+  },
+  "requests": [
+    {
+      "id": "tank_allow",
+      "capability": "operate_inlet",
+      "subject": "operator.alice",
+      "source_zone": "operations",
+      "target_zone": "basic_control",
+      "conduit": "ops_to_basic",
+      "asset": "inlet_valve",
+      "action": "set",
+      "value": 0.7,
+      "tick": 10,
+      "mode": "normal",
+      "expected_effect": "allow"
+    },
+    {
+      "id": "tank_rewrite",
+      "capability": "operate_inlet",
+      "subject": "operator.alice",
+      "source_zone": "operations",
+      "target_zone": "basic_control",
+      "conduit": "ops_to_basic",
+      "asset": "inlet_valve",
+      "action": "set",
+      "value": 1.2,
+      "tick": 10,
+      "mode": "normal",
+      "expected_effect": "rewrite"
+    },
+    {
+      "id": "tank_attenuate",
+      "capability": "operate_inlet",
+      "subject": "operator.alice",
+      "source_zone": "operations",
+      "target_zone": "basic_control",
+      "conduit": "ops_to_basic",
+      "asset": "inlet_valve",
+      "action": "set",
+      "value": 0.3,
+      "tick": 11,
+      "mode": "normal",
+      "runtime_parameter": [0.0, 0.4],
+      "expected_effect": "attenuate"
+    },
+    {
+      "id": "tank_deny_mode",
+      "capability": "operate_inlet",
+      "subject": "operator.alice",
+      "source_zone": "operations",
+      "target_zone": "basic_control",
+      "conduit": "ops_to_basic",
+      "asset": "inlet_valve",
+      "action": "set",
+      "value": 0.3,
+      "tick": 11,
+      "mode": "shutdown",
+      "expected_effect": "deny"
+    },
+    {
+      "id": "tank_defer_context",
+      "capability": "operate_inlet",
+      "subject": "operator.alice",
+      "source_zone": "operations",
+      "target_zone": "basic_control",
+      "conduit": "ops_to_basic",
+      "asset": "inlet_valve",
+      "action": "set",
+      "value": 0.3,
+      "tick": 11,
+      "mode": "normal",
+      "context_complete": false,
+      "expected_effect": "defer"
+    }
+  ]
+}
+
