@@ -19,7 +19,7 @@ Alternatives:
 - A2: Inclusion is an artifact of scalar interval arithmetic and fails for coupled, state/history-dependent MIMO systems. → ruled out by: exp-03
 - A3: Inclusion holds only because the prototype omits meaningful `REWRITE`/`DEFER` behavior. → ruled out by: exp-04
 
-Status: proposed
+Status: testing
 
 ## C2 [core] [S1]
 

@@ -1,0 +1,18 @@
+{
+  "claim": "C1",
+  "elapsed_seconds_diagnostic": 157.3585398979485,
+  "emission_authority_violations": 0,
+  "exact_1d_horizon_checks": 2756250,
+  "exact_1d_inclusion_violations": 0,
+  "exact_1d_models": 393750,
+  "exp": "exp-01",
+  "proof_obligations_total": 8,
+  "proof_obligations_with_closed_argument": 8,
+  "registered_claim_counterexamples": 0,
+  "seed": null,
+  "sequence_history_checks": 121,
+  "sequence_language_violations": 0,
+  "syntactic_widening_mutations": 10,
+  "syntactic_widening_mutations_accepted": 0,
+  "unregistered_same_request_counterexamples": 1
+}

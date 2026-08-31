@@ -1,0 +1,9 @@
+experiment=exp-01
+seed=none
+outcome=closed conditional proof; no counterexample to registered C1 in exact 1D audit
+exact_1d_models=393750
+exact_1d_horizon_checks=2756250
+exact_1d_inclusion_violations=0
+registered_claim_counterexamples=0
+same_request_strengthening_counterexamples=1
+elapsed_seconds_diagnostic=157.358540

@@ -1,0 +1,6 @@
+# attempt 1 (failed before experiment logic)
+python -m zonecap.exp01 --config results/exp01_exact_1d_20260831/config.json --output-dir results/exp01_exact_1d_20260831
+# attempt 2 (enumeration completed; manifest write failed)
+PYTHONPATH=src python -m zonecap.exp01 --config results/exp01_exact_1d_20260831/config.json --output-dir results/exp01_exact_1d_20260831
+# attempt 3 (recorded result)
+PYTHONPATH=src python -m zonecap.exp01 --config results/exp01_exact_1d_20260831/config.json --output-dir results/exp01_exact_1d_20260831

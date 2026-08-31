@@ -1,0 +1,79 @@
+{
+  "claim": "C1",
+  "emission_semantics": {
+    "authority_violations": [],
+    "child_outputs": [
+      0.0,
+      0.2,
+      0.4
+    ],
+    "finite_request_universe": [
+      -1.0,
+      0.0,
+      0.2,
+      0.4,
+      0.8,
+      1.0,
+      2.0
+    ],
+    "parent_outputs": [
+      0.0,
+      0.2,
+      0.4,
+      0.8,
+      1.0
+    ],
+    "physical_outputs_within_presented_token": true,
+    "request_abstracted_output_inclusion_on_audit_universe": true,
+    "request_synchronous_counterexample": {
+      "child_effect": "rewrite",
+      "child_output": 0.4,
+      "child_output_in_parent_token": true,
+      "interpretation": "This falsifies the unregistered same-request strengthening, not C1: C1 reachability is the union over authorized physical-action sequences.",
+      "parent_effect": "allow",
+      "parent_output": 0.8,
+      "request_value": 0.8,
+      "same_request_output_inclusion": false
+    },
+    "runtime_attenuation_returns_valid_child": true,
+    "tick_semantics_binding": "DENY and ATTENUATE emit no action in the reference engine; DEFER has no concrete hold binding yet. The theorem is closed under its registered authority-preserving-effect premise; concrete hold/idle bindings are tested by exp-04 and exp-12."
+  },
+  "exact_interval_audit": {
+    "horizon_checks": 2756250,
+    "models": 393750,
+    "violations": []
+  },
+  "exp": "exp-01",
+  "outcome": "closed conditional proof; no counterexample to registered C1 in exact 1D audit",
+  "proof_obligations": {
+    "O1_syntax_independent_of_reachability": "discharged by field-wise subset order",
+    "O2_conjunctive_caveats_monotone": "discharged for registered positive caveats",
+    "O3_sequence_extension_refines_language": "discharged by prefix/subsequence lemma",
+    "O4_effects_preserve_effective_authority": "conditional theorem premise; current emitting effects audited",
+    "O5_common_context_plant_and_uncertainty": "explicit theorem premise",
+    "O6_action_relation_forward_simulation": "discharged after request abstraction is made explicit",
+    "O7_trace_and_reachability_projection": "discharged by finite induction",
+    "O8_exact_1d_interval_corollary": "discharged algebraically; exact enumeration is a falsification audit"
+  },
+  "registered_claim_counterexamples": [],
+  "seed": null,
+  "syntactic_attenuation": {
+    "invalid_mutations": 10,
+    "invalid_mutations_accepted": [],
+    "invalid_mutations_rejected": {
+      "action": "invalid attenuation: action scope widened",
+      "asset": "invalid attenuation: asset scope widened",
+      "conduit": "invalid attenuation: conduit scope widened",
+      "issuer": "invalid attenuation: issuer changed",
+      "mode": "invalid attenuation: mode scope widened",
+      "parameter": "invalid attenuation: parameter interval widened",
+      "pre_action_sequence": "invalid attenuation: pre-action sequence does not refine parent",
+      "source_zone": "invalid attenuation: zone binding changed",
+      "target_zone": "invalid attenuation: zone binding changed",
+      "time": "invalid attenuation: time window widened"
+    },
+    "legal_child_accepted": true,
+    "sequence_history_checks": 121,
+    "sequence_language_violations": []
+  }
+}

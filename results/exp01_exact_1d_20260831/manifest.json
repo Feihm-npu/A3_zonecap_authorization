@@ -1,0 +1,12 @@
+{
+  "files": {
+    "research/monotonicity_theorem.md": "88ee1ba527102aa0948f76bd36f8ea7df046dc05914555c6acf7c71f475aa311",
+    "results/exp01_exact_1d_20260831/config.json": "32b76e3fcb92add052ecc6bf097369ca105b4149c70f636681c3e0f604eb3bbb",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp01.py": "68dcc364ca35a7f169843551820cbc4a0ece6d9ba55b07b1ffadb3159b5e38e7",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b"
+  },
+  "git_head": "d9442a1e0904fff39c031b8f93ae60be86a708a5",
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

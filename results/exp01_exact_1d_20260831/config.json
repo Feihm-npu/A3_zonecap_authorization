@@ -1,0 +1,9 @@
+{
+  "claim": "C1",
+  "coefficient_grid": [-2, -1, 0, 1, 2],
+  "endpoint_grid": [-2, -1, 0, 1, 2],
+  "exp": "exp-01",
+  "horizon": 6,
+  "protocol": "Exact rational interval propagation over the full registered grid; audit every syntactic authority dimension and retain the minimal counterexample to the stronger same-request property.",
+  "seed": null
+}
