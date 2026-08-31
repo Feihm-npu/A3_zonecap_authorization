@@ -1,0 +1,2 @@
+node scripts/exp05_sint_runner.mjs --sint-repo /tmp/zonecap-baseline.5rH5nT/sint-protocol --output results/exp05_common_subset_20260901/sint_instance.json
+PYTHONPATH=src python -m zonecap.exp05 --config results/exp05_common_subset_20260901/config.json --sint-instance results/exp05_common_subset_20260901/sint_instance.json --output-dir results/exp05_common_subset_20260901

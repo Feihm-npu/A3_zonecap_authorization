@@ -1,0 +1,10 @@
+experiment=exp-05
+seed=none
+systems=3
+common_subset_dimensions=3
+cross_adapter_decision_mismatches=0
+child_parent_permission_violations=0
+reachable_set_inclusion_violations=0
+cross_adapter_reachable_set_mismatches=0
+sint_widening_request_normalized_without_amplification=true
+registered_c1_counterexamples=0

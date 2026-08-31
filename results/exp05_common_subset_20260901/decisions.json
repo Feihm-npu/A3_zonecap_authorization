@@ -1,0 +1,944 @@
+{
+  "child_parent_permission_violations": [],
+  "cross_adapter_decision_mismatches": [],
+  "level_request_pairs": 72,
+  "records": [
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "parent",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": true,
+        "SINT_v0_2_pinned": true,
+        "ZoneCap": true
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/valve",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/valve",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/valve",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "set",
+        "resource": "modbus://cell/other",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "read",
+        "resource": "modbus://cell/other",
+        "value": "6/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "0"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "1/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "2/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "4/5"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "1"
+      }
+    },
+    {
+      "decisions": {
+        "Dodson_CHERI_Macaroons_schema_adapter": false,
+        "SINT_v0_2_pinned": false,
+        "ZoneCap": false
+      },
+      "level": "child",
+      "request": {
+        "action": "admin",
+        "resource": "modbus://cell/other",
+        "value": "6/5"
+      }
+    }
+  ],
+  "requests_per_level": 36
+}

@@ -1,0 +1,34 @@
+{
+  "claim": "C1",
+  "exp": "exp-05",
+  "horizon": 6,
+  "plants": [
+    {
+      "a": "1",
+      "b": "1",
+      "disturbance": ["-1/10", "1/10"],
+      "initial": ["-1/5", "1/5"],
+      "name": "integrator_positive_input"
+    },
+    {
+      "a": "-6/5",
+      "b": "-7/10",
+      "disturbance": ["-1/10", "1/10"],
+      "initial": ["0", "1/2"],
+      "name": "signed_coupled_response"
+    },
+    {
+      "a": "1/2",
+      "b": "-2",
+      "disturbance": ["0", "1/5"],
+      "initial": ["-1/2", "1/2"],
+      "name": "stable_negative_input"
+    }
+  ],
+  "protocol": "Instantiate the invariant-resource/action-subset/nonnegative-upper-bound common subset in ZoneCap, a Dodson/CHERI Macaroons caveat-chain adapter, and pinned SINT; compare the full request cross-product and exact reachable intervals on identical plants.",
+  "request_actions": ["set", "read", "admin"],
+  "request_resources": ["modbus://cell/valve", "modbus://cell/other"],
+  "request_values": ["0", "1/5", "2/5", "4/5", "1", "6/5"],
+  "seed": null,
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826"
+}

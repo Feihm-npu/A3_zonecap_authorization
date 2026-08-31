@@ -1,0 +1,17 @@
+{
+  "child_parent_permission_violations": 0,
+  "claim": "C1",
+  "common_subset_dimensions": 3,
+  "cross_adapter_decision_mismatches": 0,
+  "cross_adapter_reachable_set_mismatches": 0,
+  "decision_level_request_pairs": 72,
+  "exp": "exp-05",
+  "per_adapter_per_plant_horizon_checks": 63,
+  "plants": 3,
+  "reachable_set_inclusion_violations": 0,
+  "registered_c1_counterexamples": 0,
+  "seed": null,
+  "sint_unauthorized_only_action_request_rejected": true,
+  "sint_widening_request_normalized_without_amplification": true,
+  "systems": 3
+}

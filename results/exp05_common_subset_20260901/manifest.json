@@ -1,0 +1,18 @@
+{
+  "files": {
+    "research/common_subset_baseline.md": "4e6b87b8dc0f418c9fc19afc4ba9853c73884a99bee02a07a4fcc2935dbd9217",
+    "results/exp05_common_subset_20260901/config.json": "c64d48de9d5a2c6c64fc435aa5f991f613babaf2421a71c1a6d833c188f8a8c3",
+    "results/exp05_common_subset_20260901/sint_instance.json": "40d2f2c65b263bedd637dc2c8420f401c58be565fba68ad1313e2e959267b855",
+    "scripts/exp05_sint_runner.mjs": "2aff98e0d03f9b43ad43f6a27fc057222d6971e0d2e2901962862b057da80e6a",
+    "src/zonecap/exp05.py": "d4c7d0d1b1ed7adc253570d1b04586375390c6c7201ebe10a8b7da0403cf92fd"
+  },
+  "git_head": "9180becc49e6460a5088591c51a11cfdc7e0b259",
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "sint_source_hashes": {
+    "WHITEPAPER.md": "202270bbbd63662c68a0637d7d632e4eab04344205b46f6d523104e16bfb2882",
+    "packages/capability-tokens/src/delegator.ts": "009b413509cd7defee212fc7ceac74170f0286ed9a5a9359354e7bfbbb31f8db",
+    "packages/capability-tokens/src/validator.ts": "7cc8d792644290d09ceddea2f405757250241be010cc9ee9b961e638bed30018"
+  }
+}

@@ -1,0 +1,890 @@
+{
+  "cross_adapter_reachable_set_mismatches": [],
+  "horizon": 6,
+  "inclusion_violations": [],
+  "plants": 3,
+  "records": [
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-1/5",
+        "1/5"
+      ],
+      "horizon": 0,
+      "included": true,
+      "parent": [
+        "-1/5",
+        "1/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-3/10",
+        "7/10"
+      ],
+      "horizon": 1,
+      "included": true,
+      "parent": [
+        "-3/10",
+        "13/10"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-2/5",
+        "6/5"
+      ],
+      "horizon": 2,
+      "included": true,
+      "parent": [
+        "-2/5",
+        "12/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-1/2",
+        "17/10"
+      ],
+      "horizon": 3,
+      "included": true,
+      "parent": [
+        "-1/2",
+        "7/2"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-3/5",
+        "11/5"
+      ],
+      "horizon": 4,
+      "included": true,
+      "parent": [
+        "-3/5",
+        "23/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-7/10",
+        "27/10"
+      ],
+      "horizon": 5,
+      "included": true,
+      "parent": [
+        "-7/10",
+        "57/10"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-4/5",
+        "16/5"
+      ],
+      "horizon": 6,
+      "included": true,
+      "parent": [
+        "-4/5",
+        "34/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "0",
+        "1/2"
+      ],
+      "horizon": 0,
+      "included": true,
+      "parent": [
+        "0",
+        "1/2"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-49/50",
+        "1/10"
+      ],
+      "horizon": 1,
+      "included": true,
+      "parent": [
+        "-7/5",
+        "1/10"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-1/2",
+        "319/250"
+      ],
+      "horizon": 2,
+      "included": true,
+      "parent": [
+        "-23/25",
+        "89/50"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-2389/1250",
+        "7/10"
+      ],
+      "horizon": 3,
+      "included": true,
+      "parent": [
+        "-367/125",
+        "301/250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-61/50",
+        "14959/6250"
+      ],
+      "horizon": 4,
+      "included": true,
+      "parent": [
+        "-1403/625",
+        "4529/1250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-101629/31250",
+        "391/250"
+      ],
+      "horizon": 5,
+      "included": true,
+      "parent": [
+        "-16087/3125",
+        "17461/6250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-2821/1250",
+        "625399/156250"
+      ],
+      "horizon": 6,
+      "included": true,
+      "parent": [
+        "-64883/15625",
+        "196169/31250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-1/2",
+        "1/2"
+      ],
+      "horizon": 0,
+      "included": true,
+      "parent": [
+        "-1/2",
+        "1/2"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-21/20",
+        "9/20"
+      ],
+      "horizon": 1,
+      "included": true,
+      "parent": [
+        "-9/4",
+        "9/20"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-53/40",
+        "17/40"
+      ],
+      "horizon": 2,
+      "included": true,
+      "parent": [
+        "-25/8",
+        "17/40"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-117/80",
+        "33/80"
+      ],
+      "horizon": 3,
+      "included": true,
+      "parent": [
+        "-57/16",
+        "33/80"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-49/32",
+        "13/32"
+      ],
+      "horizon": 4,
+      "included": true,
+      "parent": [
+        "-121/32",
+        "13/32"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-501/320",
+        "129/320"
+      ],
+      "horizon": 5,
+      "included": true,
+      "parent": [
+        "-249/64",
+        "129/320"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "ZoneCap",
+      "child": [
+        "-1013/640",
+        "257/640"
+      ],
+      "horizon": 6,
+      "included": true,
+      "parent": [
+        "-505/128",
+        "257/640"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-1/5",
+        "1/5"
+      ],
+      "horizon": 0,
+      "included": true,
+      "parent": [
+        "-1/5",
+        "1/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-3/10",
+        "7/10"
+      ],
+      "horizon": 1,
+      "included": true,
+      "parent": [
+        "-3/10",
+        "13/10"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-2/5",
+        "6/5"
+      ],
+      "horizon": 2,
+      "included": true,
+      "parent": [
+        "-2/5",
+        "12/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-1/2",
+        "17/10"
+      ],
+      "horizon": 3,
+      "included": true,
+      "parent": [
+        "-1/2",
+        "7/2"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-3/5",
+        "11/5"
+      ],
+      "horizon": 4,
+      "included": true,
+      "parent": [
+        "-3/5",
+        "23/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-7/10",
+        "27/10"
+      ],
+      "horizon": 5,
+      "included": true,
+      "parent": [
+        "-7/10",
+        "57/10"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-4/5",
+        "16/5"
+      ],
+      "horizon": 6,
+      "included": true,
+      "parent": [
+        "-4/5",
+        "34/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "0",
+        "1/2"
+      ],
+      "horizon": 0,
+      "included": true,
+      "parent": [
+        "0",
+        "1/2"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-49/50",
+        "1/10"
+      ],
+      "horizon": 1,
+      "included": true,
+      "parent": [
+        "-7/5",
+        "1/10"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-1/2",
+        "319/250"
+      ],
+      "horizon": 2,
+      "included": true,
+      "parent": [
+        "-23/25",
+        "89/50"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-2389/1250",
+        "7/10"
+      ],
+      "horizon": 3,
+      "included": true,
+      "parent": [
+        "-367/125",
+        "301/250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-61/50",
+        "14959/6250"
+      ],
+      "horizon": 4,
+      "included": true,
+      "parent": [
+        "-1403/625",
+        "4529/1250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-101629/31250",
+        "391/250"
+      ],
+      "horizon": 5,
+      "included": true,
+      "parent": [
+        "-16087/3125",
+        "17461/6250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-2821/1250",
+        "625399/156250"
+      ],
+      "horizon": 6,
+      "included": true,
+      "parent": [
+        "-64883/15625",
+        "196169/31250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-1/2",
+        "1/2"
+      ],
+      "horizon": 0,
+      "included": true,
+      "parent": [
+        "-1/2",
+        "1/2"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-21/20",
+        "9/20"
+      ],
+      "horizon": 1,
+      "included": true,
+      "parent": [
+        "-9/4",
+        "9/20"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-53/40",
+        "17/40"
+      ],
+      "horizon": 2,
+      "included": true,
+      "parent": [
+        "-25/8",
+        "17/40"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-117/80",
+        "33/80"
+      ],
+      "horizon": 3,
+      "included": true,
+      "parent": [
+        "-57/16",
+        "33/80"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-49/32",
+        "13/32"
+      ],
+      "horizon": 4,
+      "included": true,
+      "parent": [
+        "-121/32",
+        "13/32"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-501/320",
+        "129/320"
+      ],
+      "horizon": 5,
+      "included": true,
+      "parent": [
+        "-249/64",
+        "129/320"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "Dodson_CHERI_Macaroons_schema_adapter",
+      "child": [
+        "-1013/640",
+        "257/640"
+      ],
+      "horizon": 6,
+      "included": true,
+      "parent": [
+        "-505/128",
+        "257/640"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-1/5",
+        "1/5"
+      ],
+      "horizon": 0,
+      "included": true,
+      "parent": [
+        "-1/5",
+        "1/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-3/10",
+        "7/10"
+      ],
+      "horizon": 1,
+      "included": true,
+      "parent": [
+        "-3/10",
+        "13/10"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-2/5",
+        "6/5"
+      ],
+      "horizon": 2,
+      "included": true,
+      "parent": [
+        "-2/5",
+        "12/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-1/2",
+        "17/10"
+      ],
+      "horizon": 3,
+      "included": true,
+      "parent": [
+        "-1/2",
+        "7/2"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-3/5",
+        "11/5"
+      ],
+      "horizon": 4,
+      "included": true,
+      "parent": [
+        "-3/5",
+        "23/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-7/10",
+        "27/10"
+      ],
+      "horizon": 5,
+      "included": true,
+      "parent": [
+        "-7/10",
+        "57/10"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-4/5",
+        "16/5"
+      ],
+      "horizon": 6,
+      "included": true,
+      "parent": [
+        "-4/5",
+        "34/5"
+      ],
+      "plant": "integrator_positive_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "0",
+        "1/2"
+      ],
+      "horizon": 0,
+      "included": true,
+      "parent": [
+        "0",
+        "1/2"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-49/50",
+        "1/10"
+      ],
+      "horizon": 1,
+      "included": true,
+      "parent": [
+        "-7/5",
+        "1/10"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-1/2",
+        "319/250"
+      ],
+      "horizon": 2,
+      "included": true,
+      "parent": [
+        "-23/25",
+        "89/50"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-2389/1250",
+        "7/10"
+      ],
+      "horizon": 3,
+      "included": true,
+      "parent": [
+        "-367/125",
+        "301/250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-61/50",
+        "14959/6250"
+      ],
+      "horizon": 4,
+      "included": true,
+      "parent": [
+        "-1403/625",
+        "4529/1250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-101629/31250",
+        "391/250"
+      ],
+      "horizon": 5,
+      "included": true,
+      "parent": [
+        "-16087/3125",
+        "17461/6250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-2821/1250",
+        "625399/156250"
+      ],
+      "horizon": 6,
+      "included": true,
+      "parent": [
+        "-64883/15625",
+        "196169/31250"
+      ],
+      "plant": "signed_coupled_response"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-1/2",
+        "1/2"
+      ],
+      "horizon": 0,
+      "included": true,
+      "parent": [
+        "-1/2",
+        "1/2"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-21/20",
+        "9/20"
+      ],
+      "horizon": 1,
+      "included": true,
+      "parent": [
+        "-9/4",
+        "9/20"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-53/40",
+        "17/40"
+      ],
+      "horizon": 2,
+      "included": true,
+      "parent": [
+        "-25/8",
+        "17/40"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-117/80",
+        "33/80"
+      ],
+      "horizon": 3,
+      "included": true,
+      "parent": [
+        "-57/16",
+        "33/80"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-49/32",
+        "13/32"
+      ],
+      "horizon": 4,
+      "included": true,
+      "parent": [
+        "-121/32",
+        "13/32"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-501/320",
+        "129/320"
+      ],
+      "horizon": 5,
+      "included": true,
+      "parent": [
+        "-249/64",
+        "129/320"
+      ],
+      "plant": "stable_negative_input"
+    },
+    {
+      "adapter": "SINT_v0_2_pinned",
+      "child": [
+        "-1013/640",
+        "257/640"
+      ],
+      "horizon": 6,
+      "included": true,
+      "parent": [
+        "-505/128",
+        "257/640"
+      ],
+      "plant": "stable_negative_input"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "common_subset_obligations": [
+    "resource_binding_or_invariance",
+    "action_subset_delegation",
+    "numeric_upper_bound_attenuation"
+  ],
+  "legend": {
+    "false": "not provided",
+    "null": "not attributed without a corresponding proof/artifact",
+    "true": "covered in the instantiated schema/system"
+  },
+  "obligations": [
+    "resource_binding_or_invariance",
+    "action_subset_delegation",
+    "numeric_upper_bound_attenuation",
+    "authority_preserving_rewrite_hold_contract",
+    "physical_trace_reachable_set_refinement",
+    "iec_62443_zone_conduit_compilation"
+  ],
+  "systems": {
+    "Dodson_CHERI_Macaroons_schema_adapter": {
+      "action_subset_delegation": true,
+      "authority_preserving_rewrite_hold_contract": null,
+      "iec_62443_zone_conduit_compilation": false,
+      "numeric_upper_bound_attenuation": true,
+      "physical_trace_reachable_set_refinement": null,
+      "resource_binding_or_invariance": true
+    },
+    "SINT_v0_2_pinned": {
+      "action_subset_delegation": true,
+      "authority_preserving_rewrite_hold_contract": null,
+      "iec_62443_zone_conduit_compilation": false,
+      "numeric_upper_bound_attenuation": true,
+      "physical_trace_reachable_set_refinement": null,
+      "resource_binding_or_invariance": true
+    },
+    "ZoneCap": {
+      "action_subset_delegation": true,
+      "authority_preserving_rewrite_hold_contract": true,
+      "iec_62443_zone_conduit_compilation": true,
+      "numeric_upper_bound_attenuation": true,
+      "physical_trace_reachable_set_refinement": true,
+      "resource_binding_or_invariance": true
+    }
+  }
+}
