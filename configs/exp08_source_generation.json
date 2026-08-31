@@ -1,0 +1,42 @@
+{
+  "exp": "exp-08",
+  "claim": "C2 / alternative A1",
+  "seed": null,
+  "run_id": "exp08_source_generation_ablation_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp08 --config configs/exp08_source_generation.json --output-dir results/exp08_source_generation_ablation_20260901",
+  "policy_table": "research/heldout/exp07/policy_tables.json",
+  "handwritten_fixtures": "research/heldout/exp08/handwritten_fixtures.json",
+  "frozen_hashes": {
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "research/heldout/exp08/handwritten_fixtures.json": "8f0ee3c8ac7d9bd336497f8f3e896245f5387aa7d44be548e5a0601ca601f11a",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "src/zonecap/compiler.py": "7edbaaaf7b405fe4d141aba9fac3a08699708defb51e7c97a078c2102d7fcff5",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp07.py": "d5a0398a6554fb481032bd9d969ee2cb88efc73e068fab7ee0d441cf4d301e63",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/exp07_oracle.py": "a8f51578655e68a1cb5350bf1c88ef98b0b52dc0555e98f67c9865e3020f1da3",
+    "src/zonecap/exp08.py": "c95de3ffcbf4e34d83fd18a1412f4d4c4283882ebb67ce08ccf1172f0d8e61ab",
+    "tests/test_exp08.py": "457d741ef22e3a69b99c36d2948e897a8277fba52ed278c15de58ca2db4feaf1"
+  },
+  "expected_counts": {
+    "source_table_root_grants": 42,
+    "source_table_delegated_scopes": 84,
+    "generated_cases": 58968,
+    "generated_valid_cases": 4536,
+    "generated_mutation_cases": 54432,
+    "generated_mutation_categories": 12,
+    "generated_check_removal_mutants_killed": 10,
+    "registered_check_removal_mutants": 10,
+    "handwritten_fixture_cases": 6,
+    "handwritten_fixture_check_removal_mutants_killed": 0,
+    "provenance_probes": 4
+  },
+  "pass_criteria": {
+    "generated_compiler_oracle_mismatches": 0,
+    "generated_oracle_expectation_mismatches": 0,
+    "handwritten_fixture_compiler_oracle_mismatches": 0,
+    "handwritten_fixture_oracle_expectation_mismatches": 0,
+    "provenance_probe_failures": 0,
+    "delegation_relation_failures": 0
+  }
+}

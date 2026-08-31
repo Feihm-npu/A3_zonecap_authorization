@@ -1,0 +1,42 @@
+{
+  "locked_at": "2026-09-01T01:20:00+08:00",
+  "purpose": "Happy-path hand-authored baseline: one request per architecture and depth, with no generated boundary mutations.",
+  "cases": [
+    {
+      "id": "cpwe_d0_happy",
+      "scope_id": "cpwe_cip_security:g000:d0",
+      "expected_allow": true,
+      "request": {"subject": "subject:cpwe_cip_security:g000:d0", "source_zone": "site_ops", "target_zone": "site_ops", "conduit": "c_site_ops__site_ops", "asset": "site_ops_services", "action": "read", "value": 50, "tick": 150, "mode": "normal", "history": ["authenticate"]}
+    },
+    {
+      "id": "cpwe_d1_happy",
+      "scope_id": "cpwe_cip_security:g000:d1",
+      "expected_allow": true,
+      "request": {"subject": "subject:cpwe_cip_security:g000:d1", "source_zone": "site_ops", "target_zone": "site_ops", "conduit": "c_site_ops__site_ops", "asset": "site_ops_services", "action": "read", "value": 50, "tick": 150, "mode": "normal", "history": ["authenticate", "authorize"]}
+    },
+    {
+      "id": "cpwe_d2_happy",
+      "scope_id": "cpwe_cip_security:g000:d2",
+      "expected_allow": true,
+      "request": {"subject": "subject:cpwe_cip_security:g000:d2", "source_zone": "site_ops", "target_zone": "site_ops", "conduit": "c_site_ops__site_ops", "asset": "site_ops_services", "action": "read", "value": 50, "tick": 150, "mode": "normal", "history": ["authenticate", "authorize", "inspect"]}
+    },
+    {
+      "id": "enisa_d0_happy",
+      "scope_id": "enisa_rail_signalling:g000:d0",
+      "expected_allow": true,
+      "request": {"subject": "subject:enisa_rail_signalling:g000:d0", "source_zone": "business_network", "target_zone": "industrial_dmz", "conduit": "c_business_network__industrial_dmz", "asset": "file_transfer_gateway", "action": "read", "value": 50, "tick": 150, "mode": "normal", "history": ["authenticate"]}
+    },
+    {
+      "id": "enisa_d1_happy",
+      "scope_id": "enisa_rail_signalling:g000:d1",
+      "expected_allow": true,
+      "request": {"subject": "subject:enisa_rail_signalling:g000:d1", "source_zone": "business_network", "target_zone": "industrial_dmz", "conduit": "c_business_network__industrial_dmz", "asset": "file_transfer_gateway", "action": "read", "value": 50, "tick": 150, "mode": "normal", "history": ["authenticate", "authorize"]}
+    },
+    {
+      "id": "enisa_d2_happy",
+      "scope_id": "enisa_rail_signalling:g000:d2",
+      "expected_allow": true,
+      "request": {"subject": "subject:enisa_rail_signalling:g000:d2", "source_zone": "business_network", "target_zone": "industrial_dmz", "conduit": "c_business_network__industrial_dmz", "asset": "file_transfer_gateway", "action": "read", "value": 50, "tick": 150, "mode": "normal", "history": ["authenticate", "authorize", "inspect"]}
+    }
+  ]
+}
