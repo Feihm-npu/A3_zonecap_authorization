@@ -1,0 +1,32 @@
+{
+  "claim": "C2 baseline",
+  "command": "PYTHONPATH=src python -m zonecap.exp10 --config configs/exp10_c2_baselines.json --output-dir results/exp10_c2_baselines_20260901",
+  "exp": "exp-10",
+  "exp07_cases": "results/exp07_heldout_equivalence_20260901/cases.jsonl.gz",
+  "expected_counts": {
+    "cases": 58968,
+    "opcua_false_allows": 40824,
+    "plc_abac_false_allows": 18144,
+    "sint_false_allows": 28728
+  },
+  "frozen_hashes": {
+    "research/c2_baseline_scope.md": "00afc72af70c2262249de7a78d7a1c789c710ed758bb6b2ca45d23574b1c08fe",
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "results/exp05_common_subset_20260901/sint_instance.json": "40d2f2c65b263bedd637dc2c8420f401c58be565fba68ad1313e2e959267b855",
+    "results/exp07_heldout_equivalence_20260901/cases.jsonl.gz": "46197806deb7cdf7eb108ebaceecc68b574ddce40f625dd8948b46be6bb433b6",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/exp10.py": "750d50762a3578af32a1df3c60063c097f2ed8285aea9798d47740277a8650d3",
+    "tests/test_exp10.py": "24416964a2fd853f2df4322638cbfc796838d4b856930854ebd20a12cf8945c7"
+  },
+  "pass_criteria": {
+    "baseline_false_denies": 0,
+    "fair_subset_mismatches": 0,
+    "input_compiler_oracle_mismatches": 0,
+    "input_oracle_expectation_mismatches": 0
+  },
+  "policy_table": "research/heldout/exp07/policy_tables.json",
+  "run_id": "exp10_c2_baselines_20260901",
+  "seed": null,
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "sint_instance": "results/exp05_common_subset_20260901/sint_instance.json"
+}

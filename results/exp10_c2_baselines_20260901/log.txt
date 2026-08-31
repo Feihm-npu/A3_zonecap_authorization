@@ -1,0 +1,7 @@
+experiment=exp-10
+seed=none
+cases=58968
+opcua_false_allows=40824
+plc_abac_false_allows=18144
+sint_false_allows=28728
+input_compiler_oracle_mismatches=0

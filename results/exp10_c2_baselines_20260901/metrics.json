@@ -1,0 +1,27 @@
+{
+  "authority_dimensions": 8,
+  "baseline_fair_subset_mismatches": {
+    "opcua_role_projection": 0,
+    "plc_abac_projection": 0,
+    "sint_pinned_profile": 0
+  },
+  "baseline_overall_false_allows": {
+    "opcua_role_projection": 40824,
+    "plc_abac_projection": 18144,
+    "sint_pinned_profile": 28728
+  },
+  "baseline_overall_false_denies": {
+    "opcua_role_projection": 0,
+    "plc_abac_projection": 0,
+    "sint_pinned_profile": 0
+  },
+  "cases": 58968,
+  "claim": "C2 baseline",
+  "exp": "exp-10",
+  "expected_count_mismatches": {},
+  "input_compiler_oracle_mismatches": 0,
+  "input_oracle_expectation_mismatches": 0,
+  "seed": null,
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "systems": 4
+}

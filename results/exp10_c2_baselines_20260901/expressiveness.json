@@ -1,0 +1,67 @@
+{
+  "baseline_status": {
+    "opcua_role_projection": "functional projection; no server implementation",
+    "plc_abac_projection": "functional projection; no complete runnable artifact located",
+    "sint_pinned_profile": {
+      "commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+      "source_hashes": {
+        "WHITEPAPER.md": "202270bbbd63662c68a0637d7d632e4eab04344205b46f6d523104e16bfb2882",
+        "packages/capability-tokens/src/delegator.ts": "009b413509cd7defee212fc7ceac74170f0286ed9a5a9359354e7bfbbb31f8db",
+        "packages/capability-tokens/src/validator.ts": "7cc8d792644290d09ceddea2f405757250241be010cc9ee9b961e638bed30018"
+      },
+      "status": "schema projection grounded in executable pinned token instance"
+    }
+  },
+  "dimensions": [
+    "zone",
+    "conduit",
+    "asset",
+    "action",
+    "parameter",
+    "time",
+    "mode",
+    "pre_action_sequence"
+  ],
+  "systems": {
+    "ZoneCap": {
+      "action": "full",
+      "asset": "full",
+      "conduit": "full",
+      "mode": "full",
+      "parameter": "full bilateral interval",
+      "pre_action_sequence": "full ordered subsequence",
+      "time": "full bilateral window",
+      "zone": "full"
+    },
+    "opcua_role_projection": {
+      "action": "full permission binding",
+      "asset": "full node/resource binding",
+      "conduit": "N/A",
+      "mode": "N/A",
+      "parameter": "N/A",
+      "pre_action_sequence": "N/A",
+      "time": "N/A",
+      "zone": "N/A"
+    },
+    "plc_abac_projection": {
+      "action": "full",
+      "asset": "full",
+      "conduit": "N/A",
+      "mode": "full",
+      "parameter": "N/A",
+      "pre_action_sequence": "N/A",
+      "time": "full window",
+      "zone": "full source/target attributes"
+    },
+    "sint_pinned_profile": {
+      "action": "full subset",
+      "asset": "full invariant resource",
+      "conduit": "N/A",
+      "mode": "N/A",
+      "parameter": "partial non-negative upper maximum",
+      "pre_action_sequence": "N/A",
+      "time": "partial expiry upper bound",
+      "zone": "N/A"
+    }
+  }
+}

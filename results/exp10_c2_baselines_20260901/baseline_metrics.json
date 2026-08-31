@@ -1,0 +1,294 @@
+{
+  "opcua_role_projection": {
+    "agreement": 18144,
+    "cases": 58968,
+    "fair_subset_agreement_rate": 1.0,
+    "fair_subset_cases": 18144,
+    "fair_subset_mismatches": 0,
+    "false_allow": 40824,
+    "false_deny": 0,
+    "fully_supported_mutation_categories": [
+      "action",
+      "asset",
+      "subject"
+    ],
+    "overall_agreement_rate": 0.3076923076923077,
+    "scenarios": {
+      "action": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "asset": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "conduit": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "history": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "mode": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "parameter_high": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "parameter_low": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "source_zone": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "subject": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "target_zone": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "tick_high": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "tick_low": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "valid": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      }
+    }
+  },
+  "plc_abac_projection": {
+    "agreement": 40824,
+    "cases": 58968,
+    "fair_subset_agreement_rate": 1.0,
+    "fair_subset_cases": 40824,
+    "fair_subset_mismatches": 0,
+    "false_allow": 18144,
+    "false_deny": 0,
+    "fully_supported_mutation_categories": [
+      "action",
+      "asset",
+      "mode",
+      "source_zone",
+      "subject",
+      "target_zone",
+      "tick_high",
+      "tick_low"
+    ],
+    "overall_agreement_rate": 0.6923076923076923,
+    "scenarios": {
+      "action": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "asset": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "conduit": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "history": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "mode": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "parameter_high": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "parameter_low": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "source_zone": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "subject": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "target_zone": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "tick_high": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "tick_low": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "valid": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      }
+    }
+  },
+  "sint_pinned_profile": {
+    "agreement": 30240,
+    "cases": 58968,
+    "fair_subset_agreement_rate": 1.0,
+    "fair_subset_cases": 27216,
+    "fair_subset_mismatches": 0,
+    "false_allow": 28728,
+    "false_deny": 0,
+    "fully_supported_mutation_categories": [
+      "action",
+      "asset",
+      "parameter_high",
+      "subject",
+      "tick_high"
+    ],
+    "overall_agreement_rate": 0.5128205128205128,
+    "scenarios": {
+      "action": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "asset": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "conduit": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "history": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "mode": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "parameter_high": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "parameter_low": {
+        "agreement": 3024,
+        "cases": 4536,
+        "false_allow": 1512,
+        "false_deny": 0
+      },
+      "source_zone": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "subject": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "target_zone": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "tick_high": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      },
+      "tick_low": {
+        "agreement": 0,
+        "cases": 4536,
+        "false_allow": 4536,
+        "false_deny": 0
+      },
+      "valid": {
+        "agreement": 4536,
+        "cases": 4536,
+        "false_allow": 0,
+        "false_deny": 0
+      }
+    }
+  }
+}
