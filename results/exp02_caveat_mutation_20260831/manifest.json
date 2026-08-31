@@ -1,0 +1,10 @@
+{
+  "files": {
+    "research/attenuation_mutation_audit.md": "c05d5f073e9c3943014221f14586fbe561c1b721190df87cb7a5bc804a28fd64",
+    "results/exp02_caveat_mutation_20260831/config.json": "b11054fe970b2c271acd0be0c5ec2b9b3ce668b4d186149b3eca22062b7c170a",
+    "src/zonecap/exp02.py": "e44952a672cdf74956398592aba21a711c1eaab478b8ef95ca58983d241c45e4"
+  },
+  "git_head": "abad2234dd96b2fd9c874a9e4cb5ed5fc943dd5a",
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

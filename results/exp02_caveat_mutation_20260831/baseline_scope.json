@@ -1,0 +1,13 @@
+{
+  "Dodson_CHERI_Macaroons": {
+    "fair_commonality": "delegation adds/restricts caveats without granting beyond the parent",
+    "not_claimed": "no reachable-set theorem is attributed to the baseline",
+    "source": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-963.pdf"
+  },
+  "SINT_v0_2": {
+    "fair_commonality": "attenuation-only delegation and physical constraints",
+    "not_claimed": "no IEC 62443 compiler or syntactic-to-physical proof is attributed to the baseline",
+    "source": "https://github.com/sint-ai/sint-protocol/blob/2461a911b8c3d7ed9da3f7662b33678f688eb826/WHITEPAPER.md"
+  },
+  "comparison": "The baseline schemas motivate restriction-only syntax. Exp-02 tests ZoneCap's additional compiler-to-physical refinement obligation; it does not claim that the baselines contain these injected mutants."
+}

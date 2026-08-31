@@ -1,0 +1,7 @@
+experiment=exp-02
+seed=none
+unsafe_mutants=14
+unsafe_mutants_killed=14
+unsafe_mutants_survived=0
+semantics_changing_monotone_mutants=2
+registered_c1_counterexamples=0

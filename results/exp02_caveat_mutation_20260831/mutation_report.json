@@ -1,0 +1,310 @@
+{
+  "dimensions": [
+    "source_zone",
+    "target_zone",
+    "conduit",
+    "asset",
+    "action",
+    "parameter",
+    "time",
+    "mode",
+    "pre_action_sequence"
+  ],
+  "finite_action_universe_size": 19683,
+  "killed": [
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one_step_child_state": 13122,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an amplifying child is accepted when one subset check is omitted",
+      "mutant": "validator_skips_source_zone"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one_step_child_state": 4374,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an amplifying child is accepted when one subset check is omitted",
+      "mutant": "validator_skips_target_zone"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one_step_child_state": 1458,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an amplifying child is accepted when one subset check is omitted",
+      "mutant": "validator_skips_conduit"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one_step_child_state": 486,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an amplifying child is accepted when one subset check is omitted",
+      "mutant": "validator_skips_asset"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one_step_child_state": 162,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an amplifying child is accepted when one subset check is omitted",
+      "mutant": "validator_skips_action"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "one_step_child_state": 54,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an amplifying child is accepted when one subset check is omitted",
+      "mutant": "validator_skips_parameter"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "one_step_child_state": 18,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an amplifying child is accepted when one subset check is omitted",
+      "mutant": "validator_skips_time"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "one_step_child_state": 6,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an amplifying child is accepted when one subset check is omitted",
+      "mutant": "validator_skips_mode"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "one_step_child_state": 2,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an amplifying child is accepted when one subset check is omitted",
+      "mutant": "validator_skips_pre_action_sequence"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one_step_child_state": 13122,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "an empty delegated scope is interpreted as unrestricted",
+      "mutant": "empty_child_caveat_defaults_to_universe"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "one_step_child_state": 4374,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "a missing materialized child field resets rather than inherits",
+      "mutant": "missing_child_caveat_defaults_to_universe"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "one_step_child_state": 2,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "only delegated-token evaluation takes an allow fallback",
+      "mutant": "delegated_unknown_activates_default_allow"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "action_tuple": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        "one_step_child_state": 5,
+        "one_step_state_in_parent_reachable_set": false
+      },
+      "mechanism": "adding/narrowing positive caveats changes decision parity",
+      "mutant": "and_combiner_replaced_by_xor"
+    },
+    {
+      "class": "unsafe",
+      "counterexample": {
+        "injective_plant_says_attenuates": false,
+        "input_ignoring_plant_says_attenuates": true,
+        "plant_dependent_relation_detected": true,
+        "same_tokens": true
+      },
+      "mechanism": "the same token pair is classified differently when only the plant transition changes, violating syntax independence",
+      "mutant": "attenuation_defined_as_reachable_subset"
+    }
+  ],
+  "registered_child_authorized_actions": 1,
+  "registered_parent_authorized_actions": 512,
+  "survived": [
+    {
+      "child_authorized_actions": 19171,
+      "class": "semantics_changing_but_monotone",
+      "counterexample": null,
+      "mechanism": "positive set inclusion still preserves monotonicity, although the compiled policy no longer implements the registered conjunction",
+      "mutant": "and_combiner_replaced_by_or",
+      "parent_authorized_actions": 19682
+    },
+    {
+      "child_authorized_actions": 6561,
+      "class": "semantics_changing_but_monotone",
+      "counterexample": null,
+      "mechanism": "positive set inclusion still preserves monotonicity, although the compiled policy no longer implements the registered conjunction",
+      "mutant": "and_combiner_replaced_by_first_applicable",
+      "parent_authorized_actions": 13122
+    }
+  ],
+  "unsafe_mutants": 14,
+  "unsafe_mutants_killed": 14,
+  "unsafe_mutants_survived": 0
+}

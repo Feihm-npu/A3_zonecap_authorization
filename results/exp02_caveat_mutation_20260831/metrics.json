@@ -1,0 +1,14 @@
+{
+  "authority_dimensions_mutated": 9,
+  "claim": "C1",
+  "exp": "exp-02",
+  "finite_action_universe_size": 19683,
+  "minimal_counterexamples_retained": 14,
+  "registered_c1_counterexamples": 0,
+  "seed": null,
+  "semantics_changing_monotone_mutants": 2,
+  "unsafe_mutants": 14,
+  "unsafe_mutants_killed": 14,
+  "unsafe_mutants_survived": 0,
+  "unsafe_mutation_score": 1.0
+}

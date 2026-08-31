@@ -1,0 +1,18 @@
+{
+  "claim": "C1",
+  "dimensions": [
+    "source_zone",
+    "target_zone",
+    "conduit",
+    "asset",
+    "action",
+    "parameter",
+    "time",
+    "mode",
+    "pre_action_sequence"
+  ],
+  "exp": "exp-02",
+  "protocol": "Seedless finite mutation audit with an injective one-step plant; retain the first minimum-complexity child-only action for every unsafe mutant.",
+  "seed": null,
+  "universe": [0, 1, 2]
+}
