@@ -1,0 +1,15 @@
+{
+  "claim": "C2 sanity",
+  "compile_cases": 11,
+  "compile_expectation_mismatches": 0,
+  "decision_cases": 11,
+  "decision_expectation_mismatches": 0,
+  "exp": "exp-11",
+  "expected_allows": 4,
+  "expected_compile_rejections": 9,
+  "expected_compile_successes": 2,
+  "expected_count_mismatches": {},
+  "expected_denies": 7,
+  "seed": null,
+  "total_cases": 22
+}

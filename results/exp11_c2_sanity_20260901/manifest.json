@@ -1,0 +1,34 @@
+{
+  "git_head": "9c5a17ec505afa8e9cc524ad36d31a76a50afd91",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp11_c2_sanity.json": "3590630c5c4b6752e1823e69e4f78685583b76164338a5e5bc0310a7acb3dd53",
+    "src/zonecap/compiler.py": "0c96cd2eda5f29fc284f88c6c9e741ddc78347a04f70b8432554ef695d6c44bd",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp11.py": "f19c8311144481df4af9b930fe1612da425dc22ec15137b16ac1f5d6f1b175bc",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_compiler.py": "501d613f03ca27342a9c37d6f5a8e9721812f8a6aea92202d0d31662adb47a18",
+    "tests/test_exp11.py": "60876652ed614c7f98f0fe670ef40f22f449f711e520e36fca85892ea048064d"
+  },
+  "outputs": {
+    "cases.json": "417e960a00982be25c8340496a23b077242942149ef5796edeed512004938d3e",
+    "command.txt": "6703a76183c4090eee7e3f7e17fd6034675d88857b0a1db5e6c583df186d0eee",
+    "config.json": "2d0c8f314c89382702e14f5c7e527b8abfc9f40cc4901fdf4be05a5c771255aa",
+    "fixtures/action_outside_conduit.json": "dd0bd145a9b1c44835ffde8a9a759b0a8d2697519650f90063499e7ff587fc43",
+    "fixtures/asset_outside_conduit.json": "e6088b013503f5a7706cbf051bd96df9d3113138e7a146949cc8156edff665c8",
+    "fixtures/duplicate_conduit.json": "48171f62fdc7b1175fbfbe210143a426bec03ccafb2314c72ba41136ae33ff03",
+    "fixtures/duplicate_zone.json": "4c0a1b906d554da1281b1685b217f40c1a346a7d976f402ceab07315bcf88c00",
+    "fixtures/empty_asset_and_action_scopes.json": "0d599a4d1d02ddd9268b3406a260b613bf1538eb2f15773a2995819c5bb6f9a5",
+    "fixtures/parameter_exceeds_conduit.json": "b2c79209a75e2be046ba7fdcc91cfa87a5d56716c2b5aadbb5f70ba5b46b65c9",
+    "fixtures/unknown_conduit.json": "3bc48ccb29804329fa56f8526c0702445b31ff4d8302ec00b45570bf456eeab5",
+    "fixtures/unknown_source_zone.json": "9a4baac1b32730b8f0ed1baa899cf9de911a82908b6d99209b97ab1d21b89450",
+    "fixtures/unknown_target_zone.json": "6e524761f67e79dd4b6164e499cba43a37c64325958cfa268d95f9e3e0d3bf7e",
+    "fixtures/valid_compile.json": "f5b0be31e437809a3b03063ec9869f180926a271909483ab10eaeff6660f7802",
+    "fixtures/wrong_conduit_endpoints.json": "a5f85ba84dabeda73bbdf693f3a7f2bfc6f50a8b4056480306999112002c9e8f",
+    "log.txt": "b6f8eba1af774590227835536796d95a060bfd8f4e743e94d58387f9888b5ff9",
+    "metrics.json": "b43128a4987db83a8a5c0611b423ae7c411a7e7a8d0b3f0027d4b2c69dd46a86",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345"
+  },
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

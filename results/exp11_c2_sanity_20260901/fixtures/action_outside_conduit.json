@@ -1,0 +1,66 @@
+{
+  "conduits": [
+    {
+      "actions": [
+        "read"
+      ],
+      "assets": [
+        "asset"
+      ],
+      "id": "source_to_target",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "source",
+      "target": "target"
+    }
+  ],
+  "name": "exp11_sanity",
+  "plant_1d": {
+    "a": 1,
+    "b": 1,
+    "disturbance": [
+      0,
+      0
+    ],
+    "initial_state": [
+      0,
+      0
+    ]
+  },
+  "policies": [
+    {
+      "actions": [
+        "write"
+      ],
+      "assets": [
+        "asset"
+      ],
+      "conduit": "source_to_target",
+      "id": "policy",
+      "issuer": "issuer",
+      "modes": [
+        "normal"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "source",
+      "subject": "subject",
+      "target_zone": "target",
+      "ticks": [
+        100,
+        200
+      ]
+    }
+  ],
+  "zones": [
+    "source",
+    "target"
+  ]
+}

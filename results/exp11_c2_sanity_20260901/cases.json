@@ -1,0 +1,171 @@
+{
+  "compile_cases": [
+    {
+      "case": "valid_compile",
+      "error": null,
+      "expectation_match": true,
+      "expected_error_contains": null,
+      "expected_success": true,
+      "success": true
+    },
+    {
+      "case": "duplicate_zone",
+      "error": "duplicate zone id",
+      "expectation_match": true,
+      "expected_error_contains": "duplicate zone",
+      "expected_success": false,
+      "success": false
+    },
+    {
+      "case": "duplicate_conduit",
+      "error": "duplicate conduit id",
+      "expectation_match": true,
+      "expected_error_contains": "duplicate conduit",
+      "expected_success": false,
+      "success": false
+    },
+    {
+      "case": "unknown_source_zone",
+      "error": "policy: unknown source or target zone",
+      "expectation_match": true,
+      "expected_error_contains": "unknown source or target zone",
+      "expected_success": false,
+      "success": false
+    },
+    {
+      "case": "unknown_target_zone",
+      "error": "policy: unknown source or target zone",
+      "expectation_match": true,
+      "expected_error_contains": "unknown source or target zone",
+      "expected_success": false,
+      "success": false
+    },
+    {
+      "case": "unknown_conduit",
+      "error": "policy: unknown conduit 'unknown'",
+      "expectation_match": true,
+      "expected_error_contains": "unknown conduit",
+      "expected_success": false,
+      "success": false
+    },
+    {
+      "case": "wrong_conduit_endpoints",
+      "error": "policy: conduit endpoints do not match policy",
+      "expectation_match": true,
+      "expected_error_contains": "endpoints do not match",
+      "expected_success": false,
+      "success": false
+    },
+    {
+      "case": "asset_outside_conduit",
+      "error": "policy: asset not carried by conduit",
+      "expectation_match": true,
+      "expected_error_contains": "asset not carried",
+      "expected_success": false,
+      "success": false
+    },
+    {
+      "case": "action_outside_conduit",
+      "error": "policy: action not permitted by conduit",
+      "expectation_match": true,
+      "expected_error_contains": "action not permitted",
+      "expected_success": false,
+      "success": false
+    },
+    {
+      "case": "parameter_exceeds_conduit",
+      "error": "policy: parameter exceeds conduit envelope",
+      "expectation_match": true,
+      "expected_error_contains": "parameter exceeds",
+      "expected_success": false,
+      "success": false
+    },
+    {
+      "case": "empty_asset_and_action_scopes",
+      "error": null,
+      "expectation_match": true,
+      "expected_error_contains": null,
+      "expected_success": true,
+      "success": true
+    }
+  ],
+  "decision_cases": [
+    {
+      "case": "parameter_low_boundary",
+      "effect": "allow",
+      "expectation_match": true,
+      "expected_effect": "allow",
+      "reason": "request satisfies the effective capability"
+    },
+    {
+      "case": "parameter_high_boundary",
+      "effect": "allow",
+      "expectation_match": true,
+      "expected_effect": "allow",
+      "reason": "request satisfies the effective capability"
+    },
+    {
+      "case": "parameter_below_boundary",
+      "effect": "deny",
+      "expectation_match": true,
+      "expected_effect": "deny",
+      "reason": "parameter outside token envelope"
+    },
+    {
+      "case": "parameter_above_boundary",
+      "effect": "deny",
+      "expectation_match": true,
+      "expected_effect": "deny",
+      "reason": "parameter outside token envelope"
+    },
+    {
+      "case": "tick_low_boundary",
+      "effect": "allow",
+      "expectation_match": true,
+      "expected_effect": "allow",
+      "reason": "request satisfies the effective capability"
+    },
+    {
+      "case": "tick_high_boundary",
+      "effect": "allow",
+      "expectation_match": true,
+      "expected_effect": "allow",
+      "reason": "request satisfies the effective capability"
+    },
+    {
+      "case": "before_time_window",
+      "effect": "deny",
+      "expectation_match": true,
+      "expected_effect": "deny",
+      "reason": "outside time window"
+    },
+    {
+      "case": "expired_window",
+      "effect": "deny",
+      "expectation_match": true,
+      "expected_effect": "deny",
+      "reason": "outside time window"
+    },
+    {
+      "case": "wrong_mode",
+      "effect": "deny",
+      "expectation_match": true,
+      "expected_effect": "deny",
+      "reason": "mode not authorized"
+    },
+    {
+      "case": "missing_history",
+      "effect": "deny",
+      "expectation_match": true,
+      "expected_effect": "deny",
+      "reason": "pre-action sequence unsatisfied"
+    },
+    {
+      "case": "empty_scope_request",
+      "effect": "deny",
+      "expectation_match": true,
+      "expected_effect": "deny",
+      "reason": "asset mismatch"
+    }
+  ]
+}
