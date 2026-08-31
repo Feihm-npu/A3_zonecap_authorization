@@ -1,0 +1,46 @@
+{
+  "frozen_at": "2026-09-01T00:58:12+08:00",
+  "protocol_status": "frozen before policy-table encoding, request generation, oracle execution, or compiler execution",
+  "sources": [
+    {
+      "architecture": "held-out A",
+      "title": "Deploying CIP Security within a Converged Plantwide Ethernet Architecture",
+      "document_id": "ENET-TD022A-EN-P",
+      "publisher_copy": "Rockwell Automation official literature server; the guide is co-authored with Cisco and is the same CPwE/CIP Security reference named in PLAN.md",
+      "planned_cisco_url": "https://www.cisco.com/c/en/us/td/docs/solutions/Verticals/CPwE/5-1/CIP_Security/DIG/",
+      "retrieved_url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/td/enet-td022_-en-p.pdf",
+      "retrieval_note": "Cisco's public HTML/search entry remained discoverable, but direct CLI retrieval returned HTTP 403; the official Rockwell Automation publisher copy was therefore frozen. This substitution was logged before held-out execution.",
+      "file": "sources/cpwe_cip_security_enet_td022_en_p.pdf",
+      "bytes": 17745036,
+      "sha256": "1e5b47ee25dad8c7c4e534dd110ab54418f50b99ad8b5f932cad28475c48296b",
+      "pages": 125,
+      "document_created": "2020-05-19T15:57:41+08:00"
+    },
+    {
+      "architecture": "held-out B",
+      "title": "Zoning and Conduits for Railways",
+      "publisher": "European Union Agency for Cybersecurity (ENISA)",
+      "publication_date": "2022-02-28",
+      "retrieved_url": "https://www.enisa.europa.eu/sites/default/files/publications/Zoning%20and%20Conduits%20for%20Railways%20-%20Security%20Architecture.pdf",
+      "file": "sources/enisa_rail_zoning_2022.pdf",
+      "bytes": 3155100,
+      "sha256": "946f0d7b60fbfa556d1a88052de8c9a4be410b61984bede33f0533d3f9e40e8f",
+      "pages": 59,
+      "document_created": "2022-03-18T18:26:23+08:00"
+    }
+  ],
+  "derived_files": {
+    "method": "pdftotext -layout and pdftoppm 22.02.0 at 160 dpi; derived files are for manual encoding and are not independent sources",
+    "files": {
+      "sources/cpwe_cip_security_enet_td022_en_p.txt": "8da42bcb947544a6f69019deab01caa8435fc2f0ddfe33a00d1d52e3fc2f0462",
+      "sources/enisa_rail_zoning_2022.txt": "c33f7e4948cf47754d79c52093b3fc5c2022835b03ca21e8d9d668631a4b8ce2",
+      "sources/pages/cisco_p013.png": "7495b41e5d00c16b72c38bcea44aced4b802f6e7474c44110923ad793506693f",
+      "sources/pages/cisco-056.png": "f270f15dc49ffe102b124a1d5914c33883d954504857affece9995b31afc48e5",
+      "sources/pages/cisco-057.png": "1402b5f7eed04b2db284e39355481ac39617fd813bb97dcf5593e6956945ce1a",
+      "sources/pages/enisa-20.png": "ada004e4e06659aed8c2300d2ce88cbdb3796ebe95eca581a70b89b8ada107bf",
+      "sources/pages/enisa-21.png": "07c1119a7b6e8857e57ed6fa58d57d379fcdfb3fa2c51491b2638eb6b54b93ef",
+      "sources/pages/enisa-30.png": "637246d645ec1510a7fd153c8916a5c662a634a9f601a59936d2edf6faacef58",
+      "sources/pages/enisa-31.png": "81e5f340d1d3ce025e839f8f857152dde560a29c77406ca38a3110a7e37361e6"
+    }
+  }
+}

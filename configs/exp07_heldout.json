@@ -1,0 +1,56 @@
+{
+  "exp": "exp-07",
+  "claim": "C2",
+  "seed": null,
+  "run_id": "exp07_heldout_equivalence_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp07 --config configs/exp07_heldout.json --output-dir results/exp07_heldout_equivalence_20260901",
+  "policy_table": "research/heldout/exp07/policy_tables.json",
+  "source_manifest": "research/heldout/exp07/source_manifest.json",
+  "encoding_protocol": "research/heldout/exp07/ENCODING_PROTOCOL.md",
+  "frozen_hashes": {
+    "policy_table_sha256": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "source_manifest_sha256": "8d56c432897d23a5fbaad43a93e8d2ea845ec0b40eb0df29bd1d40fb881f4747",
+    "encoding_protocol_sha256": "04306424e8db1658c8a5b38d4732b180e9a688f013d4f29d62d117421162ad70",
+    "code": {
+      "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+      "src/zonecap/compiler.py": "7edbaaaf7b405fe4d141aba9fac3a08699708defb51e7c97a078c2102d7fcff5",
+      "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+      "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+      "src/zonecap/exp07_oracle.py": "a8f51578655e68a1cb5350bf1c88ef98b0b52dc0555e98f67c9865e3020f1da3",
+      "src/zonecap/exp07.py": "d5a0398a6554fb481032bd9d969ee2cb88efc73e068fab7ee0d441cf4d301e63",
+      "tests/test_exp07.py": "e616df95d1f64f3ff6751e6ef0c61d7f26873209e443066542be75af0e2b5422"
+    }
+  },
+  "expected_counts": {
+    "root_grants": 42,
+    "delegated_scopes": 84,
+    "valid_cases": 4536,
+    "mutation_cases": 54432,
+    "total_cases": 58968
+  },
+  "registered_mutations": [
+    "subject",
+    "source_zone",
+    "target_zone",
+    "conduit",
+    "asset",
+    "action",
+    "parameter_low",
+    "parameter_high",
+    "tick_low",
+    "tick_high",
+    "mode",
+    "history"
+  ],
+  "baselines": [
+    "OPC UA role projection",
+    "PLC ABAC functional projection"
+  ],
+  "pass_criteria": {
+    "compiler_oracle_mismatches": 0,
+    "oracle_expectation_mismatches": 0,
+    "delegation_dimension_failures": 0,
+    "unsupported_decision_constructs": 0,
+    "too_good_audit_passed": true
+  }
+}

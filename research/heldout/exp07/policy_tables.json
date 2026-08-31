@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "encoded_at": "2026-09-01T01:02:00+08:00",
+  "lock_status": "locked before oracle, generator, compiler, or held-out execution",
+  "evaluation_overlay": {
+    "actions": ["read", "write"],
+    "parameter": [0, 100],
+    "ticks": [100, 200],
+    "modes": ["normal", "maintenance"],
+    "required_sequence": ["authenticate"],
+    "valid_parameter_values": [0, 50, 100],
+    "valid_tick_values": [100, 150, 200],
+    "valid_histories": [
+      ["authenticate"],
+      ["connect", "authenticate", "audit"]
+    ],
+    "invalid_mutations": {
+      "subject": "unauthorized_subject",
+      "source_zone": "outside_source_zone",
+      "target_zone": "outside_target_zone",
+      "conduit": "undefined_conduit",
+      "asset": "outside_asset",
+      "action": "outside_action",
+      "parameter_low": -1,
+      "parameter_high": 101,
+      "tick_low": 99,
+      "tick_high": 201,
+      "mode": "emergency",
+      "history": []
+    }
+  },
+  "architectures": [
+    {
+      "id": "cpwe_cip_security",
+      "title": "CPwE CIP Security IACS Security Matrix",
+      "source_file": "sources/cpwe_cip_security_enet_td022_en_p.pdf",
+      "source_evidence": [
+        "Figure 2-23, PDF page 56 / printed page 2-39: inter-zone conduit types and explicit-conduit requirement",
+        "Figure 2-24, PDF page 57 / printed page 2-40: six-by-six Permit/Default-Permit/Deny matrix"
+      ],
+      "zones": [
+        {"id": "site_ops", "asset": "site_ops_services"},
+        {"id": "safety", "asset": "safety_controller"},
+        {"id": "blend_fill", "asset": "blend_fill_controller"},
+        {"id": "clean_in_place", "asset": "clean_in_place_controller"},
+        {"id": "rapid_mix", "asset": "rapid_mix_controller"},
+        {"id": "oem", "asset": "oem_controller"}
+      ],
+      "grants": [
+        {"source_zone": "site_ops", "target_zone": "site_ops", "conduit": "c_site_ops__site_ops"},
+        {"source_zone": "site_ops", "target_zone": "safety", "conduit": "c_site_ops__safety"},
+        {"source_zone": "site_ops", "target_zone": "blend_fill", "conduit": "c_site_ops__blend_fill"},
+        {"source_zone": "site_ops", "target_zone": "clean_in_place", "conduit": "c_site_ops__clean_in_place"},
+        {"source_zone": "site_ops", "target_zone": "rapid_mix", "conduit": "c_site_ops__rapid_mix"},
+        {"source_zone": "site_ops", "target_zone": "oem", "conduit": "c_site_ops__oem"},
+
+        {"source_zone": "safety", "target_zone": "site_ops", "conduit": "c_safety__site_ops"},
+        {"source_zone": "safety", "target_zone": "safety", "conduit": "c_safety__safety"},
+        {"source_zone": "safety", "target_zone": "blend_fill", "conduit": "c_safety__blend_fill"},
+        {"source_zone": "safety", "target_zone": "clean_in_place", "conduit": "c_safety__clean_in_place"},
+        {"source_zone": "safety", "target_zone": "rapid_mix", "conduit": "c_safety__rapid_mix"},
+
+        {"source_zone": "blend_fill", "target_zone": "site_ops", "conduit": "c_blend_fill__site_ops"},
+        {"source_zone": "blend_fill", "target_zone": "safety", "conduit": "c_blend_fill__safety"},
+        {"source_zone": "blend_fill", "target_zone": "blend_fill", "conduit": "c_blend_fill__blend_fill"},
+        {"source_zone": "blend_fill", "target_zone": "clean_in_place", "conduit": "c_blend_fill__clean_in_place"},
+        {"source_zone": "blend_fill", "target_zone": "rapid_mix", "conduit": "c_blend_fill__rapid_mix"},
+        {"source_zone": "blend_fill", "target_zone": "oem", "conduit": "c_blend_fill__oem"},
+
+        {"source_zone": "clean_in_place", "target_zone": "site_ops", "conduit": "c_clean_in_place__site_ops"},
+        {"source_zone": "clean_in_place", "target_zone": "safety", "conduit": "c_clean_in_place__safety"},
+        {"source_zone": "clean_in_place", "target_zone": "blend_fill", "conduit": "c_clean_in_place__blend_fill"},
+        {"source_zone": "clean_in_place", "target_zone": "clean_in_place", "conduit": "c_clean_in_place__clean_in_place"},
+        {"source_zone": "clean_in_place", "target_zone": "rapid_mix", "conduit": "c_clean_in_place__rapid_mix"},
+
+        {"source_zone": "rapid_mix", "target_zone": "site_ops", "conduit": "c_rapid_mix__site_ops"},
+        {"source_zone": "rapid_mix", "target_zone": "safety", "conduit": "c_rapid_mix__safety"},
+        {"source_zone": "rapid_mix", "target_zone": "blend_fill", "conduit": "c_rapid_mix__blend_fill"},
+        {"source_zone": "rapid_mix", "target_zone": "clean_in_place", "conduit": "c_rapid_mix__clean_in_place"},
+        {"source_zone": "rapid_mix", "target_zone": "rapid_mix", "conduit": "c_rapid_mix__rapid_mix"},
+
+        {"source_zone": "oem", "target_zone": "site_ops", "conduit": "c_oem__site_ops"},
+        {"source_zone": "oem", "target_zone": "blend_fill", "conduit": "c_oem__blend_fill"},
+        {"source_zone": "oem", "target_zone": "oem", "conduit": "c_oem__oem"}
+      ],
+      "source_denials": [
+        ["safety", "oem"],
+        ["clean_in_place", "oem"],
+        ["rapid_mix", "oem"],
+        ["oem", "safety"],
+        ["oem", "clean_in_place"],
+        ["oem", "rapid_mix"]
+      ],
+      "unsupported_decision_constructs": [],
+      "excluded_metadata": [
+        "certificate, HMAC, encryption, and Trusted-IP mechanism choice",
+        "network redundancy and VLAN topology",
+        "security-level metadata that does not alter the selected Permit/Deny cells"
+      ]
+    },
+    {
+      "id": "enisa_rail_signalling",
+      "title": "ENISA landside railway signalling zone/conduit subset",
+      "source_file": "sources/enisa_rail_zoning_2022.pdf",
+      "source_evidence": [
+        "Printed pages 27-28: communication-matrix fail-closed rules and +/R/- meanings",
+        "Figure 10, PDF page 30 / printed page 29: individual railway zone model and directly drawn signalling conduits"
+      ],
+      "zones": [
+        {"id": "business_network", "asset": "business_services", "criticality": "ZC-L3"},
+        {"id": "industrial_dmz", "asset": "file_transfer_gateway", "criticality": "ZC-L4"},
+        {"id": "rail_control", "asset": "rail_control_server", "criticality": "ZC-L4"},
+        {"id": "automation_head", "asset": "automation_head_controller", "criticality": "ZC-L5"},
+        {"id": "interlock", "asset": "interlock_controller", "criticality": "ZC-L5"},
+        {"id": "rbc", "asset": "rbc_controller", "criticality": "ZC-L5"},
+        {"id": "rail_crossing", "asset": "crossing_controller", "criticality": "ZC-L4"}
+      ],
+      "grants": [
+        {"source_zone": "business_network", "target_zone": "industrial_dmz", "conduit": "c_business_network__industrial_dmz"},
+        {"source_zone": "industrial_dmz", "target_zone": "business_network", "conduit": "c_industrial_dmz__business_network"},
+        {"source_zone": "industrial_dmz", "target_zone": "rail_control", "conduit": "c_industrial_dmz__rail_control"},
+        {"source_zone": "rail_control", "target_zone": "industrial_dmz", "conduit": "c_rail_control__industrial_dmz"},
+        {"source_zone": "rail_control", "target_zone": "automation_head", "conduit": "c_rail_control__automation_head"},
+        {"source_zone": "automation_head", "target_zone": "rail_control", "conduit": "c_automation_head__rail_control"},
+        {"source_zone": "automation_head", "target_zone": "interlock", "conduit": "c_automation_head__interlock"},
+        {"source_zone": "interlock", "target_zone": "automation_head", "conduit": "c_interlock__automation_head"},
+        {"source_zone": "automation_head", "target_zone": "rbc", "conduit": "c_automation_head__rbc"},
+        {"source_zone": "rbc", "target_zone": "automation_head", "conduit": "c_rbc__automation_head"},
+        {"source_zone": "automation_head", "target_zone": "rail_crossing", "conduit": "c_automation_head__rail_crossing"},
+        {"source_zone": "rail_crossing", "target_zone": "automation_head", "conduit": "c_rail_crossing__automation_head"}
+      ],
+      "source_denials": "all directed pairs not listed in grants, including all skipped-layer paths",
+      "unsupported_decision_constructs": [],
+      "excluded_metadata": [
+        "optional and out-of-scope enterprise, external, rolling-stock, energy, telecom, tunnel, and redundant paths",
+        "physical versus logical firewall realization",
+        "VPN, data-diode, and security-level implementation metadata",
+        "company-specific R read-only cells because the public report does not assign them to the selected Figure 10 links"
+      ]
+    }
+  ]
+}
