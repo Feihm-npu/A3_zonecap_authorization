@@ -1,0 +1,33 @@
+{
+  "locked_at": "2026-09-01T01:31:00+08:00",
+  "representation": "A multi-conduit path is a conjunction of independently compiled hop capabilities; the end-to-end path is allowed only if every hop allows.",
+  "paths": [
+    {
+      "id": "cpwe_oem_to_safety_via_blend_fill",
+      "architecture": "cpwe_cip_security",
+      "source_zone": "oem",
+      "target_zone": "safety",
+      "direct_pair_must_be_absent": true,
+      "hop_grant_ids": ["g028", "g012"]
+    },
+    {
+      "id": "enisa_business_to_interlock_layered",
+      "architecture": "enisa_rail_signalling",
+      "source_zone": "business_network",
+      "target_zone": "interlock",
+      "direct_pair_must_be_absent": true,
+      "hop_grant_ids": ["g000", "g002", "g004", "g006"]
+    }
+  ],
+  "delegation_transitions": [[0, 1], [1, 2]],
+  "widening_dimensions": [
+    "zone",
+    "conduit",
+    "asset",
+    "action",
+    "parameter",
+    "time",
+    "mode",
+    "pre_action_sequence"
+  ]
+}

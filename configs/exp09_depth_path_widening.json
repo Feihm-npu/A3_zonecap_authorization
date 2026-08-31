@@ -1,0 +1,42 @@
+{
+  "exp": "exp-09",
+  "claim": "C2 / alternative A2",
+  "seed": null,
+  "run_id": "exp09_depth_path_widening_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp09 --config configs/exp09_depth_path_widening.json --output-dir results/exp09_depth_path_widening_20260901",
+  "policy_table": "research/heldout/exp07/policy_tables.json",
+  "path_specs": "research/heldout/exp09/path_specs.json",
+  "frozen_hashes": {
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "research/heldout/exp09/path_specs.json": "419c977779321ca82e4da9ce4d3274bc05ace24396f8c49345d76906ec7c15fd",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "src/zonecap/compiler.py": "7edbaaaf7b405fe4d141aba9fac3a08699708defb51e7c97a078c2102d7fcff5",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp07.py": "d5a0398a6554fb481032bd9d969ee2cb88efc73e068fab7ee0d441cf4d301e63",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/exp07_oracle.py": "a8f51578655e68a1cb5350bf1c88ef98b0b52dc0555e98f67c9865e3020f1da3",
+    "src/zonecap/exp09.py": "7c2107b96bee908d4a2559e5f885bdd35ce7d031a139d8fca510217ef2e1e3d4",
+    "tests/test_exp09.py": "02ba9650f148d74360a2eb274871be75f5116de38fad31f8d76a2280cfbb86d9"
+  },
+  "expected_counts": {
+    "multi_conduit_paths": 2,
+    "multi_conduit_path_cases": 24,
+    "multi_conduit_path_happy_cases": 6,
+    "multi_conduit_path_negative_cases": 18,
+    "depth0_baseline_path_cases": 8,
+    "depth0_baseline_delegation_dimension_checks": 0,
+    "legal_delegation_edges": 84,
+    "legal_delegation_dimension_checks": 672,
+    "widening_attempts": 32,
+    "accepted_widenings": 0,
+    "widening_dimensions": 8
+  },
+  "pass_criteria": {
+    "path_compiler_oracle_mismatches": 0,
+    "path_expectation_mismatches": 0,
+    "accepted_widenings": 0,
+    "widening_attempts_with_wrong_failed_dimension": 0,
+    "legal_delegation_relation_failures": 0,
+    "legal_delegation_dimension_failures": 0
+  }
+}
