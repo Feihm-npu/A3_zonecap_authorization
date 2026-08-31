@@ -1,0 +1,158 @@
+[
+  {
+    "compiler_allow": true,
+    "compiler_effect": "allow",
+    "compiler_oracle_match": true,
+    "compiler_reason": "request satisfies the effective capability",
+    "expected_allow": true,
+    "id": "cpwe_d0_happy",
+    "oracle_allow": true,
+    "oracle_expectation_match": true,
+    "request": {
+      "action": "read",
+      "asset": "site_ops_services",
+      "conduit": "c_site_ops__site_ops",
+      "history": [
+        "authenticate"
+      ],
+      "mode": "normal",
+      "source_zone": "site_ops",
+      "subject": "subject:cpwe_cip_security:g000:d0",
+      "target_zone": "site_ops",
+      "tick": 150,
+      "value": 50
+    },
+    "scope_id": "cpwe_cip_security:g000:d0"
+  },
+  {
+    "compiler_allow": true,
+    "compiler_effect": "allow",
+    "compiler_oracle_match": true,
+    "compiler_reason": "request satisfies the effective capability",
+    "expected_allow": true,
+    "id": "cpwe_d1_happy",
+    "oracle_allow": true,
+    "oracle_expectation_match": true,
+    "request": {
+      "action": "read",
+      "asset": "site_ops_services",
+      "conduit": "c_site_ops__site_ops",
+      "history": [
+        "authenticate",
+        "authorize"
+      ],
+      "mode": "normal",
+      "source_zone": "site_ops",
+      "subject": "subject:cpwe_cip_security:g000:d1",
+      "target_zone": "site_ops",
+      "tick": 150,
+      "value": 50
+    },
+    "scope_id": "cpwe_cip_security:g000:d1"
+  },
+  {
+    "compiler_allow": true,
+    "compiler_effect": "allow",
+    "compiler_oracle_match": true,
+    "compiler_reason": "request satisfies the effective capability",
+    "expected_allow": true,
+    "id": "cpwe_d2_happy",
+    "oracle_allow": true,
+    "oracle_expectation_match": true,
+    "request": {
+      "action": "read",
+      "asset": "site_ops_services",
+      "conduit": "c_site_ops__site_ops",
+      "history": [
+        "authenticate",
+        "authorize",
+        "inspect"
+      ],
+      "mode": "normal",
+      "source_zone": "site_ops",
+      "subject": "subject:cpwe_cip_security:g000:d2",
+      "target_zone": "site_ops",
+      "tick": 150,
+      "value": 50
+    },
+    "scope_id": "cpwe_cip_security:g000:d2"
+  },
+  {
+    "compiler_allow": true,
+    "compiler_effect": "allow",
+    "compiler_oracle_match": true,
+    "compiler_reason": "request satisfies the effective capability",
+    "expected_allow": true,
+    "id": "enisa_d0_happy",
+    "oracle_allow": true,
+    "oracle_expectation_match": true,
+    "request": {
+      "action": "read",
+      "asset": "file_transfer_gateway",
+      "conduit": "c_business_network__industrial_dmz",
+      "history": [
+        "authenticate"
+      ],
+      "mode": "normal",
+      "source_zone": "business_network",
+      "subject": "subject:enisa_rail_signalling:g000:d0",
+      "target_zone": "industrial_dmz",
+      "tick": 150,
+      "value": 50
+    },
+    "scope_id": "enisa_rail_signalling:g000:d0"
+  },
+  {
+    "compiler_allow": true,
+    "compiler_effect": "allow",
+    "compiler_oracle_match": true,
+    "compiler_reason": "request satisfies the effective capability",
+    "expected_allow": true,
+    "id": "enisa_d1_happy",
+    "oracle_allow": true,
+    "oracle_expectation_match": true,
+    "request": {
+      "action": "read",
+      "asset": "file_transfer_gateway",
+      "conduit": "c_business_network__industrial_dmz",
+      "history": [
+        "authenticate",
+        "authorize"
+      ],
+      "mode": "normal",
+      "source_zone": "business_network",
+      "subject": "subject:enisa_rail_signalling:g000:d1",
+      "target_zone": "industrial_dmz",
+      "tick": 150,
+      "value": 50
+    },
+    "scope_id": "enisa_rail_signalling:g000:d1"
+  },
+  {
+    "compiler_allow": true,
+    "compiler_effect": "allow",
+    "compiler_oracle_match": true,
+    "compiler_reason": "request satisfies the effective capability",
+    "expected_allow": true,
+    "id": "enisa_d2_happy",
+    "oracle_allow": true,
+    "oracle_expectation_match": true,
+    "request": {
+      "action": "read",
+      "asset": "file_transfer_gateway",
+      "conduit": "c_business_network__industrial_dmz",
+      "history": [
+        "authenticate",
+        "authorize",
+        "inspect"
+      ],
+      "mode": "normal",
+      "source_zone": "business_network",
+      "subject": "subject:enisa_rail_signalling:g000:d2",
+      "target_zone": "industrial_dmz",
+      "tick": 150,
+      "value": 50
+    },
+    "scope_id": "enisa_rail_signalling:g000:d2"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "claim": "C2 / alternative A1",
+  "delegation_relation_failures": 0,
+  "exp": "exp-08",
+  "expected_count_mismatches": {},
+  "generated_cases": 58968,
+  "generated_check_removal_mutants_killed": 10,
+  "generated_compiler_oracle_mismatches": 0,
+  "generated_mutation_cases": 54432,
+  "generated_mutation_categories": 12,
+  "generated_oracle_expectation_mismatches": 0,
+  "generated_valid_cases": 4536,
+  "handwritten_fixture_cases": 6,
+  "handwritten_fixture_check_removal_mutants_killed": 0,
+  "handwritten_fixture_compiler_oracle_mismatches": 0,
+  "handwritten_fixture_oracle_expectation_mismatches": 0,
+  "provenance_probe_failures": 0,
+  "provenance_probes": 4,
+  "registered_check_removal_mutants": 10,
+  "seed": null,
+  "source_table_delegated_scopes": 84,
+  "source_table_root_grants": 42
+}

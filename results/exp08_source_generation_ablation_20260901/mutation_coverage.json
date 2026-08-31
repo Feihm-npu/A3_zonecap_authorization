@@ -1,0 +1,86 @@
+{
+  "generated_cross_product": {
+    "action": {
+      "detecting_cases": 4536,
+      "killed": true
+    },
+    "asset": {
+      "detecting_cases": 4536,
+      "killed": true
+    },
+    "conduit": {
+      "detecting_cases": 4536,
+      "killed": true
+    },
+    "mode": {
+      "detecting_cases": 4536,
+      "killed": true
+    },
+    "parameter": {
+      "detecting_cases": 9072,
+      "killed": true
+    },
+    "sequence": {
+      "detecting_cases": 4536,
+      "killed": true
+    },
+    "source_zone": {
+      "detecting_cases": 4536,
+      "killed": true
+    },
+    "subject": {
+      "detecting_cases": 4536,
+      "killed": true
+    },
+    "target_zone": {
+      "detecting_cases": 4536,
+      "killed": true
+    },
+    "time": {
+      "detecting_cases": 9072,
+      "killed": true
+    }
+  },
+  "handwritten_happy_paths": {
+    "action": {
+      "detecting_cases": 0,
+      "killed": false
+    },
+    "asset": {
+      "detecting_cases": 0,
+      "killed": false
+    },
+    "conduit": {
+      "detecting_cases": 0,
+      "killed": false
+    },
+    "mode": {
+      "detecting_cases": 0,
+      "killed": false
+    },
+    "parameter": {
+      "detecting_cases": 0,
+      "killed": false
+    },
+    "sequence": {
+      "detecting_cases": 0,
+      "killed": false
+    },
+    "source_zone": {
+      "detecting_cases": 0,
+      "killed": false
+    },
+    "subject": {
+      "detecting_cases": 0,
+      "killed": false
+    },
+    "target_zone": {
+      "detecting_cases": 0,
+      "killed": false
+    },
+    "time": {
+      "detecting_cases": 0,
+      "killed": false
+    }
+  }
+}

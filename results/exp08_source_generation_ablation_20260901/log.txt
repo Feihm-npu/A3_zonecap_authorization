@@ -1,0 +1,9 @@
+experiment=exp-08
+seed=none
+generated_cases=58968
+generated_compiler_oracle_mismatches=0
+generated_check_removal_mutants_killed=10/10
+handwritten_fixture_cases=6
+handwritten_fixture_compiler_oracle_mismatches=0
+handwritten_fixture_check_removal_mutants_killed=0/10
+provenance_probe_failures=0

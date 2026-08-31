@@ -1,0 +1,32 @@
+{
+  "git_head": "3b4dc02e6b3b9b380854a8fb1e6c9e1297de48b8",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp08_source_generation.json": "822de5d51a5ad1b10dbc6db713449f83bdf95fa53cb22dc2ecec2c410a251d2b",
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "research/heldout/exp08/handwritten_fixtures.json": "8f0ee3c8ac7d9bd336497f8f3e896245f5387aa7d44be548e5a0601ca601f11a",
+    "src/zonecap/compiler.py": "7edbaaaf7b405fe4d141aba9fac3a08699708defb51e7c97a078c2102d7fcff5",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp07.py": "d5a0398a6554fb481032bd9d969ee2cb88efc73e068fab7ee0d441cf4d301e63",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/exp07_oracle.py": "a8f51578655e68a1cb5350bf1c88ef98b0b52dc0555e98f67c9865e3020f1da3",
+    "src/zonecap/exp08.py": "c95de3ffcbf4e34d83fd18a1412f4d4c4283882ebb67ce08ccf1172f0d8e61ab",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_exp08.py": "457d741ef22e3a69b99c36d2948e897a8277fba52ed278c15de58ca2db4feaf1"
+  },
+  "outputs": {
+    "command.txt": "672dc152e48ffb3ad4169da34129ce7298cbb43cccdffebe6e974f23190b67e2",
+    "compiled_inputs/cpwe_cip_security.json": "53d63cbf764cba5b01afeb8c2b59a359362d2b2b0f8cd75577d83f320689a054",
+    "compiled_inputs/enisa_rail_signalling.json": "3df8f9bf7051f5a2c412b4c78d3967fe00dccfb142293d2fe3e25e16c395f154",
+    "config.json": "a303bebb39607b910a5de67729f2758b74e4b627155bbef32a30c014c3a3f2e3",
+    "fixture_decisions.json": "8e655ae1c7b5f98892872331396d31c9eda28f5ca1f0854e39144b87061e49f8",
+    "generated_summary.json": "fdc33b19d31874693a7e8ee20957f3602ffaaa8aa49f7c409bf0837032c59190",
+    "log.txt": "de670fb3c76e33668fd20a901a2509570cc1e815bd42dd24ecd06379fce7572d",
+    "metrics.json": "c7c8294426cf8c7f1aa86f5ddd96cc8b925c03cd8e8a05346d529b0a93c0a7e2",
+    "mutation_coverage.json": "37190f9706bfaf87ef76d8f47dee16fb8a0b29da3a0ee9cb7f0d4b0c4a2d8617",
+    "provenance_ablation.json": "cf7bda9fd1c25f7da95dfd98cbe872533da457eb3c2b89a5de631a8ff9a750a5",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345"
+  },
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

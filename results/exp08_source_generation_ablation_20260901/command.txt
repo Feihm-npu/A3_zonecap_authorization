@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp08 --config configs/exp08_source_generation.json --output-dir results/exp08_source_generation_ablation_20260901

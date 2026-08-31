@@ -1,0 +1,90 @@
+[
+  {
+    "architecture": "cpwe_cip_security",
+    "expected": {
+      "case_delta": 1404,
+      "delegated_delta": 2,
+      "removed_conduit_absent": true,
+      "root_delta": 1
+    },
+    "observed": {
+      "case_delta": 1404,
+      "delegated_delta": 2,
+      "removed_conduit_absent": true,
+      "root_delta": 1
+    },
+    "passed": true,
+    "probe": "remove_last_source_grant"
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "expected": {
+      "case_delta": 1404,
+      "delegated_delta": 2,
+      "root_delta": 1,
+      "sentinel_asset_propagated": true,
+      "sentinel_depths": [
+        0,
+        1,
+        2
+      ]
+    },
+    "observed": {
+      "case_delta": 1404,
+      "delegated_delta": 2,
+      "root_delta": 1,
+      "sentinel_asset_propagated": true,
+      "sentinel_depths": [
+        0,
+        1,
+        2
+      ]
+    },
+    "passed": true,
+    "probe": "add_sentinel_source_grant"
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "expected": {
+      "case_delta": 1404,
+      "delegated_delta": 2,
+      "removed_conduit_absent": true,
+      "root_delta": 1
+    },
+    "observed": {
+      "case_delta": 1404,
+      "delegated_delta": 2,
+      "removed_conduit_absent": true,
+      "root_delta": 1
+    },
+    "passed": true,
+    "probe": "remove_last_source_grant"
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "expected": {
+      "case_delta": 1404,
+      "delegated_delta": 2,
+      "root_delta": 1,
+      "sentinel_asset_propagated": true,
+      "sentinel_depths": [
+        0,
+        1,
+        2
+      ]
+    },
+    "observed": {
+      "case_delta": 1404,
+      "delegated_delta": 2,
+      "root_delta": 1,
+      "sentinel_asset_propagated": true,
+      "sentinel_depths": [
+        0,
+        1,
+        2
+      ]
+    },
+    "passed": true,
+    "probe": "add_sentinel_source_grant"
+  }
+]

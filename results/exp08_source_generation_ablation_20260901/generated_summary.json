@@ -1,0 +1,71 @@
+{
+  "counters": {
+    "cases": 58968,
+    "compiler_oracle_mismatches": 0,
+    "mutation_cases": 54432,
+    "oracle_expectation_mismatches": 0,
+    "valid_cases": 4536
+  },
+  "mutation_categories": {
+    "action": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "asset": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "conduit": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "history": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "mode": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "parameter_high": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "parameter_low": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "source_zone": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "subject": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "target_zone": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "tick_high": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "tick_low": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    }
+  }
+}
