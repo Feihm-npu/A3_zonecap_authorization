@@ -1,0 +1,18 @@
+{
+  "claim": "C1",
+  "configurations": 6,
+  "effect_binding_contract_violations": 0,
+  "effect_kinds_expected": 5,
+  "effect_kinds_observed": 5,
+  "exp": "exp-04",
+  "expectation_mismatches": 0,
+  "minimal_counterexamples_retained": 2,
+  "registered_c1_counterexamples": 0,
+  "removed_obligation_counterexamples_detected": 2,
+  "removed_obligations": 2,
+  "restored_configurations": 3,
+  "restored_reachable_state_inclusion_violations": 0,
+  "restored_trace_inclusion_violations": 0,
+  "seed": null,
+  "suppression_only_inclusion_violations": 0
+}

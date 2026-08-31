@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp04 --config results/exp04_effect_closure_20260831/config.json --output-dir results/exp04_effect_closure_20260831

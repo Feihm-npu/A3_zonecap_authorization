@@ -1,0 +1,12 @@
+{
+  "files": {
+    "research/effect_refinement_audit.md": "f04660a9972ab15fd57b07115c371d1069af1d2d0c06633a7a492cd4f25bba5b",
+    "results/exp04_effect_closure_20260831/config.json": "04bf556de546a443512c5fbb8ed24ca20792dd0e3a4fa586e728f3c7a336a2b2",
+    "src/zonecap/effects.py": "f3df0ef962912352660cda577e930d3d603bb987e5f1fe861600c83bb5b26ed5",
+    "src/zonecap/exp04.py": "bb5b19d90dac35453e45ab40c20f35d9262468d4dc578b509838b78cc672b453",
+    "tests/test_effects.py": "2af123a2e9b9ad8b6dcc25183b53b1255ddd4dc9dfeabd0798dd4e1ee1f24efc"
+  },
+  "git_head": "5a3e4d4a71a95cef1ac5e17d35594ed18d234a66",
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

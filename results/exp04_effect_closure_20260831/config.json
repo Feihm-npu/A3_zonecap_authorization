@@ -1,0 +1,13 @@
+{
+  "child_action_alphabet": ["0", "1/5", "2/5"],
+  "claim": "C1",
+  "exp": "exp-04",
+  "horizon": 4,
+  "parent_action_alphabet": ["0", "1/5", "2/5", "4/5", "1"],
+  "protocol": "Seedless complete action-trace enumeration with an injective trace-to-state plant; remove and restore rewrite and defer/hold closure separately.",
+  "safe_hold": "0",
+  "safe_rewrite": "2/5",
+  "seed": null,
+  "unsafe_hold": "-1",
+  "unsafe_rewrite": "3/2"
+}

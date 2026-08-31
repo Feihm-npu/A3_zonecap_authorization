@@ -1,0 +1,36 @@
+{
+  "contract_violations": [],
+  "effects_expected": 5,
+  "effects_observed": 5,
+  "observed": {
+    "allow": {
+      "effect": "allow",
+      "emitted": {
+        "operation": "set",
+        "value": 0.2
+      }
+    },
+    "attenuate": {
+      "effect": "attenuate",
+      "emitted": null
+    },
+    "defer": {
+      "effect": "defer",
+      "emitted": {
+        "operation": "set",
+        "value": 0.0
+      }
+    },
+    "deny": {
+      "effect": "deny",
+      "emitted": null
+    },
+    "rewrite": {
+      "effect": "rewrite",
+      "emitted": {
+        "operation": "set",
+        "value": 0.4
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+experiment=exp-04
+seed=none
+removed_obligations=2
+removed_obligation_counterexamples_detected=2
+restored_trace_inclusion_violations=0
+restored_reachable_state_inclusion_violations=0
+effect_kinds_observed=5
+effect_binding_contract_violations=0
+expectation_mismatches=0
+registered_c1_counterexamples=0

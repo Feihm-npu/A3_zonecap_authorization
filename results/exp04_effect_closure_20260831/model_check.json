@@ -1,0 +1,368 @@
+{
+  "configurations": [
+    {
+      "child_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5"
+      ],
+      "configuration": "suppression_only",
+      "expectation_matched": true,
+      "expected_violation": false,
+      "minimal_counterexample": null,
+      "observed_violation": false,
+      "parent_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5",
+        "4/5",
+        "1"
+      ],
+      "per_horizon": [
+        {
+          "child_traces": 1,
+          "horizon": 0,
+          "parent_traces": 1,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 3,
+          "horizon": 1,
+          "parent_traces": 5,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 9,
+          "horizon": 2,
+          "parent_traces": 25,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 27,
+          "horizon": 3,
+          "parent_traces": 125,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 81,
+          "horizon": 4,
+          "parent_traces": 625,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        }
+      ],
+      "reachable_state_inclusion_violations": 0,
+      "trace_inclusion_violations": 0
+    },
+    {
+      "child_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5",
+        "3/2"
+      ],
+      "configuration": "rewrite_obligation_removed",
+      "expectation_matched": true,
+      "expected_violation": true,
+      "minimal_counterexample": {
+        "child_only_state": 6,
+        "child_only_trace": [
+          "3/2"
+        ],
+        "horizon": 1
+      },
+      "observed_violation": true,
+      "parent_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5",
+        "4/5",
+        "1"
+      ],
+      "per_horizon": [
+        {
+          "child_traces": 1,
+          "horizon": 0,
+          "parent_traces": 1,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 4,
+          "horizon": 1,
+          "parent_traces": 5,
+          "reachable_state_inclusion_violations": 1,
+          "trace_inclusion_violations": 1
+        },
+        {
+          "child_traces": 16,
+          "horizon": 2,
+          "parent_traces": 25,
+          "reachable_state_inclusion_violations": 7,
+          "trace_inclusion_violations": 7
+        },
+        {
+          "child_traces": 64,
+          "horizon": 3,
+          "parent_traces": 125,
+          "reachable_state_inclusion_violations": 37,
+          "trace_inclusion_violations": 37
+        },
+        {
+          "child_traces": 256,
+          "horizon": 4,
+          "parent_traces": 625,
+          "reachable_state_inclusion_violations": 175,
+          "trace_inclusion_violations": 175
+        }
+      ],
+      "reachable_state_inclusion_violations": 220,
+      "trace_inclusion_violations": 220
+    },
+    {
+      "child_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5"
+      ],
+      "configuration": "rewrite_obligation_restored",
+      "expectation_matched": true,
+      "expected_violation": false,
+      "minimal_counterexample": null,
+      "observed_violation": false,
+      "parent_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5",
+        "4/5",
+        "1"
+      ],
+      "per_horizon": [
+        {
+          "child_traces": 1,
+          "horizon": 0,
+          "parent_traces": 1,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 3,
+          "horizon": 1,
+          "parent_traces": 5,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 9,
+          "horizon": 2,
+          "parent_traces": 25,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 27,
+          "horizon": 3,
+          "parent_traces": 125,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 81,
+          "horizon": 4,
+          "parent_traces": 625,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        }
+      ],
+      "reachable_state_inclusion_violations": 0,
+      "trace_inclusion_violations": 0
+    },
+    {
+      "child_action_alphabet": [
+        "-1",
+        "0",
+        "1/5",
+        "2/5"
+      ],
+      "configuration": "defer_stutter_obligation_removed",
+      "expectation_matched": true,
+      "expected_violation": true,
+      "minimal_counterexample": {
+        "child_only_state": 1,
+        "child_only_trace": [
+          "-1"
+        ],
+        "horizon": 1
+      },
+      "observed_violation": true,
+      "parent_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5",
+        "4/5",
+        "1"
+      ],
+      "per_horizon": [
+        {
+          "child_traces": 1,
+          "horizon": 0,
+          "parent_traces": 1,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 4,
+          "horizon": 1,
+          "parent_traces": 5,
+          "reachable_state_inclusion_violations": 1,
+          "trace_inclusion_violations": 1
+        },
+        {
+          "child_traces": 16,
+          "horizon": 2,
+          "parent_traces": 25,
+          "reachable_state_inclusion_violations": 7,
+          "trace_inclusion_violations": 7
+        },
+        {
+          "child_traces": 64,
+          "horizon": 3,
+          "parent_traces": 125,
+          "reachable_state_inclusion_violations": 37,
+          "trace_inclusion_violations": 37
+        },
+        {
+          "child_traces": 256,
+          "horizon": 4,
+          "parent_traces": 625,
+          "reachable_state_inclusion_violations": 175,
+          "trace_inclusion_violations": 175
+        }
+      ],
+      "reachable_state_inclusion_violations": 220,
+      "trace_inclusion_violations": 220
+    },
+    {
+      "child_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5"
+      ],
+      "configuration": "defer_stutter_obligation_restored",
+      "expectation_matched": true,
+      "expected_violation": false,
+      "minimal_counterexample": null,
+      "observed_violation": false,
+      "parent_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5",
+        "4/5",
+        "1"
+      ],
+      "per_horizon": [
+        {
+          "child_traces": 1,
+          "horizon": 0,
+          "parent_traces": 1,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 3,
+          "horizon": 1,
+          "parent_traces": 5,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 9,
+          "horizon": 2,
+          "parent_traces": 25,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 27,
+          "horizon": 3,
+          "parent_traces": 125,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 81,
+          "horizon": 4,
+          "parent_traces": 625,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        }
+      ],
+      "reachable_state_inclusion_violations": 0,
+      "trace_inclusion_violations": 0
+    },
+    {
+      "child_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5"
+      ],
+      "configuration": "all_five_effects_restored",
+      "expectation_matched": true,
+      "expected_violation": false,
+      "minimal_counterexample": null,
+      "observed_violation": false,
+      "parent_action_alphabet": [
+        "0",
+        "1/5",
+        "2/5",
+        "4/5",
+        "1"
+      ],
+      "per_horizon": [
+        {
+          "child_traces": 1,
+          "horizon": 0,
+          "parent_traces": 1,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 3,
+          "horizon": 1,
+          "parent_traces": 5,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 9,
+          "horizon": 2,
+          "parent_traces": 25,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 27,
+          "horizon": 3,
+          "parent_traces": 125,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        },
+        {
+          "child_traces": 81,
+          "horizon": 4,
+          "parent_traces": 625,
+          "reachable_state_inclusion_violations": 0,
+          "trace_inclusion_violations": 0
+        }
+      ],
+      "reachable_state_inclusion_violations": 0,
+      "trace_inclusion_violations": 0
+    }
+  ],
+  "expectation_mismatches": [],
+  "horizon": 4
+}
