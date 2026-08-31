@@ -1,0 +1,386 @@
+[
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 1,
+    "dimension": "zone",
+    "error": "invalid attenuation: zone binding changed",
+    "failed_dimensions": [
+      "zone"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 1,
+    "dimension": "conduit",
+    "error": "invalid attenuation: conduit scope widened",
+    "failed_dimensions": [
+      "conduit"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 1,
+    "dimension": "asset",
+    "error": "invalid attenuation: asset scope widened",
+    "failed_dimensions": [
+      "asset"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 1,
+    "dimension": "action",
+    "error": "invalid attenuation: action scope widened",
+    "failed_dimensions": [
+      "action"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 1,
+    "dimension": "parameter",
+    "error": "invalid attenuation: parameter interval widened",
+    "failed_dimensions": [
+      "parameter"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 1,
+    "dimension": "time",
+    "error": "invalid attenuation: time window widened",
+    "failed_dimensions": [
+      "time"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 1,
+    "dimension": "mode",
+    "error": "invalid attenuation: mode scope widened",
+    "failed_dimensions": [
+      "mode"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 1,
+    "dimension": "pre_action_sequence",
+    "error": "invalid attenuation: pre-action sequence does not refine parent",
+    "failed_dimensions": [
+      "pre_action_sequence"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 2,
+    "dimension": "zone",
+    "error": "invalid attenuation: zone binding changed",
+    "failed_dimensions": [
+      "zone"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 2,
+    "dimension": "conduit",
+    "error": "invalid attenuation: conduit scope widened",
+    "failed_dimensions": [
+      "conduit"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 2,
+    "dimension": "asset",
+    "error": "invalid attenuation: asset scope widened",
+    "failed_dimensions": [
+      "asset"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 2,
+    "dimension": "action",
+    "error": "invalid attenuation: action scope widened",
+    "failed_dimensions": [
+      "action"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 2,
+    "dimension": "parameter",
+    "error": "invalid attenuation: parameter interval widened",
+    "failed_dimensions": [
+      "parameter"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 2,
+    "dimension": "time",
+    "error": "invalid attenuation: time window widened",
+    "failed_dimensions": [
+      "time"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 2,
+    "dimension": "mode",
+    "error": "invalid attenuation: mode scope widened",
+    "failed_dimensions": [
+      "mode"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "cpwe_cip_security",
+    "attempted_child_depth": 2,
+    "dimension": "pre_action_sequence",
+    "error": "invalid attenuation: pre-action sequence does not refine parent",
+    "failed_dimensions": [
+      "pre_action_sequence"
+    ],
+    "parent_capability_id": "cpwe_cip_security:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 1,
+    "dimension": "zone",
+    "error": "invalid attenuation: zone binding changed",
+    "failed_dimensions": [
+      "zone"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 1,
+    "dimension": "conduit",
+    "error": "invalid attenuation: conduit scope widened",
+    "failed_dimensions": [
+      "conduit"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 1,
+    "dimension": "asset",
+    "error": "invalid attenuation: asset scope widened",
+    "failed_dimensions": [
+      "asset"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 1,
+    "dimension": "action",
+    "error": "invalid attenuation: action scope widened",
+    "failed_dimensions": [
+      "action"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 1,
+    "dimension": "parameter",
+    "error": "invalid attenuation: parameter interval widened",
+    "failed_dimensions": [
+      "parameter"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 1,
+    "dimension": "time",
+    "error": "invalid attenuation: time window widened",
+    "failed_dimensions": [
+      "time"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 1,
+    "dimension": "mode",
+    "error": "invalid attenuation: mode scope widened",
+    "failed_dimensions": [
+      "mode"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 1,
+    "dimension": "pre_action_sequence",
+    "error": "invalid attenuation: pre-action sequence does not refine parent",
+    "failed_dimensions": [
+      "pre_action_sequence"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:root",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 2,
+    "dimension": "zone",
+    "error": "invalid attenuation: zone binding changed",
+    "failed_dimensions": [
+      "zone"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 2,
+    "dimension": "conduit",
+    "error": "invalid attenuation: conduit scope widened",
+    "failed_dimensions": [
+      "conduit"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 2,
+    "dimension": "asset",
+    "error": "invalid attenuation: asset scope widened",
+    "failed_dimensions": [
+      "asset"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 2,
+    "dimension": "action",
+    "error": "invalid attenuation: action scope widened",
+    "failed_dimensions": [
+      "action"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 2,
+    "dimension": "parameter",
+    "error": "invalid attenuation: parameter interval widened",
+    "failed_dimensions": [
+      "parameter"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 2,
+    "dimension": "time",
+    "error": "invalid attenuation: time window widened",
+    "failed_dimensions": [
+      "time"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 2,
+    "dimension": "mode",
+    "error": "invalid attenuation: mode scope widened",
+    "failed_dimensions": [
+      "mode"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:d1",
+    "target_dimension_failed": true
+  },
+  {
+    "accepted": false,
+    "architecture": "enisa_rail_signalling",
+    "attempted_child_depth": 2,
+    "dimension": "pre_action_sequence",
+    "error": "invalid attenuation: pre-action sequence does not refine parent",
+    "failed_dimensions": [
+      "pre_action_sequence"
+    ],
+    "parent_capability_id": "enisa_rail_signalling:g000:d1",
+    "target_dimension_failed": true
+  }
+]

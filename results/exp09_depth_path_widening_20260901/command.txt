@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp09 --config configs/exp09_depth_path_widening.json --output-dir results/exp09_depth_path_widening_20260901

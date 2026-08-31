@@ -1,0 +1,31 @@
+{
+  "git_head": "d5ad66a5243b87c17f1ea2a0d18f712ba7851002",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp09_depth_path_widening.json": "41c29e31010e465a815862da1ae77035151bc8e8fe96d30289fd07e563e1fabc",
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "research/heldout/exp09/path_specs.json": "419c977779321ca82e4da9ce4d3274bc05ace24396f8c49345d76906ec7c15fd",
+    "src/zonecap/compiler.py": "7edbaaaf7b405fe4d141aba9fac3a08699708defb51e7c97a078c2102d7fcff5",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp07.py": "d5a0398a6554fb481032bd9d969ee2cb88efc73e068fab7ee0d441cf4d301e63",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/exp07_oracle.py": "a8f51578655e68a1cb5350bf1c88ef98b0b52dc0555e98f67c9865e3020f1da3",
+    "src/zonecap/exp09.py": "7c2107b96bee908d4a2559e5f885bdd35ce7d031a139d8fca510217ef2e1e3d4",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_exp09.py": "02ba9650f148d74360a2eb274871be75f5116de38fad31f8d76a2280cfbb86d9"
+  },
+  "outputs": {
+    "command.txt": "cc34d5d0e6ee66b16ec764798afec5d6e8f66e5e43bef55b1c11151524d877aa",
+    "compiled_inputs/cpwe_cip_security.json": "53d63cbf764cba5b01afeb8c2b59a359362d2b2b0f8cd75577d83f320689a054",
+    "compiled_inputs/enisa_rail_signalling.json": "3df8f9bf7051f5a2c412b4c78d3967fe00dccfb142293d2fe3e25e16c395f154",
+    "config.json": "2a744ac0d7a2bf3a373a0f6ea8c048939facfad42810ec2268594663243b1369",
+    "legal_delegation_checks.json": "7852b0787bad74069e35bae435298c839d06d671919b44cd0842c16650e9134c",
+    "log.txt": "3e72b689a558370215606082476c354b084692e9aaa8db311a646280317c9f0d",
+    "metrics.json": "924dc1bc6577cc564c750db83aa3798b7a784476b3b10e9c31a5ee1c77afa2aa",
+    "path_cases.json": "8124edb8a62a9942b14bddd3218d2d66598d4497759644fdbdad96a901c01951",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345",
+    "widening_attempts.json": "84c77229c8a22be47017a0f46b1b408ebad2d8bd2515c1d659b4922c314bdb12"
+  },
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

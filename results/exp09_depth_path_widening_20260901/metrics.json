@@ -1,0 +1,22 @@
+{
+  "accepted_widenings": 0,
+  "claim": "C2 / alternative A2",
+  "depth0_baseline_delegation_dimension_checks": 0,
+  "depth0_baseline_path_cases": 8,
+  "exp": "exp-09",
+  "expected_count_mismatches": {},
+  "legal_delegation_dimension_checks": 672,
+  "legal_delegation_dimension_failures": 0,
+  "legal_delegation_edges": 84,
+  "legal_delegation_relation_failures": 0,
+  "multi_conduit_path_cases": 24,
+  "multi_conduit_path_happy_cases": 6,
+  "multi_conduit_path_negative_cases": 18,
+  "multi_conduit_paths": 2,
+  "path_compiler_oracle_mismatches": 0,
+  "path_expectation_mismatches": 0,
+  "seed": null,
+  "widening_attempts": 32,
+  "widening_attempts_with_wrong_failed_dimension": 0,
+  "widening_dimensions": 8
+}

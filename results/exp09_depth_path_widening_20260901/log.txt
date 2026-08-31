@@ -1,0 +1,8 @@
+experiment=exp-09
+seed=none
+multi_conduit_paths=2
+multi_conduit_path_cases=24
+path_compiler_oracle_mismatches=0
+widening_attempts=32
+accepted_widenings=0
+legal_delegation_dimension_failures=0
