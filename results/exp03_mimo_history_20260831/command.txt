@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp03 --config results/exp03_mimo_history_20260831/config.json --output-dir results/exp03_mimo_history_20260831

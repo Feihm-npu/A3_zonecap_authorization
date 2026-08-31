@@ -1,0 +1,9 @@
+{
+  "history_child_only_state": 2,
+  "history_widening_detected": true,
+  "mimo_child_only_vertex": [
+    "2",
+    "0"
+  ],
+  "mimo_widening_detected": true
+}

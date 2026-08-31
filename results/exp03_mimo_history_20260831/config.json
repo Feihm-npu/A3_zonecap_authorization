@@ -1,0 +1,14 @@
+{
+  "claim": "C1",
+  "exp": "exp-03",
+  "history_actions": 3,
+  "history_count_modulus": 3,
+  "history_disturbances": 2,
+  "history_horizon": 4,
+  "history_models_per_seed": 16,
+  "history_states": 6,
+  "mimo_horizon": 5,
+  "mimo_models_per_seed": 24,
+  "protocol": "Exact rational 2D V-polytope propagation plus exhaustive finite trace enumeration for state/history-dependent action relations; report every seed and horizon.",
+  "seeds": [104729, 130363, 155921, 196613, 262147]
+}

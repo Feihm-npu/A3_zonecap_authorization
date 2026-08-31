@@ -1,0 +1,332 @@
+{
+  "104729": {
+    "history": [
+      {
+        "horizon": 0,
+        "reachable_state_violations": 0,
+        "trace_checks": 32,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 1,
+        "reachable_state_violations": 0,
+        "trace_checks": 74,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 2,
+        "reachable_state_violations": 0,
+        "trace_checks": 184,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 3,
+        "reachable_state_violations": 0,
+        "trace_checks": 474,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 4,
+        "reachable_state_violations": 0,
+        "trace_checks": 1216,
+        "trace_violations": 0
+      }
+    ],
+    "mimo": [
+      {
+        "checks": 24,
+        "horizon": 0,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 1,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 2,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 3,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 4,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 5,
+        "violations": 0
+      }
+    ]
+  },
+  "130363": {
+    "history": [
+      {
+        "horizon": 0,
+        "reachable_state_violations": 0,
+        "trace_checks": 32,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 1,
+        "reachable_state_violations": 0,
+        "trace_checks": 84,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 2,
+        "reachable_state_violations": 0,
+        "trace_checks": 208,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 3,
+        "reachable_state_violations": 0,
+        "trace_checks": 548,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 4,
+        "reachable_state_violations": 0,
+        "trace_checks": 1354,
+        "trace_violations": 0
+      }
+    ],
+    "mimo": [
+      {
+        "checks": 24,
+        "horizon": 0,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 1,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 2,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 3,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 4,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 5,
+        "violations": 0
+      }
+    ]
+  },
+  "155921": {
+    "history": [
+      {
+        "horizon": 0,
+        "reachable_state_violations": 0,
+        "trace_checks": 32,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 1,
+        "reachable_state_violations": 0,
+        "trace_checks": 72,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 2,
+        "reachable_state_violations": 0,
+        "trace_checks": 132,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 3,
+        "reachable_state_violations": 0,
+        "trace_checks": 314,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 4,
+        "reachable_state_violations": 0,
+        "trace_checks": 828,
+        "trace_violations": 0
+      }
+    ],
+    "mimo": [
+      {
+        "checks": 24,
+        "horizon": 0,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 1,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 2,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 3,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 4,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 5,
+        "violations": 0
+      }
+    ]
+  },
+  "196613": {
+    "history": [
+      {
+        "horizon": 0,
+        "reachable_state_violations": 0,
+        "trace_checks": 32,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 1,
+        "reachable_state_violations": 0,
+        "trace_checks": 86,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 2,
+        "reachable_state_violations": 0,
+        "trace_checks": 208,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 3,
+        "reachable_state_violations": 0,
+        "trace_checks": 534,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 4,
+        "reachable_state_violations": 0,
+        "trace_checks": 1274,
+        "trace_violations": 0
+      }
+    ],
+    "mimo": [
+      {
+        "checks": 24,
+        "horizon": 0,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 1,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 2,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 3,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 4,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 5,
+        "violations": 0
+      }
+    ]
+  },
+  "262147": {
+    "history": [
+      {
+        "horizon": 0,
+        "reachable_state_violations": 0,
+        "trace_checks": 32,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 1,
+        "reachable_state_violations": 0,
+        "trace_checks": 68,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 2,
+        "reachable_state_violations": 0,
+        "trace_checks": 138,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 3,
+        "reachable_state_violations": 0,
+        "trace_checks": 286,
+        "trace_violations": 0
+      },
+      {
+        "horizon": 4,
+        "reachable_state_violations": 0,
+        "trace_checks": 612,
+        "trace_violations": 0
+      }
+    ],
+    "mimo": [
+      {
+        "checks": 24,
+        "horizon": 0,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 1,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 2,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 3,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 4,
+        "violations": 0
+      },
+      {
+        "checks": 24,
+        "horizon": 5,
+        "violations": 0
+      }
+    ]
+  }
+}

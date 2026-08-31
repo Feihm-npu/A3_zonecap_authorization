@@ -1,0 +1,11 @@
+{
+  "files": {
+    "research/mimo_history_audit.md": "98809a7e832cb8ad988991eea53938c64572e888074215662cbd62db90148b5a",
+    "results/exp03_mimo_history_20260831/config.json": "511e65e6a7e614bb7d20d371ca1465616137b9e5ce416976c2cc41489bf041a1",
+    "src/zonecap/exp03.py": "05063c0c36d4ccc7ddd4394fa20512ef704b3e6b743c6a2d553f1e3157093fde",
+    "tests/test_exp03.py": "dddc4b15b8051c11fe3d911a507bde8640197874fefd2f21aab7a41241853042"
+  },
+  "git_head": "0d9b1a895b70bec21ae2bb12e2cb8ba7412aac39",
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

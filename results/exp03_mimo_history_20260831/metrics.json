@@ -1,0 +1,120 @@
+{
+  "claim": "C1",
+  "exp": "exp-03",
+  "history_child_trace_membership_checks": 8854,
+  "history_horizon_checks": 400,
+  "history_models": 80,
+  "history_reachable_state_inclusion_violations": 0,
+  "history_trace_inclusion_violations": 0,
+  "mimo_horizon_checks": 720,
+  "mimo_inclusion_violations": 0,
+  "mimo_models": 120,
+  "negative_controls_detected": 2,
+  "negative_controls_expected": 2,
+  "per_seed": [
+    {
+      "history": {
+        "child_trace_membership_checks": 1980,
+        "horizon_checks": 80,
+        "models": 16,
+        "reachable_state_violations": 0,
+        "total_child_trace_frontier_sizes": 1980,
+        "total_parent_trace_frontier_sizes": 14298,
+        "trace_violations": 0
+      },
+      "mimo": {
+        "horizon_checks": 144,
+        "max_child_vertices": 44,
+        "max_parent_vertices": 36,
+        "models": 24,
+        "violations": 0
+      },
+      "seed": 104729
+    },
+    {
+      "history": {
+        "child_trace_membership_checks": 2226,
+        "horizon_checks": 80,
+        "models": 16,
+        "reachable_state_violations": 0,
+        "total_child_trace_frontier_sizes": 2226,
+        "total_parent_trace_frontier_sizes": 14506,
+        "trace_violations": 0
+      },
+      "mimo": {
+        "horizon_checks": 144,
+        "max_child_vertices": 44,
+        "max_parent_vertices": 36,
+        "models": 24,
+        "violations": 0
+      },
+      "seed": 130363
+    },
+    {
+      "history": {
+        "child_trace_membership_checks": 1378,
+        "horizon_checks": 80,
+        "models": 16,
+        "reachable_state_violations": 0,
+        "total_child_trace_frontier_sizes": 1378,
+        "total_parent_trace_frontier_sizes": 11226,
+        "trace_violations": 0
+      },
+      "mimo": {
+        "horizon_checks": 144,
+        "max_child_vertices": 44,
+        "max_parent_vertices": 34,
+        "models": 24,
+        "violations": 0
+      },
+      "seed": 155921
+    },
+    {
+      "history": {
+        "child_trace_membership_checks": 2134,
+        "horizon_checks": 80,
+        "models": 16,
+        "reachable_state_violations": 0,
+        "total_child_trace_frontier_sizes": 2134,
+        "total_parent_trace_frontier_sizes": 14962,
+        "trace_violations": 0
+      },
+      "mimo": {
+        "horizon_checks": 144,
+        "max_child_vertices": 36,
+        "max_parent_vertices": 30,
+        "models": 24,
+        "violations": 0
+      },
+      "seed": 196613
+    },
+    {
+      "history": {
+        "child_trace_membership_checks": 1136,
+        "horizon_checks": 80,
+        "models": 16,
+        "reachable_state_violations": 0,
+        "total_child_trace_frontier_sizes": 1136,
+        "total_parent_trace_frontier_sizes": 13866,
+        "trace_violations": 0
+      },
+      "mimo": {
+        "horizon_checks": 144,
+        "max_child_vertices": 44,
+        "max_parent_vertices": 36,
+        "models": 24,
+        "violations": 0
+      },
+      "seed": 262147
+    }
+  ],
+  "registered_c1_counterexamples": 0,
+  "seed_count": 5,
+  "seeds": [
+    104729,
+    130363,
+    155921,
+    196613,
+    262147
+  ]
+}
