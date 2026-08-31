@@ -1,0 +1,66 @@
+{
+  "all_mutations_denied_by_compiler": true,
+  "all_mutations_denied_by_oracle": true,
+  "all_valid_cases_allowed_by_oracle": true,
+  "check_removal_mutants": {
+    "action": {
+      "cases_that_accept_only_after_check_removal": 4536,
+      "killed": true
+    },
+    "asset": {
+      "cases_that_accept_only_after_check_removal": 4536,
+      "killed": true
+    },
+    "conduit": {
+      "cases_that_accept_only_after_check_removal": 4536,
+      "killed": true
+    },
+    "mode": {
+      "cases_that_accept_only_after_check_removal": 4536,
+      "killed": true
+    },
+    "parameter": {
+      "cases_that_accept_only_after_check_removal": 9072,
+      "killed": true
+    },
+    "sequence": {
+      "cases_that_accept_only_after_check_removal": 4536,
+      "killed": true
+    },
+    "source_zone": {
+      "cases_that_accept_only_after_check_removal": 4536,
+      "killed": true
+    },
+    "subject": {
+      "cases_that_accept_only_after_check_removal": 4536,
+      "killed": true
+    },
+    "target_zone": {
+      "cases_that_accept_only_after_check_removal": 4536,
+      "killed": true
+    },
+    "time": {
+      "cases_that_accept_only_after_check_removal": 9072,
+      "killed": true
+    }
+  },
+  "every_mutation_category_exercised": true,
+  "frozen_policy_hash_matched": true,
+  "frozen_source_hashes_matched": true,
+  "oracle_generator_dependency_audit": {
+    "generator_has_compiler_or_engine_import": false,
+    "generator_imports": [
+      "__future__",
+      "itertools",
+      "typing"
+    ],
+    "oracle_has_implementation_import": false,
+    "oracle_imports": [
+      "__future__",
+      "typing"
+    ]
+  },
+  "passed": true,
+  "perfect_agreement_triggered": true,
+  "pre_run_git_tree_clean": true
+}

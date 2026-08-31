@@ -33,7 +33,7 @@ Alternatives:
 - A1: Agreement comes from hand-authored fixtures mirroring compiler code. → ruled out by: exp-08
 - A2: Non-amplification is trivial because delegation chains or cross-zone paths are not exercised. → ruled out by: exp-09
 
-Status: proposed
+Status: testing
 
 ## C3 [S1]
 

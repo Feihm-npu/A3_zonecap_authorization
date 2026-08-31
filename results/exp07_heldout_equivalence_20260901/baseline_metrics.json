@@ -1,0 +1,18 @@
+{
+  "opcua_role_projection": {
+    "agreement": 18144,
+    "agreement_rate": 0.3076923076923077,
+    "cases": 58968,
+    "false_allow": 40824,
+    "false_deny": 0,
+    "scope": "functional projection over subject/asset/action; no external OPC UA implementation"
+  },
+  "plc_abac_projection": {
+    "agreement": 40824,
+    "agreement_rate": 0.6923076923076923,
+    "cases": 58968,
+    "false_allow": 18144,
+    "false_deny": 0,
+    "scope": "functional PLC-ABAC projection over identity, zones, asset, action, time, and mode"
+  }
+}

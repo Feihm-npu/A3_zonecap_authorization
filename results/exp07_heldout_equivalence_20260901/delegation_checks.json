@@ -1,0 +1,4790 @@
+[
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g000:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g000:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g000:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g000:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g001:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g001:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g001:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g001:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g002:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g002:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g002:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g002:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g003:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g003:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g003:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g003:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g004:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g004:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g004:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g004:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g005:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g005:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g005:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g005:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g006:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g006:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g006:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g006:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g007:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g007:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g007:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g007:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g008:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g008:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g008:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g008:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g009:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g009:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g009:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g009:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g010:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g010:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g010:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g010:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g011:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g011:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g011:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g011:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g012:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g012:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g012:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g012:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g013:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g013:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g013:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g013:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g014:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g014:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g014:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g014:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g015:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g015:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g015:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g015:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g016:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g016:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g016:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g016:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g017:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g017:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g017:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g017:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g018:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g018:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g018:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g018:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g019:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g019:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g019:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g019:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g020:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g020:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g020:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g020:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g021:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g021:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g021:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g021:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g022:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g022:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g022:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g022:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g023:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g023:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g023:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g023:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g024:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g024:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g024:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g024:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g025:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g025:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g025:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g025:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g026:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g026:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g026:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g026:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g027:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g027:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g027:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g027:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g028:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g028:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g028:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g028:d1",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 1,
+    "child_scope_id": "cpwe_cip_security:g029:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g029:d0",
+    "passed": true
+  },
+  {
+    "architecture": "cpwe_cip_security",
+    "child_depth": 2,
+    "child_scope_id": "cpwe_cip_security:g029:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "cpwe_cip_security:g029:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g000:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g000:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g000:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g000:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g001:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g001:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g001:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g001:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g002:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g002:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g002:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g002:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g003:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g003:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g003:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g003:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g004:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g004:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g004:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g004:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g005:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g005:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g005:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g005:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g006:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g006:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g006:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g006:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g007:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g007:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g007:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g007:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g008:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g008:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g008:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g008:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g009:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g009:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g009:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g009:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g010:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g010:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g010:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g010:d1",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 1,
+    "child_scope_id": "enisa_rail_signalling:g011:d1",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g011:d0",
+    "passed": true
+  },
+  {
+    "architecture": "enisa_rail_signalling",
+    "child_depth": 2,
+    "child_scope_id": "enisa_rail_signalling:g011:d2",
+    "dimensions": {
+      "action": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "asset": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "conduit": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "mode": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      },
+      "parameter": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "pre_action_sequence": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "time": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "narrowed",
+        "table_check": true
+      },
+      "zone": {
+        "compiled_check": true,
+        "passed": true,
+        "relation": "preserved",
+        "table_check": true
+      }
+    },
+    "parent_scope_id": "enisa_rail_signalling:g011:d1",
+    "passed": true
+  }
+]

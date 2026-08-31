@@ -1,0 +1,108 @@
+{
+  "architectures": {
+    "cpwe_cip_security": {
+      "cases": 42120,
+      "mismatches": 0,
+      "oracle_expectation_mismatches": 0
+    },
+    "enisa_rail_signalling": {
+      "cases": 16848,
+      "mismatches": 0,
+      "oracle_expectation_mismatches": 0
+    }
+  },
+  "claim": "C2",
+  "compiler_oracle_agreement_rate": 1.0,
+  "compiler_oracle_mismatches": 0,
+  "delegated_scopes": 84,
+  "delegation_dimension_checks": 672,
+  "delegation_dimension_failures": 0,
+  "delegation_edges": 84,
+  "depths": {
+    "0": {
+      "cases": 39312,
+      "mismatches": 0
+    },
+    "1": {
+      "cases": 9828,
+      "mismatches": 0
+    },
+    "2": {
+      "cases": 9828,
+      "mismatches": 0
+    }
+  },
+  "excluded_nondecision_metadata_items": 7,
+  "exp": "exp-07",
+  "expected_count_mismatches": {},
+  "mutation_cases": 54432,
+  "mutation_categories": {
+    "action": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "asset": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "conduit": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "history": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "mode": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "parameter_high": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "parameter_low": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "source_zone": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "subject": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "target_zone": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "tick_high": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    },
+    "tick_low": {
+      "cases": 4536,
+      "compiler_allows": 0,
+      "oracle_allows": 0
+    }
+  },
+  "oracle_expectation_mismatches": 0,
+  "root_grants": 42,
+  "seed": null,
+  "too_good_audit_passed": true,
+  "total_cases": 58968,
+  "unsupported_decision_constructs": 0,
+  "valid_cases": 4536
+}

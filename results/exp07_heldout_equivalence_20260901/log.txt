@@ -1,0 +1,11 @@
+experiment=exp-07
+seed=none
+root_grants=42
+delegated_scopes=84
+total_cases=58968
+valid_cases=4536
+mutation_cases=54432
+compiler_oracle_mismatches=0
+delegation_dimension_failures=0
+unsupported_decision_constructs=0
+too_good_audit_passed=true

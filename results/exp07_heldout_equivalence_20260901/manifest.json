@@ -1,0 +1,35 @@
+{
+  "git_head": "f365d9e44470937d4fccbe8fcefa7c879286f42b",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp07_heldout.json": "fd7c7024c3fe356375e0809d99ee4db8abf6457418a1c9f424ae9e617fc0e96f",
+    "research/heldout/exp07/ENCODING_PROTOCOL.md": "04306424e8db1658c8a5b38d4732b180e9a688f013d4f29d62d117421162ad70",
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "research/heldout/exp07/source_manifest.json": "8d56c432897d23a5fbaad43a93e8d2ea845ec0b40eb0df29bd1d40fb881f4747",
+    "research/heldout/exp07/sources/cpwe_cip_security_enet_td022_en_p.pdf": "1e5b47ee25dad8c7c4e534dd110ab54418f50b99ad8b5f932cad28475c48296b",
+    "research/heldout/exp07/sources/enisa_rail_zoning_2022.pdf": "946f0d7b60fbfa556d1a88052de8c9a4be410b61984bede33f0533d3f9e40e8f",
+    "src/zonecap/compiler.py": "7edbaaaf7b405fe4d141aba9fac3a08699708defb51e7c97a078c2102d7fcff5",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp07.py": "d5a0398a6554fb481032bd9d969ee2cb88efc73e068fab7ee0d441cf4d301e63",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/exp07_oracle.py": "a8f51578655e68a1cb5350bf1c88ef98b0b52dc0555e98f67c9865e3020f1da3",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_exp07.py": "e616df95d1f64f3ff6751e6ef0c61d7f26873209e443066542be75af0e2b5422"
+  },
+  "outputs": {
+    "baseline_metrics.json": "f058489f3d32ab65258314574dcf598863c9bc0905f00eefca76b6ab86ef9f5b",
+    "cases.jsonl.gz": "46197806deb7cdf7eb108ebaceecc68b574ddce40f625dd8948b46be6bb433b6",
+    "command.txt": "cb3dae974bd9ea7c1bebb8a4e664a00a5c85910b105a93233f0f5e7474e50f32",
+    "compiled_inputs/cpwe_cip_security.json": "53d63cbf764cba5b01afeb8c2b59a359362d2b2b0f8cd75577d83f320689a054",
+    "compiled_inputs/enisa_rail_signalling.json": "3df8f9bf7051f5a2c412b4c78d3967fe00dccfb142293d2fe3e25e16c395f154",
+    "config.json": "1cae8b3287ccd696f31fbf3f0d7e31a1a70917b46b49037e9a90bf7201b6a48d",
+    "delegation_checks.json": "7852b0787bad74069e35bae435298c839d06d671919b44cd0842c16650e9134c",
+    "delegation_specs.json": "8763371054c655c6226c1a3addd55bbc976bc1b9d65dbd65e73f874fd2b2d960",
+    "log.txt": "64c88f8ebf5fc592d1bc40bdeb92533343140464b83d75e13836d06e4ab86228",
+    "metrics.json": "bc51805e3bb26b4eaf6fe54807354c8658fe2c5f0da8eb6cd12b09bbb06c6e53",
+    "mutation_audit.json": "ab0a824dc393ef4550bb46e9826acbbcaa748a957d87248480dfe322fe9bd54c",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345"
+  },
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

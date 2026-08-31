@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp07 --config configs/exp07_heldout.json --output-dir results/exp07_heldout_equivalence_20260901
