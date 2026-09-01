@@ -1,0 +1,9 @@
+experiment=exp-13
+seed=none
+policy_steps=81648
+deny_only_false_blocks=13608
+false_block_rate_all_policy_steps=0.16666666666666666
+false_block_rate_safe_service_opportunities=0.6
+lost_recoverable_decisions=9072
+deny_only_safety_violations=0
+negative_control_mutants_killed=3/3

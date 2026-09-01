@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "detected": true,
+      "mutant": "pass_through_out_of-range_raw_rewrite_request"
+    },
+    {
+      "detected": true,
+      "mutant": "drop_original_allow_output"
+    },
+    {
+      "detected": true,
+      "mutant": "emit_on_replaced_defer"
+    }
+  ],
+  "killed": 3,
+  "mutants": 3
+}

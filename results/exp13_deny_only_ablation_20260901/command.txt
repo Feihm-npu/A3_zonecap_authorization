@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp13 --config configs/exp13_deny_only_ablation.json --output-dir results/exp13_deny_only_ablation_20260901

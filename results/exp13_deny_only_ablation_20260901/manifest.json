@@ -1,0 +1,25 @@
+{
+  "git_head": "bfdff7cc73f554a8a78d4babbda91b315056db4f",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp13_deny_only_ablation.json": "c55c68cd7c89d629a913d9464653b4bad835cfb6df1ba058a5dbde81fe4a3809",
+    "research/c3_deny_only_ablation_protocol.md": "683de5dd4282a14d3f05fe272d4317965b0ed0212b44f468ffb8e7f668a50357",
+    "results/exp12_effect_automaton_20260901/case_audit.jsonl.gz": "d1b960dde95c2096bd2400007d47308e97b0f3a2a2c4f99f1bb00a838962105b",
+    "results/exp12_effect_automaton_20260901/composed_traces.jsonl.gz": "503be017f21137fab627bd8253c364028cd86c17431bf625ee3276291f596a5e",
+    "results/exp12_effect_automaton_20260901/manifest.json": "8fedea67a5099b45e47485f299fe36003e6e0265b4fe8e91256525d2f79c19f2",
+    "results/exp12_effect_automaton_20260901/metrics.json": "01f8fca0841331997c185424a7db2ea860792678d88e7c96e3cd5b1804cc4911",
+    "src/zonecap/exp13.py": "c439dbf3f82a728db9064d043b85e67758f9a2313d7f805eda886c9f10e007e1",
+    "tests/test_exp13.py": "74e61563954cde83321901f16c0fdaad87588ed5174620c2cccc76d217009981"
+  },
+  "outputs": {
+    "command.txt": "360c270fbde349cd8a6b9f4e140802bfe4a4a24b6baf094878ad24f110b7fc6a",
+    "config.json": "5399e2aa9b6e455ba69b129d658660da61682bbf160ebe007c843c7bd6cccf4d",
+    "decision_audit.jsonl.gz": "ad43660070cf918b22b1ad40cc046760fe8669ade34975c4cb25e552e3bced97",
+    "log.txt": "568b5a244e5963ac6f47b27ef29a674780e051bff5dc93fa8e3f8f9f5985a9c8",
+    "metrics.json": "8c85a8959cf5291f682fa4398163bb2855505e0a32758095ef80006798f40a53",
+    "mutation_audit.json": "bcdc4ba63401ec486ed5b1f62890000c3617c470ce1a83b5d2db3de19665c800",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345"
+  },
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}
