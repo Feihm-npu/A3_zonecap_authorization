@@ -1,0 +1,36 @@
+{
+  "exp": "exp-15",
+  "claim": "C3 baseline",
+  "seed": null,
+  "run_id": "exp15_c3_baselines_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp15 --config configs/exp15_c3_baselines.json --output-dir results/exp15_c3_baselines_20260901",
+  "effect_mapping": "research/baseline_sources/exp15/effect_mapping.json",
+  "exp12_metrics": "results/exp12_effect_automaton_20260901/metrics.json",
+  "sint_instance": "results/exp05_common_subset_20260901/sint_instance.json",
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "expected_counts": {
+    "policy_steps": 81648,
+    "effect_types": 5,
+    "properties": 9,
+    "systems": 3,
+    "lanotte_exact_effect_types": 3,
+    "lanotte_unmapped_policy_steps": 9072,
+    "sint_exact_effect_types": 2,
+    "sint_partial_effect_types": 2,
+    "sint_absent_effect_types": 1,
+    "sint_strict_nonexact_policy_steps": 22680,
+    "sint_unmapped_policy_steps": 13608,
+    "sint_rewrites_projected_to_constraint_violation_deny": 13608,
+    "zonecap_exact_effect_types": 5
+  },
+  "frozen_hashes": {
+    "results/exp12_effect_automaton_20260901/metrics.json": "01f8fca0841331997c185424a7db2ea860792678d88e7c96e3cd5b1804cc4911",
+    "results/exp05_common_subset_20260901/sint_instance.json": "40d2f2c65b263bedd637dc2c8420f401c58be565fba68ad1313e2e959267b855",
+    "results/exp05_common_subset_20260901/manifest.json": "cd5510c357654fae763d1da2131dd1c30df82c42263b0a29bf792cf331364ff6",
+    "research/c3_baseline_mapping.md": "06ae5b1629da115da60b1099cf1b029002b1cf8edaf72d4134d60654ec23e124",
+    "research/baseline_sources/exp15/effect_mapping.json": "bd1a5afce09fc17ff68e911189aac8b4442011db2587da8f977036ee9d021d7e",
+    "src/zonecap/exp15.py": "995c62fa3e598df22bfaa114a566685acce09c20fd46be5563879c088f9c4e32",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_exp15.py": "a196e2b306fcfd8904a1326f4634b4999db1af94dc29afba32166b8b698bc83b"
+  }
+}

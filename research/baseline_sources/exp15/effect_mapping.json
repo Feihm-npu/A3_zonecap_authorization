@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "frozen_on": "2026-09-01",
+  "status_legend": {
+    "exact": "same request-time operational role",
+    "partial": "related behavior at another lifecycle stage or without the registered physical contract",
+    "absent": "no source-grounded analogue located"
+  },
+  "sources": {
+    "lanotte_roop": {
+      "primary": [
+        {
+          "title": "Industrial Control Systems Security via Runtime Enforcement",
+          "doi": "10.1145/3546579",
+          "arxiv": "2105.10668",
+          "role": "effect mechanism plus formal soundness/deadlock-freedom"
+        },
+        {
+          "title": "Scalable Security Enforcement for Cyber Physical Systems",
+          "doi": "10.1109/ACCESS.2024.3357714",
+          "role": "bidirectional parallel hardware composition boundary"
+        }
+      ],
+      "runtime_status": "N/A: matching licensed FPGA/PLC/Simulink environment unavailable"
+    },
+    "sint_v0_2": {
+      "repository": "https://github.com/sint-ai/sint-protocol.git",
+      "commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+      "executed_evidence": "results/exp05_common_subset_20260901/sint_instance.json",
+      "runtime_status": "pinned delegation instance executed; effect comparison is source-grounded projection"
+    },
+    "zonecap": {
+      "executed_evidence": "results/exp12_effect_automaton_20260901/metrics.json",
+      "runtime_status": "all five effects executed on the frozen held-out corpus"
+    }
+  },
+  "systems": {
+    "ZoneCap": {
+      "effects": {
+        "allow": {"status": "exact", "projection": "ALLOW"},
+        "deny": {"status": "exact", "projection": "DENY"},
+        "attenuate": {"status": "exact", "projection": "ATTENUATE"},
+        "rewrite": {"status": "exact", "projection": "REWRITE"},
+        "defer": {"status": "exact", "projection": "DEFER"}
+      }
+    },
+    "Lanotte_Roop_edit_automata": {
+      "effects": {
+        "allow": {"status": "exact", "projection": "pass/identity edit"},
+        "deny": {"status": "exact", "projection": "suppress"},
+        "attenuate": {"status": "absent", "projection": "N/A"},
+        "rewrite": {"status": "exact", "projection": "correct/autonomous output"},
+        "defer": {"status": "absent", "projection": "N/A"}
+      }
+    },
+    "SINT_v0_2_pinned": {
+      "effects": {
+        "allow": {"status": "exact", "projection": "allow"},
+        "deny": {"status": "exact", "projection": "deny"},
+        "attenuate": {"status": "partial", "projection": "delegation-time token attenuation"},
+        "rewrite": {"status": "absent", "projection": "constraint violation/deny"},
+        "defer": {"status": "partial", "projection": "escalate/approval"}
+      }
+    }
+  },
+  "properties": [
+    {
+      "property": "request pass/allow",
+      "ZoneCap": "exact",
+      "Lanotte_Roop_edit_automata": "exact",
+      "SINT_v0_2_pinned": "exact"
+    },
+    {
+      "property": "request suppression/deny",
+      "ZoneCap": "exact",
+      "Lanotte_Roop_edit_automata": "exact",
+      "SINT_v0_2_pinned": "exact"
+    },
+    {
+      "property": "live runtime capability attenuation",
+      "ZoneCap": "exact",
+      "Lanotte_Roop_edit_automata": "absent",
+      "SINT_v0_2_pinned": "partial"
+    },
+    {
+      "property": "runtime output correction",
+      "ZoneCap": "exact",
+      "Lanotte_Roop_edit_automata": "exact",
+      "SINT_v0_2_pinned": "absent"
+    },
+    {
+      "property": "approval defer with parent-admissible stutter",
+      "ZoneCap": "exact",
+      "Lanotte_Roop_edit_automata": "absent",
+      "SINT_v0_2_pinned": "partial"
+    },
+    {
+      "property": "effective-capability output membership",
+      "ZoneCap": "exact",
+      "Lanotte_Roop_edit_automata": "absent",
+      "SINT_v0_2_pinned": "partial"
+    },
+    {
+      "property": "formal monitored-system deadlock freedom",
+      "ZoneCap": "partial",
+      "Lanotte_Roop_edit_automata": "exact",
+      "SINT_v0_2_pinned": "absent"
+    },
+    {
+      "property": "syntactic attenuation to physical trace/reachable-set refinement",
+      "ZoneCap": "exact",
+      "Lanotte_Roop_edit_automata": "absent",
+      "SINT_v0_2_pinned": "absent"
+    },
+    {
+      "property": "IEC 62443 zone/conduit compiler",
+      "ZoneCap": "exact",
+      "Lanotte_Roop_edit_automata": "absent",
+      "SINT_v0_2_pinned": "absent"
+    }
+  ]
+}
