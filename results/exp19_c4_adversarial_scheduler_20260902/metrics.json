@@ -1,0 +1,47 @@
+{
+  "adversarial_post_issuance_revocation_executions": 8,
+  "all_revocations_delivered": true,
+  "all_schedules_fair": true,
+  "central_fifo_post_issuance_revocation_executions": 0,
+  "central_fifo_schedules": 5,
+  "claim": "C4",
+  "claim_supported_under_delayed_delivery": false,
+  "deadlocks": 0,
+  "delayed_schedules": 10,
+  "deterministic_resolution_violations": 0,
+  "exp": "exp-19",
+  "fair_schedules": 15,
+  "infrastructure_failures": {
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "expected_counts": {},
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "terminal_revoked_target_pending": 0,
+    "undelivered_revocation": false,
+    "unfair_schedule": false
+  },
+  "permission_union_violations": 0,
+  "post_delivery_revocation_executions": 0,
+  "scenarios": 5,
+  "seed": null,
+  "stale_executions_blocked_by_epoch_fence": 8,
+  "terminal_revoked_targets_pending": 0,
+  "violations_by_delay": {
+    "0": {
+      "post_delivery_revocation_executions": 0,
+      "post_issuance_revocation_executions": 0,
+      "schedules": 5
+    },
+    "1": {
+      "post_delivery_revocation_executions": 0,
+      "post_issuance_revocation_executions": 4,
+      "schedules": 5
+    },
+    "2": {
+      "post_delivery_revocation_executions": 0,
+      "post_issuance_revocation_executions": 4,
+      "schedules": 5
+    }
+  }
+}

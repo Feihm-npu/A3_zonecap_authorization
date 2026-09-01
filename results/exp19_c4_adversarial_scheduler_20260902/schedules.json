@@ -1,0 +1,767 @@
+[
+  {
+    "deadlocks": 0,
+    "delay": 0,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 0,
+    "records": [
+      {
+        "event": "revoke_1",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 0
+      },
+      {
+        "event": "resolve",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [
+          1
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [
+          1
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 1,
+    "revoked_target_pending_at_end": false,
+    "scenario": "ordinary_pending",
+    "schedule": [
+      "revoke_1",
+      "resolve",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 0
+  },
+  {
+    "deadlocks": 0,
+    "delay": 1,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 1,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 1,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": true,
+        "step": 0
+      },
+      {
+        "event": "revoke_1",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [
+          1
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 1,
+    "revoked_target_pending_at_end": false,
+    "scenario": "ordinary_pending",
+    "schedule": [
+      "resolve",
+      "revoke_1",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 1
+  },
+  {
+    "deadlocks": 0,
+    "delay": 2,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 1,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 1,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": true,
+        "step": 0
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "revoke_1",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 1,
+    "revoked_target_pending_at_end": false,
+    "scenario": "ordinary_pending",
+    "schedule": [
+      "resolve",
+      "tick",
+      "revoke_1"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 1
+  },
+  {
+    "deadlocks": 0,
+    "delay": 0,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 0,
+    "records": [
+      {
+        "event": "revoke_0",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 0
+      },
+      {
+        "event": "resolve",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [
+          0
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [
+          0
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 0,
+    "revoked_target_pending_at_end": false,
+    "scenario": "approved_high_risk",
+    "schedule": [
+      "revoke_0",
+      "resolve",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 0
+  },
+  {
+    "deadlocks": 0,
+    "delay": 1,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 1,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 0,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": true,
+        "step": 0
+      },
+      {
+        "event": "revoke_0",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [
+          0
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 0,
+    "revoked_target_pending_at_end": false,
+    "scenario": "approved_high_risk",
+    "schedule": [
+      "resolve",
+      "revoke_0",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 1
+  },
+  {
+    "deadlocks": 0,
+    "delay": 2,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 1,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 0,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": true,
+        "step": 0
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "revoke_0",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 0,
+    "revoked_target_pending_at_end": false,
+    "scenario": "approved_high_risk",
+    "schedule": [
+      "resolve",
+      "tick",
+      "revoke_0"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 1
+  },
+  {
+    "deadlocks": 0,
+    "delay": 0,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 0,
+    "records": [
+      {
+        "event": "revoke_1",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 0
+      },
+      {
+        "event": "resolve",
+        "executed_holder": 2,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [
+          1
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [
+          1
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 1,
+    "revoked_target_pending_at_end": false,
+    "scenario": "conflict_revoked_winner",
+    "schedule": [
+      "revoke_1",
+      "resolve",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 0
+  },
+  {
+    "deadlocks": 0,
+    "delay": 1,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 1,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 1,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": true,
+        "step": 0
+      },
+      {
+        "event": "revoke_1",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [
+          1
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 1,
+    "revoked_target_pending_at_end": false,
+    "scenario": "conflict_revoked_winner",
+    "schedule": [
+      "resolve",
+      "revoke_1",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 1
+  },
+  {
+    "deadlocks": 0,
+    "delay": 2,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 1,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 1,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": true,
+        "step": 0
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "revoke_1",
+        "executed_holder": null,
+        "local_revoked_after": [
+          1
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 1,
+    "revoked_target_pending_at_end": false,
+    "scenario": "conflict_revoked_winner",
+    "schedule": [
+      "resolve",
+      "tick",
+      "revoke_1"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 1
+  },
+  {
+    "deadlocks": 0,
+    "delay": 0,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 0,
+    "records": [
+      {
+        "event": "revoke_2",
+        "executed_holder": null,
+        "local_revoked_after": [
+          2
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 0
+      },
+      {
+        "event": "resolve",
+        "executed_holder": 1,
+        "local_revoked_after": [
+          2
+        ],
+        "local_revoked_before": [
+          2
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          2
+        ],
+        "local_revoked_before": [
+          2
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 2,
+    "revoked_target_pending_at_end": false,
+    "scenario": "conflict_revoked_loser",
+    "schedule": [
+      "revoke_2",
+      "resolve",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 0
+  },
+  {
+    "deadlocks": 0,
+    "delay": 1,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 0,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 1,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 0
+      },
+      {
+        "event": "revoke_2",
+        "executed_holder": null,
+        "local_revoked_after": [
+          2
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          2
+        ],
+        "local_revoked_before": [
+          2
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 2,
+    "revoked_target_pending_at_end": false,
+    "scenario": "conflict_revoked_loser",
+    "schedule": [
+      "resolve",
+      "revoke_2",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 0
+  },
+  {
+    "deadlocks": 0,
+    "delay": 2,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 0,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 1,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 0
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "revoke_2",
+        "executed_holder": null,
+        "local_revoked_after": [
+          2
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 2,
+    "revoked_target_pending_at_end": false,
+    "scenario": "conflict_revoked_loser",
+    "schedule": [
+      "resolve",
+      "tick",
+      "revoke_2"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 0
+  },
+  {
+    "deadlocks": 0,
+    "delay": 0,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 0,
+    "records": [
+      {
+        "event": "revoke_0",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 0
+      },
+      {
+        "event": "resolve",
+        "executed_holder": 1,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [
+          0
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [
+          0
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 0,
+    "revoked_target_pending_at_end": false,
+    "scenario": "mixed_revoked_high_risk_winner",
+    "schedule": [
+      "revoke_0",
+      "resolve",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 0
+  },
+  {
+    "deadlocks": 0,
+    "delay": 1,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 1,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 0,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": true,
+        "step": 0
+      },
+      {
+        "event": "revoke_0",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [
+          0
+        ],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 0,
+    "revoked_target_pending_at_end": false,
+    "scenario": "mixed_revoked_high_risk_winner",
+    "schedule": [
+      "resolve",
+      "revoke_0",
+      "tick"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 1
+  },
+  {
+    "deadlocks": 0,
+    "delay": 2,
+    "deterministic_resolution_violations": 0,
+    "fair_delivery": true,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "post_issuance_revocation_executions": 1,
+    "records": [
+      {
+        "event": "resolve",
+        "executed_holder": 0,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": true,
+        "step": 0
+      },
+      {
+        "event": "tick",
+        "executed_holder": null,
+        "local_revoked_after": [],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 1
+      },
+      {
+        "event": "revoke_0",
+        "executed_holder": null,
+        "local_revoked_after": [
+          0
+        ],
+        "local_revoked_before": [],
+        "post_issuance_revocation_execution": false,
+        "step": 2
+      }
+    ],
+    "revocation_delivered": true,
+    "revoke_holder": 0,
+    "revoked_target_pending_at_end": false,
+    "scenario": "mixed_revoked_high_risk_winner",
+    "schedule": [
+      "resolve",
+      "tick",
+      "revoke_0"
+    ],
+    "stale_executions_blocked_by_epoch_fence": 1
+  }
+]

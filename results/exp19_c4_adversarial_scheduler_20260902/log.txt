@@ -1,0 +1,7 @@
+experiment=exp-19
+seed=none
+fair_schedules=15
+central_fifo_post_issuance_revocation_executions=0
+adversarial_post_issuance_revocation_executions=8
+post_delivery_revocation_executions=0
+claim_supported_under_delayed_delivery=false

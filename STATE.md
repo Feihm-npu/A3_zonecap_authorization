@@ -10,7 +10,7 @@ since: 2026-08-31
 read:                     # what the next session must read first
   - prompts/S2_RUN.md
 options: []               # when awaiting human: allowed next states
-note: "exp-01 through exp-18 are complete with no registered C1-C4 counterexample; resume at exp-19 adversarial fair schedules and delayed revocation delivery. Jetson/OpenPLC for exp-22–25 remains unapproved." # one line for the next session: pending request, where work stopped
+note: "exp-01 through exp-19 are complete; exp-19 produced a registered non-core C4 counterexample under issuance-time delayed-revocation semantics, so continue exp-20/21 to bound the finding before S2 interpretation. Jetson/OpenPLC for exp-22–25 remains unapproved." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -28,3 +28,4 @@ note: "exp-01 through exp-18 are complete with no registered C1-C4 counterexampl
 - 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after completing C3 exp-12 through exp-16 with bounded five-effect composition, exhaustive sequences, baseline boundaries, and fail-closed timeout sanity; next is exp-17 C4
 - 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after exp-17 exhausted the registered bound-five 2-4-holder interleavings with zero C4 safety/deadlock violation; next is exp-18 bound/convergence ablation
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | checkpoint after exp-18 closed every 2-4-holder graph with symmetry reduction and zero new cycle/deadlock violation; next is exp-19 adversarial scheduling
+- 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-19 found issuer-relative stale execution under fair delayed revocation delivery; C4 is non-core, so continue to exp-20 baseline and exp-21 sanity to bound the counterexample

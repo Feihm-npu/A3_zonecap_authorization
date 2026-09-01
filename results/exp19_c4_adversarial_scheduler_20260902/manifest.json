@@ -1,0 +1,22 @@
+{
+  "git_head": "f8475dee6866eb55646a2e21a89b1190f59c1196",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp19_c4_adversarial_scheduler.json": "b2d7a30e12cd5e78a6506e8b5085f72c6894b4d7208e4df5ec21bb65cb60687b",
+    "research/c4_adversarial_scheduler_protocol.md": "d478be4a192190d1204a60a935327a064f017d4353bff4aa0f68f03759a8ee02",
+    "results/exp18_c4_convergence_20260902/metrics.json": "225bce3ae6b3d943fdb2800d893e17c95810cd12018441b83655e68641f85545",
+    "src/zonecap/concurrency.py": "d881c8757140c16cafb38ca341b933ed477b92b25ec63097a35ed4ab59bd6a12",
+    "src/zonecap/exp19.py": "2488f111150b11d89e068fcd1e7f1658e91c3b4f6870c55451406734038a1810",
+    "tests/test_exp19.py": "441661cddb2481943ef73988fdc299d1d567b5af73f8f6e0fefdc8434663db75"
+  },
+  "outputs": {
+    "command.txt": "acad87f924aa214fbfbb96715beb744eed69ae8f6e26ebd11dec33d1d0788a0e",
+    "config.json": "b2d7a30e12cd5e78a6506e8b5085f72c6894b4d7208e4df5ec21bb65cb60687b",
+    "log.txt": "de9e0bb4e8597a23f0b0dbf355671885e8270be7336abb67db52137340aa56c9",
+    "metrics.json": "7439982937a8a787b1c511d146d11798560f9955c7663bfbe07b094f2086ffca",
+    "schedules.json": "76bae48976372d5c0821c7478f67457c598d3be65e44296960d6f4fac399f098",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345"
+  },
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

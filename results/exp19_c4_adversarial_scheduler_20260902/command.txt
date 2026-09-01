@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp19 --config configs/exp19_c4_adversarial_scheduler.json --output-dir results/exp19_c4_adversarial_scheduler_20260902

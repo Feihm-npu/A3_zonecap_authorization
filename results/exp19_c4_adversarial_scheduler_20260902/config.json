@@ -1,0 +1,40 @@
+{
+  "approval_timeout_ticks": 2,
+  "claim": "C4",
+  "command": "PYTHONPATH=src python -m zonecap.exp19 --config configs/exp19_c4_adversarial_scheduler.json --output-dir results/exp19_c4_adversarial_scheduler_20260902",
+  "delivery_delays": [
+    0,
+    1,
+    2
+  ],
+  "exp": "exp-19",
+  "expected_counts": {
+    "all_revocations_delivered": true,
+    "all_schedules_fair": true,
+    "central_fifo_post_issuance_revocation_executions": 0,
+    "central_fifo_schedules": 5,
+    "deadlocks": 0,
+    "delayed_schedules": 10,
+    "deterministic_resolution_violations": 0,
+    "fair_schedules": 15,
+    "permission_union_violations": 0,
+    "post_delivery_revocation_executions": 0,
+    "scenarios": 5,
+    "terminal_revoked_targets_pending": 0
+  },
+  "expected_if_claim_true": {
+    "adversarial_post_issuance_revocation_executions": 0,
+    "claim_supported_under_delayed_delivery": true
+  },
+  "frozen_hashes": {
+    "research/c4_adversarial_scheduler_protocol.md": "d478be4a192190d1204a60a935327a064f017d4353bff4aa0f68f03759a8ee02",
+    "results/exp18_c4_convergence_20260902/metrics.json": "225bce3ae6b3d943fdb2800d893e17c95810cd12018441b83655e68641f85545",
+    "src/zonecap/concurrency.py": "d881c8757140c16cafb38ca341b933ed477b92b25ec63097a35ed4ab59bd6a12",
+    "src/zonecap/exp19.py": "2488f111150b11d89e068fcd1e7f1658e91c3b4f6870c55451406734038a1810",
+    "tests/test_exp19.py": "441661cddb2481943ef73988fdc299d1d567b5af73f8f6e0fefdc8434663db75"
+  },
+  "holders": 3,
+  "maximum_delivery_delay": 2,
+  "run_id": "exp19_c4_adversarial_scheduler_20260902",
+  "seed": null
+}
