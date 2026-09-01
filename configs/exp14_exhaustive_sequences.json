@@ -1,0 +1,58 @@
+{
+  "exp": "exp-14",
+  "claim": "C3-A2",
+  "seed": null,
+  "run_id": "exp14_exhaustive_sequences_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp14 --config configs/exp14_exhaustive_sequences.json --output-dir results/exp14_exhaustive_sequences_20260901",
+  "policy_table": "research/heldout/exp07/policy_tables.json",
+  "alphabet": [
+    "narrow",
+    "defer",
+    "valid",
+    "rewrite",
+    "deny"
+  ],
+  "handpicked_path": [
+    "narrow",
+    "defer",
+    "valid",
+    "rewrite",
+    "deny"
+  ],
+  "horizon": 5,
+  "expected_counts": {
+    "scopes": 126,
+    "exhaustive_words": 492156,
+    "exhaustive_transitions": 492030,
+    "exhaustive_physical_transitions": 295218,
+    "handpicked_words": 126,
+    "handpicked_transitions": 630,
+    "handpicked_physical_transitions": 378,
+    "exhaustive_bigrams": 25,
+    "exhaustive_trigrams": 125,
+    "handpicked_bigrams": 4,
+    "handpicked_trigrams": 3
+  },
+  "pass_criteria": {
+    "exhaustive_effect_violations": 0,
+    "exhaustive_attenuation_violations": 0,
+    "exhaustive_authority_violations": 0,
+    "exhaustive_nonstutter_violations": 0,
+    "exhaustive_parent_realizability_violations": 0,
+    "exhaustive_deadlocks": 0,
+    "exhaustive_mutants_killed": 3,
+    "handpicked_mutants_killed": 0
+  },
+  "frozen_hashes": {
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "research/c3_exhaustive_sequence_protocol.md": "d1e4769a0c712f3dda6efc727904dec98a6267cfd10d007d2d677ddb2d0db71a",
+    "src/zonecap/compiler.py": "0c96cd2eda5f29fc284f88c6c9e741ddc78347a04f70b8432554ef695d6c44bd",
+    "src/zonecap/effects.py": "f3df0ef962912352660cda577e930d3d603bb987e5f1fe861600c83bb5b26ed5",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp07.py": "d5a0398a6554fb481032bd9d969ee2cb88efc73e068fab7ee0d441cf4d301e63",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/exp14.py": "07ba6ed59b8246f8dce5736c4aea385cffe044fa51388f76badd7188f2f7756a",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_exp14.py": "ca231c8eaa3e28ad4636177a2bbb1896139a99bd9b80d9293e066550959894bd"
+  }
+}
