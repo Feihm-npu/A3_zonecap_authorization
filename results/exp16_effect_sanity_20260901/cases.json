@@ -1,0 +1,149 @@
+{
+  "approval_timeout": {
+    "expectation_matched": true,
+    "expected_effects": [
+      "defer",
+      "defer",
+      "deny"
+    ],
+    "steps": [
+      {
+        "authorized": true,
+        "effect": "defer",
+        "emitted": {
+          "operation": "read",
+          "value": 0.0
+        },
+        "fail_closed": false,
+        "parent_authorized": true,
+        "reason": "high-risk request requires human approval",
+        "stutter": true
+      },
+      {
+        "authorized": true,
+        "effect": "defer",
+        "emitted": {
+          "operation": "read",
+          "value": 0.0
+        },
+        "fail_closed": false,
+        "parent_authorized": true,
+        "reason": "high-risk request requires human approval",
+        "stutter": true
+      },
+      {
+        "authorized": true,
+        "effect": "deny",
+        "emitted": null,
+        "fail_closed": true,
+        "parent_authorized": true,
+        "reason": "defer approval/context timeout",
+        "stutter": true
+      }
+    ]
+  },
+  "lost_context": {
+    "expectation_matched": true,
+    "expected_effects": [
+      "defer",
+      "defer",
+      "deny"
+    ],
+    "steps": [
+      {
+        "authorized": true,
+        "effect": "defer",
+        "emitted": {
+          "operation": "read",
+          "value": 0.0
+        },
+        "fail_closed": false,
+        "parent_authorized": true,
+        "reason": "required runtime context is unavailable",
+        "stutter": true
+      },
+      {
+        "authorized": true,
+        "effect": "defer",
+        "emitted": {
+          "operation": "read",
+          "value": 0.0
+        },
+        "fail_closed": false,
+        "parent_authorized": true,
+        "reason": "required runtime context is unavailable",
+        "stutter": true
+      },
+      {
+        "authorized": true,
+        "effect": "deny",
+        "emitted": null,
+        "fail_closed": true,
+        "parent_authorized": true,
+        "reason": "defer approval/context timeout",
+        "stutter": true
+      }
+    ]
+  },
+  "missing_hold_action": {
+    "effect": "deny",
+    "emitted": null,
+    "expectation_matched": true,
+    "expected_effect": "deny",
+    "fail_closed": true
+  },
+  "recovery_before_timeout": {
+    "expectation_matched": true,
+    "expected_effects": [
+      "defer",
+      "allow"
+    ],
+    "steps": [
+      {
+        "authorized": true,
+        "effect": "defer",
+        "emitted": {
+          "operation": "read",
+          "value": 0.0
+        },
+        "fail_closed": false,
+        "parent_authorized": true,
+        "reason": "required runtime context is unavailable",
+        "stutter": true
+      },
+      {
+        "authorized": true,
+        "effect": "allow",
+        "emitted": {
+          "operation": "set",
+          "value": 0.2
+        },
+        "fail_closed": false,
+        "parent_authorized": true,
+        "reason": "request satisfies the effective capability",
+        "stutter": true
+      }
+    ]
+  },
+  "unauthorized_rewrite": {
+    "child_authorized_if_bypassed": false,
+    "counterexample_if_binding_bypassed": {
+      "child_parameter": [
+        0.0,
+        0.4
+      ],
+      "operation": "set",
+      "parent_parameter": [
+        0.0,
+        1.0
+      ],
+      "value": 1.5
+    },
+    "effect": "deny",
+    "emitted": null,
+    "expectation_matched": true,
+    "expected_effect": "deny",
+    "fail_closed": true,
+    "parent_authorized_if_bypassed": false
+  }
+}

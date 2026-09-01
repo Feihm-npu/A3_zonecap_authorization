@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp16 --config configs/exp16_effect_sanity.json --output-dir results/exp16_effect_sanity_20260901

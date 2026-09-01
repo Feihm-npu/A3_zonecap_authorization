@@ -1,0 +1,18 @@
+{
+  "registered_premise_removed": [
+    {
+      "case": "unauthorized_rewrite",
+      "child_parameter": [
+        0.0,
+        0.4
+      ],
+      "operation": "set",
+      "parent_parameter": [
+        0.0,
+        1.0
+      ],
+      "removed_premise": "rewrite output remains inside the effective capability",
+      "value": 1.5
+    }
+  ]
+}

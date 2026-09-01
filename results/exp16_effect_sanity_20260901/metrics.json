@@ -1,0 +1,17 @@
+{
+  "authorized_defer_holds": 5,
+  "cases": 5,
+  "claim": "C3 sanity",
+  "executor_nonstutter_defers": 0,
+  "executor_unauthorized_outputs": 0,
+  "exp": "exp-16",
+  "expectation_mismatches": 0,
+  "expected_count_mismatches": {},
+  "immediate_fail_closed_cases": 2,
+  "max_deferrals": 2,
+  "premise_removed_counterexamples": 1,
+  "recovery_allows": 1,
+  "seed": null,
+  "terminal_pending_requests": 0,
+  "timeout_fail_closed_cases": 2
+}

@@ -25,7 +25,7 @@ The runner refuses to overwrite an existing run directory. Every run writes `con
 
 - `examples/dev_tank.json` and `examples/dev_robot_cell.json` are development fixtures only. They are not IEC 62443 conformance evidence and are permanently excluded from confirmatory results.
 - The current rewrite is a boundary clamp used to exercise the authority-preservation obligation. S2 must replace/extend it with registered plant-specific edit choices and compare against deny-only enforcement.
-- The current defer decision does not yet advance the plant. S2 must model an explicit hold/stutter transition and refute the theorem when that transition is absent.
+- `PolicyEngine` keeps `DEFER` as a stateless request decision. `EffectBinding` supplies the explicit parent-admissible hold/stutter transition, and `BoundedEffectExecutor` converts a missing hold or a third unresolved defer into no-output `DENY`; exp-04, exp-12, and exp-16 retain the removed-premise counterexamples and timeout checks.
 - The exact interval implementation is intentionally dependency-free because `casadi` is absent from the active environment. A MIMO set representation will be pinned before exp-03.
 
 ## Baseline status

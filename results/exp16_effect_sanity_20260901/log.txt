@@ -1,0 +1,9 @@
+experiment=exp-16
+seed=none
+cases=5
+expectation_mismatches=0
+immediate_fail_closed_cases=2
+timeout_fail_closed_cases=2
+authorized_defer_holds=5
+recovery_allows=1
+premise_removed_counterexamples=1
