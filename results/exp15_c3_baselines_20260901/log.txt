@@ -1,0 +1,9 @@
+experiment=exp-15
+seed=none
+policy_steps=81648
+lanotte_exact_effect_types=3/5
+lanotte_unmapped_policy_steps=9072
+sint_exact_partial_absent_effect_types=2/2/1
+sint_strict_nonexact_policy_steps=22680
+sint_rewrites_projected_to_constraint_violation_deny=13608
+lanotte_runtime_metrics_status=N/A

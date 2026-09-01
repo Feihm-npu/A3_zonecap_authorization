@@ -1,0 +1,28 @@
+{
+  "lanotte_roop": {
+    "primary": [
+      {
+        "arxiv": "2105.10668",
+        "doi": "10.1145/3546579",
+        "role": "effect mechanism plus formal soundness/deadlock-freedom",
+        "title": "Industrial Control Systems Security via Runtime Enforcement"
+      },
+      {
+        "doi": "10.1109/ACCESS.2024.3357714",
+        "role": "bidirectional parallel hardware composition boundary",
+        "title": "Scalable Security Enforcement for Cyber Physical Systems"
+      }
+    ],
+    "runtime_status": "N/A: matching licensed FPGA/PLC/Simulink environment unavailable"
+  },
+  "sint_v0_2": {
+    "commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+    "executed_evidence": "results/exp05_common_subset_20260901/sint_instance.json",
+    "repository": "https://github.com/sint-ai/sint-protocol.git",
+    "runtime_status": "pinned delegation instance executed; effect comparison is source-grounded projection"
+  },
+  "zonecap": {
+    "executed_evidence": "results/exp12_effect_automaton_20260901/metrics.json",
+    "runtime_status": "all five effects executed on the frozen held-out corpus"
+  }
+}

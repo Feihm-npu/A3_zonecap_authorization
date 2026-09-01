@@ -1,0 +1,21 @@
+{
+  "claim": "C3 baseline",
+  "effect_types": 5,
+  "exp": "exp-15",
+  "expected_count_mismatches": {},
+  "lanotte_exact_effect_types": 3,
+  "lanotte_runtime_metrics_status": "N/A",
+  "lanotte_unmapped_policy_steps": 9072,
+  "policy_steps": 81648,
+  "properties": 9,
+  "seed": null,
+  "sint_absent_effect_types": 1,
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "sint_exact_effect_types": 2,
+  "sint_partial_effect_types": 2,
+  "sint_rewrites_projected_to_constraint_violation_deny": 13608,
+  "sint_strict_nonexact_policy_steps": 22680,
+  "sint_unmapped_policy_steps": 13608,
+  "systems": 3,
+  "zonecap_exact_effect_types": 5
+}

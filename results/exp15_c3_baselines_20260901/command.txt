@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp15 --config configs/exp15_c3_baselines.json --output-dir results/exp15_c3_baselines_20260901

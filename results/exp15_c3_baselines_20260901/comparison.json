@@ -1,0 +1,275 @@
+{
+  "effect_counts_input": {
+    "allow": 9072,
+    "attenuate": 4536,
+    "defer": 4536,
+    "deny": 49896,
+    "rewrite": 13608
+  },
+  "effect_coverage": {
+    "Lanotte_Roop_edit_automata": {
+      "absent_policy_step_rate": 0.1111111111111111,
+      "effect_type_coverage": {
+        "absent": 2,
+        "exact": 3
+      },
+      "exact_effect_type_rate": 0.6,
+      "exact_policy_step_rate": 0.8888888888888888,
+      "partial_policy_step_rate": 0.0,
+      "projected_outcomes": {
+        "N/A": 9072,
+        "correct/autonomous output": 13608,
+        "pass/identity edit": 9072,
+        "suppress": 49896
+      },
+      "strict_nonexact_policy_steps": 9072,
+      "unmapped_policy_steps": 9072,
+      "weighted_policy_steps": {
+        "absent": 9072,
+        "exact": 72576
+      }
+    },
+    "SINT_v0_2_pinned": {
+      "absent_policy_step_rate": 0.16666666666666666,
+      "effect_type_coverage": {
+        "absent": 1,
+        "exact": 2,
+        "partial": 2
+      },
+      "exact_effect_type_rate": 0.4,
+      "exact_policy_step_rate": 0.7222222222222222,
+      "partial_policy_step_rate": 0.1111111111111111,
+      "projected_outcomes": {
+        "allow": 9072,
+        "constraint violation/deny": 13608,
+        "delegation-time token attenuation": 4536,
+        "deny": 49896,
+        "escalate/approval": 4536
+      },
+      "strict_nonexact_policy_steps": 22680,
+      "unmapped_policy_steps": 13608,
+      "weighted_policy_steps": {
+        "absent": 13608,
+        "exact": 58968,
+        "partial": 9072
+      }
+    },
+    "ZoneCap": {
+      "absent_policy_step_rate": 0.0,
+      "effect_type_coverage": {
+        "exact": 5
+      },
+      "exact_effect_type_rate": 1.0,
+      "exact_policy_step_rate": 1.0,
+      "partial_policy_step_rate": 0.0,
+      "projected_outcomes": {
+        "ALLOW": 9072,
+        "ATTENUATE": 4536,
+        "DEFER": 4536,
+        "DENY": 49896,
+        "REWRITE": 13608
+      },
+      "strict_nonexact_policy_steps": 0,
+      "unmapped_policy_steps": 0,
+      "weighted_policy_steps": {
+        "exact": 81648
+      }
+    }
+  },
+  "execution_boundary": {
+    "Lanotte_Roop_edit_automata": "N/A: matching licensed FPGA/PLC/Simulink environment unavailable",
+    "SINT_v0_2_pinned": "pinned delegation instance executed; effect comparison is source-grounded projection",
+    "ZoneCap": "exp-12 executed"
+  },
+  "mapping": {
+    "frozen_on": "2026-09-01",
+    "properties": [
+      {
+        "Lanotte_Roop_edit_automata": "exact",
+        "SINT_v0_2_pinned": "exact",
+        "ZoneCap": "exact",
+        "property": "request pass/allow"
+      },
+      {
+        "Lanotte_Roop_edit_automata": "exact",
+        "SINT_v0_2_pinned": "exact",
+        "ZoneCap": "exact",
+        "property": "request suppression/deny"
+      },
+      {
+        "Lanotte_Roop_edit_automata": "absent",
+        "SINT_v0_2_pinned": "partial",
+        "ZoneCap": "exact",
+        "property": "live runtime capability attenuation"
+      },
+      {
+        "Lanotte_Roop_edit_automata": "exact",
+        "SINT_v0_2_pinned": "absent",
+        "ZoneCap": "exact",
+        "property": "runtime output correction"
+      },
+      {
+        "Lanotte_Roop_edit_automata": "absent",
+        "SINT_v0_2_pinned": "partial",
+        "ZoneCap": "exact",
+        "property": "approval defer with parent-admissible stutter"
+      },
+      {
+        "Lanotte_Roop_edit_automata": "absent",
+        "SINT_v0_2_pinned": "partial",
+        "ZoneCap": "exact",
+        "property": "effective-capability output membership"
+      },
+      {
+        "Lanotte_Roop_edit_automata": "exact",
+        "SINT_v0_2_pinned": "absent",
+        "ZoneCap": "partial",
+        "property": "formal monitored-system deadlock freedom"
+      },
+      {
+        "Lanotte_Roop_edit_automata": "absent",
+        "SINT_v0_2_pinned": "absent",
+        "ZoneCap": "exact",
+        "property": "syntactic attenuation to physical trace/reachable-set refinement"
+      },
+      {
+        "Lanotte_Roop_edit_automata": "absent",
+        "SINT_v0_2_pinned": "absent",
+        "ZoneCap": "exact",
+        "property": "IEC 62443 zone/conduit compiler"
+      }
+    ],
+    "schema_version": 1,
+    "sources": {
+      "lanotte_roop": {
+        "primary": [
+          {
+            "arxiv": "2105.10668",
+            "doi": "10.1145/3546579",
+            "role": "effect mechanism plus formal soundness/deadlock-freedom",
+            "title": "Industrial Control Systems Security via Runtime Enforcement"
+          },
+          {
+            "doi": "10.1109/ACCESS.2024.3357714",
+            "role": "bidirectional parallel hardware composition boundary",
+            "title": "Scalable Security Enforcement for Cyber Physical Systems"
+          }
+        ],
+        "runtime_status": "N/A: matching licensed FPGA/PLC/Simulink environment unavailable"
+      },
+      "sint_v0_2": {
+        "commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+        "executed_evidence": "results/exp05_common_subset_20260901/sint_instance.json",
+        "repository": "https://github.com/sint-ai/sint-protocol.git",
+        "runtime_status": "pinned delegation instance executed; effect comparison is source-grounded projection"
+      },
+      "zonecap": {
+        "executed_evidence": "results/exp12_effect_automaton_20260901/metrics.json",
+        "runtime_status": "all five effects executed on the frozen held-out corpus"
+      }
+    },
+    "status_legend": {
+      "absent": "no source-grounded analogue located",
+      "exact": "same request-time operational role",
+      "partial": "related behavior at another lifecycle stage or without the registered physical contract"
+    },
+    "systems": {
+      "Lanotte_Roop_edit_automata": {
+        "effects": {
+          "allow": {
+            "projection": "pass/identity edit",
+            "status": "exact"
+          },
+          "attenuate": {
+            "projection": "N/A",
+            "status": "absent"
+          },
+          "defer": {
+            "projection": "N/A",
+            "status": "absent"
+          },
+          "deny": {
+            "projection": "suppress",
+            "status": "exact"
+          },
+          "rewrite": {
+            "projection": "correct/autonomous output",
+            "status": "exact"
+          }
+        }
+      },
+      "SINT_v0_2_pinned": {
+        "effects": {
+          "allow": {
+            "projection": "allow",
+            "status": "exact"
+          },
+          "attenuate": {
+            "projection": "delegation-time token attenuation",
+            "status": "partial"
+          },
+          "defer": {
+            "projection": "escalate/approval",
+            "status": "partial"
+          },
+          "deny": {
+            "projection": "deny",
+            "status": "exact"
+          },
+          "rewrite": {
+            "projection": "constraint violation/deny",
+            "status": "absent"
+          }
+        }
+      },
+      "ZoneCap": {
+        "effects": {
+          "allow": {
+            "projection": "ALLOW",
+            "status": "exact"
+          },
+          "attenuate": {
+            "projection": "ATTENUATE",
+            "status": "exact"
+          },
+          "defer": {
+            "projection": "DEFER",
+            "status": "exact"
+          },
+          "deny": {
+            "projection": "DENY",
+            "status": "exact"
+          },
+          "rewrite": {
+            "projection": "REWRITE",
+            "status": "exact"
+          }
+        }
+      }
+    }
+  },
+  "property_coverage": {
+    "Lanotte_Roop_edit_automata": {
+      "properties": 9,
+      "property_status_counts": {
+        "absent": 5,
+        "exact": 4
+      }
+    },
+    "SINT_v0_2_pinned": {
+      "properties": 9,
+      "property_status_counts": {
+        "absent": 4,
+        "exact": 2,
+        "partial": 3
+      }
+    },
+    "ZoneCap": {
+      "properties": 9,
+      "property_status_counts": {
+        "exact": 8,
+        "partial": 1
+      }
+    }
+  }
+}
