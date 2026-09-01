@@ -47,7 +47,7 @@ Alternatives:
 - A1: Any apparent improvement is achievable by deny-only enforcement, so new effects add no policy value. → ruled out by: exp-13
 - A2: Safety holds only on hand-picked traces. → ruled out by: exp-14
 
-Status: proposed
+Status: testing
 
 ## C4 [S1]
 

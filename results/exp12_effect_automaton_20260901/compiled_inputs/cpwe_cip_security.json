@@ -1,0 +1,1409 @@
+{
+  "conduits": [
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "id": "c_site_ops__site_ops",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "site_ops",
+      "target": "site_ops"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "id": "c_site_ops__safety",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "site_ops",
+      "target": "safety"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "id": "c_site_ops__blend_fill",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "site_ops",
+      "target": "blend_fill"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "id": "c_site_ops__clean_in_place",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "site_ops",
+      "target": "clean_in_place"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "id": "c_site_ops__rapid_mix",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "site_ops",
+      "target": "rapid_mix"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "oem_controller"
+      ],
+      "id": "c_site_ops__oem",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "site_ops",
+      "target": "oem"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "id": "c_safety__site_ops",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "safety",
+      "target": "site_ops"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "id": "c_safety__safety",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "safety",
+      "target": "safety"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "id": "c_safety__blend_fill",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "safety",
+      "target": "blend_fill"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "id": "c_safety__clean_in_place",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "safety",
+      "target": "clean_in_place"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "id": "c_safety__rapid_mix",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "safety",
+      "target": "rapid_mix"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "id": "c_blend_fill__site_ops",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "blend_fill",
+      "target": "site_ops"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "id": "c_blend_fill__safety",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "blend_fill",
+      "target": "safety"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "id": "c_blend_fill__blend_fill",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "blend_fill",
+      "target": "blend_fill"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "id": "c_blend_fill__clean_in_place",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "blend_fill",
+      "target": "clean_in_place"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "id": "c_blend_fill__rapid_mix",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "blend_fill",
+      "target": "rapid_mix"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "oem_controller"
+      ],
+      "id": "c_blend_fill__oem",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "blend_fill",
+      "target": "oem"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "id": "c_clean_in_place__site_ops",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "clean_in_place",
+      "target": "site_ops"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "id": "c_clean_in_place__safety",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "clean_in_place",
+      "target": "safety"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "id": "c_clean_in_place__blend_fill",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "clean_in_place",
+      "target": "blend_fill"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "id": "c_clean_in_place__clean_in_place",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "clean_in_place",
+      "target": "clean_in_place"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "id": "c_clean_in_place__rapid_mix",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "clean_in_place",
+      "target": "rapid_mix"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "id": "c_rapid_mix__site_ops",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "rapid_mix",
+      "target": "site_ops"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "id": "c_rapid_mix__safety",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "rapid_mix",
+      "target": "safety"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "id": "c_rapid_mix__blend_fill",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "rapid_mix",
+      "target": "blend_fill"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "id": "c_rapid_mix__clean_in_place",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "rapid_mix",
+      "target": "clean_in_place"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "id": "c_rapid_mix__rapid_mix",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "rapid_mix",
+      "target": "rapid_mix"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "id": "c_oem__site_ops",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "oem",
+      "target": "site_ops"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "id": "c_oem__blend_fill",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "oem",
+      "target": "blend_fill"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "oem_controller"
+      ],
+      "id": "c_oem__oem",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "oem",
+      "target": "oem"
+    }
+  ],
+  "evidence_scope": "held-out source table plus locked evaluation overlay",
+  "name": "cpwe_cip_security",
+  "plant_1d": {
+    "a": 1,
+    "b": 1,
+    "disturbance": [
+      0,
+      0
+    ],
+    "initial_state": [
+      0,
+      0
+    ]
+  },
+  "policies": [
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "conduit": "c_site_ops__site_ops",
+      "id": "g000",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "site_ops",
+      "subject": "subject:cpwe_cip_security:g000:d0",
+      "target_zone": "site_ops",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "conduit": "c_site_ops__safety",
+      "id": "g001",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "site_ops",
+      "subject": "subject:cpwe_cip_security:g001:d0",
+      "target_zone": "safety",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "conduit": "c_site_ops__blend_fill",
+      "id": "g002",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "site_ops",
+      "subject": "subject:cpwe_cip_security:g002:d0",
+      "target_zone": "blend_fill",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "conduit": "c_site_ops__clean_in_place",
+      "id": "g003",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "site_ops",
+      "subject": "subject:cpwe_cip_security:g003:d0",
+      "target_zone": "clean_in_place",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "conduit": "c_site_ops__rapid_mix",
+      "id": "g004",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "site_ops",
+      "subject": "subject:cpwe_cip_security:g004:d0",
+      "target_zone": "rapid_mix",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "oem_controller"
+      ],
+      "conduit": "c_site_ops__oem",
+      "id": "g005",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "site_ops",
+      "subject": "subject:cpwe_cip_security:g005:d0",
+      "target_zone": "oem",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "conduit": "c_safety__site_ops",
+      "id": "g006",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "safety",
+      "subject": "subject:cpwe_cip_security:g006:d0",
+      "target_zone": "site_ops",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "conduit": "c_safety__safety",
+      "id": "g007",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "safety",
+      "subject": "subject:cpwe_cip_security:g007:d0",
+      "target_zone": "safety",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "conduit": "c_safety__blend_fill",
+      "id": "g008",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "safety",
+      "subject": "subject:cpwe_cip_security:g008:d0",
+      "target_zone": "blend_fill",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "conduit": "c_safety__clean_in_place",
+      "id": "g009",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "safety",
+      "subject": "subject:cpwe_cip_security:g009:d0",
+      "target_zone": "clean_in_place",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "conduit": "c_safety__rapid_mix",
+      "id": "g010",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "safety",
+      "subject": "subject:cpwe_cip_security:g010:d0",
+      "target_zone": "rapid_mix",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "conduit": "c_blend_fill__site_ops",
+      "id": "g011",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "blend_fill",
+      "subject": "subject:cpwe_cip_security:g011:d0",
+      "target_zone": "site_ops",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "conduit": "c_blend_fill__safety",
+      "id": "g012",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "blend_fill",
+      "subject": "subject:cpwe_cip_security:g012:d0",
+      "target_zone": "safety",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "conduit": "c_blend_fill__blend_fill",
+      "id": "g013",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "blend_fill",
+      "subject": "subject:cpwe_cip_security:g013:d0",
+      "target_zone": "blend_fill",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "conduit": "c_blend_fill__clean_in_place",
+      "id": "g014",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "blend_fill",
+      "subject": "subject:cpwe_cip_security:g014:d0",
+      "target_zone": "clean_in_place",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "conduit": "c_blend_fill__rapid_mix",
+      "id": "g015",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "blend_fill",
+      "subject": "subject:cpwe_cip_security:g015:d0",
+      "target_zone": "rapid_mix",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "oem_controller"
+      ],
+      "conduit": "c_blend_fill__oem",
+      "id": "g016",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "blend_fill",
+      "subject": "subject:cpwe_cip_security:g016:d0",
+      "target_zone": "oem",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "conduit": "c_clean_in_place__site_ops",
+      "id": "g017",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "clean_in_place",
+      "subject": "subject:cpwe_cip_security:g017:d0",
+      "target_zone": "site_ops",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "conduit": "c_clean_in_place__safety",
+      "id": "g018",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "clean_in_place",
+      "subject": "subject:cpwe_cip_security:g018:d0",
+      "target_zone": "safety",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "conduit": "c_clean_in_place__blend_fill",
+      "id": "g019",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "clean_in_place",
+      "subject": "subject:cpwe_cip_security:g019:d0",
+      "target_zone": "blend_fill",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "conduit": "c_clean_in_place__clean_in_place",
+      "id": "g020",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "clean_in_place",
+      "subject": "subject:cpwe_cip_security:g020:d0",
+      "target_zone": "clean_in_place",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "conduit": "c_clean_in_place__rapid_mix",
+      "id": "g021",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "clean_in_place",
+      "subject": "subject:cpwe_cip_security:g021:d0",
+      "target_zone": "rapid_mix",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "conduit": "c_rapid_mix__site_ops",
+      "id": "g022",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "rapid_mix",
+      "subject": "subject:cpwe_cip_security:g022:d0",
+      "target_zone": "site_ops",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "safety_controller"
+      ],
+      "conduit": "c_rapid_mix__safety",
+      "id": "g023",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "rapid_mix",
+      "subject": "subject:cpwe_cip_security:g023:d0",
+      "target_zone": "safety",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "conduit": "c_rapid_mix__blend_fill",
+      "id": "g024",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "rapid_mix",
+      "subject": "subject:cpwe_cip_security:g024:d0",
+      "target_zone": "blend_fill",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "clean_in_place_controller"
+      ],
+      "conduit": "c_rapid_mix__clean_in_place",
+      "id": "g025",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "rapid_mix",
+      "subject": "subject:cpwe_cip_security:g025:d0",
+      "target_zone": "clean_in_place",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rapid_mix_controller"
+      ],
+      "conduit": "c_rapid_mix__rapid_mix",
+      "id": "g026",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "rapid_mix",
+      "subject": "subject:cpwe_cip_security:g026:d0",
+      "target_zone": "rapid_mix",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "site_ops_services"
+      ],
+      "conduit": "c_oem__site_ops",
+      "id": "g027",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "oem",
+      "subject": "subject:cpwe_cip_security:g027:d0",
+      "target_zone": "site_ops",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "blend_fill_controller"
+      ],
+      "conduit": "c_oem__blend_fill",
+      "id": "g028",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "oem",
+      "subject": "subject:cpwe_cip_security:g028:d0",
+      "target_zone": "blend_fill",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "oem_controller"
+      ],
+      "conduit": "c_oem__oem",
+      "id": "g029",
+      "issuer": "issuer:cpwe_cip_security",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "oem",
+      "subject": "subject:cpwe_cip_security:g029:d0",
+      "target_zone": "oem",
+      "ticks": [
+        100,
+        200
+      ]
+    }
+  ],
+  "source_basis": "sources/cpwe_cip_security_enet_td022_en_p.pdf",
+  "zones": [
+    "site_ops",
+    "safety",
+    "blend_fill",
+    "clean_in_place",
+    "rapid_mix",
+    "oem"
+  ]
+}

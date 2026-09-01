@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp12 --config configs/exp12_effect_automaton.json --output-dir results/exp12_effect_automaton_20260901

@@ -1,0 +1,11 @@
+experiment=exp-12
+seed=none
+heldout_traces=58968
+composed_traces=4536
+composed_policy_steps=22680
+composed_physical_transitions=13608
+all_five_effects_reached=true
+authority_safety_violations=0
+trace_inclusion_violations=0
+bounded_deadlocks=0
+negative_control_mutants_killed=5/5

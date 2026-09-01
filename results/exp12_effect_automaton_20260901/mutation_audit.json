@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "detected": true,
+      "mutant": "rewrite_outside_effective_capability"
+    },
+    {
+      "detected": true,
+      "mutant": "defer_nonstutter_operation"
+    },
+    {
+      "detected": true,
+      "mutant": "defer_without_resolution"
+    },
+    {
+      "detected": true,
+      "mutant": "deny_emits_unauthorized_action"
+    },
+    {
+      "detected": true,
+      "mutant": "attenuate_widens_parameter"
+    }
+  ],
+  "killed": 5,
+  "mutants": 5
+}

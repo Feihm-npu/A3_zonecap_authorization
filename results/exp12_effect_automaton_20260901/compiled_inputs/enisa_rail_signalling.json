@@ -1,0 +1,582 @@
+{
+  "conduits": [
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "file_transfer_gateway"
+      ],
+      "id": "c_business_network__industrial_dmz",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "business_network",
+      "target": "industrial_dmz"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "business_services"
+      ],
+      "id": "c_industrial_dmz__business_network",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "industrial_dmz",
+      "target": "business_network"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rail_control_server"
+      ],
+      "id": "c_industrial_dmz__rail_control",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "industrial_dmz",
+      "target": "rail_control"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "file_transfer_gateway"
+      ],
+      "id": "c_rail_control__industrial_dmz",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "rail_control",
+      "target": "industrial_dmz"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "automation_head_controller"
+      ],
+      "id": "c_rail_control__automation_head",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "rail_control",
+      "target": "automation_head"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rail_control_server"
+      ],
+      "id": "c_automation_head__rail_control",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "automation_head",
+      "target": "rail_control"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "interlock_controller"
+      ],
+      "id": "c_automation_head__interlock",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "automation_head",
+      "target": "interlock"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "automation_head_controller"
+      ],
+      "id": "c_interlock__automation_head",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "interlock",
+      "target": "automation_head"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rbc_controller"
+      ],
+      "id": "c_automation_head__rbc",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "automation_head",
+      "target": "rbc"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "automation_head_controller"
+      ],
+      "id": "c_rbc__automation_head",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "rbc",
+      "target": "automation_head"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "crossing_controller"
+      ],
+      "id": "c_automation_head__rail_crossing",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "automation_head",
+      "target": "rail_crossing"
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "automation_head_controller"
+      ],
+      "id": "c_rail_crossing__automation_head",
+      "parameter": [
+        0,
+        100
+      ],
+      "source": "rail_crossing",
+      "target": "automation_head"
+    }
+  ],
+  "evidence_scope": "held-out source table plus locked evaluation overlay",
+  "name": "enisa_rail_signalling",
+  "plant_1d": {
+    "a": 1,
+    "b": 1,
+    "disturbance": [
+      0,
+      0
+    ],
+    "initial_state": [
+      0,
+      0
+    ]
+  },
+  "policies": [
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "file_transfer_gateway"
+      ],
+      "conduit": "c_business_network__industrial_dmz",
+      "id": "g000",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "business_network",
+      "subject": "subject:enisa_rail_signalling:g000:d0",
+      "target_zone": "industrial_dmz",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "business_services"
+      ],
+      "conduit": "c_industrial_dmz__business_network",
+      "id": "g001",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "industrial_dmz",
+      "subject": "subject:enisa_rail_signalling:g001:d0",
+      "target_zone": "business_network",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rail_control_server"
+      ],
+      "conduit": "c_industrial_dmz__rail_control",
+      "id": "g002",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "industrial_dmz",
+      "subject": "subject:enisa_rail_signalling:g002:d0",
+      "target_zone": "rail_control",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "file_transfer_gateway"
+      ],
+      "conduit": "c_rail_control__industrial_dmz",
+      "id": "g003",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "rail_control",
+      "subject": "subject:enisa_rail_signalling:g003:d0",
+      "target_zone": "industrial_dmz",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "automation_head_controller"
+      ],
+      "conduit": "c_rail_control__automation_head",
+      "id": "g004",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "rail_control",
+      "subject": "subject:enisa_rail_signalling:g004:d0",
+      "target_zone": "automation_head",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rail_control_server"
+      ],
+      "conduit": "c_automation_head__rail_control",
+      "id": "g005",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "automation_head",
+      "subject": "subject:enisa_rail_signalling:g005:d0",
+      "target_zone": "rail_control",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "interlock_controller"
+      ],
+      "conduit": "c_automation_head__interlock",
+      "id": "g006",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "automation_head",
+      "subject": "subject:enisa_rail_signalling:g006:d0",
+      "target_zone": "interlock",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "automation_head_controller"
+      ],
+      "conduit": "c_interlock__automation_head",
+      "id": "g007",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "interlock",
+      "subject": "subject:enisa_rail_signalling:g007:d0",
+      "target_zone": "automation_head",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "rbc_controller"
+      ],
+      "conduit": "c_automation_head__rbc",
+      "id": "g008",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "automation_head",
+      "subject": "subject:enisa_rail_signalling:g008:d0",
+      "target_zone": "rbc",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "automation_head_controller"
+      ],
+      "conduit": "c_rbc__automation_head",
+      "id": "g009",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "rbc",
+      "subject": "subject:enisa_rail_signalling:g009:d0",
+      "target_zone": "automation_head",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "crossing_controller"
+      ],
+      "conduit": "c_automation_head__rail_crossing",
+      "id": "g010",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "automation_head",
+      "subject": "subject:enisa_rail_signalling:g010:d0",
+      "target_zone": "rail_crossing",
+      "ticks": [
+        100,
+        200
+      ]
+    },
+    {
+      "actions": [
+        "read",
+        "write"
+      ],
+      "assets": [
+        "automation_head_controller"
+      ],
+      "conduit": "c_rail_crossing__automation_head",
+      "id": "g011",
+      "issuer": "issuer:enisa_rail_signalling",
+      "modes": [
+        "normal",
+        "maintenance"
+      ],
+      "parameter": [
+        0,
+        100
+      ],
+      "required_sequence": [
+        "authenticate"
+      ],
+      "source_zone": "rail_crossing",
+      "subject": "subject:enisa_rail_signalling:g011:d0",
+      "target_zone": "automation_head",
+      "ticks": [
+        100,
+        200
+      ]
+    }
+  ],
+  "source_basis": "sources/enisa_rail_zoning_2022.pdf",
+  "zones": [
+    "business_network",
+    "industrial_dmz",
+    "rail_control",
+    "automation_head",
+    "interlock",
+    "rbc",
+    "rail_crossing"
+  ]
+}

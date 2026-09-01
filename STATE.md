@@ -10,7 +10,7 @@ since: 2026-08-31
 read:                     # what the next session must read first
   - prompts/S2_RUN.md
 options: []               # when awaiting human: allowed next states
-note: "exp-01 through exp-11 are complete with no registered C1/C2 counterexample; resume at exp-12 by composing the five runtime effects with held-out capabilities and bounded trace checks. Jetson/OpenPLC for exp-22–25 remains unapproved." # one line for the next session: pending request, where work stopped
+note: "exp-01 through exp-12 are complete with no registered C1/C2/C3 counterexample; resume at exp-13 by comparing the five-effect semantics with deny-only enforcement on identical requests. Jetson/OpenPLC for exp-22–25 remains unapproved." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -21,3 +21,4 @@ note: "exp-01 through exp-11 are complete with no registered C1/C2 counterexampl
 - 2026-08-31 | S2_RUN -> S2_RUN | agent | checkpoint after exp-01 and exp-02; next is exp-03, with non-default hardware still pending
 - 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after completing the full C1 matrix exp-01 through exp-06; next is held-out C2 exp-07
 - 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after completing the C2 matrix exp-07 through exp-11 with no compiler-oracle mismatch or accepted widening; next is exp-12
+- 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after exp-12 exercised all five runtime effects on every frozen held-out request and composed trace with zero registered violation; next is exp-13 deny-only ablation

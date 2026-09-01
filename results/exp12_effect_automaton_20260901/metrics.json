@@ -1,0 +1,49 @@
+{
+  "all_five_effects_reached": true,
+  "attenuation_violations": 0,
+  "authority_safety_violations": 0,
+  "bounded_deadlocks": 0,
+  "claim": "C3",
+  "composed_delegated_trace_checks": 1512,
+  "composed_effect_counts": {
+    "allow": 4536,
+    "attenuate": 4536,
+    "defer": 4536,
+    "deny": 4536,
+    "rewrite": 4536
+  },
+  "composed_physical_transitions": 13608,
+  "composed_policy_steps": 22680,
+  "composed_traces": 4536,
+  "corpus_effect_counts": {
+    "allow": 4536,
+    "deny": 45360,
+    "rewrite": 9072
+  },
+  "defer_nonstutter_violations": 0,
+  "effect_expectation_violations": 0,
+  "effect_order_violations": 0,
+  "exp": "exp-12",
+  "expected_count_mismatches": {},
+  "expected_effect_count_mismatches": {},
+  "heldout_delegated_trace_checks": 19656,
+  "heldout_traces": 58968,
+  "lanotte_roop_runtime_baseline": "N/A in exp-12; registered for exp-15",
+  "mutation_cases": 54432,
+  "negative_control_mutants": 5,
+  "negative_control_mutants_killed": 5,
+  "parent_physical_transition_checks": 9072,
+  "parent_realizability_violations": 0,
+  "resolution_bound_policy_steps": 2,
+  "seed": null,
+  "sint_tier_baseline": "N/A in exp-12; registered for exp-15",
+  "total_effect_counts": {
+    "allow": 9072,
+    "attenuate": 4536,
+    "defer": 4536,
+    "deny": 49896,
+    "rewrite": 13608
+  },
+  "trace_inclusion_violations": 0,
+  "valid_cases": 4536
+}
