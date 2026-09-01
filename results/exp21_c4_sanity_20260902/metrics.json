@@ -1,0 +1,15 @@
+{
+  "case_mismatches": {},
+  "cases": 4,
+  "cases_matching_expected_terminal_state": 4,
+  "claim": "C4",
+  "deadlocks": 0,
+  "deterministic_resolution_violations": 0,
+  "executions": 2,
+  "exp": "exp-21",
+  "expected_count_mismatches": {},
+  "permission_union_violations": 0,
+  "post_revocation_executions": 0,
+  "seed": null,
+  "timeouts": 1
+}

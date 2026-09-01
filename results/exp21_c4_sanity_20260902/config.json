@@ -1,0 +1,80 @@
+{
+  "approval_timeout_ticks": 2,
+  "claim": "C4",
+  "command": "PYTHONPATH=src python -m zonecap.exp21 --config configs/exp21_c4_sanity.json --output-dir results/exp21_c4_sanity_20260902",
+  "exp": "exp-21",
+  "expected_cases": {
+    "duplicate_revoke": {
+      "changed": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "execution_order": [],
+      "final_pending_holders": [],
+      "final_revoked": [
+        1
+      ],
+      "timeouts": 0
+    },
+    "immediate_revoke": {
+      "changed": [
+        true,
+        true,
+        false
+      ],
+      "execution_order": [],
+      "final_pending_holders": [],
+      "final_revoked": [
+        1
+      ],
+      "timeouts": 0
+    },
+    "permanent_missing_approval": {
+      "changed": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "execution_order": [],
+      "final_pending_holders": [],
+      "final_revoked": [],
+      "timeouts": 1
+    },
+    "simultaneous_equal_priority": {
+      "changed": [
+        true,
+        true
+      ],
+      "execution_order": [
+        1,
+        2
+      ],
+      "final_pending_holders": [],
+      "final_revoked": [],
+      "timeouts": 0
+    }
+  },
+  "expected_counts": {
+    "cases": 4,
+    "cases_matching_expected_terminal_state": 4,
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "executions": 2,
+    "permission_union_violations": 0,
+    "post_revocation_executions": 0,
+    "timeouts": 1
+  },
+  "frozen_hashes": {
+    "research/c4_sanity_protocol.md": "899ae2c0e85f4dacc15e9f93ece020372d9c1b05975cde42a49922ad8021f7c1",
+    "results/exp19_c4_adversarial_scheduler_20260902/metrics.json": "7439982937a8a787b1c511d146d11798560f9955c7663bfbe07b094f2086ffca",
+    "src/zonecap/concurrency.py": "d881c8757140c16cafb38ca341b933ed477b92b25ec63097a35ed4ab59bd6a12",
+    "src/zonecap/exp21.py": "7675143101a9ca8b2483a7352bd5b317a7cffb13f2f74849b9ae038970ebd048",
+    "tests/test_exp21.py": "c6b3e5ac470e6266c3b5a9146158445f33d040074ea16fdacb9b9de8d2efc1fe"
+  },
+  "holders": 3,
+  "run_id": "exp21_c4_sanity_20260902",
+  "seed": null
+}

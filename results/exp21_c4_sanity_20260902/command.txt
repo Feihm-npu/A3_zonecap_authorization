@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp21 --config configs/exp21_c4_sanity.json --output-dir results/exp21_c4_sanity_20260902

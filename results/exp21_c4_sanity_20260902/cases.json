@@ -1,0 +1,108 @@
+[
+  {
+    "changed": [
+      true,
+      true,
+      false
+    ],
+    "conflict_candidate_counts": [
+      0
+    ],
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "events": [
+      "submit_1",
+      "revoke_1",
+      "resolve"
+    ],
+    "execution_order": [],
+    "final_pending_holders": [],
+    "final_revoked": [
+      1
+    ],
+    "name": "immediate_revoke",
+    "permission_union_violations": 0,
+    "post_revocation_executions": 0,
+    "timeouts": 0
+  },
+  {
+    "changed": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "conflict_candidate_counts": [
+      0
+    ],
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "events": [
+      "submit_1",
+      "revoke_1",
+      "revoke_1",
+      "resolve"
+    ],
+    "execution_order": [],
+    "final_pending_holders": [],
+    "final_revoked": [
+      1
+    ],
+    "name": "duplicate_revoke",
+    "permission_union_violations": 0,
+    "post_revocation_executions": 0,
+    "timeouts": 0
+  },
+  {
+    "changed": [
+      true,
+      true
+    ],
+    "conflict_candidate_counts": [
+      2,
+      1
+    ],
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "events": [
+      "resolve",
+      "resolve"
+    ],
+    "execution_order": [
+      1,
+      2
+    ],
+    "final_pending_holders": [],
+    "final_revoked": [],
+    "name": "simultaneous_equal_priority",
+    "permission_union_violations": 0,
+    "post_revocation_executions": 0,
+    "timeouts": 0
+  },
+  {
+    "changed": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "conflict_candidate_counts": [
+      0
+    ],
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "events": [
+      "submit_0",
+      "tick",
+      "tick",
+      "resolve"
+    ],
+    "execution_order": [],
+    "final_pending_holders": [],
+    "final_revoked": [],
+    "name": "permanent_missing_approval",
+    "permission_union_violations": 0,
+    "post_revocation_executions": 0,
+    "timeouts": 1
+  }
+]

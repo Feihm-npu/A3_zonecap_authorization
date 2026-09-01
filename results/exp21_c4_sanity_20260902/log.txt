@@ -1,0 +1,8 @@
+experiment=exp-21
+seed=none
+cases=4
+cases_matching_expected_terminal_state=4
+executions=2
+timeouts=1
+post_revocation_executions=0
+deadlocks=0

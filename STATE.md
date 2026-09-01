@@ -5,12 +5,12 @@ Human decision: set `state`, set `awaiting: none`, clear `options`, put any over
 
 ```yaml
 state: S2_RUN
-awaiting: none            # none | human
+awaiting: human           # none | human
 since: 2026-08-31
 read:                     # what the next session must read first
   - prompts/S2_RUN.md
-options: []               # when awaiting human: allowed next states
-note: "exp-01 through exp-20 are complete; exp-19's non-core C4 delayed-revocation counterexample remains, and pinned SINT likewise requires delivery plus a fresh gateway recheck rather than providing atomic same-asset conflict resolution. Resume at exp-21 C4 sanity. Jetson/OpenPLC for exp-22–25 remains unapproved." # one line for the next session: pending request, where work stopped
+options: [S2_RUN]         # when awaiting human: allowed next states
+note: "exp-01 through exp-21 are complete; C4 has an issuer-relative delayed-revocation counterexample but local sanity is clean. Approval requested for exp-22–25 on non-default Jetson/OpenPLC hardware: needed because C5 is target-specific; expected duration up to 3 hardware-days; fallback within default is mark exp-22–25 skipped:target hardware unavailable, run exp-26 x86 timer sanity, and leave C5 inconclusive. Human: approve hardware use or select fallback." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -30,3 +30,4 @@ note: "exp-01 through exp-20 are complete; exp-19's non-core C4 delayed-revocati
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | checkpoint after exp-18 closed every 2-4-holder graph with symmetry reduction and zero new cycle/deadlock violation; next is exp-19 adversarial scheduling
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-19 found issuer-relative stale execution under fair delayed revocation delivery; C4 is non-core, so continue to exp-20 baseline and exp-21 sanity to bound the counterexample
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-20 bounded the pinned-SINT comparison to delivered revocation, independent quorum, timeout, and consumer-side recheck; next is exp-21 C4 sanity
+- 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-21 matched all local C4 terminal-state sanity checks; pausing at the exp-22 non-default Jetson/OpenPLC hardware gate for human approval or fallback selection
