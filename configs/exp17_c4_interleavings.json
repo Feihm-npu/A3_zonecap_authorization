@@ -1,0 +1,34 @@
+{
+  "exp": "exp-17",
+  "claim": "C4",
+  "seed": null,
+  "run_id": "exp17_c4_interleavings_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp17 --config configs/exp17_c4_interleavings.json --output-dir results/exp17_c4_interleavings_20260901",
+  "holder_counts": [2, 3, 4],
+  "horizon": 5,
+  "approval_timeout_ticks": 2,
+  "expected_counts": {
+    "holder_configurations": 3,
+    "words": 793800,
+    "transitions": 793797,
+    "revocation_after_submit_configurations": 3,
+    "post_revocation_executions": 0,
+    "permission_union_violations": 0,
+    "deterministic_resolution_violations": 0,
+    "deadlocks": 0,
+    "mutants": 4,
+    "mutants_killed": 4
+  },
+  "pass_criteria": {
+    "conflict_resolutions_min": 1,
+    "timeouts_min": 1,
+    "unique_conflict_states_min": 1,
+    "unique_approval_wait_states_min": 1
+  },
+  "frozen_hashes": {
+    "research/c4_interleaving_protocol.md": "d920ae0591272418f6fb7825df1b50ceac9853b6895fafbdd2174235593f59b1",
+    "src/zonecap/concurrency.py": "cf020f9444dd0478954c1570412e7a5a14ca18667a30bc3877c81aff0e5c0187",
+    "src/zonecap/exp17.py": "9614dc57bd6995fb4029b67d59127991b344faa8c8ba0e06988be38351bcd881",
+    "tests/test_exp17.py": "5160308ad1173747e430ab0d536e84c5acb284ab2faa83f294b947b3cd4e5f86"
+  }
+}
