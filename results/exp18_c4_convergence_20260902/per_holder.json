@@ -1,0 +1,212 @@
+[
+  {
+    "bound_five_exact_states": 30,
+    "canonical_reachable_states": 30,
+    "classification_mismatch_examples": [],
+    "closure_missing_states": 0,
+    "converged": true,
+    "convergence_depth": 6,
+    "cycle_edges": 181,
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "exact_reachable_states": 30,
+    "executions": 14,
+    "expanded_edges": 240,
+    "holders": 2,
+    "layers": [
+      {
+        "depth": 0,
+        "new_states": 1,
+        "reachable_states": 1
+      },
+      {
+        "depth": 1,
+        "new_states": 4,
+        "reachable_states": 5
+      },
+      {
+        "depth": 2,
+        "new_states": 7,
+        "reachable_states": 12
+      },
+      {
+        "depth": 3,
+        "new_states": 9,
+        "reachable_states": 21
+      },
+      {
+        "depth": 4,
+        "new_states": 7,
+        "reachable_states": 28
+      },
+      {
+        "depth": 5,
+        "new_states": 2,
+        "reachable_states": 30
+      },
+      {
+        "depth": 6,
+        "new_states": 0,
+        "reachable_states": 30
+      }
+    ],
+    "max_depth": 20,
+    "new_exact_states_after_bound_five": 0,
+    "permission_union_violations": 0,
+    "post_revocation_executions": 0,
+    "symmetry_classification_mismatches": 0,
+    "symmetry_reduction_fraction": 0.0,
+    "timeouts": 9,
+    "violation_examples": []
+  },
+  {
+    "bound_five_exact_states": 138,
+    "canonical_reachable_states": 96,
+    "classification_mismatch_examples": [],
+    "closure_missing_states": 0,
+    "converged": true,
+    "convergence_depth": 8,
+    "cycle_edges": 1296,
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "exact_reachable_states": 162,
+    "executions": 122,
+    "expanded_edges": 1782,
+    "holders": 3,
+    "layers": [
+      {
+        "depth": 0,
+        "new_states": 1,
+        "reachable_states": 1
+      },
+      {
+        "depth": 1,
+        "new_states": 6,
+        "reachable_states": 7
+      },
+      {
+        "depth": 2,
+        "new_states": 16,
+        "reachable_states": 23
+      },
+      {
+        "depth": 3,
+        "new_states": 30,
+        "reachable_states": 53
+      },
+      {
+        "depth": 4,
+        "new_states": 44,
+        "reachable_states": 97
+      },
+      {
+        "depth": 5,
+        "new_states": 41,
+        "reachable_states": 138
+      },
+      {
+        "depth": 6,
+        "new_states": 20,
+        "reachable_states": 158
+      },
+      {
+        "depth": 7,
+        "new_states": 4,
+        "reachable_states": 162
+      },
+      {
+        "depth": 8,
+        "new_states": 0,
+        "reachable_states": 162
+      }
+    ],
+    "max_depth": 20,
+    "new_exact_states_after_bound_five": 24,
+    "permission_union_violations": 0,
+    "post_revocation_executions": 0,
+    "symmetry_classification_mismatches": 0,
+    "symmetry_reduction_fraction": 0.40740740740740744,
+    "timeouts": 36,
+    "violation_examples": []
+  },
+  {
+    "bound_five_exact_states": 481,
+    "canonical_reachable_states": 244,
+    "classification_mismatch_examples": [],
+    "closure_missing_states": 0,
+    "converged": true,
+    "convergence_depth": 10,
+    "cycle_edges": 9099,
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "exact_reachable_states": 918,
+    "executions": 822,
+    "expanded_edges": 12852,
+    "holders": 4,
+    "layers": [
+      {
+        "depth": 0,
+        "new_states": 1,
+        "reachable_states": 1
+      },
+      {
+        "depth": 1,
+        "new_states": 8,
+        "reachable_states": 9
+      },
+      {
+        "depth": 2,
+        "new_states": 29,
+        "reachable_states": 38
+      },
+      {
+        "depth": 3,
+        "new_states": 72,
+        "reachable_states": 110
+      },
+      {
+        "depth": 4,
+        "new_states": 146,
+        "reachable_states": 256
+      },
+      {
+        "depth": 5,
+        "new_states": 225,
+        "reachable_states": 481
+      },
+      {
+        "depth": 6,
+        "new_states": 231,
+        "reachable_states": 712
+      },
+      {
+        "depth": 7,
+        "new_states": 146,
+        "reachable_states": 858
+      },
+      {
+        "depth": 8,
+        "new_states": 52,
+        "reachable_states": 910
+      },
+      {
+        "depth": 9,
+        "new_states": 8,
+        "reachable_states": 918
+      },
+      {
+        "depth": 10,
+        "new_states": 0,
+        "reachable_states": 918
+      }
+    ],
+    "max_depth": 20,
+    "new_exact_states_after_bound_five": 437,
+    "permission_union_violations": 0,
+    "post_revocation_executions": 0,
+    "symmetry_classification_mismatches": 0,
+    "symmetry_reduction_fraction": 0.7342047930283224,
+    "timeouts": 135,
+    "violation_examples": []
+  }
+]

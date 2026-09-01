@@ -1,0 +1,24 @@
+{
+  "git_head": "ff87a946ec9ab1490fb05b90ace23f7671413a37",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp18_c4_convergence.json": "6fe0349bd9c1a1428c523b556753a7830d3c16a41b701e3a4689267257186e8b",
+    "research/c4_convergence_protocol.md": "314fac93ca502adaafdb0d492640481cf14b475f36ef07d2f32efe6477db10a0",
+    "results/exp17_c4_interleavings_20260901/metrics.json": "7f48a01f5bcc3d26075ce057c09e9ee98683a9fb464a9c4a17edb4b923cd5606",
+    "results/exp17_c4_interleavings_20260901/per_holder.json": "737fb6272bd526520ba223f03934641f1312d798d983fbc9124b85fe25093d0e",
+    "src/zonecap/concurrency.py": "d881c8757140c16cafb38ca341b933ed477b92b25ec63097a35ed4ab59bd6a12",
+    "src/zonecap/exp18.py": "fd0d1ab9f502652638c6a3982e134ecad3f3d369c1e49e32b2b9a5c08315bdf3",
+    "tests/test_exp18.py": "7307caa80feb9ca69de3fcbcb94cba794b4fa9a7610775c6a2f2797010776763"
+  },
+  "outputs": {
+    "command.txt": "61f63461d95e45afd4723b66a106de6d4d55da09aa9bba7f0c7e163e11169ff6",
+    "config.json": "6fe0349bd9c1a1428c523b556753a7830d3c16a41b701e3a4689267257186e8b",
+    "log.txt": "f4053a65b0a0f1f207eddf3e835c34be41b20a9e7b9e7115fa3a47d51aa5243a",
+    "metrics.json": "225bce3ae6b3d943fdb2800d893e17c95810cd12018441b83655e68641f85545",
+    "negative_control.json": "9e3aceb40d573a13f45a8370d47e0f4aeb7873520d9a5998fcfd9133808b0ba8",
+    "per_holder.json": "3ea17e91cf157b841056a20eb500e0531b1225d5d6b0fe1a261e6cf1a931108f",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345"
+  },
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

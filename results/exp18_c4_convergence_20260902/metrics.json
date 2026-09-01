@@ -1,0 +1,21 @@
+{
+  "canonical_reachable_states_sum": 370,
+  "claim": "C4",
+  "closure_missing_states": 0,
+  "converged_configurations": 3,
+  "cycle_edges": 10576,
+  "deadlocks": 0,
+  "deterministic_resolution_violations": 0,
+  "exact_reachable_states_sum": 1110,
+  "exp": "exp-18",
+  "expanded_edges": 14874,
+  "expected_count_mismatches": {},
+  "holder_configurations": 3,
+  "maximum_convergence_depth": 10,
+  "negative_control_detected": true,
+  "new_exact_states_after_bound_five_sum": 461,
+  "permission_union_violations": 0,
+  "post_revocation_executions": 0,
+  "seed": null,
+  "symmetry_classification_mismatches": 0
+}

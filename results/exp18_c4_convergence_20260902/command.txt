@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp18 --config configs/exp18_c4_convergence.json --output-dir results/exp18_c4_convergence_20260902

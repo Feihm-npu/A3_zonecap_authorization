@@ -1,0 +1,11 @@
+experiment=exp-18
+seed=none
+converged_configurations=3
+maximum_convergence_depth=10
+exact_reachable_states_sum=1110
+canonical_reachable_states_sum=370
+new_exact_states_after_bound_five_sum=461
+cycle_edges=10576
+closure_missing_states=0
+deadlocks=0
+negative_control_detected=true

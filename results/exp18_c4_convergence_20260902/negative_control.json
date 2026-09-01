@@ -1,0 +1,5 @@
+{
+  "detected": true,
+  "mutant": "retain_timed_out_high_risk_pending_state",
+  "state": "ConcurrentState(revoked=frozenset(), pending=(PendingCommand(holder=0, action='action_0', value=10, high_risk=True, approvals=frozenset(), age=2),))"
+}
