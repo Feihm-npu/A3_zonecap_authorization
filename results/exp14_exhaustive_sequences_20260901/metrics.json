@@ -1,0 +1,59 @@
+{
+  "alphabet_size": 5,
+  "claim": "C3-A2",
+  "coverage_mutants": 3,
+  "exhaustive_attenuation_violations": 0,
+  "exhaustive_authority_violations": 0,
+  "exhaustive_deadlocks": 0,
+  "exhaustive_effect_counts": {
+    "allow": 98406,
+    "attenuate": 98406,
+    "defer": 98406,
+    "deny": 98406,
+    "rewrite": 98406
+  },
+  "exhaustive_effect_violations": 0,
+  "exhaustive_mutants_killed": 3,
+  "exhaustive_ngram_counts": {
+    "1": 5,
+    "2": 25,
+    "3": 125
+  },
+  "exhaustive_nonstutter_violations": 0,
+  "exhaustive_parent_realizability_violations": 0,
+  "exhaustive_physical_transitions": 295218,
+  "exhaustive_transitions": 492030,
+  "exhaustive_unique_states_sum": 5628,
+  "exhaustive_unique_transition_signatures_sum": 16590,
+  "exhaustive_words": 492156,
+  "exp": "exp-14",
+  "expected_count_mismatches": {},
+  "handpicked_attenuation_violations": 0,
+  "handpicked_authority_violations": 0,
+  "handpicked_deadlocks": 0,
+  "handpicked_effect_counts": {
+    "allow": 126,
+    "attenuate": 126,
+    "defer": 126,
+    "deny": 126,
+    "rewrite": 126
+  },
+  "handpicked_effect_violations": 0,
+  "handpicked_mutants_killed": 0,
+  "handpicked_ngram_counts": {
+    "1": 5,
+    "2": 4,
+    "3": 3
+  },
+  "handpicked_nonstutter_violations": 0,
+  "handpicked_parent_realizability_violations": 0,
+  "handpicked_physical_transitions": 378,
+  "handpicked_transitions": 630,
+  "handpicked_unique_states_sum": 462,
+  "handpicked_unique_transition_signatures_sum": 630,
+  "handpicked_words": 126,
+  "horizon": 5,
+  "scopes": 126,
+  "seed": null,
+  "transition_coverage_multiplier": 781.0
+}

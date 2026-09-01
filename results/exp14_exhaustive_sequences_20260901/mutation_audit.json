@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "exhaustive_detected": true,
+      "handpicked_detected": false,
+      "mutant": "second_defer_is_nonstutter",
+      "trigger": [
+        "defer",
+        "defer"
+      ]
+    },
+    {
+      "exhaustive_detected": true,
+      "handpicked_detected": false,
+      "mutant": "second_attenuation_widens",
+      "trigger": [
+        "narrow",
+        "narrow"
+      ]
+    },
+    {
+      "exhaustive_detected": true,
+      "handpicked_detected": false,
+      "mutant": "attenuation_after_rewrite_emits_unauthorized_output",
+      "trigger": [
+        "rewrite",
+        "narrow"
+      ]
+    }
+  ],
+  "exhaustive_killed": 3,
+  "handpicked_killed": 0,
+  "mutants": 3
+}

@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp14 --config configs/exp14_exhaustive_sequences.json --output-dir results/exp14_exhaustive_sequences_20260901

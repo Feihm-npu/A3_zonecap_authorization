@@ -1,0 +1,6806 @@
+[
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g000:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g001:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g002:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g003:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g004:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g005:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g006:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g007:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g008:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g009:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g010:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g011:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g012:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g013:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g014:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g015:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g016:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g017:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g018:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g019:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g020:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g021:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g022:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g023:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g024:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g025:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g026:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g027:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g028:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g029:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g000:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g001:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g002:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g003:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g004:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g005:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g006:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g007:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g008:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g009:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g010:d0"
+  },
+  {
+    "depth": 0,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 112,
+      "unique_transition_signatures": 305,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 5,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g011:d0"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g000:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g000:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g001:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g001:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g002:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g002:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g003:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g003:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g004:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g004:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g005:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g005:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g006:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g006:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g007:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g007:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g008:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g008:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g009:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g009:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g010:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g010:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g011:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g011:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g012:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g012:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g013:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g013:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g014:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g014:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g015:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g015:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g016:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g016:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g017:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g017:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g018:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g018:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g019:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g019:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g020:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g020:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g021:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g021:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g022:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g022:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g023:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g023:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g024:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g024:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g025:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g025:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g026:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g026:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g027:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g027:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g028:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g028:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g029:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "cpwe_cip_security:g029:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g000:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g000:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g001:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g001:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g002:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g002:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g003:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g003:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g004:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g004:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g005:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g005:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g006:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g006:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g007:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g007:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g008:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g008:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g009:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g009:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g010:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g010:d2"
+  },
+  {
+    "depth": 1,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g011:d1"
+  },
+  {
+    "depth": 2,
+    "exhaustive": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 781,
+        "attenuate": 781,
+        "defer": 781,
+        "deny": 781,
+        "rewrite": 781
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 25,
+        "3": 125
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 2343,
+      "transitions": 3905,
+      "unique_states": 11,
+      "unique_transition_signatures": 45,
+      "words": 3906
+    },
+    "handpicked": {
+      "attenuation_violations": 0,
+      "authority_violations": 0,
+      "deadlocks": 0,
+      "effect_counts": {
+        "allow": 1,
+        "attenuate": 1,
+        "defer": 1,
+        "deny": 1,
+        "rewrite": 1
+      },
+      "effect_violations": 0,
+      "ngram_counts": {
+        "1": 5,
+        "2": 4,
+        "3": 3
+      },
+      "nonstutter_violations": 0,
+      "parent_realizability_violations": 0,
+      "physical_transitions": 3,
+      "transitions": 5,
+      "unique_states": 3,
+      "unique_transition_signatures": 5,
+      "words": 1
+    },
+    "scope_id": "enisa_rail_signalling:g011:d2"
+  }
+]

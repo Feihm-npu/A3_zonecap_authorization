@@ -1,0 +1,12 @@
+experiment=exp-14
+seed=none
+exhaustive_words=492156
+exhaustive_transitions=492030
+exhaustive_ngram_counts={"1": 5, "2": 25, "3": 125}
+handpicked_transitions=630
+handpicked_ngram_counts={"1": 5, "2": 4, "3": 3}
+exhaustive_authority_violations=0
+exhaustive_parent_realizability_violations=0
+exhaustive_deadlocks=0
+exhaustive_mutants_killed=3/3
+handpicked_mutants_killed=0/3
