@@ -1,0 +1,107 @@
+{
+  "full_active_stages": [
+    "parse",
+    "token_integrity",
+    "revocation",
+    "context",
+    "decision",
+    "audit"
+  ],
+  "full_missing_stages": [],
+  "mutants": 6,
+  "mutants_killed": 6,
+  "records": [
+    {
+      "active_stages": [
+        "token_integrity",
+        "revocation",
+        "context",
+        "decision",
+        "audit"
+      ],
+      "detected": true,
+      "disabled_stage": "parse",
+      "missing_stages": [
+        "parse"
+      ]
+    },
+    {
+      "active_stages": [
+        "parse",
+        "revocation",
+        "context",
+        "decision",
+        "audit"
+      ],
+      "detected": true,
+      "disabled_stage": "token_integrity",
+      "missing_stages": [
+        "token_integrity"
+      ]
+    },
+    {
+      "active_stages": [
+        "parse",
+        "token_integrity",
+        "context",
+        "decision",
+        "audit"
+      ],
+      "detected": true,
+      "disabled_stage": "revocation",
+      "missing_stages": [
+        "revocation"
+      ]
+    },
+    {
+      "active_stages": [
+        "parse",
+        "token_integrity",
+        "revocation",
+        "decision",
+        "audit"
+      ],
+      "detected": true,
+      "disabled_stage": "context",
+      "missing_stages": [
+        "context"
+      ]
+    },
+    {
+      "active_stages": [
+        "parse",
+        "token_integrity",
+        "revocation",
+        "context",
+        "audit"
+      ],
+      "detected": true,
+      "disabled_stage": "decision",
+      "missing_stages": [
+        "decision"
+      ]
+    },
+    {
+      "active_stages": [
+        "parse",
+        "token_integrity",
+        "revocation",
+        "context",
+        "decision"
+      ],
+      "detected": true,
+      "disabled_stage": "audit",
+      "missing_stages": [
+        "audit"
+      ]
+    }
+  ],
+  "required_stages": [
+    "parse",
+    "token_integrity",
+    "revocation",
+    "context",
+    "decision",
+    "audit"
+  ]
+}

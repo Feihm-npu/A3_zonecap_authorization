@@ -1,0 +1,9 @@
+experiment=exp-26
+seed=none
+affinity_verified=true
+timer_resolution_ns=90
+empty_p99_ns=210
+full_p99_ns=19326
+forced_slow_p99_ns=6639755
+timing_order_passed=true
+check_mutants_killed=6/6

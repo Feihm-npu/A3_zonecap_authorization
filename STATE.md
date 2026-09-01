@@ -5,12 +5,12 @@ Human decision: set `state`, set `awaiting: none`, clear `options`, put any over
 
 ```yaml
 state: S2_RUN
-awaiting: none            # none | human
+awaiting: human           # none | human
 since: 2026-08-31
 read:                     # what the next session must read first
   - prompts/S2_RUN.md
-options: []               # when awaiting human: allowed next states
-note: "The human approved NVIDIA Jetson Orin NX 8GB for exp-22–25, delegated execution to the hardware group, and directed local work to continue. Requirements are in hardware_delivery/exp_requirements.md; hardware harness freeze/results remain external:pending. Resume locally at exp-26 timer sanity, then wait for the hardware return without interpreting C5." # one line for the next session: pending request, where work stopped
+options: [S2_RUN]         # when awaiting human: allowed next states
+note: "exp-01–21 and local exp-26 are complete; exp-26 passed as x86 infrastructure sanity only. Exp-22–25 remain external:pending on the approved NVIDIA Jetson Orin NX 8GB. Send hardware_delivery/exp_requirements.md to the hardware group; before confirmatory measurement, return their harness/config/OpenPLC patch for clean freeze, then return all raw result directories for audit. Do not interpret C5 until those results arrive." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -32,3 +32,4 @@ note: "The human approved NVIDIA Jetson Orin NX 8GB for exp-22–25, delegated e
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-20 bounded the pinned-SINT comparison to delivered revocation, independent quorum, timeout, and consumer-side recheck; next is exp-21 C4 sanity
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-21 matched all local C4 terminal-state sanity checks; pausing at the exp-22 non-default Jetson/OpenPLC hardware gate for human approval or fallback selection
 - 2026-09-02 | S2_RUN -> S2_RUN | human | approved NVIDIA Jetson Orin NX 8GB for exp-22–25, delegated hardware execution, and directed the agent to continue with local exp-26
+- 2026-09-02 | S2_RUN -> S2_RUN | agent | completed and independently audited local exp-26 timer/check/affinity sanity; no local matrix work remains, so await the hardware group's pre-run harness freeze or returned exp-22–25 results

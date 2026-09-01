@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp26 --config configs/exp26_c5_timer_sanity.json --output-dir results/exp26_c5_timer_sanity_20260902

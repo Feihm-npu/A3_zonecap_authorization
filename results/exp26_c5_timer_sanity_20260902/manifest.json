@@ -1,0 +1,26 @@
+{
+  "git_head": "e59d16e1d8ac98a129a4e99f303975b410013833",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp26_c5_timer_sanity.json": "ab4696b5956e2b3b52315da451143fcd5ae08ba7e187c77f1794774137e1b19c",
+    "hardware_delivery/exp_requirements.md": "b67862e096f01253d19bbaa704ca3b6c572a7468e4aa1afd34e8c2488637f8bc",
+    "research/c5_timer_sanity_protocol.md": "8e0afec7e13557421f668a06fd30c43d5118958c726526615e6664efd8b58ed6",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp26.py": "6cf4d8d661412746e214c16a0b865a9708dbcdd3a6fe231b2e3493768416f72b",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_exp26.py": "85290a128a3606d056f2ef5ef8f316f4f6c315d39df489e7c5496cf2cc804546"
+  },
+  "outputs": {
+    "check_activation.json": "77b2b3b89575765896f4c911c1a170fd5ca6f324433aedaa196fb7ac1484e2d1",
+    "command.txt": "2a9fbb807c8f7bbfc23b1f85b0a4207ed782f0df8360616fa40d660706218999",
+    "config.json": "ab4696b5956e2b3b52315da451143fcd5ae08ba7e187c77f1794774137e1b19c",
+    "empty_samples_ns.json.gz": "6e3315e2bee293e453196539ddec1addb8960259cd792fe4704b75b2746aa236",
+    "environment.json": "b7a61d5b1b0feea021681b3095d0275e921f558e1e8829841d128c6c6cfa347c",
+    "forced_slow_samples_ns.json.gz": "678713b9c73b2267a8aeb784a18559558c779d01463fb6a58276de829b6430d0",
+    "full_samples_ns.json.gz": "a0678a0219d938a93acb6f995db8a5736e61a0a6038f057ba19f4dd7c01159ac",
+    "log.txt": "5ed21507302013da825522911fdc15bc59c3415ebe0dd5e2db765aa6e9a8343d",
+    "metrics.json": "400adc60864dfdf46adca251fd852481b562fefeaddb742e13396a64d9477b1f",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345",
+    "timer_deltas_ns.json.gz": "b5599986339b8701bd3439738cfd31654290147fd6fd8aefb2aa136026661f05"
+  }
+}
