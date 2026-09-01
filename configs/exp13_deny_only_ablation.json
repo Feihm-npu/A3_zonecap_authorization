@@ -1,0 +1,38 @@
+{
+  "exp": "exp-13",
+  "claim": "C3-A1",
+  "seed": null,
+  "run_id": "exp13_deny_only_ablation_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp13 --config configs/exp13_deny_only_ablation.json --output-dir results/exp13_deny_only_ablation_20260901",
+  "exp12_case_audit": "results/exp12_effect_automaton_20260901/case_audit.jsonl.gz",
+  "exp12_composed_traces": "results/exp12_effect_automaton_20260901/composed_traces.jsonl.gz",
+  "registered_rewrite_offset": 1.0,
+  "expected_counts": {
+    "policy_steps": 81648,
+    "heldout_one_request_steps": 58968,
+    "composed_policy_steps": 22680,
+    "deny_only_false_blocks": 13608,
+    "composed_traces_with_false_block": 4536,
+    "lost_recoverable_decisions": 9072,
+    "categorical_effect_distance": 22680,
+    "rich_physical_outputs": 27216,
+    "deny_only_physical_outputs": 9072,
+    "lost_rewrite_outputs": 13608,
+    "lost_defer_stutters": 4536
+  },
+  "pass_criteria": {
+    "deny_only_false_blocks_min": 1,
+    "input_safety_violations": 0,
+    "deny_only_safety_violations": 0,
+    "negative_control_mutants_killed": 3
+  },
+  "frozen_hashes": {
+    "results/exp12_effect_automaton_20260901/case_audit.jsonl.gz": "d1b960dde95c2096bd2400007d47308e97b0f3a2a2c4f99f1bb00a838962105b",
+    "results/exp12_effect_automaton_20260901/composed_traces.jsonl.gz": "503be017f21137fab627bd8253c364028cd86c17431bf625ee3276291f596a5e",
+    "results/exp12_effect_automaton_20260901/metrics.json": "01f8fca0841331997c185424a7db2ea860792678d88e7c96e3cd5b1804cc4911",
+    "results/exp12_effect_automaton_20260901/manifest.json": "8fedea67a5099b45e47485f299fe36003e6e0265b4fe8e91256525d2f79c19f2",
+    "research/c3_deny_only_ablation_protocol.md": "683de5dd4282a14d3f05fe272d4317965b0ed0212b44f468ffb8e7f668a50357",
+    "src/zonecap/exp13.py": "c439dbf3f82a728db9064d043b85e67758f9a2313d7f805eda886c9f10e007e1",
+    "tests/test_exp13.py": "74e61563954cde83321901f16c0fdaad87588ed5174620c2cccc76d217009981"
+  }
+}
