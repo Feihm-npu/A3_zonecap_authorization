@@ -1,0 +1,30 @@
+{
+  "exp": "exp-16",
+  "claim": "C3 sanity",
+  "seed": null,
+  "run_id": "exp16_effect_sanity_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp16 --config configs/exp16_effect_sanity.json --output-dir results/exp16_effect_sanity_20260901",
+  "max_deferrals": 2,
+  "unauthorized_rewrite_value": 1.5,
+  "expected_counts": {
+    "cases": 5,
+    "expectation_mismatches": 0,
+    "immediate_fail_closed_cases": 2,
+    "timeout_fail_closed_cases": 2,
+    "authorized_defer_holds": 5,
+    "recovery_allows": 1,
+    "executor_unauthorized_outputs": 0,
+    "executor_nonstutter_defers": 0,
+    "terminal_pending_requests": 0,
+    "premise_removed_counterexamples": 1
+  },
+  "frozen_hashes": {
+    "research/c3_effect_sanity_protocol.md": "efc5ca06e39bbb91dac905a8efa8fc3421f9304d7aed091fda8b1191c868947b",
+    "src/zonecap/effects.py": "a010919eb19db85a1baa4da70d603c538e5df965628a7f4ba4389ad2e375aaed",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp16.py": "f6b9733605f7a1971e9bee8db551ac28a2a2edc50cd02dc424f645f23d275e7e",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_effects.py": "2af123a2e9b9ad8b6dcc25183b53b1255ddd4dc9dfeabd0798dd4e1ee1f24efc",
+    "tests/test_exp16.py": "71477daffbb1a75cf38033284e0ecdd83c450ec1403e980e18de4b8bd007302e"
+  }
+}

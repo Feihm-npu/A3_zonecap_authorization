@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from .engine import PolicyEngine
 from .models import ActionRequest, Capability, Decision, Effect
 
 
@@ -55,3 +56,77 @@ class EffectBinding:
             raise EffectContractError(f"unrecognized effect: {decision.effect}")
         self._assert_authorized(capability, action)
         return action
+
+
+@dataclass(frozen=True)
+class ExecutionOutcome:
+    decision: Decision
+    emitted: PhysicalAction | None
+    fail_closed: bool = False
+
+
+@dataclass
+class BoundedEffectExecutor:
+    """Bind effects and terminate unresolved deferrals without emitting.
+
+    ``PolicyEngine`` remains a pure one-request decision function. This adapter
+    owns the state needed by a deployment: consecutive deferrals, a fixed
+    deferral bound, and fail-closed handling of an invalid physical binding.
+    """
+
+    binding: EffectBinding
+    max_deferrals: int
+    consecutive_deferrals: int = 0
+    timed_out: bool = False
+
+    def __post_init__(self) -> None:
+        if self.max_deferrals < 0:
+            raise ValueError("max_deferrals must be non-negative")
+
+    @staticmethod
+    def _denial(reason: str) -> Decision:
+        return Decision(Effect.DENY, reason)
+
+    def apply(
+        self,
+        capability: Capability,
+        request: ActionRequest,
+        decision: Decision,
+    ) -> ExecutionOutcome:
+        if decision.effect is Effect.DEFER:
+            if self.timed_out or self.consecutive_deferrals >= self.max_deferrals:
+                self.timed_out = True
+                return ExecutionOutcome(
+                    self._denial("defer approval/context timeout"),
+                    None,
+                    fail_closed=True,
+                )
+            self.consecutive_deferrals += 1
+        else:
+            self.consecutive_deferrals = 0
+            self.timed_out = False
+
+        try:
+            emitted = self.binding.emitted_action(capability, request, decision)
+        except EffectContractError as error:
+            return ExecutionOutcome(
+                self._denial(f"effect binding rejected: {error}"),
+                None,
+                fail_closed=True,
+            )
+        return ExecutionOutcome(decision, emitted)
+
+    def evaluate(
+        self,
+        engine: PolicyEngine,
+        capability: Capability,
+        request: ActionRequest,
+        *,
+        rewrite_out_of_range: bool = True,
+    ) -> ExecutionOutcome:
+        decision = engine.evaluate(
+            capability,
+            request,
+            rewrite_out_of_range=rewrite_out_of_range,
+        )
+        return self.apply(capability, request, decision)
