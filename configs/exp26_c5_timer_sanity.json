@@ -1,0 +1,43 @@
+{
+  "claim": "C5",
+  "command": "PYTHONPATH=src python -m zonecap.exp26 --config configs/exp26_c5_timer_sanity.json --output-dir results/exp26_c5_timer_sanity_20260902",
+  "cpu_core": 0,
+  "exp": "exp-26",
+  "expected_counts": {
+    "affinity_restored": true,
+    "affinity_verified": true,
+    "check_mutants": 6,
+    "check_mutants_killed": 6,
+    "clock_adjustable": false,
+    "clock_monotonic": true,
+    "empirical_resolution_below_empty_p50": true,
+    "empty_samples": 100000,
+    "forced_slow_detected": true,
+    "forced_slow_samples": 100,
+    "full_missing_checks": [],
+    "full_sanity_samples": 100000,
+    "positive_timer_deltas": 100000,
+    "requested_cpu_core": 0,
+    "required_checks": 6,
+    "timer_monotonicity_violations": 0,
+    "timer_pairs": 100000,
+    "timing_order_passed": true
+  },
+  "forced_delay_ns": 5000000,
+  "forced_slow_minimum_ns": 4000000,
+  "forced_slow_samples": 100,
+  "forced_slow_warmups": 5,
+  "frozen_hashes": {
+    "hardware_delivery/exp_requirements.md": "b67862e096f01253d19bbaa704ca3b6c572a7468e4aa1afd34e8c2488637f8bc",
+    "research/c5_timer_sanity_protocol.md": "8e0afec7e13557421f668a06fd30c43d5118958c726526615e6664efd8b58ed6",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp26.py": "6cf4d8d661412746e214c16a0b865a9708dbcdd3a6fe231b2e3493768416f72b",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_exp26.py": "85290a128a3606d056f2ef5ef8f316f4f6c315d39df489e7c5496cf2cc804546"
+  },
+  "measured_samples": 100000,
+  "run_id": "exp26_c5_timer_sanity_20260902",
+  "seed": null,
+  "timer_pairs": 100000,
+  "warmups": 10000
+}
