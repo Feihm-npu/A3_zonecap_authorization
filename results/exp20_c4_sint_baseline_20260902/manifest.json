@@ -1,0 +1,37 @@
+{
+  "git_head": "716b870aef5a7ed172a215e4f59fd4c26addd2dc",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp20_c4_sint_baseline.json": "e64fa1d9a088da38206de5a61e2351230c2fe20a5a2ad20017762336f5a6a27e",
+    "research/c4_sint_baseline_protocol.md": "5084f02c8f19ee152d5782e43d1ab306ba568dc690d58ac92424c73fa8d0b45e",
+    "results/exp17_c4_interleavings_20260901/metrics.json": "7f48a01f5bcc3d26075ce057c09e9ee98683a9fb464a9c4a17edb4b923cd5606",
+    "results/exp19_c4_adversarial_scheduler_20260902/metrics.json": "7439982937a8a787b1c511d146d11798560f9955c7663bfbe07b094f2086ffca",
+    "scripts/exp20_sint_runner.mjs": "f666ee6dde26cb9c48272e1167a723238af4d26c0e6f9c2b937e19d1958bf43e",
+    "src/zonecap/exp20.py": "a259ee7f683c3bf6537cfd7de0ad051b67e8d2c6994fcfe2719bd7b92dd0caf3",
+    "tests/test_exp20.py": "6539515b4f7643c3287758738ce8cd23af116f186623ccd4a15920b99eb867b9"
+  },
+  "node": "v24.12.0",
+  "outputs": {
+    "command.txt": "a54abeb8cba5745d43905d2f9159216c7bc20f13d2cc7931888f16a66cf41ca4",
+    "config.json": "e64fa1d9a088da38206de5a61e2351230c2fe20a5a2ad20017762336f5a6a27e",
+    "decision_state_machine_delta.json": "641fcc5a50f4665d58422df669fa0d4ac46e6010696d6903edc054edff36b527",
+    "log.txt": "d075003ae53daa40a41d8a2b0a24d01936396f672b7b8670854ff6c0c970427a",
+    "metrics.json": "2ec13d201fa5477f9e42e9712c773247dfe07f839fc516d41b822618cb1c9f2f",
+    "runner_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runner_stdout.log": "1996125b7b348fa1039df9f054b3c1a195c9284eebf454fd11943b234f38ff3d",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345",
+    "sint_raw.json": "6826d29738765106b72905c43d5c83debb57af8690d03aeb3e04ba50c6f6be0f"
+  },
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "sint_git_status": "",
+  "sint_sources": {
+    "WHITEPAPER.md": "202270bbbd63662c68a0637d7d632e4eab04344205b46f6d523104e16bfb2882",
+    "packages/capability-tokens/src/revocation.ts": "92cd7e580e82db831f7afcb309f347610b944b12285a1919b605c2392bb3f5a3",
+    "packages/persistence/src/in-memory-revocation-bus.ts": "1ba29be6829c4ba974439775d4fe58b17ea67a4400807a6456b883fdf820a704",
+    "packages/persistence/src/redis-revocation-bus.ts": "4453aabb2fe17b5d6ef3b2a3c9f2a68696ac674a5488461d14cee405e9c38ec3",
+    "packages/policy-gateway/src/approval-flow.ts": "9f8dafc02acef05a5ee090d9c909a615e4b94442b065b885d54ca084ea410639",
+    "packages/policy-gateway/src/gateway.ts": "9625c6c6f8156e902a4d8bb59bea7415fd782af857e7c5652b660ddf3c54db8e"
+  }
+}

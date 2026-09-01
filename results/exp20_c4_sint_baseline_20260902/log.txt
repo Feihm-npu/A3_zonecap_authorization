@@ -1,0 +1,9 @@
+experiment=exp-20
+seed=none
+sint_commit=2461a911b8c3d7ed9da3f7662b33678f688eb826
+issued_not_delivered_allows=1
+post_delivery_revocation_denies=1
+revoked_enqueued_request_approved=1
+same_resource_requests_approved=2
+revoked_gateway_recheck_denies=1
+missing_approval_timeouts=1

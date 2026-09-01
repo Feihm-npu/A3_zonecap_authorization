@@ -1,0 +1,15 @@
+{
+  "interpretation_boundary": "ApprovalQueue resolution is not physical execution. The revoked request is denied if the consumer performs a fresh PolicyGateway interception; the pinned API does not make that recheck atomic with queue resolution.",
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "trace_results": {
+    "atomic_permission_union_property": "N/A: requests and tokens remain independent; no cross-request command tuple exists",
+    "delivered_local_revocation": "full",
+    "duplicate_vote_suppression": "full",
+    "issuance_time_revocation_with_stale_local_store": "absent",
+    "missing_approval_timeout": "full",
+    "revocation_recheck_after_approval": "full",
+    "revoke_pending_approval_atomically": "absent",
+    "same_asset_deterministic_conflict_winner": "absent",
+    "two_of_three_approval": "full"
+  }
+}

@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp20 --config configs/exp20_c4_sint_baseline.json --sint-repo /tmp/zonecap-exp20-sint --output-dir results/exp20_c4_sint_baseline_20260902

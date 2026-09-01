@@ -1,0 +1,37 @@
+{
+  "claim": "C4",
+  "command": "PYTHONPATH=src python -m zonecap.exp20 --config configs/exp20_c4_sint_baseline.json --sint-repo /tmp/zonecap-exp20-sint --output-dir results/exp20_c4_sint_baseline_20260902",
+  "exp": "exp-20",
+  "expected_counts": {
+    "approval_count_after_duplicate": 1,
+    "first_votes_pending": true,
+    "initial_escalations": 2,
+    "missing_approval_timeouts": 1,
+    "post_delivery_revocation_denies": 1,
+    "pre_revocation_allows": 1,
+    "revoked_gateway_recheck_denies": 1,
+    "sint_commit_match": true,
+    "source_files_checked": 6,
+    "timeout_pending_at_end": 0
+  },
+  "frozen_hashes": {
+    "research/c4_sint_baseline_protocol.md": "5084f02c8f19ee152d5782e43d1ab306ba568dc690d58ac92424c73fa8d0b45e",
+    "results/exp17_c4_interleavings_20260901/metrics.json": "7f48a01f5bcc3d26075ce057c09e9ee98683a9fb464a9c4a17edb4b923cd5606",
+    "results/exp19_c4_adversarial_scheduler_20260902/metrics.json": "7439982937a8a787b1c511d146d11798560f9955c7663bfbe07b094f2086ffca",
+    "scripts/exp20_sint_runner.mjs": "f666ee6dde26cb9c48272e1167a723238af4d26c0e6f9c2b937e19d1958bf43e",
+    "src/zonecap/exp20.py": "a259ee7f683c3bf6537cfd7de0ad051b67e8d2c6994fcfe2719bd7b92dd0caf3",
+    "tests/test_exp20.py": "6539515b4f7643c3287758738ce8cd23af116f186623ccd4a15920b99eb867b9"
+  },
+  "run_id": "exp20_c4_sint_baseline_20260902",
+  "seed": null,
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "sint_prepare_command": "git clone https://github.com/sint-ai/sint-protocol.git /tmp/zonecap-exp20-sint && git -C /tmp/zonecap-exp20-sint checkout --detach 2461a911b8c3d7ed9da3f7662b33678f688eb826 && cd /tmp/zonecap-exp20-sint && npx --yes pnpm@9.15.0 install --frozen-lockfile && npx --yes pnpm@9.15.0 --filter @pshkv/gate-policy-gateway... build",
+  "sint_source_hashes": {
+    "WHITEPAPER.md": "202270bbbd63662c68a0637d7d632e4eab04344205b46f6d523104e16bfb2882",
+    "packages/capability-tokens/src/revocation.ts": "92cd7e580e82db831f7afcb309f347610b944b12285a1919b605c2392bb3f5a3",
+    "packages/persistence/src/in-memory-revocation-bus.ts": "1ba29be6829c4ba974439775d4fe58b17ea67a4400807a6456b883fdf820a704",
+    "packages/persistence/src/redis-revocation-bus.ts": "4453aabb2fe17b5d6ef3b2a3c9f2a68696ac674a5488461d14cee405e9c38ec3",
+    "packages/policy-gateway/src/approval-flow.ts": "9f8dafc02acef05a5ee090d9c909a615e4b94442b065b885d54ca084ea410639",
+    "packages/policy-gateway/src/gateway.ts": "9625c6c6f8156e902a4d8bb59bea7415fd782af857e7c5652b660ddf3c54db8e"
+  }
+}

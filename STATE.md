@@ -10,7 +10,7 @@ since: 2026-08-31
 read:                     # what the next session must read first
   - prompts/S2_RUN.md
 options: []               # when awaiting human: allowed next states
-note: "exp-01 through exp-19 are complete; exp-19 produced a registered non-core C4 counterexample under issuance-time delayed-revocation semantics, so continue exp-20/21 to bound the finding before S2 interpretation. Jetson/OpenPLC for exp-22–25 remains unapproved." # one line for the next session: pending request, where work stopped
+note: "exp-01 through exp-20 are complete; exp-19's non-core C4 delayed-revocation counterexample remains, and pinned SINT likewise requires delivery plus a fresh gateway recheck rather than providing atomic same-asset conflict resolution. Resume at exp-21 C4 sanity. Jetson/OpenPLC for exp-22–25 remains unapproved." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -29,3 +29,4 @@ note: "exp-01 through exp-19 are complete; exp-19 produced a registered non-core
 - 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after exp-17 exhausted the registered bound-five 2-4-holder interleavings with zero C4 safety/deadlock violation; next is exp-18 bound/convergence ablation
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | checkpoint after exp-18 closed every 2-4-holder graph with symmetry reduction and zero new cycle/deadlock violation; next is exp-19 adversarial scheduling
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-19 found issuer-relative stale execution under fair delayed revocation delivery; C4 is non-core, so continue to exp-20 baseline and exp-21 sanity to bound the counterexample
+- 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-20 bounded the pinned-SINT comparison to delivered revocation, independent quorum, timeout, and consumer-side recheck; next is exp-21 C4 sanity

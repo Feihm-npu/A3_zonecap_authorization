@@ -1,0 +1,22 @@
+{
+  "approval_count_after_duplicate": 1,
+  "claim": "C4",
+  "cross_request_winners": 0,
+  "exp": "exp-20",
+  "expected_count_mismatches": {},
+  "first_votes_pending": true,
+  "initial_escalations": 2,
+  "issued_not_delivered_allows": 1,
+  "missing_approval_timeouts": 1,
+  "post_delivery_revocation_denies": 1,
+  "pre_revocation_allows": 1,
+  "revoked_enqueued_request_approved": 1,
+  "revoked_gateway_recheck_denies": 1,
+  "same_resource_requests_approved": 2,
+  "seed": null,
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "sint_commit_match": true,
+  "source_files_checked": 6,
+  "source_hash_mismatches": {},
+  "timeout_pending_at_end": 0
+}
