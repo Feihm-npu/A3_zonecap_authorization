@@ -1,0 +1,57 @@
+{
+  "exp": "exp-12",
+  "claim": "C3",
+  "seed": null,
+  "run_id": "exp12_effect_automaton_20260901",
+  "command": "PYTHONPATH=src python -m zonecap.exp12 --config configs/exp12_effect_automaton.json --output-dir results/exp12_effect_automaton_20260901",
+  "policy_table": "research/heldout/exp07/policy_tables.json",
+  "exp07_cases": "results/exp07_heldout_equivalence_20260901/cases.jsonl.gz",
+  "resolution_bound_policy_steps": 2,
+  "composed_effect_order": [
+    "attenuate",
+    "defer",
+    "allow",
+    "rewrite",
+    "deny"
+  ],
+  "expected_counts": {
+    "heldout_traces": 58968,
+    "valid_cases": 4536,
+    "mutation_cases": 54432,
+    "composed_traces": 4536,
+    "composed_policy_steps": 22680,
+    "composed_physical_transitions": 13608
+  },
+  "expected_total_effect_counts": {
+    "allow": 9072,
+    "deny": 49896,
+    "attenuate": 4536,
+    "rewrite": 13608,
+    "defer": 4536
+  },
+  "pass_criteria": {
+    "all_five_effects_reached": true,
+    "effect_expectation_violations": 0,
+    "effect_order_violations": 0,
+    "attenuation_violations": 0,
+    "authority_safety_violations": 0,
+    "defer_nonstutter_violations": 0,
+    "parent_realizability_violations": 0,
+    "trace_inclusion_violations": 0,
+    "bounded_deadlocks": 0,
+    "negative_control_mutants_killed": 5
+  },
+  "frozen_hashes": {
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "results/exp07_heldout_equivalence_20260901/cases.jsonl.gz": "46197806deb7cdf7eb108ebaceecc68b574ddce40f625dd8948b46be6bb433b6",
+    "research/c3_effect_automaton_protocol.md": "67c23b43162aa9acf293e922e7a5c6b315182c22b8c3309f89e9d32c543d36a3",
+    "src/zonecap/compiler.py": "0c96cd2eda5f29fc284f88c6c9e741ddc78347a04f70b8432554ef695d6c44bd",
+    "src/zonecap/effects.py": "f3df0ef962912352660cda577e930d3d603bb987e5f1fe861600c83bb5b26ed5",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp07.py": "d5a0398a6554fb481032bd9d969ee2cb88efc73e068fab7ee0d441cf4d301e63",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/exp12.py": "4a365e472acac9f3f62b12364e5fbdc0c56e199df403feafa3628f3d93bc6aa2",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_exp12.py": "e64de40096aa9ea75f13c1ab74a976a0b0e5a155b930ab9db952cfb2417189f9"
+  }
+}
