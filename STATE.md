@@ -5,12 +5,12 @@ Human decision: set `state`, set `awaiting: none`, clear `options`, put any over
 
 ```yaml
 state: S2_RUN
-awaiting: human           # none | human
+awaiting: none            # none | human
 since: 2026-08-31
 read:                     # what the next session must read first
   - prompts/S2_RUN.md
-options: [S2_RUN]         # when awaiting human: allowed next states
-note: "exp-01 through exp-21 are complete; C4 has an issuer-relative delayed-revocation counterexample but local sanity is clean. Approval requested for exp-22–25 on non-default Jetson/OpenPLC hardware: needed because C5 is target-specific; expected duration up to 3 hardware-days; fallback within default is mark exp-22–25 skipped:target hardware unavailable, run exp-26 x86 timer sanity, and leave C5 inconclusive. Human: approve hardware use or select fallback." # one line for the next session: pending request, where work stopped
+options: []               # when awaiting human: allowed next states
+note: "The human approved NVIDIA Jetson Orin NX 8GB for exp-22–25, delegated execution to the hardware group, and directed local work to continue. Requirements are in hardware_delivery/exp_requirements.md; hardware harness freeze/results remain external:pending. Resume locally at exp-26 timer sanity, then wait for the hardware return without interpreting C5." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -31,3 +31,4 @@ note: "exp-01 through exp-21 are complete; C4 has an issuer-relative delayed-rev
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-19 found issuer-relative stale execution under fair delayed revocation delivery; C4 is non-core, so continue to exp-20 baseline and exp-21 sanity to bound the counterexample
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-20 bounded the pinned-SINT comparison to delivered revocation, independent quorum, timeout, and consumer-side recheck; next is exp-21 C4 sanity
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | exp-21 matched all local C4 terminal-state sanity checks; pausing at the exp-22 non-default Jetson/OpenPLC hardware gate for human approval or fallback selection
+- 2026-09-02 | S2_RUN -> S2_RUN | human | approved NVIDIA Jetson Orin NX 8GB for exp-22–25, delegated hardware execution, and directed the agent to continue with local exp-26
