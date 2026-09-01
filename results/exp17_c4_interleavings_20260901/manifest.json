@@ -1,0 +1,22 @@
+{
+  "git_head": "bead0839c14517aee8307c65a3c43f2697591202",
+  "git_status_before_run": "",
+  "inputs": {
+    "configs/exp17_c4_interleavings.json": "e6f7e7fd5624e4f77e25d01db6d7f0bc5c19164d6dc42170d6f3e3b4172c9ed1",
+    "research/c4_interleaving_protocol.md": "d920ae0591272418f6fb7825df1b50ceac9853b6895fafbdd2174235593f59b1",
+    "src/zonecap/concurrency.py": "cf020f9444dd0478954c1570412e7a5a14ca18667a30bc3877c81aff0e5c0187",
+    "src/zonecap/exp17.py": "9614dc57bd6995fb4029b67d59127991b344faa8c8ba0e06988be38351bcd881",
+    "tests/test_exp17.py": "5160308ad1173747e430ab0d536e84c5acb284ab2faa83f294b947b3cd4e5f86"
+  },
+  "outputs": {
+    "command.txt": "6f788d3e51c893e7af52b514e491a8eced2305b7a25a623f4114320df98ce9a1",
+    "config.json": "63a609ccd314422e6873e819331c15be327491ecc0d37e6be8dfeebbd8568fad",
+    "log.txt": "dab48cc6cbffebc2b79330ab5f8e13660dd2d2c28008e24e86d4b830e936b744",
+    "metrics.json": "7f48a01f5bcc3d26075ce057c09e9ee98683a9fb464a9c4a17edb4b923cd5606",
+    "mutation_audit.json": "49208dc12fd0ec09d4f7b82e20ddc8aa99e63cc5f6937ed5ef726714f1d41d63",
+    "per_holder.json": "737fb6272bd526520ba223f03934641f1312d798d983fbc9124b85fe25093d0e",
+    "seed.txt": "fcf33dfbe13c2354bf0e1b063f9fb422747a46cee00b7420bceff2b81457b345"
+  },
+  "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

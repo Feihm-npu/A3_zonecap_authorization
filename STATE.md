@@ -10,7 +10,7 @@ since: 2026-08-31
 read:                     # what the next session must read first
   - prompts/S2_RUN.md
 options: []               # when awaiting human: allowed next states
-note: "exp-01 through exp-16 are complete with no registered C1/C2/C3 counterexample; resume at exp-17 by modeling revocation and deterministic conflict order for 2-4 holders under all bounded interleavings. Jetson/OpenPLC for exp-22–25 remains unapproved." # one line for the next session: pending request, where work stopped
+note: "exp-01 through exp-17 are complete with no registered C1-C4 counterexample; resume at exp-18 by increasing the C4 bound to state-graph convergence and reporting symmetry reduction/new cycles or deadlocks. Jetson/OpenPLC for exp-22–25 remains unapproved." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -26,3 +26,4 @@ note: "exp-01 through exp-16 are complete with no registered C1/C2/C3 counterexa
 - 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after exp-14 exhaustive request/context enumeration covered every effect bigram/trigram with zero registered violation and exposed hand-picked coverage gaps; next is exp-15 baseline mapping
 - 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after exp-15 source-grounded baseline mapping preserved lifecycle/proof boundaries and left unavailable Lanotte runtime metrics N/A; next is exp-16 sanity
 - 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after completing C3 exp-12 through exp-16 with bounded five-effect composition, exhaustive sequences, baseline boundaries, and fail-closed timeout sanity; next is exp-17 C4
+- 2026-09-01 | S2_RUN -> S2_RUN | agent | checkpoint after exp-17 exhausted the registered bound-five 2-4-holder interleavings with zero C4 safety/deadlock violation; next is exp-18 bound/convergence ablation

@@ -1,0 +1,11 @@
+experiment=exp-17
+seed=none
+words=793800
+transitions=793797
+executions=26038
+timeouts=1590
+conflict_resolutions=4534
+post_revocation_executions=0
+permission_union_violations=0
+deadlocks=0
+mutants_killed=4/4

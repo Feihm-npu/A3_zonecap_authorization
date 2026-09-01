@@ -1,0 +1,28 @@
+{
+  "claim": "C4",
+  "conflict_resolutions": 4534,
+  "deadlocks": 0,
+  "deterministic_resolution_violations": 0,
+  "executions": 26038,
+  "exp": "exp-17",
+  "expected_count_mismatches": {},
+  "holder_configurations": 3,
+  "holder_counts": [
+    2,
+    3,
+    4
+  ],
+  "horizon": 5,
+  "mutants": 4,
+  "mutants_killed": 4,
+  "permission_union_violations": 0,
+  "post_revocation_executions": 0,
+  "revocation_after_submit_configurations": 3,
+  "seed": null,
+  "timeouts": 1590,
+  "transitions": 793797,
+  "unique_approval_wait_states_sum": 328,
+  "unique_conflict_states_sum": 351,
+  "unique_states_sum": 649,
+  "words": 793800
+}

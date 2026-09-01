@@ -1,0 +1,1 @@
+PYTHONPATH=src python -m zonecap.exp17 --config configs/exp17_c4_interleavings.json --output-dir results/exp17_c4_interleavings_20260901

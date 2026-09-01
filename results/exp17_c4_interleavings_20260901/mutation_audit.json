@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "detected": true,
+      "mutant": "retain_and_execute_revoked_command"
+    },
+    {
+      "detected": true,
+      "mutant": "union_action_0_with_value_1"
+    },
+    {
+      "detected": true,
+      "mutant": "choose_maximum_id_winner"
+    },
+    {
+      "detected": true,
+      "mutant": "remove_approval_and_timeout_progress"
+    }
+  ],
+  "killed": 4,
+  "mutants": 4
+}

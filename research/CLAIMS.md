@@ -61,7 +61,7 @@ Alternatives:
 - A1: Bounded verification hides longer deadlock cycles. → ruled out by: exp-18
 - A2: Safety depends on a benign centralized scheduler rather than the protocol. → ruled out by: exp-19
 
-Status: proposed
+Status: testing
 
 ## C5 [S1]
 
