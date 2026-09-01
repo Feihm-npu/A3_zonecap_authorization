@@ -1,0 +1,42 @@
+{
+  "approval_timeout_ticks": 2,
+  "bound_five_exact_states": {
+    "2": 30,
+    "3": 138,
+    "4": 481
+  },
+  "claim": "C4",
+  "command": "PYTHONPATH=src python -m zonecap.exp18 --config configs/exp18_c4_convergence.json --output-dir results/exp18_c4_convergence_20260902",
+  "exp": "exp-18",
+  "expected_counts": {
+    "closure_missing_states": 0,
+    "converged_configurations": 3,
+    "deadlocks": 0,
+    "deterministic_resolution_violations": 0,
+    "holder_configurations": 3,
+    "negative_control_detected": true,
+    "permission_union_violations": 0,
+    "post_revocation_executions": 0,
+    "symmetry_classification_mismatches": 0
+  },
+  "frozen_hashes": {
+    "research/c4_convergence_protocol.md": "314fac93ca502adaafdb0d492640481cf14b475f36ef07d2f32efe6477db10a0",
+    "results/exp17_c4_interleavings_20260901/metrics.json": "7f48a01f5bcc3d26075ce057c09e9ee98683a9fb464a9c4a17edb4b923cd5606",
+    "results/exp17_c4_interleavings_20260901/per_holder.json": "737fb6272bd526520ba223f03934641f1312d798d983fbc9124b85fe25093d0e",
+    "src/zonecap/concurrency.py": "d881c8757140c16cafb38ca341b933ed477b92b25ec63097a35ed4ab59bd6a12",
+    "src/zonecap/exp18.py": "fd0d1ab9f502652638c6a3982e134ecad3f3d369c1e49e32b2b9a5c08315bdf3",
+    "tests/test_exp18.py": "7307caa80feb9ca69de3fcbcb94cba794b4fa9a7610775c6a2f2797010776763"
+  },
+  "holder_counts": [
+    2,
+    3,
+    4
+  ],
+  "max_depth": 20,
+  "pass_criteria": {
+    "cycle_edges_min": 1,
+    "strict_symmetry_reduction": true
+  },
+  "run_id": "exp18_c4_convergence_20260902",
+  "seed": null
+}

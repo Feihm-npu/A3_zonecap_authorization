@@ -66,6 +66,37 @@ def deadlocked(state: ConcurrentState, holders: int, timeout_ticks: int) -> bool
     return True
 
 
+def symmetry_key(state: ConcurrentState, holders: int) -> tuple[Any, ...]:
+    """Canonicalize permutations of ordinary holders for invariant checks.
+
+    Holder 0 is fixed because it is the high-risk principal. Ordinary holder
+    identities are erased only in this auxiliary key; exact resolution still
+    runs on ``ConcurrentState`` and therefore retains the minimum-ID order.
+    """
+
+    pending_by_holder = {command.holder: command for command in state.pending}
+    high = pending_by_holder.get(0)
+    high_key = (
+        None
+        if high is None
+        else (
+            high.age,
+            0 in high.approvals,
+        )
+    )
+    ordinary = tuple(
+        sorted(
+            (
+                holder in state.revoked,
+                holder in pending_by_holder,
+                high is not None and holder in high.approvals,
+            )
+            for holder in range(1, holders)
+        )
+    )
+    return (0 in state.revoked, high_key, ordinary)
+
+
 def transition(
     state: ConcurrentState,
     event: str,
