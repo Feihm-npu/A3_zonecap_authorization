@@ -4,13 +4,13 @@ Routing only. Content lives in `research/`. Read this, then `prompts/<state>.md`
 Human decision: set `state`, set `awaiting: none`, clear `options`, put any override of REVIEW verdicts or comments for the agent in `note`, append a log line, commit.
 
 ```yaml
-state: S3_REVIEW
-awaiting: none            # none | human
+state: S3_AWAIT
+awaiting: human           # none | human
 since: 2026-08-31
 read:                     # what the next session must read first
-  - prompts/S3_REVIEW.md
-options: []               # when awaiting human: allowed next states
-note: "Review the completed local subset independently from result files. Exp-22–25 remain external pending and C5 has no approved-testbed evidence; assess C1–C4 now and recommend whether the accepted subset can proceed without waiting for hardware." # one line for the next session: pending request, where work stopped
+  - research/REVIEW.md
+options: [S4, S2_RUN, S1] # when awaiting human: allowed next states
+note: "Reviewer recommends S4 now with C1 accepted, C2/C3 narrowed, C4 rejected and reported as a checked negative result, and C5 omitted pending external exp-22–25. Human must decide the verdicts and next state; hardware progress need not block the C1–C3 writing path." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -35,3 +35,4 @@ note: "Review the completed local subset independently from result files. Exp-22
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | completed and independently audited local exp-26 timer/check/affinity sanity; no local matrix work remains, so await the hardware group's pre-run harness freeze or returned exp-22–25 results
 - 2026-09-02 | S2_RUN -> S2_INTERPRET | agent | completed local subset exp-01–21 and exp-26; exp-22–25 remain external pending and are excluded so hardware progress does not block interpretation
 - 2026-09-02 | S2_INTERPRET -> S3_REVIEW | agent | handed off per-claim local evidence: C1–C3 support, C4 is refuted by a checked issuance-relative revocation counterexample, and C5 is inconclusive pending external hardware results
+- 2026-09-02 | S3_REVIEW -> S3_AWAIT | agent | independent review accepts C1, narrows C2/C3, rejects original C4, finds C5 insufficient, and recommends S4 on the non-hardware core without waiting for exp-22–25
