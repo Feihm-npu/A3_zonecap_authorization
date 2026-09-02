@@ -4,13 +4,13 @@ Routing only. Content lives in `research/`. Read this, then `prompts/<state>.md`
 Human decision: set `state`, set `awaiting: none`, clear `options`, put any override of REVIEW verdicts or comments for the agent in `note`, append a log line, commit.
 
 ```yaml
-state: S2_INTERPRET
+state: S3_REVIEW
 awaiting: none            # none | human
 since: 2026-08-31
 read:                     # what the next session must read first
-  - prompts/S2_INTERPRET.md
+  - prompts/S3_REVIEW.md
 options: []               # when awaiting human: allowed next states
-note: "Interpret the completed local subset now: exp-01–21 and exp-26. Exp-22–25 remain external:pending and are excluded from the completed subset so hardware-group timing cannot block review; C5 must remain inconclusive because exp-26 is x86 infrastructure sanity, not approved-testbed evidence." # one line for the next session: pending request, where work stopped
+note: "Review the completed local subset independently from result files. Exp-22–25 remain external pending and C5 has no approved-testbed evidence; assess C1–C4 now and recommend whether the accepted subset can proceed without waiting for hardware." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -34,3 +34,4 @@ note: "Interpret the completed local subset now: exp-01–21 and exp-26. Exp-22�
 - 2026-09-02 | S2_RUN -> S2_RUN | human | approved NVIDIA Jetson Orin NX 8GB for exp-22–25, delegated hardware execution, and directed the agent to continue with local exp-26
 - 2026-09-02 | S2_RUN -> S2_RUN | agent | completed and independently audited local exp-26 timer/check/affinity sanity; no local matrix work remains, so await the hardware group's pre-run harness freeze or returned exp-22–25 results
 - 2026-09-02 | S2_RUN -> S2_INTERPRET | agent | completed local subset exp-01–21 and exp-26; exp-22–25 remain external pending and are excluded so hardware progress does not block interpretation
+- 2026-09-02 | S2_INTERPRET -> S3_REVIEW | agent | handed off per-claim local evidence: C1–C3 support, C4 is refuted by a checked issuance-relative revocation counterexample, and C5 is inconclusive pending external hardware results

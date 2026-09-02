@@ -19,7 +19,7 @@ Alternatives:
 - A2: Inclusion is an artifact of scalar interval arithmetic and fails for coupled, state/history-dependent MIMO systems. → ruled out by: exp-03
 - A3: Inclusion holds only because the prototype omits meaningful `REWRITE`/`DEFER` behavior. → ruled out by: exp-04
 
-Status: testing
+Status: supports
 
 ## C2 [core] [S1]
 
@@ -33,7 +33,7 @@ Alternatives:
 - A1: Agreement comes from hand-authored fixtures mirroring compiler code. → ruled out by: exp-08
 - A2: Non-amplification is trivial because delegation chains or cross-zone paths are not exercised. → ruled out by: exp-09
 
-Status: testing
+Status: supports
 
 ## C3 [S1]
 
@@ -47,7 +47,7 @@ Alternatives:
 - A1: Any apparent improvement is achievable by deny-only enforcement, so new effects add no policy value. → ruled out by: exp-13
 - A2: Safety holds only on hand-picked traces. → ruled out by: exp-14
 
-Status: testing
+Status: supports
 
 ## C4 [S1]
 
@@ -61,7 +61,7 @@ Alternatives:
 - A1: Bounded verification hides longer deadlock cycles. → ruled out by: exp-18
 - A2: Safety depends on a benign centralized scheduler rather than the protocol. → ruled out by: exp-19
 
-Status: testing
+Status: refutes
 
 ## C5 [S1]
 
@@ -75,4 +75,4 @@ Alternatives:
 - A1: The threshold is met only through warm caches or omitted signature/revocation checks. → ruled out by: exp-23
 - A2: The threshold is met only for a toy policy count. → ruled out by: exp-24
 
-Status: proposed
+Status: inconclusive
