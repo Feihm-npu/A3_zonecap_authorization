@@ -4,13 +4,13 @@ Routing only. Content lives in `research/`. Read this, then `prompts/<state>.md`
 Human decision: set `state`, set `awaiting: none`, clear `options`, put any override of REVIEW verdicts or comments for the agent in `note`, append a log line, commit.
 
 ```yaml
-state: S3_AWAIT
-awaiting: human           # none | human
+state: S4
+awaiting: none            # none | human
 since: 2026-08-31
 read:                     # what the next session must read first
-  - research/REVIEW.md
-options: [S4, S2_RUN, S1] # when awaiting human: allowed next states
-note: "Reviewer recommends S4 now with C1 accepted, C2/C3 narrowed, C4 rejected and reported as a checked negative result, and C5 omitted pending external exp-22–25. Human must decide the verdicts and next state; hardware progress need not block the C1–C3 writing path." # one line for the next session: pending request, where work stopped
+  - prompts/S4.md
+options: []               # when awaiting human: allowed next states
+note: "Human accepted entry to S4 without overriding REVIEW: accept C1; narrow C2/C3 to new post-hoc review claims; reject C4; mark C5 insufficient. Write the paper from the accepted claims, retain C4 as a negative result and C5 as a limitation, and do not wait for external exp-22–25." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -36,3 +36,4 @@ note: "Reviewer recommends S4 now with C1 accepted, C2/C3 narrowed, C4 rejected 
 - 2026-09-02 | S2_RUN -> S2_INTERPRET | agent | completed local subset exp-01–21 and exp-26; exp-22–25 remain external pending and are excluded so hardware progress does not block interpretation
 - 2026-09-02 | S2_INTERPRET -> S3_REVIEW | agent | handed off per-claim local evidence: C1–C3 support, C4 is refuted by a checked issuance-relative revocation counterexample, and C5 is inconclusive pending external hardware results
 - 2026-09-02 | S3_REVIEW -> S3_AWAIT | agent | independent review accepts C1, narrows C2/C3, rejects original C4, finds C5 insufficient, and recommends S4 on the non-hardware core without waiting for exp-22–25
+- 2026-09-02 | S3_AWAIT -> S4 | human | accepted entry to S4 without review overrides; proceed on C1 and narrowed C2/C3 while retaining C4/C5 as negative result and limitation
