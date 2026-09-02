@@ -4,13 +4,12 @@ Routing only. Content lives in `research/`. Read this, then `prompts/<state>.md`
 Human decision: set `state`, set `awaiting: none`, clear `options`, put any override of REVIEW verdicts or comments for the agent in `note`, append a log line, commit.
 
 ```yaml
-state: S4
+state: DONE
 awaiting: none            # none | human
 since: 2026-08-31
-read:                     # what the next session must read first
-  - prompts/S4.md
+read: []                  # what the next session must read first
 options: []               # when awaiting human: allowed next states
-note: "Human accepted entry to S4 without overriding REVIEW: accept C1; narrow C2/C3 to new post-hoc review claims; reject C4; mark C5 insufficient. Write the paper from the accepted claims, retain C4 as a negative result and C5 as a limitation, and do not wait for external exp-22–25." # one line for the next session: pending request, where work stopped
+note: "Paper artifacts are complete and the draft/evidence cold read passed. The accepted storyline uses C1/C6/C7; C4 is a reported negative result; C5 is an explicit limitation. External exp-22–25 may be audited later but are not part of this DONE evidence set. Before submission, supply the public repository/archive URL and compress the rendered manuscript to the IEEE TII page budget." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
@@ -37,3 +36,4 @@ note: "Human accepted entry to S4 without overriding REVIEW: accept C1; narrow C
 - 2026-09-02 | S2_INTERPRET -> S3_REVIEW | agent | handed off per-claim local evidence: C1–C3 support, C4 is refuted by a checked issuance-relative revocation counterexample, and C5 is inconclusive pending external hardware results
 - 2026-09-02 | S3_REVIEW -> S3_AWAIT | agent | independent review accepts C1, narrows C2/C3, rejects original C4, finds C5 insufficient, and recommends S4 on the non-hardware core without waiting for exp-22–25
 - 2026-09-02 | S3_AWAIT -> S4 | human | accepted entry to S4 without review overrides; proceed on C1 and narrowed C2/C3 while retaining C4/C5 as negative result and limitation
+- 2026-09-02 | S4 -> DONE | agent | completed story, section logic, two-way evidence map, evidence-traced English draft, and cold read with no missing experiment required by accepted C1/C6/C7
