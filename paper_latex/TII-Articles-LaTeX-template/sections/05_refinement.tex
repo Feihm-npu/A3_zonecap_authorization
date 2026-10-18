@@ -1,4 +1,4 @@
-\section{Physical Refinement Guarantee}
+\section{Conditional Physical Refinement}
 \label{sec:theorem}
 
 The same-request example in Section~\ref{sec:model} shows why field-wise attenuation alone does not order runtime outputs. \zonecap{} instead separates authorization inclusion from emission inclusion and requires parent realizability at their interface. Fig.~\ref{fig:refinement} summarizes this proof chain and instantiates the resulting reachable-set relation on three exact signed one-dimensional plants.
@@ -6,7 +6,7 @@ The same-request example in Section~\ref{sec:model} shows why field-wise attenua
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/generated/fig02_refinement_reachability}
-\caption{Attenuation-to-reachability refinement and exact instantiations. (a) The proof factors field-wise attenuation through request-abstracted emission and physical-trace inclusion. (b)--(d) Parent and child reachable intervals through actuation-event horizon six for a positive-input integrator, a signed coupled response, and a stable negative-input plant. Grey denotes the parent domain and blue the child domain. The intervals were propagated with seedless exact rational arithmetic; no sampling error bars apply. These panels check executable instances, whereas Theorem~1 establishes the conditional general result.}
+\caption{Attenuation-to-reachability refinement and exact instantiations. (a) The proof factors field-wise attenuation through request-abstracted emission and physical-trace inclusion. (b)--(d) Parent and child reachable intervals through actuation-event horizon six for a positive-input integrator, a signed coupled response, and a stable negative-input plant, taken from the common-subset parent/child pair, for which all three compared adapters produced identical intervals. Grey denotes the parent domain and blue the child domain. The intervals were propagated with seedless exact rational arithmetic; no sampling error bars apply. These panels check executable instances, whereas Theorem~1 establishes the conditional general result.}
 \label{fig:refinement}
 \end{figure*}
 

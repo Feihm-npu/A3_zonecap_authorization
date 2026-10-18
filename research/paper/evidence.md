@@ -55,7 +55,7 @@ Only C1, C6, and C7 are accepted claims. C4 is included solely as a rejected cla
 | Display | Planned message | Claim/boundary served | Run or formal source |
 |---|---|---|---|
 | F1 | Zone/conduit table -> compiler -> root capability -> depth-1/2 attenuation -> five-effect decision -> physical emission -> plant trace, with proof obligations marked at interfaces | C1, C6, C7 | exp-01, exp-07, exp-12; theorem and protocols |
-| F2 | Three-step refinement: syntactic scope inclusion -> request-abstracted emission inclusion -> trace/reachable-set inclusion; inset counterexamples when rewrite or hold premises are removed | C1 | exp-01--04, exp-06 |
+| F2 | Three-step refinement: syntactic scope inclusion -> request-abstracted emission inclusion -> trace/reachable-set inclusion; exact parent/child reachable intervals for three plants from the common-subset pair (premise-removal counterexamples are reported in text) | C1 | exp-01--06 |
 | F3 | Frozen-source corpus generation and independent compiler/oracle paths, with case, mutation, delegation, and widening outcomes | C6 | exp-07--11 |
 | F4 | Five-effect actuation-event automaton and bounded composed trace, annotated with emitted/no-output/stutter behavior | C7 | exp-12--16 |
 | F5 | Revocation issuance/delivery timeline for delays 0, 1, and 2, showing the stale-execution window | C4 negative result | exp-17--21, principally exp-19 |

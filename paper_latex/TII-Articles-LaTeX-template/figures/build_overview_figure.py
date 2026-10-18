@@ -170,7 +170,7 @@ def build_overview() -> None:
     ax.text(93.75, 20.4, r"$F(x_t,u_t,w_t)$", ha="center", va="center", fontsize=SMALL)
     ax.text(93.75, 17.6, r"$x_0\in X_0,\ w_t\in W$", ha="center", va="center", fontsize=SMALL)
     badge(ax, 98.6, 27.2, 3)
-    ax.text(93.75, 15.2, r"traces $\mathcal{T}_H$," "\n" r"reach sets $\mathcal{R}_t$", ha="center", va="top", fontsize=SMALL)
+    ax.text(93.75, 15.2, r"traces $\mathrm{Tr}_H$," "\n" r"reach sets $\mathrm{Reach}_t$", ha="center", va="top", fontsize=SMALL)
 
     # Trusted physical history feeds back to the engine.
     polyline(ax, [(93.75, 26.5), (93.75, 27.8), (60.3, 27.8)], color=COLORS["baseline"])

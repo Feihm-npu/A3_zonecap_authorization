@@ -117,6 +117,21 @@ def panel_label(ax: plt.Axes, label: str, x: float = -0.12, y: float = 1.10) -> 
     )
 
 
+def place_panel_labels(fig: plt.Figure, axes: list[plt.Axes]) -> None:
+    """Put each label just left of its panel's full extent, level with the title.
+
+    Use when wide tick labels or titles make axes-relative offsets collide.
+    """
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    to_figure = fig.transFigure.inverted()
+    for idx, ax in enumerate(axes):
+        extent = ax.get_tightbbox(renderer)
+        title = ax.title.get_window_extent(renderer)
+        x, y = to_figure.transform((extent.x0 - 3, (title.y0 + title.y1) / 2))
+        fig.text(x, y, chr(ord("a") + idx), fontsize=8, fontweight="bold", ha="right", va="center")
+
+
 def add_value_labels(ax: plt.Axes, bars, fmt) -> None:
     for bar in bars:
         value = bar.get_width() if bar.get_width() else bar.get_height()
@@ -189,13 +204,13 @@ def build_refinement_reachability() -> None:
     chain = [
         (0.77, r"Field-wise attenuation  $c' \preceq c$"),
         (0.54, r"Authorized emissions  $\overline{E}_{c'} \subseteq \overline{E}_{c}$"),
-        (0.31, r"Physical traces  $\mathcal{T}_H(c') \subseteq \mathcal{T}_H(c)$"),
-        (0.08, r"Reachable sets  $\mathcal{R}_t(c') \subseteq \mathcal{R}_t(c)$"),
+        (0.31, r"Physical traces  $\mathrm{Tr}_H(c') \subseteq \mathrm{Tr}_H(c)$"),
+        (0.08, r"Reachable sets  $\mathrm{Reach}_t(c') \subseteq \mathrm{Reach}_t(c)$"),
     ]
     for idx, (y, label) in enumerate(chain):
         box = FancyBboxPatch(
-            (-0.10, y),
-            1.20,
+            (-0.22, y),
+            1.44,
             0.13,
             boxstyle="round,pad=0.015,rounding_size=0.02",
             linewidth=0.8,
@@ -280,7 +295,7 @@ def build_compiler_results() -> None:
             "mismatches": main["architectures"]["cpwe_cip_security"]["mismatches"],
         },
         {
-            "architecture": "ENISA rail signalling",
+            "architecture": "ENISA landside signalling",
             "cases": main["architectures"]["enisa_rail_signalling"]["cases"],
             "mismatches": main["architectures"]["enisa_rail_signalling"]["mismatches"],
         },
@@ -330,7 +345,7 @@ def build_compiler_results() -> None:
     ax.set_title("Frozen source structures", pad=9)
     ax.set_xlim(0, max(values) * 1.24)
     add_value_labels(ax, bars, lambda value: f"{int(value):,}\n0 mismatch")
-    panel_label(ax, "a", x=-0.18, y=1.08)
+    panels = [ax]
 
     ax = fig.add_subplot(grid[0, 1])
     valid = main["valid_cases"]
@@ -353,7 +368,7 @@ def build_compiler_results() -> None:
     ax.set_yticks([])
     ax.set_xlabel("Cases")
     ax.set_title(f"Complete corpus (n={total:,})", pad=9)
-    panel_label(ax, "b", y=1.08)
+    panels.append(ax)
 
     ax = fig.add_subplot(grid[0, 2])
     control_labels = [
@@ -380,7 +395,8 @@ def build_compiler_results() -> None:
     ax.set_xticks([0, 50, 100])
     ax.set_xlabel("Registered checks detected/passed (%)")
     ax.set_title("Adequacy and delegation controls", pad=9)
-    panel_label(ax, "c", x=-0.14, y=1.08)
+    panels.append(ax)
+    place_panel_labels(fig, panels)
 
     save_figure(fig, "fig03_compiler_results")
 
