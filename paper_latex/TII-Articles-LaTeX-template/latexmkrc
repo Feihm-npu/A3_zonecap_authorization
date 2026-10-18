@@ -1,0 +1,11 @@
+# Build with pdflatex so the matplotlib PDF figures are embedded directly.
+# The latex -> dvips -> ps2pdf route turns repeated DejaVuSans definitions in
+# the figure EPS files into Type 3 fonts, which IEEE PDF eXpress rejects.
+$pdf_mode = 1;
+@default_files = ('zonecap_tii.tex');
+
+# ieeecolor.cls hard-codes TII.eps for the header logo.  pdflatex asks
+# epstopdf for TII-eps-converted-to.pdf; produce it with Ghostscript because
+# repstopdf is not always installed.
+system('ps2pdf -dEPSCrop TII.eps TII-eps-converted-to.pdf')
+    if !-e 'TII-eps-converted-to.pdf' || -M 'TII.eps' < -M 'TII-eps-converted-to.pdf';

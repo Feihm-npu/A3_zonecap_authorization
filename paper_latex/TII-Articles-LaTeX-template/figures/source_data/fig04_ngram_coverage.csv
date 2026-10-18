@@ -1,0 +1,7 @@
+strategy,order,covered,total
+One named path per scope,1,5,5
+Exhaustive through horizon 5,1,5,5
+One named path per scope,2,4,25
+Exhaustive through horizon 5,2,25,25
+One named path per scope,3,3,125
+Exhaustive through horizon 5,3,125,125

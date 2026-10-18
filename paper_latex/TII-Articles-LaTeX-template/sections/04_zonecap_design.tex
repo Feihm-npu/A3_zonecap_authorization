@@ -1,0 +1,25 @@
+\section{ZoneCap Design}
+\label{sec:design}
+
+\zonecap{} connects five interfaces: source-table normalization, capability compilation, attenuation validation, runtime decision, and physical effect binding. The first two convert a directed zone/conduit grant into a root capability. Delegation applies field-wise subset checks, after which the policy engine selects an effect and the binding either emits an authorized physical input, emits the registered hold, or emits no actuation event. Fig.~\ref{fig:overview} identifies the obligations exposed at each interface.
+
+\subsection{Source-Table Compilation}
+
+The compiler accepts named zones, directed conduits, and grant rows. It rejects duplicate or unknown identifiers, mismatched conduit endpoints, assets or operations outside a row's scope, and parameter intervals outside the conduit envelope. A valid row becomes a root capability whose issuer and zone endpoints remain invariant under delegation. Other fields are positive caveats combined by intersection, which prevents a narrower caveat from activating a fallback grant and provides the monotone structure used by Lemma~1.
+
+The evaluation sources do not supply every field in~\eqref{eq:capability}. The CPwE/CIP Security matrix and the ENISA landside-signalling subgraph provide the directed zone/conduit topology~\cite{cpwe2020,enisa2022}. During encoding, each target zone receives a deterministic target-asset identifier. A common source-independent overlay supplies read/write operations, normalized parameter and time intervals, operating modes, and an authenticate pre-action sequence. Provenance metadata keeps these encoded and overlaid fields separate; the compiler therefore tests a bounded zone/conduit realization rather than claiming that the sources or IEC~62443 define the complete capability.
+
+\subsection{Attenuation Validation}
+
+Given a proposed child, the validator checks issuer equality, invariant zone binding, set inclusion for conduits, assets, operations, and modes, interval inclusion for parameters and time, and prefix extension for the required sequence. It rejects an invalid child instead of silently normalizing it. A valid delegation may replace the subject and increments the recorded depth, but it preserves lineage and cannot widen any of the eight checked authority dimensions. The validator never queries plant reachability, so syntactic attenuation remains independently falsifiable.
+
+\subsection{Runtime Decision and Effect Binding}
+
+The policy engine evaluates a request in a fixed, fail-closed order. Missing context or a registered high-risk condition returns \texttt{DEFER}. A failed subject, zone, conduit, asset, operation, time, mode, or history check returns \texttt{DENY}. A runtime parameter envelope that strictly narrows the presented interval returns \texttt{ATTENUATE} with a derived child capability and does not execute the request. A structurally valid value outside the effective interval returns \texttt{REWRITE} to the nearest authorized boundary. A request that passes all checks returns \texttt{ALLOW}.
+
+The physical binding gives each decision an actuation-event meaning. \texttt{ALLOW} emits the checked request, and \texttt{REWRITE} emits only the checked boundary value. \texttt{DEFER} emits the registered read hold only when it is authorized and parent-realizable. \texttt{DENY} and \texttt{ATTENUATE} emit no actuation event. A bounded resolver tracks consecutive deferrals and returns a no-output denial after the resolution limit; an invalid rewrite or hold also fails closed. These rules do not describe fixed-tick PLC execution, where the plant may evolve between commands and a common idle binding would need separate verification.
+
+\subsection{Enforcement and Revocation Interface}
+
+Immediately before emission, the enforcement point repeats effective-capability membership and records the decision, emitted value, lineage, context version, and revocation state for audit. Revocation delivery is a resolver-local transition that marks a holder revoked and removes its pending command. Revocation issuance at a remote authority service is a distinct event. The local interface makes no implicit claim that issuance and delivery are atomic; Section~\ref{sec:discussion} evaluates the consequence of that distinction.
+

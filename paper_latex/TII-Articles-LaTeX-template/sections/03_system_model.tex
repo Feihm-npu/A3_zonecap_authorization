@@ -1,0 +1,71 @@
+\section{System Model and Problem Statement}
+\label{sec:model}
+
+\subsection{System and Trust Model}
+
+We consider cross-zone actuation in which a policy authority issues a capability to a software principal, the principal may delegate a narrower child capability, and a policy enforcement point mediates requests before they reach the plant. The trusted computing base comprises the source-table compiler, capability issuer, attenuation validator, effect binding, and providers of authorization-relevant time, mode, and plant history. The network and requesting principal need not be trusted. The refinement result assumes that parent and child executions use the same history projection and plant transition relation; compromised sensors, stale modes, and model mismatch are outside that result.
+
+Let the plant be the discrete-time transition system
+\begin{equation}
+    \mathcal{P}=(X,U,W,F), \qquad x_{t+1}=F(x_t,u_t,w_t),
+    \label{eq:plant}
+\end{equation}
+where $X_0\subseteq X$ is the initial-state set, $U$ is the set of physical inputs, and $W$ is a fixed disturbance set. An authorization-relevant physical history $\eta_t$ records observed plant states, emitted physical events, trusted operating mode, and time. It excludes token-internal decisions and raw requests that produced no actuation event.
+
+\subsection{Capability and Attenuation}
+
+A \zonecap{} capability is the tuple
+\begin{equation}
+ c=(\mathit{iss},\mathit{sub},Z_s,Z_d,K,A,O,I_u,I_t,M,L),
+ \label{eq:capability}
+\end{equation}
+which binds an issuer and subject to source and destination zones, conduit set $K$, asset set $A$, operation set $O$, parameter interval $I_u$, time window $I_t$, operating-mode set $M$, and admissible physical-history language $L$. Compilation maps $c$ and history $\eta$ to an authorization relation $\Adm_c(\eta)\subseteq U$. Table~\ref{tab:fields} records the source and attenuation treatment of each authority field.
+
+\begin{table*}[t]
+\caption{ZoneCap capability fields, provenance, and attenuation rules. Structural source fields are separated from the declared evaluation overlay.}
+\label{tab:fields}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Field & Meaning & Evaluation provenance & Child rule/runtime check \\
+\midrule
+$Z_s,Z_d$ & Zone endpoints & Source-derived topology & Invariant; exact endpoint match \\
+$K$ & Directed conduits & Source-derived topology & Set subset; valid endpoint path \\
+$A$ & Target assets & Deterministic per-zone encoding & Set subset; requested asset membership \\
+$O$ & Operations & Source-independent overlay & Set subset; requested operation membership \\
+$I_u$ & Physical parameter envelope & Source-independent overlay & Interval subset; value or rewrite membership \\
+$I_t$ & Validity window & Source-independent overlay & Interval subset; trusted time membership \\
+$M$ & Operating modes & Source-independent overlay & Set subset; trusted mode membership \\
+$L$ & Required event histories & Source-independent overlay & Language refinement; sequence-prefix check \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+A child $c'\preceq c$ preserves the issuer and zone endpoints while narrowing every authority dimension:
+\begin{equation}
+\begin{split}
+K'&\subseteq K,\; A'\subseteq A,\; O'\subseteq O,\; I'_u\subseteq I_u,\\
+I'_t&\subseteq I_t,\; M'\subseteq M,\; L'\subseteq L.
+\end{split}
+\label{eq:attenuation}
+\end{equation}
+The subject may change because delegation transfers identity while narrowing physical authority. The implementation represents $L$ by an ordered required-event sequence and requires the parent's sequence to be a prefix of the child's. This rule is sufficient for history-language inclusion. Definition~\eqref{eq:attenuation} contains neither plant dynamics nor a reachable-set predicate, so the desired result is not true by definition.
+
+\subsection{Request-Abstracted Physical Behavior}
+
+For raw request $q\in Q$, $\Emit_c(\eta,q)\subseteq U$ denotes the physical input emitted by the runtime effect. Reachability uses the request-abstracted relation
+\begin{equation}
+    \overline{E}_c(\eta)=\bigcup_{q\in Q}\Emit_c(\eta,q).
+    \label{eq:emission}
+\end{equation}
+This union does not require same-request output inclusion. For example, a parent with interval $[0,1]$ may allow request $0.8$, whereas a child with interval $[0,0.4]$ rewrites the same request to $0.4$. The child output remains realizable under the parent even though the two same-request outputs differ.
+
+Let $\Tr_H(c)$ contain all physical traces of length at most $H$ from $X_0$, with $w_t\in W$ and $u_t\in\overline{E}_c(\eta_t)$. We define
+\begin{equation}
+ \Reach_t(c)=\{x_t\mid(x_0,u_0,w_0,\ldots,x_t)\in\Tr_H(c)\}.
+ \label{eq:reach}
+\end{equation}
+The research question is whether the syntactic relation $c'\preceq c$ implies inclusion of these physical traces and reachable sets after runtime mediation. This question excludes probability ordering, a selected controller trajectory, controller synthesis, and universal robustness to an incorrect plant or context model.
+

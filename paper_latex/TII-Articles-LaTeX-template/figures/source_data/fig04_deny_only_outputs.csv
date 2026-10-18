@@ -1,0 +1,4 @@
+outcome,count
+Retained ALLOW outputs,9072
+Lost REWRITE outputs,13608
+Lost DEFER holds,4536

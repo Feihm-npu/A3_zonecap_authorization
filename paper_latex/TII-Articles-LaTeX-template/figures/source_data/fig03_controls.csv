@@ -1,0 +1,5 @@
+control,observed,total
+Generated corpus: check-removal mutants killed,10,10
+Six happy paths: check-removal mutants killed,0,10
+Legal delegation checks passed,672,672
+Localized widenings rejected,32,32

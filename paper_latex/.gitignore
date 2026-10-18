@@ -1,0 +1,15 @@
+# macOS archive metadata
+__MACOSX/
+.DS_Store
+
+# LaTeX build products; rebuild with `latexmk` in TII-Articles-LaTeX-template/
+*.aux
+*.log
+*.dvi
+*.ps
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex.gz
+*-eps-converted-to.pdf
+TII-Articles-LaTeX-template/zonecap_tii.pdf
