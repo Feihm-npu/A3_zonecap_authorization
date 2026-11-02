@@ -1,0 +1,19 @@
+{
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "node": "v24.12.0",
+  "v8": "13.6.233.17-node.37",
+  "steps": 27216,
+  "warmup": 1000,
+  "measured": 10000,
+  "tokens_issued": 252,
+  "expired_twins": 126,
+  "revoked_preloaded": 10000,
+  "setup_ns": 829530426,
+  "measured_loop_wall_ns": 19431127738,
+  "decision_counts": {
+    "deny": 8336,
+    "allow": 1664
+  },
+  "resource_scheme": "modbus://<target_zone>/<asset>",
+  "timed_call": "await PolicyGateway.intercept(request)"
+}

@@ -1,0 +1,80 @@
+{
+  "after": {
+    "benchmark_core_cpufreq": {
+      "cpuinfo_cur_freq": null,
+      "scaling_cur_freq": "3370747",
+      "scaling_governor": "performance",
+      "scaling_max_freq": "2250000",
+      "scaling_min_freq": "1500000"
+    },
+    "byteorder": "little",
+    "clock": {
+      "adjustable": false,
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "monotonic": true,
+      "resolution_s": 1e-09
+    },
+    "cpu_model": "AMD EPYC 7742 64-Core Processor",
+    "gc_enabled": true,
+    "gc_thresholds": [
+      700,
+      10,
+      10
+    ],
+    "libsodium_binary": "/home/feihm/llm-fei/.llm/lib/python3.10/site-packages/nacl/_sodium.abi3.so",
+    "libsodium_binary_sha256": "b89e91c129db6fdc0ee1eb11d1b554aab7c51ed04e1a6df821021d99a1357c66",
+    "load_average": [
+      27.3974609375,
+      27.52099609375,
+      27.4599609375
+    ],
+    "machine": "x86_64",
+    "nacl_bindings_module": "nacl.bindings",
+    "online_cpus": 256,
+    "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+    "pynacl": "1.5.0",
+    "python": "3.10.12",
+    "python_executable": "/home/feihm/llm-fei/.llm/bin/python3",
+    "python_implementation": "CPython",
+    "utc": "2026-11-02T14:50:07Z"
+  },
+  "before": {
+    "benchmark_core_cpufreq": {
+      "cpuinfo_cur_freq": null,
+      "scaling_cur_freq": "3380149",
+      "scaling_governor": "performance",
+      "scaling_max_freq": "2250000",
+      "scaling_min_freq": "1500000"
+    },
+    "byteorder": "little",
+    "clock": {
+      "adjustable": false,
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "monotonic": true,
+      "resolution_s": 1e-09
+    },
+    "cpu_model": "AMD EPYC 7742 64-Core Processor",
+    "gc_enabled": true,
+    "gc_thresholds": [
+      700,
+      10,
+      10
+    ],
+    "libsodium_binary": "/home/feihm/llm-fei/.llm/lib/python3.10/site-packages/nacl/_sodium.abi3.so",
+    "libsodium_binary_sha256": "b89e91c129db6fdc0ee1eb11d1b554aab7c51ed04e1a6df821021d99a1357c66",
+    "load_average": [
+      27.3974609375,
+      27.52099609375,
+      27.4599609375
+    ],
+    "machine": "x86_64",
+    "nacl_bindings_module": "nacl.bindings",
+    "online_cpus": 256,
+    "platform": "Linux-5.15.0-1101-nvidia-x86_64-with-glibc2.35",
+    "pynacl": "1.5.0",
+    "python": "3.10.12",
+    "python_executable": "/home/feihm/llm-fei/.llm/bin/python3",
+    "python_implementation": "CPython",
+    "utc": "2026-11-02T14:50:06Z"
+  }
+}

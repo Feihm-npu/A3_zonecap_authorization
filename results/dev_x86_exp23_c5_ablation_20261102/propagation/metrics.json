@@ -1,0 +1,32 @@
+{
+  "authority_core": 1,
+  "clock": "CLOCK_MONOTONIC on one host",
+  "issuance_to_visibility_ns": {
+    "maximum_ns": 847888,
+    "mean_ns": 95123.26,
+    "median_absolute_deviation_ns": 9258,
+    "minimum_ns": 69872,
+    "p50_ns": 85542,
+    "p95_ns": 144544,
+    "p999_ns": 281954,
+    "p99_ns": 176074,
+    "samples": 1000,
+    "zero_or_negative_samples": 0
+  },
+  "issue_call_round_trip_ns": {
+    "maximum_ns": 834002,
+    "mean_ns": 78688.539,
+    "median_absolute_deviation_ns": 11462,
+    "minimum_ns": 51497,
+    "p50_ns": 69171,
+    "p95_ns": 120669,
+    "p999_ns": 284960,
+    "p99_ns": 145656,
+    "samples": 1000,
+    "zero_or_negative_samples": 0
+  },
+  "resolver_core": 4,
+  "resolver_polls_maximum": 257,
+  "revocations": 1000,
+  "seed": 104729
+}

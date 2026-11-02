@@ -1,0 +1,182 @@
+{
+  "affinity": {
+    "proc_cpus_allowed_list": "3",
+    "requested_core": 3,
+    "sched_getaffinity": [
+      3
+    ],
+    "verified": true
+  },
+  "audit_peak_backlog_bytes": 19827,
+  "audit_queue_bytes": 1048576,
+  "audit_records": 11000,
+  "audit_records_expected": 11000,
+  "audit_unavailable_denials": 0,
+  "cache_miss": false,
+  "claim": "C5",
+  "configuration": "zonecap_full",
+  "configuration_role": "baseline-comparison",
+  "corpus_fingerprint": "52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab",
+  "decision_latency_ns": {
+    "maximum_ns": 818252,
+    "mean_ns": 80940.5993,
+    "median_absolute_deviation_ns": 4319,
+    "minimum_ns": 59452,
+    "p50_ns": 66497,
+    "p95_ns": 117924,
+    "p999_ns": 347669,
+    "p99_ns": 158961,
+    "samples": 10000,
+    "zero_or_negative_samples": 0
+  },
+  "decision_mismatches": 0,
+  "decision_reason_counts": {
+    "action": 1662,
+    "asset": 1652,
+    "authorized": 1655,
+    "parameter_boundary": 1681,
+    "subject": 1685,
+    "time": 1665
+  },
+  "derived_p99_scan_occupancy_percent": 1.58961,
+  "development_scale": 10,
+  "exp": "exp-25",
+  "expected_stage_mask": 1023,
+  "expected_stages": [
+    "parse",
+    "anchor",
+    "chain",
+    "signature",
+    "revocation",
+    "context",
+    "policy",
+    "binding",
+    "response",
+    "audit"
+  ],
+  "gc_frozen_objects": 152127,
+  "latency_by_chain_depth_ns": {
+    "0": {
+      "maximum_ns": 818252,
+      "p50_ns": 64282,
+      "p99_ns": 99750,
+      "samples": 6671
+    },
+    "1": {
+      "maximum_ns": 735546,
+      "p50_ns": 89149,
+      "p99_ns": 136419,
+      "samples": 1641
+    },
+    "2": {
+      "maximum_ns": 576533,
+      "p50_ns": 112303,
+      "p99_ns": 217934,
+      "samples": 1688
+    }
+  },
+  "latency_by_expected_effect_ns": {
+    "allow": {
+      "maximum_ns": 312733,
+      "p50_ns": 66697,
+      "p99_ns": 158822,
+      "samples": 1655
+    },
+    "deny": {
+      "maximum_ns": 818252,
+      "p50_ns": 64483,
+      "p99_ns": 158711,
+      "samples": 6664
+    },
+    "rewrite": {
+      "maximum_ns": 735546,
+      "p50_ns": 67769,
+      "p99_ns": 159703,
+      "samples": 1681
+    }
+  },
+  "measured_decisions": 10000,
+  "measured_loop_wall_ns": 834987508,
+  "measured_step_sequence_sha256": "fafbd71d271bf2279424b124c792e8e21f64f37fdc5aac85397d3ddc12a0ca68",
+  "memory_kib": {
+    "after_corpus_load": {
+      "vm_hwm_kib": 181712,
+      "vm_rss_kib": 181712
+    },
+    "after_measured": {
+      "vm_hwm_kib": 196920,
+      "vm_rss_kib": 196920
+    },
+    "after_pep_init": {
+      "vm_hwm_kib": 194648,
+      "vm_rss_kib": 194648
+    },
+    "after_warmup": {
+      "vm_hwm_kib": 194712,
+      "vm_rss_kib": 194712
+    },
+    "process_start": {
+      "vm_hwm_kib": 105956,
+      "vm_rss_kib": 34400
+    }
+  },
+  "p99_us": 158.961,
+  "peak_rss_kib": 197712,
+  "pep_options": {
+    "audit_enabled": true,
+    "cache_capacity": 65536,
+    "disabled_stages": [],
+    "max_context_age_ns": 50000000,
+    "max_deferrals": 2,
+    "verification_cache": true,
+    "verify_signatures": true
+  },
+  "registry_policies": 42,
+  "registry_sha256": "342e32ff79c0ffc9f27e3cdeb1c0febf76a4655b237538c1a5298753e92adc43",
+  "response_sha256": "9f48d056b164e36287c78c05c8b21ec92b0902b643e9e0a980dc6cac000bb87e",
+  "revocation_backend": "local",
+  "revocation_entries": 10000,
+  "revocation_reconnects": null,
+  "run_role": "development",
+  "seed": 196613,
+  "signatures_verified": 0,
+  "stage_mask_failures": 0,
+  "system": "zonecap",
+  "threshold_checks": {
+    "audit_complete": true,
+    "derived_occupancy_at_most_10_percent": true,
+    "every_expected_stage_exercised": true,
+    "no_nonpositive_sample": true,
+    "p99_at_most_1000_us": true,
+    "verification_counts_consistent": true,
+    "zero_decision_mismatches": true
+  },
+  "throughput_decisions_per_s_decision_time": 12354.73926123994,
+  "throughput_decisions_per_s_wall": 11976.227074285764,
+  "token_bytes_by_depth": {
+    "0": {
+      "count": 1042,
+      "maximum": 544,
+      "minimum": 472
+    },
+    "1": {
+      "count": 4066,
+      "maximum": 614,
+      "minimum": 516
+    },
+    "2": {
+      "count": 1798,
+      "maximum": 599,
+      "minimum": 525
+    },
+    "3": {
+      "count": 756,
+      "maximum": 609,
+      "minimum": 535
+    }
+  },
+  "variant": "sint_subset",
+  "verification_cache_hits": 15017,
+  "verification_count_failures": 0,
+  "warmup_decisions": 1000
+}

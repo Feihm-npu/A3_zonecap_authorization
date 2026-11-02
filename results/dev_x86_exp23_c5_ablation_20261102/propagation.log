@@ -1,0 +1,1 @@
+{"maximum_ns": 847888, "mean_ns": 95123.26, "median_absolute_deviation_ns": 9258, "minimum_ns": 69872, "p50_ns": 85542, "p95_ns": 144544, "p999_ns": 281954, "p99_ns": 176074, "samples": 1000, "zero_or_negative_samples": 0}

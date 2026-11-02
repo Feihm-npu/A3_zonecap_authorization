@@ -1,0 +1,1 @@
+{"configuration": "sint", "seed": 262147, "p99_us": 2938.244, "checks": {"zero_decision_mismatches": true, "affinity_verified": true, "no_nonpositive_sample": true}}

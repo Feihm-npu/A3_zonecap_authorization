@@ -1,0 +1,10 @@
+{
+  "active_ns": 2621225129,
+  "bytes": 1906123,
+  "drain_affinity": [
+    4
+  ],
+  "peak_backlog_bytes": 11102,
+  "records": 11000,
+  "sha256": "e214210a75a1f6cb325063f7af5502c74f56a3a136033ee689c6880c66df3936"
+}

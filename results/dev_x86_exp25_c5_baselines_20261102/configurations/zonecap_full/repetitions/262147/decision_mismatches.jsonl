@@ -1,0 +1,1 @@
+{"case": "cpwe_cip_security:g002:d0:v028:mutation:asset", "expected": ["deny", null, null, null, null], "kind": "single", "measured_index": 2311, "observed": ["defer", "read", 0.0, null, null, "context_unavailable"], "step": 1034}

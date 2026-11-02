@@ -1,0 +1,207 @@
+{
+  "affinity": {
+    "proc_cpus_allowed_list": "3",
+    "requested_core": 3,
+    "sched_getaffinity": [
+      3
+    ],
+    "verified": true
+  },
+  "audit_peak_backlog_bytes": 22693,
+  "audit_queue_bytes": 1048576,
+  "audit_records": 11000,
+  "audit_records_expected": 11000,
+  "audit_unavailable_denials": 0,
+  "cache_miss": true,
+  "claim": "C5",
+  "configuration": "cache_miss",
+  "configuration_role": "diagnostic:A1",
+  "corpus_fingerprint": "52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab",
+  "decision_latency_ns": {
+    "maximum_ns": 8225623,
+    "mean_ns": 218299.3432,
+    "median_absolute_deviation_ns": 60895,
+    "minimum_ns": 131981,
+    "p50_ns": 199267,
+    "p95_ns": 407894,
+    "p999_ns": 922450,
+    "p99_ns": 452047,
+    "samples": 10000,
+    "zero_or_negative_samples": 0
+  },
+  "decision_mismatches": 0,
+  "decision_reason_counts": {
+    "action": 1099,
+    "asset": 535,
+    "authorized": 1150,
+    "conduit": 523,
+    "context_unavailable": 568,
+    "mode": 575,
+    "parameter_boundary": 1661,
+    "runtime_envelope": 568,
+    "sequence": 575,
+    "source_zone": 516,
+    "subject": 552,
+    "target_zone": 596,
+    "time": 1082
+  },
+  "derived_p99_scan_occupancy_percent": 4.52047,
+  "development_scale": 10,
+  "exp": "exp-23",
+  "expected_stage_mask": 1023,
+  "expected_stages": [
+    "parse",
+    "anchor",
+    "chain",
+    "signature",
+    "revocation",
+    "context",
+    "policy",
+    "binding",
+    "response",
+    "audit"
+  ],
+  "gc_frozen_objects": 428827,
+  "latency_by_chain_depth_ns": {
+    "0": {
+      "maximum_ns": 3044145,
+      "p50_ns": 138353,
+      "p99_ns": 221761,
+      "samples": 5084
+    },
+    "1": {
+      "maximum_ns": 8225623,
+      "p50_ns": 231299,
+      "p99_ns": 386754,
+      "samples": 2751
+    },
+    "2": {
+      "maximum_ns": 1591309,
+      "p50_ns": 323213,
+      "p99_ns": 497323,
+      "samples": 1722
+    },
+    "3": {
+      "maximum_ns": 622230,
+      "p50_ns": 411069,
+      "p99_ns": 560703,
+      "samples": 443
+    }
+  },
+  "latency_by_expected_effect_ns": {
+    "allow": {
+      "maximum_ns": 684608,
+      "p50_ns": 230527,
+      "p99_ns": 458580,
+      "samples": 1150
+    },
+    "attenuate": {
+      "maximum_ns": 1696809,
+      "p50_ns": 144153,
+      "p99_ns": 398936,
+      "samples": 568
+    },
+    "defer": {
+      "maximum_ns": 8225623,
+      "p50_ns": 234956,
+      "p99_ns": 544332,
+      "samples": 568
+    },
+    "deny": {
+      "maximum_ns": 5793470,
+      "p50_ns": 144564,
+      "p99_ns": 436718,
+      "samples": 6053
+    },
+    "rewrite": {
+      "maximum_ns": 3044145,
+      "p50_ns": 229917,
+      "p99_ns": 483157,
+      "samples": 1661
+    }
+  },
+  "measured_decisions": 10000,
+  "measured_loop_wall_ns": 2215291994,
+  "measured_step_sequence_sha256": "0728d2f9079d5549d1ac6ffd3e21acf21fa6ebcc79892a3fd16aa2fba68dcc18",
+  "memory_kib": {
+    "after_corpus_load": {
+      "vm_hwm_kib": 514140,
+      "vm_rss_kib": 428956
+    },
+    "after_measured": {
+      "vm_hwm_kib": 514140,
+      "vm_rss_kib": 472020
+    },
+    "after_pep_init": {
+      "vm_hwm_kib": 514140,
+      "vm_rss_kib": 471456
+    },
+    "after_warmup": {
+      "vm_hwm_kib": 514140,
+      "vm_rss_kib": 472020
+    },
+    "process_start": {
+      "vm_hwm_kib": 105744,
+      "vm_rss_kib": 34188
+    }
+  },
+  "p99_us": 452.047,
+  "peak_rss_kib": 514140,
+  "pep_options": {
+    "audit_enabled": true,
+    "cache_capacity": 65536,
+    "disabled_stages": [],
+    "max_context_age_ns": 50000000,
+    "max_deferrals": 2,
+    "verification_cache": true,
+    "verify_signatures": true
+  },
+  "registry_policies": 42,
+  "registry_sha256": "342e32ff79c0ffc9f27e3cdeb1c0febf76a4655b237538c1a5298753e92adc43",
+  "response_sha256": "c1dbe5eef2c7ba6194712cfd15953d4bf3310302b145a8af057863b3a02b47eb",
+  "revocation_backend": "local",
+  "revocation_entries": 10000,
+  "revocation_reconnects": null,
+  "run_role": "development",
+  "seed": 104729,
+  "signatures_verified": 17524,
+  "stage_mask_failures": 0,
+  "system": "zonecap",
+  "threshold_checks": {
+    "audit_complete": true,
+    "derived_occupancy_at_most_10_percent": true,
+    "every_expected_stage_exercised": true,
+    "no_nonpositive_sample": true,
+    "p99_at_most_1000_us": true,
+    "verification_counts_consistent": true,
+    "zero_decision_mismatches": true
+  },
+  "throughput_decisions_per_s_decision_time": 4580.86582094673,
+  "throughput_decisions_per_s_wall": 4514.077614637016,
+  "token_bytes_by_depth": {
+    "0": {
+      "count": 1042,
+      "maximum": 544,
+      "minimum": 472
+    },
+    "1": {
+      "count": 4066,
+      "maximum": 614,
+      "minimum": 516
+    },
+    "2": {
+      "count": 1798,
+      "maximum": 599,
+      "minimum": 525
+    },
+    "3": {
+      "count": 756,
+      "maximum": 609,
+      "minimum": 535
+    }
+  },
+  "variant": "main",
+  "verification_cache_hits": 0,
+  "verification_count_failures": 0,
+  "warmup_decisions": 1000
+}

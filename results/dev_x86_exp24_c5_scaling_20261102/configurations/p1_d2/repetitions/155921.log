@@ -1,0 +1,1 @@
+{"configuration": "p1_d2", "seed": 155921, "p99_us": 158.3, "checks": {"p99_at_most_1000_us": true, "derived_occupancy_at_most_10_percent": true, "zero_decision_mismatches": true, "every_expected_stage_exercised": true, "verification_counts_consistent": true, "audit_complete": true, "no_nonpositive_sample": true}}

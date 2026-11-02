@@ -1,0 +1,71 @@
+{
+  "affinity": {
+    "proc_cpus_allowed_list": "3",
+    "requested_core": 3,
+    "sched_getaffinity": [
+      3
+    ],
+    "verified": true
+  },
+  "checks": {
+    "affinity_verified": true,
+    "clock_monotonic": true,
+    "corpus_fingerprint": true,
+    "forced_slow_detected": true,
+    "forced_slow_slowest": true,
+    "full_slower_than_empty": true,
+    "no_backwards_clock": true,
+    "registered_audit_queue_granted": true,
+    "resolution_below_empty_p50": true
+  },
+  "empty_call_ns": {
+    "maximum_ns": 22102,
+    "mean_ns": 117.04447,
+    "median_absolute_deviation_ns": 1,
+    "minimum_ns": 109,
+    "p50_ns": 120,
+    "p95_ns": 121,
+    "p999_ns": 151,
+    "p99_ns": 130,
+    "samples": 100000,
+    "zero_or_negative_samples": 0
+  },
+  "forced_slow_ns": {
+    "maximum_ns": 5363364,
+    "mean_ns": 5209088.02,
+    "median_absolute_deviation_ns": 13294,
+    "minimum_ns": 5166210,
+    "p50_ns": 5186057,
+    "p95_ns": 5285076,
+    "p999_ns": 5363364,
+    "p99_ns": 5342765,
+    "samples": 100,
+    "zero_or_negative_samples": 0
+  },
+  "full_probe_ns": {
+    "maximum_ns": 6660384,
+    "mean_ns": 100858.0712,
+    "median_absolute_deviation_ns": 451,
+    "minimum_ns": 97476,
+    "p50_ns": 98777,
+    "p95_ns": 104458,
+    "p999_ns": 244073,
+    "p99_ns": 120638,
+    "samples": 10000,
+    "zero_or_negative_samples": 0
+  },
+  "timer_backwards_transitions": 0,
+  "timer_delta_ns": {
+    "maximum_ns": 7293,
+    "mean_ns": 62.95001,
+    "median_absolute_deviation_ns": 0,
+    "minimum_ns": 49,
+    "p50_ns": 60,
+    "p95_ns": 71,
+    "p999_ns": 80,
+    "p99_ns": 71,
+    "samples": 100000,
+    "zero_or_negative_samples": 0
+  },
+  "timer_pairs": 100000
+}

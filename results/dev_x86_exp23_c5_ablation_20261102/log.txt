@@ -1,0 +1,39 @@
+experiment=exp-23
+run_role=development
+development_scale=10
+git_head=1be503b465b9e5ac512deeef96e251fe458e9ed3
+git_tree_clean_except_untracked_results=True
+preflight_returncode=0
+fake_redis_port=33091
+repetition configuration=cache_miss seed=104729 returncode=0 seconds=6.3
+repetition configuration=cold_start seed=104729 returncode=0 seconds=3.6
+repetition configuration=unsigned seed=104729 returncode=0 seconds=4.5
+repetition configuration=remote_revocation seed=104729 returncode=0 seconds=5.5
+repetition configuration=audit_disabled seed=104729 returncode=0 seconds=4.5
+repetition configuration=cold_start seed=130363 returncode=0 seconds=10.5
+repetition configuration=unsigned seed=130363 returncode=0 seconds=4.7
+repetition configuration=remote_revocation seed=130363 returncode=0 seconds=5.5
+repetition configuration=audit_disabled seed=130363 returncode=0 seconds=4.5
+repetition configuration=cache_miss seed=130363 returncode=0 seconds=5.9
+repetition configuration=unsigned seed=155921 returncode=0 seconds=4.5
+repetition configuration=remote_revocation seed=155921 returncode=0 seconds=5.5
+repetition configuration=audit_disabled seed=155921 returncode=0 seconds=4.4
+repetition configuration=cache_miss seed=155921 returncode=0 seconds=8.9
+repetition configuration=cold_start seed=155921 returncode=0 seconds=3.5
+repetition configuration=remote_revocation seed=196613 returncode=0 seconds=5.5
+repetition configuration=audit_disabled seed=196613 returncode=0 seconds=4.3
+repetition configuration=cache_miss seed=196613 returncode=0 seconds=5.9
+repetition configuration=cold_start seed=196613 returncode=0 seconds=8.6
+repetition configuration=unsigned seed=196613 returncode=0 seconds=4.5
+repetition configuration=audit_disabled seed=262147 returncode=0 seconds=4.5
+repetition configuration=cache_miss seed=262147 returncode=0 seconds=5.9
+repetition configuration=cold_start seed=262147 returncode=0 seconds=12.5
+repetition configuration=unsigned seed=262147 returncode=0 seconds=4.7
+repetition configuration=remote_revocation seed=262147 returncode=0 seconds=5.4
+propagation returncode=0
+configuration=cache_miss worst_p99_ns=452047 pooled_p99_ns=418043
+configuration=cold_start worst_p99_ns=331528 pooled_p99_ns=273419
+configuration=unsigned worst_p99_ns=164321 pooled_p99_ns=145476
+configuration=remote_revocation worst_p99_ns=353180 pooled_p99_ns=336748
+configuration=audit_disabled worst_p99_ns=201692 pooled_p99_ns=200761
+registered_check=A1_excluded_by_cache_miss all_repetitions_meet_checks=true

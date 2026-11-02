@@ -1,0 +1,24 @@
+experiment=exp-25
+run_role=development
+development_scale=10
+git_head=1be503b465b9e5ac512deeef96e251fe458e9ed3
+git_tree_clean_except_untracked_results=True
+preflight_returncode=0
+repetition configuration=zonecap_full seed=104729 returncode=0 seconds=2.5
+repetition configuration=zonecap_cache_miss seed=104729 returncode=0 seconds=3.8
+repetition configuration=sint seed=104729 returncode=0 seconds=25.2
+repetition configuration=zonecap_cache_miss seed=130363 returncode=0 seconds=3.7
+repetition configuration=sint seed=130363 returncode=0 seconds=25.5
+repetition configuration=zonecap_full seed=130363 returncode=0 seconds=3.4
+repetition configuration=sint seed=155921 returncode=0 seconds=25.3
+repetition configuration=zonecap_full seed=155921 returncode=0 seconds=2.5
+repetition configuration=zonecap_cache_miss seed=155921 returncode=0 seconds=3.7
+repetition configuration=zonecap_full seed=196613 returncode=0 seconds=2.5
+repetition configuration=zonecap_cache_miss seed=196613 returncode=0 seconds=3.8
+repetition configuration=sint seed=196613 returncode=0 seconds=25.5
+repetition configuration=zonecap_cache_miss seed=262147 returncode=0 seconds=3.7
+repetition configuration=sint seed=262147 returncode=0 seconds=25.3
+repetition configuration=zonecap_full seed=262147 returncode=0 seconds=2.6
+configuration=zonecap_full worst_p99_ns=158961 pooled_p99_ns=130928
+configuration=zonecap_cache_miss worst_p99_ns=440105 pooled_p99_ns=354522
+configuration=sint worst_p99_ns=3646016 pooled_p99_ns=3325107

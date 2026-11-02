@@ -1,0 +1,2514 @@
+{
+  "claim": "C5",
+  "configurations": {
+    "audit_disabled": {
+      "every_repetition_passes": {
+        "audit_complete": true,
+        "derived_occupancy_at_most_10_percent": true,
+        "every_expected_stage_exercised": true,
+        "no_nonpositive_sample": true,
+        "p99_at_most_1000_us": true,
+        "verification_counts_consistent": true,
+        "zero_decision_mismatches": true
+      },
+      "pooled_decision_latency_ns": {
+        "maximum_ns": 869850,
+        "mean_ns": 80426.225,
+        "median_absolute_deviation_ns": 7354,
+        "minimum_ns": 53481,
+        "p50_ns": 62308,
+        "p95_ns": 156297,
+        "p999_ns": 250826,
+        "p99_ns": 200761,
+        "samples": 50000,
+        "zero_or_negative_samples": 0
+      },
+      "repetitions": {
+        "104729": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.01192,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 300671,
+              "p50_ns": 57439,
+              "p99_ns": 67879,
+              "samples": 5084
+            },
+            "1": {
+              "maximum_ns": 869850,
+              "p50_ns": 83409,
+              "p99_ns": 164933,
+              "samples": 2751
+            },
+            "2": {
+              "maximum_ns": 311451,
+              "p50_ns": 104969,
+              "p99_ns": 181945,
+              "samples": 1722
+            },
+            "3": {
+              "maximum_ns": 327832,
+              "p50_ns": 129085,
+              "p99_ns": 213706,
+              "samples": 443
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 869850,
+              "p50_ns": 84470,
+              "p99_ns": 140877,
+              "samples": 1150
+            },
+            "attenuate": {
+              "maximum_ns": 242049,
+              "p50_ns": 61547,
+              "p99_ns": 118695,
+              "samples": 568
+            },
+            "defer": {
+              "maximum_ns": 358010,
+              "p50_ns": 158321,
+              "p99_ns": 214107,
+              "samples": 568
+            },
+            "deny": {
+              "maximum_ns": 321540,
+              "p50_ns": 57990,
+              "p99_ns": 125739,
+              "samples": 6053
+            },
+            "rewrite": {
+              "maximum_ns": 237290,
+              "p50_ns": 83458,
+              "p99_ns": 130197,
+              "samples": 1661
+            }
+          },
+          "maximum_ns": 869850,
+          "p50_ns": 64774,
+          "p999_ns": 251377,
+          "p99_ns": 201192,
+          "peak_rss_kib": 514332,
+          "signatures_verified": 569,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 11978.146805448909,
+          "verification_cache_hits": 16955,
+          "verification_count_failures": 0
+        },
+        "130363": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.0022,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 248863,
+              "p50_ns": 57338,
+              "p99_ns": 66616,
+              "samples": 5230
+            },
+            "1": {
+              "maximum_ns": 301833,
+              "p50_ns": 83208,
+              "p99_ns": 161516,
+              "samples": 2687
+            },
+            "2": {
+              "maximum_ns": 268550,
+              "p50_ns": 104869,
+              "p99_ns": 182035,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 271354,
+              "p50_ns": 129616,
+              "p99_ns": 214507,
+              "samples": 376
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 271354,
+              "p50_ns": 84560,
+              "p99_ns": 132271,
+              "samples": 1085
+            },
+            "attenuate": {
+              "maximum_ns": 120589,
+              "p50_ns": 61327,
+              "p99_ns": 112854,
+              "samples": 546
+            },
+            "defer": {
+              "maximum_ns": 301833,
+              "p50_ns": 158070,
+              "p99_ns": 212333,
+              "samples": 546
+            },
+            "deny": {
+              "maximum_ns": 268550,
+              "p50_ns": 57820,
+              "p99_ns": 125848,
+              "samples": 6133
+            },
+            "rewrite": {
+              "maximum_ns": 280683,
+              "p50_ns": 82557,
+              "p99_ns": 131019,
+              "samples": 1690
+            }
+          },
+          "maximum_ns": 301833,
+          "p50_ns": 61376,
+          "p999_ns": 244164,
+          "p99_ns": 200220,
+          "peak_rss_kib": 514244,
+          "signatures_verified": 551,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 12162.673599299804,
+          "verification_cache_hits": 16678,
+          "verification_count_failures": 0
+        },
+        "155921": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.01642,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 419085,
+              "p50_ns": 57729,
+              "p99_ns": 68430,
+              "samples": 5152
+            },
+            "1": {
+              "maximum_ns": 349312,
+              "p50_ns": 83929,
+              "p99_ns": 163440,
+              "samples": 2742
+            },
+            "2": {
+              "maximum_ns": 340305,
+              "p50_ns": 105561,
+              "p99_ns": 185452,
+              "samples": 1726
+            },
+            "3": {
+              "maximum_ns": 373599,
+              "p50_ns": 129655,
+              "p99_ns": 216701,
+              "samples": 380
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 231840,
+              "p50_ns": 84981,
+              "p99_ns": 134775,
+              "samples": 1123
+            },
+            "attenuate": {
+              "maximum_ns": 279740,
+              "p50_ns": 61657,
+              "p99_ns": 115028,
+              "samples": 570
+            },
+            "defer": {
+              "maximum_ns": 373599,
+              "p50_ns": 158841,
+              "p99_ns": 229755,
+              "samples": 570
+            },
+            "deny": {
+              "maximum_ns": 419085,
+              "p50_ns": 58150,
+              "p99_ns": 126199,
+              "samples": 6101
+            },
+            "rewrite": {
+              "maximum_ns": 241157,
+              "p50_ns": 83868,
+              "p99_ns": 130948,
+              "samples": 1636
+            }
+          },
+          "maximum_ns": 419085,
+          "p50_ns": 62669,
+          "p999_ns": 253681,
+          "p99_ns": 201642,
+          "peak_rss_kib": 514264,
+          "signatures_verified": 570,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 11974.942079240902,
+          "verification_cache_hits": 16764,
+          "verification_count_failures": 0
+        },
+        "196613": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.98647,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 243181,
+              "p50_ns": 57138,
+              "p99_ns": 68029,
+              "samples": 5135
+            },
+            "1": {
+              "maximum_ns": 295621,
+              "p50_ns": 83047,
+              "p99_ns": 160906,
+              "samples": 2826
+            },
+            "2": {
+              "maximum_ns": 290070,
+              "p50_ns": 104448,
+              "p99_ns": 184670,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 315419,
+              "p50_ns": 128513,
+              "p99_ns": 213004,
+              "samples": 332
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 274862,
+              "p50_ns": 84250,
+              "p99_ns": 135467,
+              "samples": 1095
+            },
+            "attenuate": {
+              "maximum_ns": 183498,
+              "p50_ns": 60966,
+              "p99_ns": 113025,
+              "samples": 571
+            },
+            "defer": {
+              "maximum_ns": 280392,
+              "p50_ns": 157729,
+              "p99_ns": 209938,
+              "samples": 571
+            },
+            "deny": {
+              "maximum_ns": 295621,
+              "p50_ns": 57669,
+              "p99_ns": 124447,
+              "samples": 6097
+            },
+            "rewrite": {
+              "maximum_ns": 315419,
+              "p50_ns": 82597,
+              "p99_ns": 130347,
+              "samples": 1666
+            }
+          },
+          "maximum_ns": 315419,
+          "p50_ns": 62609,
+          "p999_ns": 246217,
+          "p99_ns": 198647,
+          "peak_rss_kib": 514236,
+          "signatures_verified": 575,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 12152.339137408788,
+          "verification_cache_hits": 16661,
+          "verification_count_failures": 0
+        },
+        "262147": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.0169200000000003,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 333623,
+              "p50_ns": 57639,
+              "p99_ns": 74261,
+              "samples": 5229
+            },
+            "1": {
+              "maximum_ns": 338783,
+              "p50_ns": 83168,
+              "p99_ns": 165674,
+              "samples": 2781
+            },
+            "2": {
+              "maximum_ns": 359472,
+              "p50_ns": 105049,
+              "p99_ns": 195842,
+              "samples": 1602
+            },
+            "3": {
+              "maximum_ns": 252849,
+              "p50_ns": 129226,
+              "p99_ns": 216250,
+              "samples": 388
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 250826,
+              "p50_ns": 84309,
+              "p99_ns": 140647,
+              "samples": 1119
+            },
+            "attenuate": {
+              "maximum_ns": 239855,
+              "p50_ns": 61747,
+              "p99_ns": 112474,
+              "samples": 552
+            },
+            "defer": {
+              "maximum_ns": 252849,
+              "p50_ns": 158881,
+              "p99_ns": 216250,
+              "samples": 552
+            },
+            "deny": {
+              "maximum_ns": 359472,
+              "p50_ns": 58190,
+              "p99_ns": 128364,
+              "samples": 6137
+            },
+            "rewrite": {
+              "maximum_ns": 338783,
+              "p50_ns": 82706,
+              "p99_ns": 131750,
+              "samples": 1640
+            }
+          },
+          "maximum_ns": 359472,
+          "p50_ns": 62399,
+          "p999_ns": 253050,
+          "p99_ns": 201692,
+          "peak_rss_kib": 514224,
+          "signatures_verified": 555,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 12035.071309837456,
+          "verification_cache_hits": 16594,
+          "verification_count_failures": 0
+        }
+      },
+      "worst_repetition": {
+        "p99_ns": 201692,
+        "seed": 262147
+      }
+    },
+    "cache_miss": {
+      "every_repetition_passes": {
+        "audit_complete": true,
+        "derived_occupancy_at_most_10_percent": true,
+        "every_expected_stage_exercised": true,
+        "no_nonpositive_sample": true,
+        "p99_at_most_1000_us": true,
+        "verification_counts_consistent": true,
+        "zero_decision_mismatches": true
+      },
+      "pooled_decision_latency_ns": {
+        "maximum_ns": 8225623,
+        "mean_ns": 210288.5761,
+        "median_absolute_deviation_ns": 18345,
+        "minimum_ns": 131981,
+        "p50_ns": 152870,
+        "p95_ns": 340476,
+        "p999_ns": 572616,
+        "p99_ns": 418043,
+        "samples": 50000,
+        "zero_or_negative_samples": 0
+      },
+      "repetitions": {
+        "104729": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 4.52047,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 3044145,
+              "p50_ns": 138353,
+              "p99_ns": 221761,
+              "samples": 5084
+            },
+            "1": {
+              "maximum_ns": 8225623,
+              "p50_ns": 231299,
+              "p99_ns": 386754,
+              "samples": 2751
+            },
+            "2": {
+              "maximum_ns": 1591309,
+              "p50_ns": 323213,
+              "p99_ns": 497323,
+              "samples": 1722
+            },
+            "3": {
+              "maximum_ns": 622230,
+              "p50_ns": 411069,
+              "p99_ns": 560703,
+              "samples": 443
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 684608,
+              "p50_ns": 230527,
+              "p99_ns": 458580,
+              "samples": 1150
+            },
+            "attenuate": {
+              "maximum_ns": 1696809,
+              "p50_ns": 144153,
+              "p99_ns": 398936,
+              "samples": 568
+            },
+            "defer": {
+              "maximum_ns": 8225623,
+              "p50_ns": 234956,
+              "p99_ns": 544332,
+              "samples": 568
+            },
+            "deny": {
+              "maximum_ns": 5793470,
+              "p50_ns": 144564,
+              "p99_ns": 436718,
+              "samples": 6053
+            },
+            "rewrite": {
+              "maximum_ns": 3044145,
+              "p50_ns": 229917,
+              "p99_ns": 483157,
+              "samples": 1661
+            }
+          },
+          "maximum_ns": 8225623,
+          "p50_ns": 199267,
+          "p999_ns": 922450,
+          "p99_ns": 452047,
+          "peak_rss_kib": 514140,
+          "signatures_verified": 17524,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 4514.077614637016,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "130363": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 4.158189999999999,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 5552744,
+              "p50_ns": 138111,
+              "p99_ns": 154824,
+              "samples": 5230
+            },
+            "1": {
+              "maximum_ns": 5807457,
+              "p50_ns": 231489,
+              "p99_ns": 276836,
+              "samples": 2687
+            },
+            "2": {
+              "maximum_ns": 878747,
+              "p50_ns": 323373,
+              "p99_ns": 441457,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 882123,
+              "p50_ns": 411430,
+              "p99_ns": 537960,
+              "samples": 376
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 882123,
+              "p50_ns": 231018,
+              "p99_ns": 420578,
+              "samples": 1085
+            },
+            "attenuate": {
+              "maximum_ns": 455735,
+              "p50_ns": 142721,
+              "p99_ns": 338633,
+              "samples": 546
+            },
+            "defer": {
+              "maximum_ns": 557077,
+              "p50_ns": 232892,
+              "p99_ns": 427481,
+              "samples": 546
+            },
+            "deny": {
+              "maximum_ns": 5807457,
+              "p50_ns": 138993,
+              "p99_ns": 409297,
+              "samples": 6133
+            },
+            "rewrite": {
+              "maximum_ns": 509156,
+              "p50_ns": 230408,
+              "p99_ns": 418684,
+              "samples": 1690
+            }
+          },
+          "maximum_ns": 5807457,
+          "p50_ns": 145676,
+          "p999_ns": 509156,
+          "p99_ns": 415819,
+          "peak_rss_kib": 514344,
+          "signatures_verified": 17229,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 4728.935714263876,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "155921": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 4.13093,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 5526875,
+              "p50_ns": 137822,
+              "p99_ns": 158010,
+              "samples": 5152
+            },
+            "1": {
+              "maximum_ns": 509276,
+              "p50_ns": 230397,
+              "p99_ns": 255294,
+              "samples": 2742
+            },
+            "2": {
+              "maximum_ns": 5699261,
+              "p50_ns": 322252,
+              "p99_ns": 370313,
+              "samples": 1726
+            },
+            "3": {
+              "maximum_ns": 1103974,
+              "p50_ns": 409658,
+              "p99_ns": 469341,
+              "samples": 380
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 469341,
+              "p50_ns": 230066,
+              "p99_ns": 416119,
+              "samples": 1123
+            },
+            "attenuate": {
+              "maximum_ns": 509276,
+              "p50_ns": 142119,
+              "p99_ns": 340125,
+              "samples": 570
+            },
+            "defer": {
+              "maximum_ns": 567397,
+              "p50_ns": 232070,
+              "p99_ns": 422913,
+              "samples": 570
+            },
+            "deny": {
+              "maximum_ns": 5699261,
+              "p50_ns": 138813,
+              "p99_ns": 406041,
+              "samples": 6101
+            },
+            "rewrite": {
+              "maximum_ns": 5526875,
+              "p50_ns": 229656,
+              "p99_ns": 416160,
+              "samples": 1636
+            }
+          },
+          "maximum_ns": 5699261,
+          "p50_ns": 148202,
+          "p999_ns": 469341,
+          "p99_ns": 413093,
+          "peak_rss_kib": 514312,
+          "signatures_verified": 17334,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 4734.691291752515,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "196613": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 4.15187,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 974037,
+              "p50_ns": 137762,
+              "p99_ns": 157979,
+              "samples": 5135
+            },
+            "1": {
+              "maximum_ns": 5906374,
+              "p50_ns": 231089,
+              "p99_ns": 286013,
+              "samples": 2826
+            },
+            "2": {
+              "maximum_ns": 5729087,
+              "p50_ns": 323022,
+              "p99_ns": 406290,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 3102936,
+              "p50_ns": 411791,
+              "p99_ns": 569270,
+              "samples": 332
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 940925,
+              "p50_ns": 231058,
+              "p99_ns": 418484,
+              "samples": 1095
+            },
+            "attenuate": {
+              "maximum_ns": 406290,
+              "p50_ns": 142290,
+              "p99_ns": 344814,
+              "samples": 571
+            },
+            "defer": {
+              "maximum_ns": 3102936,
+              "p50_ns": 232280,
+              "p99_ns": 426429,
+              "samples": 571
+            },
+            "deny": {
+              "maximum_ns": 5906374,
+              "p50_ns": 138723,
+              "p99_ns": 408365,
+              "samples": 6097
+            },
+            "rewrite": {
+              "maximum_ns": 591302,
+              "p50_ns": 229956,
+              "p99_ns": 418483,
+              "samples": 1666
+            }
+          },
+          "maximum_ns": 5906374,
+          "p50_ns": 149524,
+          "p999_ns": 569270,
+          "p99_ns": 415187,
+          "peak_rss_kib": 514416,
+          "signatures_verified": 17236,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 4722.71527028559,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "262147": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 4.16109,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 5603019,
+              "p50_ns": 138252,
+              "p99_ns": 154834,
+              "samples": 5229
+            },
+            "1": {
+              "maximum_ns": 526028,
+              "p50_ns": 231319,
+              "p99_ns": 313665,
+              "samples": 2781
+            },
+            "2": {
+              "maximum_ns": 5688160,
+              "p50_ns": 323604,
+              "p99_ns": 470121,
+              "samples": 1602
+            },
+            "3": {
+              "maximum_ns": 541297,
+              "p50_ns": 411430,
+              "p99_ns": 504277,
+              "samples": 388
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 541297,
+              "p50_ns": 230778,
+              "p99_ns": 422522,
+              "samples": 1119
+            },
+            "attenuate": {
+              "maximum_ns": 350034,
+              "p50_ns": 142801,
+              "p99_ns": 336128,
+              "samples": 552
+            },
+            "defer": {
+              "maximum_ns": 470362,
+              "p50_ns": 232611,
+              "p99_ns": 423293,
+              "samples": 552
+            },
+            "deny": {
+              "maximum_ns": 5688160,
+              "p50_ns": 139174,
+              "p99_ns": 408475,
+              "samples": 6137
+            },
+            "rewrite": {
+              "maximum_ns": 742699,
+              "p50_ns": 229826,
+              "p99_ns": 421309,
+              "samples": 1640
+            }
+          },
+          "maximum_ns": 5688160,
+          "p50_ns": 146388,
+          "p999_ns": 510859,
+          "p99_ns": 416109,
+          "peak_rss_kib": 514308,
+          "signatures_verified": 17149,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 4746.245893211069,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        }
+      },
+      "worst_repetition": {
+        "p99_ns": 452047,
+        "seed": 104729
+      }
+    },
+    "cold_start": {
+      "every_repetition_passes": {
+        "audit_complete": true,
+        "derived_occupancy_at_most_10_percent": true,
+        "every_expected_stage_exercised": true,
+        "no_nonpositive_sample": true,
+        "p99_at_most_1000_us": true,
+        "verification_counts_consistent": true,
+        "zero_decision_mismatches": true
+      },
+      "pooled_decision_latency_ns": {
+        "maximum_ns": 687805,
+        "mean_ns": 100893.8834,
+        "median_absolute_deviation_ns": 22723,
+        "minimum_ns": 61807,
+        "p50_ns": 89469,
+        "p95_ns": 194670,
+        "p999_ns": 384609,
+        "p99_ns": 273419,
+        "samples": 5000,
+        "zero_or_negative_samples": 0
+      },
+      "repetitions": {
+        "104729": {
+          "audit_records": 1000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.1311400000000003,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 346827,
+              "p50_ns": 67568,
+              "p99_ns": 156197,
+              "samples": 538
+            },
+            "1": {
+              "maximum_ns": 255696,
+              "p50_ns": 94940,
+              "p99_ns": 246077,
+              "samples": 219
+            },
+            "2": {
+              "maximum_ns": 375793,
+              "p50_ns": 118104,
+              "p99_ns": 341438,
+              "samples": 195
+            },
+            "3": {
+              "maximum_ns": 223314,
+              "p50_ns": 142500,
+              "p99_ns": 223314,
+              "samples": 48
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 251798,
+              "p50_ns": 95732,
+              "p99_ns": 246077,
+              "samples": 118
+            },
+            "attenuate": {
+              "maximum_ns": 285482,
+              "p50_ns": 84320,
+              "p99_ns": 285482,
+              "samples": 45
+            },
+            "defer": {
+              "maximum_ns": 223314,
+              "p50_ns": 171726,
+              "p99_ns": 223314,
+              "samples": 45
+            },
+            "deny": {
+              "maximum_ns": 375793,
+              "p50_ns": 68169,
+              "p99_ns": 330878,
+              "samples": 628
+            },
+            "rewrite": {
+              "maximum_ns": 341438,
+              "p50_ns": 94940,
+              "p99_ns": 265794,
+              "samples": 164
+            }
+          },
+          "maximum_ns": 375793,
+          "p50_ns": 82446,
+          "p999_ns": 346827,
+          "p99_ns": 313114,
+          "peak_rss_kib": 514244,
+          "signatures_verified": 170,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 9663.226319737258,
+          "verification_cache_hits": 1583,
+          "verification_count_failures": 0
+        },
+        "130363": {
+          "audit_records": 1000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.3152800000000004,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 361696,
+              "p50_ns": 66797,
+              "p99_ns": 147530,
+              "samples": 491
+            },
+            "1": {
+              "maximum_ns": 582204,
+              "p50_ns": 94259,
+              "p99_ns": 247800,
+              "samples": 304
+            },
+            "2": {
+              "maximum_ns": 350986,
+              "p50_ns": 117803,
+              "p99_ns": 334825,
+              "samples": 157
+            },
+            "3": {
+              "maximum_ns": 398867,
+              "p50_ns": 139915,
+              "p99_ns": 398867,
+              "samples": 48
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 331528,
+              "p50_ns": 95160,
+              "p99_ns": 197745,
+              "samples": 115
+            },
+            "attenuate": {
+              "maximum_ns": 361696,
+              "p50_ns": 71586,
+              "p99_ns": 361696,
+              "samples": 71
+            },
+            "defer": {
+              "maximum_ns": 398867,
+              "p50_ns": 168099,
+              "p99_ns": 398867,
+              "samples": 71
+            },
+            "deny": {
+              "maximum_ns": 437751,
+              "p50_ns": 68209,
+              "p99_ns": 330757,
+              "samples": 593
+            },
+            "rewrite": {
+              "maximum_ns": 582204,
+              "p50_ns": 93598,
+              "p99_ns": 332901,
+              "samples": 150
+            }
+          },
+          "maximum_ns": 582204,
+          "p50_ns": 90371,
+          "p999_ns": 437751,
+          "p99_ns": 331528,
+          "peak_rss_kib": 514440,
+          "signatures_verified": 192,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 9537.440342714566,
+          "verification_cache_hits": 1570,
+          "verification_count_failures": 0
+        },
+        "155921": {
+          "audit_records": 1000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.686,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 248671,
+              "p50_ns": 67969,
+              "p99_ns": 154893,
+              "samples": 546
+            },
+            "1": {
+              "maximum_ns": 484629,
+              "p50_ns": 95191,
+              "p99_ns": 251246,
+              "samples": 225
+            },
+            "2": {
+              "maximum_ns": 364913,
+              "p50_ns": 119276,
+              "p99_ns": 345886,
+              "samples": 185
+            },
+            "3": {
+              "maximum_ns": 218505,
+              "p50_ns": 142050,
+              "p99_ns": 218505,
+              "samples": 44
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 251246,
+              "p50_ns": 96122,
+              "p99_ns": 251246,
+              "samples": 98
+            },
+            "attenuate": {
+              "maximum_ns": 273328,
+              "p50_ns": 76335,
+              "p99_ns": 273328,
+              "samples": 46
+            },
+            "defer": {
+              "maximum_ns": 218505,
+              "p50_ns": 172057,
+              "p99_ns": 218505,
+              "samples": 46
+            },
+            "deny": {
+              "maximum_ns": 484629,
+              "p50_ns": 69021,
+              "p99_ns": 331990,
+              "samples": 651
+            },
+            "rewrite": {
+              "maximum_ns": 265874,
+              "p50_ns": 94630,
+              "p99_ns": 264422,
+              "samples": 159
+            }
+          },
+          "maximum_ns": 484629,
+          "p50_ns": 76456,
+          "p999_ns": 364913,
+          "p99_ns": 268600,
+          "peak_rss_kib": 514324,
+          "signatures_verified": 172,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 9675.465722253488,
+          "verification_cache_hits": 1555,
+          "verification_count_failures": 0
+        },
+        "196613": {
+          "audit_records": 1000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.65714,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 384609,
+              "p50_ns": 67768,
+              "p99_ns": 150285,
+              "samples": 516
+            },
+            "1": {
+              "maximum_ns": 294710,
+              "p50_ns": 94519,
+              "p99_ns": 252348,
+              "samples": 292
+            },
+            "2": {
+              "maximum_ns": 363029,
+              "p50_ns": 119006,
+              "p99_ns": 343621,
+              "samples": 168
+            },
+            "3": {
+              "maximum_ns": 218805,
+              "p50_ns": 142049,
+              "p99_ns": 218805,
+              "samples": 24
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 266616,
+              "p50_ns": 95772,
+              "p99_ns": 262668,
+              "samples": 121
+            },
+            "attenuate": {
+              "maximum_ns": 246407,
+              "p50_ns": 71536,
+              "p99_ns": 246407,
+              "samples": 58
+            },
+            "defer": {
+              "maximum_ns": 218805,
+              "p50_ns": 168730,
+              "p99_ns": 218805,
+              "samples": 58
+            },
+            "deny": {
+              "maximum_ns": 384609,
+              "p50_ns": 68601,
+              "p99_ns": 326379,
+              "samples": 584
+            },
+            "rewrite": {
+              "maximum_ns": 363029,
+              "p50_ns": 93137,
+              "p99_ns": 294710,
+              "samples": 179
+            }
+          },
+          "maximum_ns": 384609,
+          "p50_ns": 89921,
+          "p999_ns": 363029,
+          "p99_ns": 265714,
+          "peak_rss_kib": 514196,
+          "signatures_verified": 180,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 9767.33390189635,
+          "verification_cache_hits": 1520,
+          "verification_count_failures": 0
+        },
+        "262147": {
+          "audit_records": 1000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.65684,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 373999,
+              "p50_ns": 66606,
+              "p99_ns": 148612,
+              "samples": 510
+            },
+            "1": {
+              "maximum_ns": 277737,
+              "p50_ns": 93748,
+              "p99_ns": 245866,
+              "samples": 277
+            },
+            "2": {
+              "maximum_ns": 349974,
+              "p50_ns": 116962,
+              "p99_ns": 338122,
+              "samples": 161
+            },
+            "3": {
+              "maximum_ns": 687805,
+              "p50_ns": 140957,
+              "p99_ns": 687805,
+              "samples": 52
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 303235,
+              "p50_ns": 94810,
+              "p99_ns": 193797,
+              "samples": 109
+            },
+            "attenuate": {
+              "maximum_ns": 333844,
+              "p50_ns": 71135,
+              "p99_ns": 333844,
+              "samples": 63
+            },
+            "defer": {
+              "maximum_ns": 228323,
+              "p50_ns": 168029,
+              "p99_ns": 228323,
+              "samples": 63
+            },
+            "deny": {
+              "maximum_ns": 373999,
+              "p50_ns": 67608,
+              "p99_ns": 262808,
+              "samples": 608
+            },
+            "rewrite": {
+              "maximum_ns": 687805,
+              "p50_ns": 93107,
+              "p99_ns": 270223,
+              "samples": 157
+            }
+          },
+          "maximum_ns": 687805,
+          "p50_ns": 89560,
+          "p999_ns": 373999,
+          "p99_ns": 265684,
+          "peak_rss_kib": 514244,
+          "signatures_verified": 186,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 9650.79672924462,
+          "verification_cache_hits": 1569,
+          "verification_count_failures": 0
+        }
+      },
+      "worst_repetition": {
+        "p99_ns": 331528,
+        "seed": 130363
+      }
+    },
+    "remote_revocation": {
+      "every_repetition_passes": {
+        "audit_complete": true,
+        "derived_occupancy_at_most_10_percent": true,
+        "every_expected_stage_exercised": true,
+        "no_nonpositive_sample": true,
+        "p99_at_most_1000_us": true,
+        "verification_counts_consistent": true,
+        "zero_decision_mismatches": true
+      },
+      "pooled_decision_latency_ns": {
+        "maximum_ns": 8062243,
+        "mean_ns": 170550.26336,
+        "median_absolute_deviation_ns": 33363,
+        "minimum_ns": 122393,
+        "p50_ns": 163620,
+        "p95_ns": 260575,
+        "p999_ns": 485030,
+        "p99_ns": 336748,
+        "samples": 50000,
+        "zero_or_negative_samples": 0
+      },
+      "repetitions": {
+        "104729": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.5318,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 5459907,
+              "p50_ns": 131650,
+              "p99_ns": 245225,
+              "samples": 5084
+            },
+            "1": {
+              "maximum_ns": 5833435,
+              "p50_ns": 175643,
+              "p99_ns": 351837,
+              "samples": 2751
+            },
+            "2": {
+              "maximum_ns": 2630681,
+              "p50_ns": 206241,
+              "p99_ns": 359652,
+              "samples": 1722
+            },
+            "3": {
+              "maximum_ns": 608084,
+              "p50_ns": 270673,
+              "p99_ns": 463449,
+              "samples": 443
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 5833435,
+              "p50_ns": 175042,
+              "p99_ns": 362017,
+              "samples": 1150
+            },
+            "attenuate": {
+              "maximum_ns": 387224,
+              "p50_ns": 149694,
+              "p99_ns": 321871,
+              "samples": 568
+            },
+            "defer": {
+              "maximum_ns": 608084,
+              "p50_ns": 274912,
+              "p99_ns": 486813,
+              "samples": 568
+            },
+            "deny": {
+              "maximum_ns": 5459907,
+              "p50_ns": 147640,
+              "p99_ns": 316330,
+              "samples": 6053
+            },
+            "rewrite": {
+              "maximum_ns": 3393527,
+              "p50_ns": 173338,
+              "p99_ns": 326479,
+              "samples": 1661
+            }
+          },
+          "maximum_ns": 5833435,
+          "p50_ns": 169722,
+          "p999_ns": 521049,
+          "p99_ns": 353180,
+          "peak_rss_kib": 514120,
+          "signatures_verified": 569,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5511.035451697472,
+          "verification_cache_hits": 16955,
+          "verification_count_failures": 0
+        },
+        "130363": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.33062,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 8062243,
+              "p50_ns": 130618,
+              "p99_ns": 175112,
+              "samples": 5230
+            },
+            "1": {
+              "maximum_ns": 504286,
+              "p50_ns": 173850,
+              "p99_ns": 306060,
+              "samples": 2687
+            },
+            "2": {
+              "maximum_ns": 5707838,
+              "p50_ns": 203116,
+              "p99_ns": 317112,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 551437,
+              "p50_ns": 260003,
+              "p99_ns": 433222,
+              "samples": 376
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 424115,
+              "p50_ns": 173799,
+              "p99_ns": 294709,
+              "samples": 1085
+            },
+            "attenuate": {
+              "maximum_ns": 290481,
+              "p50_ns": 136359,
+              "p99_ns": 253762,
+              "samples": 546
+            },
+            "defer": {
+              "maximum_ns": 551437,
+              "p50_ns": 253971,
+              "p99_ns": 433222,
+              "samples": 546
+            },
+            "deny": {
+              "maximum_ns": 8062243,
+              "p50_ns": 133052,
+              "p99_ns": 266566,
+              "samples": 6133
+            },
+            "rewrite": {
+              "maximum_ns": 5707838,
+              "p50_ns": 171786,
+              "p99_ns": 273449,
+              "samples": 1690
+            }
+          },
+          "maximum_ns": 8062243,
+          "p50_ns": 159483,
+          "p999_ns": 433222,
+          "p99_ns": 333062,
+          "peak_rss_kib": 514472,
+          "signatures_verified": 551,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5810.985638946841,
+          "verification_cache_hits": 16678,
+          "verification_count_failures": 0
+        },
+        "155921": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.35456,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 5646211,
+              "p50_ns": 129556,
+              "p99_ns": 181034,
+              "samples": 5152
+            },
+            "1": {
+              "maximum_ns": 704868,
+              "p50_ns": 172437,
+              "p99_ns": 313805,
+              "samples": 2742
+            },
+            "2": {
+              "maximum_ns": 765322,
+              "p50_ns": 203206,
+              "p99_ns": 325888,
+              "samples": 1726
+            },
+            "3": {
+              "maximum_ns": 504888,
+              "p50_ns": 259974,
+              "p99_ns": 425277,
+              "samples": 380
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 732079,
+              "p50_ns": 172817,
+              "p99_ns": 277747,
+              "samples": 1123
+            },
+            "attenuate": {
+              "maximum_ns": 607312,
+              "p50_ns": 134776,
+              "p99_ns": 257479,
+              "samples": 570
+            },
+            "defer": {
+              "maximum_ns": 765322,
+              "p50_ns": 252008,
+              "p99_ns": 448311,
+              "samples": 570
+            },
+            "deny": {
+              "maximum_ns": 5646211,
+              "p50_ns": 131269,
+              "p99_ns": 266416,
+              "samples": 6101
+            },
+            "rewrite": {
+              "maximum_ns": 935064,
+              "p50_ns": 170704,
+              "p99_ns": 272747,
+              "samples": 1636
+            }
+          },
+          "maximum_ns": 5646211,
+          "p50_ns": 147159,
+          "p999_ns": 581603,
+          "p99_ns": 335456,
+          "peak_rss_kib": 514252,
+          "signatures_verified": 570,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5884.412506322198,
+          "verification_cache_hits": 16764,
+          "verification_count_failures": 0
+        },
+        "196613": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.3381300000000005,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 1014454,
+              "p50_ns": 130538,
+              "p99_ns": 157349,
+              "samples": 5135
+            },
+            "1": {
+              "maximum_ns": 5734908,
+              "p50_ns": 173899,
+              "p99_ns": 274330,
+              "samples": 2826
+            },
+            "2": {
+              "maximum_ns": 460945,
+              "p50_ns": 206091,
+              "p99_ns": 303887,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 527401,
+              "p50_ns": 261326,
+              "p99_ns": 402785,
+              "samples": 332
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 384550,
+              "p50_ns": 174591,
+              "p99_ns": 280762,
+              "samples": 1095
+            },
+            "attenuate": {
+              "maximum_ns": 329285,
+              "p50_ns": 136088,
+              "p99_ns": 225878,
+              "samples": 571
+            },
+            "defer": {
+              "maximum_ns": 527401,
+              "p50_ns": 253661,
+              "p99_ns": 393056,
+              "samples": 571
+            },
+            "deny": {
+              "maximum_ns": 5734908,
+              "p50_ns": 132842,
+              "p99_ns": 258621,
+              "samples": 6097
+            },
+            "rewrite": {
+              "maximum_ns": 398506,
+              "p50_ns": 171916,
+              "p99_ns": 280182,
+              "samples": 1666
+            }
+          },
+          "maximum_ns": 5734908,
+          "p50_ns": 149153,
+          "p999_ns": 398506,
+          "p99_ns": 333813,
+          "peak_rss_kib": 514100,
+          "signatures_verified": 575,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5873.094919093613,
+          "verification_cache_hits": 16661,
+          "verification_count_failures": 0
+        },
+        "262147": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.3799099999999997,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 5549317,
+              "p50_ns": 131360,
+              "p99_ns": 178668,
+              "samples": 5229
+            },
+            "1": {
+              "maximum_ns": 2879512,
+              "p50_ns": 174521,
+              "p99_ns": 310088,
+              "samples": 2781
+            },
+            "2": {
+              "maximum_ns": 487515,
+              "p50_ns": 205309,
+              "p99_ns": 363860,
+              "samples": 1602
+            },
+            "3": {
+              "maximum_ns": 591091,
+              "p50_ns": 262358,
+              "p99_ns": 476434,
+              "samples": 388
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 2879512,
+              "p50_ns": 174131,
+              "p99_ns": 315759,
+              "samples": 1119
+            },
+            "attenuate": {
+              "maximum_ns": 345075,
+              "p50_ns": 137211,
+              "p99_ns": 271024,
+              "samples": 552
+            },
+            "defer": {
+              "maximum_ns": 591091,
+              "p50_ns": 255976,
+              "p99_ns": 443000,
+              "samples": 552
+            },
+            "deny": {
+              "maximum_ns": 5549317,
+              "p50_ns": 135517,
+              "p99_ns": 270312,
+              "samples": 6137
+            },
+            "rewrite": {
+              "maximum_ns": 453741,
+              "p50_ns": 172637,
+              "p99_ns": 320669,
+              "samples": 1640
+            }
+          },
+          "maximum_ns": 5549317,
+          "p50_ns": 162498,
+          "p999_ns": 453741,
+          "p99_ns": 337991,
+          "peak_rss_kib": 514156,
+          "signatures_verified": 555,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5750.437465967833,
+          "verification_cache_hits": 16594,
+          "verification_count_failures": 0
+        }
+      },
+      "worst_repetition": {
+        "p99_ns": 353180,
+        "seed": 104729
+      }
+    },
+    "unsigned": {
+      "every_repetition_passes": {
+        "audit_complete": true,
+        "derived_occupancy_at_most_10_percent": true,
+        "every_expected_stage_exercised": true,
+        "no_nonpositive_sample": true,
+        "p99_at_most_1000_us": true,
+        "verification_counts_consistent": true,
+        "zero_decision_mismatches": true
+      },
+      "pooled_decision_latency_ns": {
+        "maximum_ns": 7354130,
+        "mean_ns": 84336.31296,
+        "median_absolute_deviation_ns": 13495,
+        "minimum_ns": 59022,
+        "p50_ns": 77276,
+        "p95_ns": 124907,
+        "p999_ns": 271224,
+        "p99_ns": 145476,
+        "samples": 50000,
+        "zero_or_negative_samples": 0
+      },
+      "repetitions": {
+        "104729": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.35818,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 259863,
+              "p50_ns": 63981,
+              "p99_ns": 74872,
+              "samples": 5084
+            },
+            "1": {
+              "maximum_ns": 277516,
+              "p50_ns": 89139,
+              "p99_ns": 101874,
+              "samples": 2751
+            },
+            "2": {
+              "maximum_ns": 1310886,
+              "p50_ns": 111512,
+              "p99_ns": 160535,
+              "samples": 1722
+            },
+            "3": {
+              "maximum_ns": 154894,
+              "p50_ns": 133433,
+              "p99_ns": 145747,
+              "samples": 443
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 387685,
+              "p50_ns": 89720,
+              "p99_ns": 141268,
+              "samples": 1150
+            },
+            "attenuate": {
+              "maximum_ns": 252579,
+              "p50_ns": 68169,
+              "p99_ns": 124437,
+              "samples": 568
+            },
+            "defer": {
+              "maximum_ns": 213225,
+              "p50_ns": 89750,
+              "p99_ns": 138863,
+              "samples": 568
+            },
+            "deny": {
+              "maximum_ns": 301472,
+              "p50_ns": 64482,
+              "p99_ns": 131930,
+              "samples": 6053
+            },
+            "rewrite": {
+              "maximum_ns": 1310886,
+              "p50_ns": 89870,
+              "p99_ns": 139375,
+              "samples": 1661
+            }
+          },
+          "maximum_ns": 1310886,
+          "p50_ns": 71606,
+          "p999_ns": 266215,
+          "p99_ns": 135818,
+          "peak_rss_kib": 514272,
+          "signatures_verified": 0,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 11654.673031067608,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "130363": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.36879,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 7354130,
+              "p50_ns": 64192,
+              "p99_ns": 77247,
+              "samples": 5230
+            },
+            "1": {
+              "maximum_ns": 654852,
+              "p50_ns": 89340,
+              "p99_ns": 102495,
+              "samples": 2687
+            },
+            "2": {
+              "maximum_ns": 347439,
+              "p50_ns": 112083,
+              "p99_ns": 127532,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 273299,
+              "p50_ns": 134815,
+              "p99_ns": 148020,
+              "samples": 376
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 503776,
+              "p50_ns": 90071,
+              "p99_ns": 140567,
+              "samples": 1085
+            },
+            "attenuate": {
+              "maximum_ns": 276675,
+              "p50_ns": 68230,
+              "p99_ns": 125258,
+              "samples": 546
+            },
+            "defer": {
+              "maximum_ns": 275724,
+              "p50_ns": 89740,
+              "p99_ns": 179841,
+              "samples": 546
+            },
+            "deny": {
+              "maximum_ns": 7354130,
+              "p50_ns": 64662,
+              "p99_ns": 133142,
+              "samples": 6133
+            },
+            "rewrite": {
+              "maximum_ns": 347439,
+              "p50_ns": 89710,
+              "p99_ns": 139054,
+              "samples": 1690
+            }
+          },
+          "maximum_ns": 7354130,
+          "p50_ns": 68681,
+          "p999_ns": 276675,
+          "p99_ns": 136879,
+          "peak_rss_kib": 514256,
+          "signatures_verified": 0,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 11524.762018389472,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "155921": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.36188,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 315169,
+              "p50_ns": 63801,
+              "p99_ns": 76636,
+              "samples": 5152
+            },
+            "1": {
+              "maximum_ns": 337150,
+              "p50_ns": 88948,
+              "p99_ns": 103146,
+              "samples": 2742
+            },
+            "2": {
+              "maximum_ns": 330357,
+              "p50_ns": 111411,
+              "p99_ns": 162478,
+              "samples": 1726
+            },
+            "3": {
+              "maximum_ns": 292495,
+              "p50_ns": 134055,
+              "p99_ns": 152779,
+              "samples": 380
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 275102,
+              "p50_ns": 89700,
+              "p99_ns": 138853,
+              "samples": 1123
+            },
+            "attenuate": {
+              "maximum_ns": 249713,
+              "p50_ns": 67999,
+              "p99_ns": 125578,
+              "samples": 570
+            },
+            "defer": {
+              "maximum_ns": 234835,
+              "p50_ns": 89580,
+              "p99_ns": 145015,
+              "samples": 570
+            },
+            "deny": {
+              "maximum_ns": 337150,
+              "p50_ns": 64282,
+              "p99_ns": 132341,
+              "samples": 6101
+            },
+            "rewrite": {
+              "maximum_ns": 264902,
+              "p50_ns": 89730,
+              "p99_ns": 136689,
+              "samples": 1636
+            }
+          },
+          "maximum_ns": 337150,
+          "p50_ns": 69552,
+          "p999_ns": 257148,
+          "p99_ns": 136188,
+          "peak_rss_kib": 514300,
+          "signatures_verified": 0,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 11725.390331296834,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "196613": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.35207,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 344173,
+              "p50_ns": 63911,
+              "p99_ns": 75343,
+              "samples": 5135
+            },
+            "1": {
+              "maximum_ns": 334795,
+              "p50_ns": 88708,
+              "p99_ns": 101322,
+              "samples": 2826
+            },
+            "2": {
+              "maximum_ns": 323283,
+              "p50_ns": 110981,
+              "p99_ns": 138633,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 195761,
+              "p50_ns": 133483,
+              "p99_ns": 146818,
+              "samples": 332
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 323283,
+              "p50_ns": 89530,
+              "p99_ns": 137451,
+              "samples": 1095
+            },
+            "attenuate": {
+              "maximum_ns": 127593,
+              "p50_ns": 67879,
+              "p99_ns": 118395,
+              "samples": 571
+            },
+            "defer": {
+              "maximum_ns": 195761,
+              "p50_ns": 89339,
+              "p99_ns": 142240,
+              "samples": 571
+            },
+            "deny": {
+              "maximum_ns": 344173,
+              "p50_ns": 64512,
+              "p99_ns": 131991,
+              "samples": 6097
+            },
+            "rewrite": {
+              "maximum_ns": 316250,
+              "p50_ns": 89009,
+              "p99_ns": 137050,
+              "samples": 1666
+            }
+          },
+          "maximum_ns": 344173,
+          "p50_ns": 69572,
+          "p999_ns": 242911,
+          "p99_ns": 135207,
+          "peak_rss_kib": 514364,
+          "signatures_verified": 0,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 11809.068398311927,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "262147": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.64321,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 5653765,
+              "p50_ns": 66456,
+              "p99_ns": 95841,
+              "samples": 5229
+            },
+            "1": {
+              "maximum_ns": 3633984,
+              "p50_ns": 91493,
+              "p99_ns": 133173,
+              "samples": 2781
+            },
+            "2": {
+              "maximum_ns": 286283,
+              "p50_ns": 114507,
+              "p99_ns": 175032,
+              "samples": 1602
+            },
+            "3": {
+              "maximum_ns": 334334,
+              "p50_ns": 138272,
+              "p99_ns": 203085,
+              "samples": 388
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 2314741,
+              "p50_ns": 90271,
+              "p99_ns": 174441,
+              "samples": 1119
+            },
+            "attenuate": {
+              "maximum_ns": 683567,
+              "p50_ns": 73019,
+              "p99_ns": 155144,
+              "samples": 552
+            },
+            "defer": {
+              "maximum_ns": 334334,
+              "p50_ns": 96363,
+              "p99_ns": 179300,
+              "samples": 552
+            },
+            "deny": {
+              "maximum_ns": 5653765,
+              "p50_ns": 69882,
+              "p99_ns": 153461,
+              "samples": 6137
+            },
+            "rewrite": {
+              "maximum_ns": 3633984,
+              "p50_ns": 89950,
+              "p99_ns": 182716,
+              "samples": 1640
+            }
+          },
+          "maximum_ns": 5653765,
+          "p50_ns": 86083,
+          "p999_ns": 286283,
+          "p99_ns": 164321,
+          "peak_rss_kib": 514256,
+          "signatures_verified": 0,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 10857.402589788879,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        }
+      },
+      "worst_repetition": {
+        "p99_ns": 164321,
+        "seed": 262147
+      }
+    }
+  },
+  "corpus_fingerprint": "52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab",
+  "corpus_variants": {
+    "main": {
+      "chain_depths": {
+        "0": 42336,
+        "1": 22680,
+        "2": 13608,
+        "3": 3024
+      },
+      "expected_effects": {
+        "allow": 9072,
+        "attenuate": 4536,
+        "defer": 4536,
+        "deny": 49896,
+        "rewrite": 13608
+      },
+      "step_kinds": {
+        "allow": 4536,
+        "attenuate": 4536,
+        "defer": 4536,
+        "deny": 4536,
+        "rewrite": 4536,
+        "single": 58968
+      },
+      "steps": 81648,
+      "units": 63504
+    },
+    "scale_p1000_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p1000_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p1000_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p100_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p100_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p100_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p10_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p10_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p10_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p1_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p1_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p1_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "sint_subset": {
+      "chain_depths": {
+        "0": 18144,
+        "1": 4536,
+        "2": 4536
+      },
+      "expected_effects": {
+        "allow": 4536,
+        "deny": 18144,
+        "rewrite": 4536
+      },
+      "sint_expected": {
+        "allow": 4536,
+        "deny": 22680
+      },
+      "step_kinds": {
+        "single": 27216
+      },
+      "steps": 27216,
+      "units": 27216
+    }
+  },
+  "development_scale": 10,
+  "evidence_scope": "development run of the frozen harness; not C5 evidence",
+  "exp": "exp-23",
+  "preflight": {
+    "passed": true
+  },
+  "registered_checks": {
+    "A1_excluded_by_cache_miss": {
+      "all_repetitions_meet_checks": true,
+      "checks": [
+        "p99_at_most_1000_us",
+        "zero_decision_mismatches",
+        "every_expected_stage_exercised",
+        "verification_counts_consistent",
+        "audit_complete",
+        "no_nonpositive_sample"
+      ],
+      "configurations": [
+        "cache_miss"
+      ],
+      "statement": "A1 is ruled out only if every cache_miss repetition (verification cache cleared before each timed decision, so every token signature is verified) has p99 <= 1,000 us with zero mismatch, every stage exercised, verification count equal to chain length, and complete audit."
+    }
+  },
+  "revocation_propagation": {
+    "authority_core": 1,
+    "clock": "CLOCK_MONOTONIC on one host",
+    "issuance_to_visibility_ns": {
+      "maximum_ns": 847888,
+      "mean_ns": 95123.26,
+      "median_absolute_deviation_ns": 9258,
+      "minimum_ns": 69872,
+      "p50_ns": 85542,
+      "p95_ns": 144544,
+      "p999_ns": 281954,
+      "p99_ns": 176074,
+      "samples": 1000,
+      "zero_or_negative_samples": 0
+    },
+    "issue_call_round_trip_ns": {
+      "maximum_ns": 834002,
+      "mean_ns": 78688.539,
+      "median_absolute_deviation_ns": 11462,
+      "minimum_ns": 51497,
+      "p50_ns": 69171,
+      "p95_ns": 120669,
+      "p999_ns": 284960,
+      "p99_ns": 145656,
+      "samples": 1000,
+      "zero_or_negative_samples": 0
+    },
+    "resolver_core": 4,
+    "resolver_polls_maximum": 257,
+    "revocations": 1000,
+    "seed": 104729
+  },
+  "run_role": "development",
+  "seeds": [
+    104729,
+    130363,
+    155921,
+    196613,
+    262147
+  ],
+  "token_bytes_by_depth": {
+    "0": {
+      "count": 1042,
+      "maximum": 544,
+      "minimum": 472
+    },
+    "1": {
+      "count": 4066,
+      "maximum": 614,
+      "minimum": 516
+    },
+    "2": {
+      "count": 1798,
+      "maximum": 599,
+      "minimum": 525
+    },
+    "3": {
+      "count": 756,
+      "maximum": 609,
+      "minimum": 535
+    }
+  }
+}

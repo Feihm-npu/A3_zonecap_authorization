@@ -1,0 +1,97 @@
+experiment=exp-24
+run_role=development
+development_scale=10
+git_head=1be503b465b9e5ac512deeef96e251fe458e9ed3
+git_tree_clean_except_untracked_results=True
+preflight_returncode=0
+repetition configuration=p1_d0 seed=104729 returncode=0 seconds=1.7
+repetition configuration=p1_d1 seed=104729 returncode=0 seconds=1.8
+repetition configuration=p1_d2 seed=104729 returncode=0 seconds=2.0
+repetition configuration=p10_d0 seed=104729 returncode=0 seconds=1.7
+repetition configuration=p10_d1 seed=104729 returncode=0 seconds=1.8
+repetition configuration=p10_d2 seed=104729 returncode=0 seconds=2.0
+repetition configuration=p100_d0 seed=104729 returncode=0 seconds=1.8
+repetition configuration=p100_d1 seed=104729 returncode=0 seconds=2.1
+repetition configuration=p100_d2 seed=104729 returncode=0 seconds=2.0
+repetition configuration=p1000_d0 seed=104729 returncode=0 seconds=2.9
+repetition configuration=p1000_d1 seed=104729 returncode=0 seconds=2.0
+repetition configuration=p1000_d2 seed=104729 returncode=0 seconds=2.3
+repetition configuration=p1000_d0_cache_miss seed=104729 returncode=0 seconds=2.7
+repetition configuration=p1000_d1_cache_miss seed=104729 returncode=0 seconds=3.4
+repetition configuration=p1000_d2_cache_miss seed=104729 returncode=0 seconds=4.4
+repetition configuration=p1_d1 seed=130363 returncode=0 seconds=1.8
+repetition configuration=p1_d2 seed=130363 returncode=0 seconds=2.0
+repetition configuration=p10_d0 seed=130363 returncode=0 seconds=1.8
+repetition configuration=p10_d1 seed=130363 returncode=0 seconds=1.8
+repetition configuration=p10_d2 seed=130363 returncode=0 seconds=2.1
+repetition configuration=p100_d0 seed=130363 returncode=0 seconds=1.7
+repetition configuration=p100_d1 seed=130363 returncode=0 seconds=9.9
+repetition configuration=p100_d2 seed=130363 returncode=0 seconds=2.1
+repetition configuration=p1000_d0 seed=130363 returncode=0 seconds=1.8
+repetition configuration=p1000_d1 seed=130363 returncode=0 seconds=2.1
+repetition configuration=p1000_d2 seed=130363 returncode=0 seconds=2.3
+repetition configuration=p1000_d0_cache_miss seed=130363 returncode=0 seconds=2.8
+repetition configuration=p1000_d1_cache_miss seed=130363 returncode=0 seconds=3.5
+repetition configuration=p1000_d2_cache_miss seed=130363 returncode=0 seconds=4.5
+repetition configuration=p1_d0 seed=130363 returncode=0 seconds=1.8
+repetition configuration=p1_d2 seed=155921 returncode=0 seconds=2.1
+repetition configuration=p10_d0 seed=155921 returncode=0 seconds=1.9
+repetition configuration=p10_d1 seed=155921 returncode=0 seconds=1.8
+repetition configuration=p10_d2 seed=155921 returncode=0 seconds=2.2
+repetition configuration=p100_d0 seed=155921 returncode=0 seconds=1.7
+repetition configuration=p100_d1 seed=155921 returncode=0 seconds=2.8
+repetition configuration=p100_d2 seed=155921 returncode=0 seconds=2.0
+repetition configuration=p1000_d0 seed=155921 returncode=0 seconds=1.8
+repetition configuration=p1000_d1 seed=155921 returncode=0 seconds=3.1
+repetition configuration=p1000_d2 seed=155921 returncode=0 seconds=2.4
+repetition configuration=p1000_d0_cache_miss seed=155921 returncode=0 seconds=2.6
+repetition configuration=p1000_d1_cache_miss seed=155921 returncode=0 seconds=3.4
+repetition configuration=p1000_d2_cache_miss seed=155921 returncode=0 seconds=4.6
+repetition configuration=p1_d0 seed=155921 returncode=0 seconds=1.7
+repetition configuration=p1_d1 seed=155921 returncode=0 seconds=1.8
+repetition configuration=p10_d0 seed=196613 returncode=0 seconds=1.7
+repetition configuration=p10_d1 seed=196613 returncode=0 seconds=2.8
+repetition configuration=p10_d2 seed=196613 returncode=0 seconds=3.1
+repetition configuration=p100_d0 seed=196613 returncode=0 seconds=1.7
+repetition configuration=p100_d1 seed=196613 returncode=0 seconds=1.8
+repetition configuration=p100_d2 seed=196613 returncode=0 seconds=2.0
+repetition configuration=p1000_d0 seed=196613 returncode=0 seconds=1.8
+repetition configuration=p1000_d1 seed=196613 returncode=0 seconds=2.0
+repetition configuration=p1000_d2 seed=196613 returncode=0 seconds=2.3
+repetition configuration=p1000_d0_cache_miss seed=196613 returncode=0 seconds=2.7
+repetition configuration=p1000_d1_cache_miss seed=196613 returncode=0 seconds=3.5
+repetition configuration=p1000_d2_cache_miss seed=196613 returncode=0 seconds=4.4
+repetition configuration=p1_d0 seed=196613 returncode=0 seconds=2.0
+repetition configuration=p1_d1 seed=196613 returncode=0 seconds=1.8
+repetition configuration=p1_d2 seed=196613 returncode=0 seconds=2.5
+repetition configuration=p10_d1 seed=262147 returncode=0 seconds=1.8
+repetition configuration=p10_d2 seed=262147 returncode=0 seconds=2.0
+repetition configuration=p100_d0 seed=262147 returncode=0 seconds=1.7
+repetition configuration=p100_d1 seed=262147 returncode=0 seconds=1.8
+repetition configuration=p100_d2 seed=262147 returncode=0 seconds=2.1
+repetition configuration=p1000_d0 seed=262147 returncode=0 seconds=1.8
+repetition configuration=p1000_d1 seed=262147 returncode=0 seconds=2.1
+repetition configuration=p1000_d2 seed=262147 returncode=0 seconds=2.3
+repetition configuration=p1000_d0_cache_miss seed=262147 returncode=0 seconds=2.6
+repetition configuration=p1000_d1_cache_miss seed=262147 returncode=0 seconds=3.4
+repetition configuration=p1000_d2_cache_miss seed=262147 returncode=0 seconds=4.6
+repetition configuration=p1_d0 seed=262147 returncode=0 seconds=1.7
+repetition configuration=p1_d1 seed=262147 returncode=0 seconds=1.8
+repetition configuration=p1_d2 seed=262147 returncode=0 seconds=2.0
+repetition configuration=p10_d0 seed=262147 returncode=0 seconds=1.8
+configuration=p1_d0 worst_p99_ns=110189 pooled_p99_ns=103597
+configuration=p1_d1 worst_p99_ns=115569 pooled_p99_ns=104368
+configuration=p1_d2 worst_p99_ns=192686 pooled_p99_ns=182887
+configuration=p10_d0 worst_p99_ns=186494 pooled_p99_ns=147781
+configuration=p10_d1 worst_p99_ns=112423 pooled_p99_ns=104318
+configuration=p10_d2 worst_p99_ns=155836 pooled_p99_ns=145004
+configuration=p100_d0 worst_p99_ns=82787 pooled_p99_ns=79140
+configuration=p100_d1 worst_p99_ns=148893 pooled_p99_ns=141429
+configuration=p100_d2 worst_p99_ns=150966 pooled_p99_ns=135657
+configuration=p1000_d0 worst_p99_ns=142040 pooled_p99_ns=140897
+configuration=p1000_d1 worst_p99_ns=235426 pooled_p99_ns=234946
+configuration=p1000_d2 worst_p99_ns=328053 pooled_p99_ns=326990
+configuration=p1000_d0_cache_miss worst_p99_ns=244003 pooled_p99_ns=226811
+configuration=p1000_d1_cache_miss worst_p99_ns=322742 pooled_p99_ns=304358
+configuration=p1000_d2_cache_miss worst_p99_ns=556987 pooled_p99_ns=502944
+registered_check=A2_excluded_at_1000_policies all_repetitions_meet_checks=true

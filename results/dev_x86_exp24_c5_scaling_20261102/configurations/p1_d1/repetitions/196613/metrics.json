@@ -1,0 +1,175 @@
+{
+  "affinity": {
+    "proc_cpus_allowed_list": "3",
+    "requested_core": 3,
+    "sched_getaffinity": [
+      3
+    ],
+    "verified": true
+  },
+  "audit_peak_backlog_bytes": 23993,
+  "audit_queue_bytes": 1048576,
+  "audit_records": 11000,
+  "audit_records_expected": 11000,
+  "audit_unavailable_denials": 0,
+  "cache_miss": false,
+  "claim": "C5",
+  "configuration": "p1_d1",
+  "configuration_role": "scaling",
+  "corpus_fingerprint": "52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab",
+  "decision_latency_ns": {
+    "maximum_ns": 645736,
+    "mean_ns": 88601.3805,
+    "median_absolute_deviation_ns": 1344,
+    "minimum_ns": 83188,
+    "p50_ns": 87607,
+    "p95_ns": 93277,
+    "p999_ns": 237550,
+    "p99_ns": 100310,
+    "samples": 10000,
+    "zero_or_negative_samples": 0
+  },
+  "decision_mismatches": 0,
+  "decision_reason_counts": {
+    "action": 773,
+    "asset": 773,
+    "authorized": 780,
+    "conduit": 769,
+    "mode": 755,
+    "parameter_boundary": 1552,
+    "sequence": 767,
+    "source_zone": 767,
+    "subject": 766,
+    "target_zone": 767,
+    "time": 1531
+  },
+  "derived_p99_scan_occupancy_percent": 1.0031,
+  "development_scale": 10,
+  "exp": "exp-24",
+  "expected_stage_mask": 1023,
+  "expected_stages": [
+    "parse",
+    "anchor",
+    "chain",
+    "signature",
+    "revocation",
+    "context",
+    "policy",
+    "binding",
+    "response",
+    "audit"
+  ],
+  "gc_frozen_objects": 27502,
+  "latency_by_chain_depth_ns": {
+    "1": {
+      "maximum_ns": 645736,
+      "p50_ns": 87607,
+      "p99_ns": 100310,
+      "samples": 10000
+    }
+  },
+  "latency_by_expected_effect_ns": {
+    "allow": {
+      "maximum_ns": 286994,
+      "p50_ns": 89169,
+      "p99_ns": 102074,
+      "samples": 780
+    },
+    "deny": {
+      "maximum_ns": 645736,
+      "p50_ns": 86944,
+      "p99_ns": 99639,
+      "samples": 7668
+    },
+    "rewrite": {
+      "maximum_ns": 237550,
+      "p50_ns": 89510,
+      "p99_ns": 102234,
+      "samples": 1552
+    }
+  },
+  "measured_decisions": 10000,
+  "measured_loop_wall_ns": 906526624,
+  "measured_step_sequence_sha256": "9803e916190b033a0e7b9a34af4cf4e0c38df2810de27aab5bf478d78fbbf4df",
+  "memory_kib": {
+    "after_corpus_load": {
+      "vm_hwm_kib": 106000,
+      "vm_rss_kib": 42100
+    },
+    "after_measured": {
+      "vm_hwm_kib": 106000,
+      "vm_rss_kib": 48008
+    },
+    "after_pep_init": {
+      "vm_hwm_kib": 106000,
+      "vm_rss_kib": 44212
+    },
+    "after_warmup": {
+      "vm_hwm_kib": 106000,
+      "vm_rss_kib": 44276
+    },
+    "process_start": {
+      "vm_hwm_kib": 106000,
+      "vm_rss_kib": 34444
+    }
+  },
+  "p99_us": 100.31,
+  "peak_rss_kib": 106000,
+  "pep_options": {
+    "audit_enabled": true,
+    "cache_capacity": 65536,
+    "disabled_stages": [],
+    "max_context_age_ns": 50000000,
+    "max_deferrals": 2,
+    "verification_cache": true,
+    "verify_signatures": true
+  },
+  "registry_policies": 1,
+  "registry_sha256": "6a732a36955d062aa4746dc25d17686a62cd7af5452fee5a8c0309c26181851f",
+  "response_sha256": "452a3998b8cc48f19f9c829bbed27a39e939afd27571fdb36da9dac39eadaf35",
+  "revocation_backend": "local",
+  "revocation_entries": 10000,
+  "revocation_reconnects": null,
+  "run_role": "development",
+  "seed": 196613,
+  "signatures_verified": 0,
+  "stage_mask_failures": 0,
+  "system": "zonecap",
+  "threshold_checks": {
+    "audit_complete": true,
+    "derived_occupancy_at_most_10_percent": true,
+    "every_expected_stage_exercised": true,
+    "no_nonpositive_sample": true,
+    "p99_at_most_1000_us": true,
+    "verification_counts_consistent": true,
+    "zero_decision_mismatches": true
+  },
+  "throughput_decisions_per_s_decision_time": 11286.505857546994,
+  "throughput_decisions_per_s_wall": 11031.115617846432,
+  "token_bytes_by_depth": {
+    "0": {
+      "count": 1042,
+      "maximum": 544,
+      "minimum": 472
+    },
+    "1": {
+      "count": 4066,
+      "maximum": 614,
+      "minimum": 516
+    },
+    "2": {
+      "count": 1798,
+      "maximum": 599,
+      "minimum": 525
+    },
+    "3": {
+      "count": 756,
+      "maximum": 609,
+      "minimum": 535
+    }
+  },
+  "variant": "scale_p1_d1",
+  "verification_cache_hits": 20000,
+  "verification_count_failures": 0,
+  "warmup_decisions": 1000
+}

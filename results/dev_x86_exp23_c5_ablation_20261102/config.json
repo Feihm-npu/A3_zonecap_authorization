@@ -1,0 +1,167 @@
+{
+  "claim": "C5",
+  "configurations": [
+    {
+      "cache_miss": true,
+      "name": "cache_miss",
+      "role": "diagnostic:A1"
+    },
+    {
+      "measured": 10000,
+      "name": "cold_start",
+      "role": "diagnostic",
+      "warmup": 0
+    },
+    {
+      "name": "unsigned",
+      "pep": {
+        "verify_signatures": false
+      },
+      "role": "diagnostic:disabled-check"
+    },
+    {
+      "name": "remote_revocation",
+      "revocation": {
+        "backend": "redis",
+        "host": "127.0.0.1",
+        "port": 6379,
+        "timeout_ms": 100
+      },
+      "role": "diagnostic"
+    },
+    {
+      "name": "audit_disabled",
+      "pep": {
+        "audit_enabled": false
+      },
+      "role": "diagnostic:disabled-check"
+    }
+  ],
+  "corpus_fingerprint": "52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab",
+  "cpu": {
+    "audit_core": 4,
+    "benchmark_core": 3,
+    "monitor_core": 1,
+    "support_core": 5
+  },
+  "criteria": [
+    {
+      "checks": [
+        "p99_at_most_1000_us",
+        "zero_decision_mismatches",
+        "every_expected_stage_exercised",
+        "verification_counts_consistent",
+        "audit_complete",
+        "no_nonpositive_sample"
+      ],
+      "configurations": [
+        "cache_miss"
+      ],
+      "name": "A1_excluded_by_cache_miss",
+      "statement": "A1 is ruled out only if every cache_miss repetition (verification cache cleared before each timed decision, so every token signature is verified) has p99 <= 1,000 us with zero mismatch, every stage exercised, verification count equal to chain length, and complete audit."
+    }
+  ],
+  "defaults": {
+    "audit_queue_bytes": 1048576,
+    "cache_miss": false,
+    "measured": 100000,
+    "pep": {
+      "audit_enabled": true,
+      "cache_capacity": 65536,
+      "max_context_age_ns": 50000000,
+      "max_deferrals": 2,
+      "verification_cache": true,
+      "verify_signatures": true
+    },
+    "registry": "main",
+    "retain_audit_log": false,
+    "revocation": {
+      "backend": "local",
+      "preloaded": 10000
+    },
+    "role": "main",
+    "scan_period_us": 10000,
+    "system": "zonecap",
+    "threshold_occupancy_percent": 10,
+    "threshold_p99_us": 1000,
+    "variant": "main",
+    "warmup": 10000
+  },
+  "environment_commands": [
+    "date -u +%Y-%m-%dT%H:%M:%SZ",
+    "uname -a",
+    "cat /etc/nv_tegra_release",
+    "cat /proc/device-tree/model",
+    "nvpmodel -q --verbose",
+    "jetson_clocks --show",
+    "lscpu",
+    "cat /proc/cpuinfo",
+    "free -m",
+    "df -h .",
+    "cat /proc/cmdline",
+    "cat /proc/sys/fs/pipe-max-size",
+    "cat /proc/sys/fs/pipe-user-pages-soft /proc/sys/fs/pipe-user-pages-hard",
+    "for c in /sys/devices/system/cpu/cpu[0-9]*; do echo $c $(cat $c/online 2>/dev/null) $(cat $c/cpufreq/scaling_governor) $(cat $c/cpufreq/scaling_min_freq) $(cat $c/cpufreq/scaling_cur_freq) $(cat $c/cpufreq/scaling_max_freq); done",
+    "swapon --show",
+    "systemctl list-units --type=service --state=running --no-pager",
+    "python3 --version",
+    "python3 -m pip freeze",
+    "node --version",
+    "redis-server --version",
+    "git rev-parse HEAD",
+    "git status --porcelain"
+  ],
+  "evidence_scope": "NVIDIA Jetson Orin NX 8GB Developer Kit with OpenPLC; server-side decision path of the frozen ZoneCap reference PEP (zonecap.c5)",
+  "exp": "exp-23",
+  "frozen_hashes": {
+    "hardware_delivery/exp_requirements.md": "3c2ee4cefe36e3bb6ce3b8573918022fde2e04c988b43e2bd2cb2795dd65fc66",
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "results/exp07_heldout_equivalence_20260901/cases.jsonl.gz": "46197806deb7cdf7eb108ebaceecc68b574ddce40f625dd8948b46be6bb433b6",
+    "scripts/exp25_sint_runner.mjs": "407548933622f7bc03a4e5eef94fddc304176b93b9ae26f6ca39cc07eac20774",
+    "src/zonecap/__init__.py": "b815f203daf83b0bfbe1c7c990c399d04bb8aa973af4de13f632295d62aadfad",
+    "src/zonecap/c5/__init__.py": "c4b5cbefca2a8d0fe11ff7e53a762b7a233fcc3d5416f60dc67db70d79dc5e45",
+    "src/zonecap/c5/audit.py": "a040deca00ce49b9932b44a8b6e2de5bfa31774554656782f86c3abaf59cb0d1",
+    "src/zonecap/c5/corpus.py": "e5d8511ef2ea8252b412b1e2b444ff7d50f78479206c42075343d1b252632e7c",
+    "src/zonecap/c5/freeze.py": "c976a8eb20cc5b71f3021deb8601f2e4f3b7d2600699ac9fee359def39899d12",
+    "src/zonecap/c5/harness.py": "06716e86111ab1a1cf27f30da8b456f714a02c57c218111ce3837b8b3fe40477",
+    "src/zonecap/c5/matrix.py": "488d30a415a3377b270727c8ccbcdc6ecd6b237f17ffab0bca176be8ae6aaf7d",
+    "src/zonecap/c5/oracle.py": "3b7d5f0b495d8b34f0da8bd43a42af7ab9e855571a02afee3c3da3fd8a753f08",
+    "src/zonecap/c5/pep.py": "92e2c9d07788568b185dcf9d921cfd8e0074be23d11d23724c64d46d2b872b94",
+    "src/zonecap/c5/propagation.py": "e930c74238fbab2a4a35e57537d8c08edfad747d7b0632203e43845dc7f2b865",
+    "src/zonecap/c5/resp.py": "74bb76d76c34ebbe4c71bb0022b6db928441c803c19f94fe65196b2ca429182a",
+    "src/zonecap/c5/wire.py": "8581992b9291970adc04ac4c1cad4617568c96b4f3da7edf5b4eb55c7dcc374f",
+    "src/zonecap/compiler.py": "0c96cd2eda5f29fc284f88c6c9e741ddc78347a04f70b8432554ef695d6c44bd",
+    "src/zonecap/effects.py": "a010919eb19db85a1baa4da70d603c538e5df965628a7f4ba4389ad2e375aaed",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_c5_corpus.py": "0b6b39fc5f68f324796917e5e62bf50beb26e6feb4a56906b923f2b5a1374858",
+    "tests/test_c5_harness.py": "33b91f4d2df79752d1a203dfb69f9d63050ed219e69c06d188d537bb293e3722",
+    "tests/test_c5_pep.py": "4fd93cc32089ac165b9f9af489e6a69538afbe012b71f67c251c34f66bf64a76"
+  },
+  "preflight": {
+    "empty_samples": 100000,
+    "forced_delay_ns": 5000000,
+    "forced_slow_minimum_ns": 4000000,
+    "forced_slow_samples": 100,
+    "forced_slow_warmup": 5,
+    "full_samples": 10000,
+    "timer_pairs": 100000,
+    "warmup": 1000
+  },
+  "propagation": {
+    "authority_core": 1,
+    "resolver_core": 4,
+    "revocations": 1000,
+    "seed": 104729
+  },
+  "protocol": "hardware_delivery/exp_requirements.md v1.1",
+  "run_id_prefix": "exp23_c5_ablation",
+  "seeds": [
+    104729,
+    130363,
+    155921,
+    196613,
+    262147
+  ]
+}

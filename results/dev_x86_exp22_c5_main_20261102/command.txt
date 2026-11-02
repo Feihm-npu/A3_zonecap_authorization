@@ -1,0 +1,1 @@
+/home/feihm/llm-fei/.llm/bin/python3 -m zonecap.c5.matrix --config configs/c5/exp22_c5_main.json --corpus-dir build/c5_corpus --output-dir results/dev_x86_exp22_c5_main_20261102 --development --development-scale 10

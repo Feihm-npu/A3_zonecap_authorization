@@ -1,0 +1,727 @@
+{
+  "claim": "C5",
+  "configurations": {
+    "full": {
+      "every_repetition_passes": {
+        "audit_complete": true,
+        "derived_occupancy_at_most_10_percent": true,
+        "every_expected_stage_exercised": true,
+        "no_nonpositive_sample": true,
+        "p99_at_most_1000_us": true,
+        "verification_counts_consistent": true,
+        "zero_decision_mismatches": true
+      },
+      "pooled_decision_latency_ns": {
+        "maximum_ns": 5199433,
+        "mean_ns": 89138.05538,
+        "median_absolute_deviation_ns": 9739,
+        "minimum_ns": 60495,
+        "p50_ns": 72207,
+        "p95_ns": 165164,
+        "p999_ns": 267617,
+        "p99_ns": 210349,
+        "samples": 50000,
+        "zero_or_negative_samples": 0
+      },
+      "repetitions": {
+        "104729": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.1229299999999998,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 258700,
+              "p50_ns": 66176,
+              "p99_ns": 77627,
+              "samples": 5084
+            },
+            "1": {
+              "maximum_ns": 5199433,
+              "p50_ns": 92936,
+              "p99_ns": 173299,
+              "samples": 2751
+            },
+            "2": {
+              "maximum_ns": 299519,
+              "p50_ns": 115228,
+              "p99_ns": 194889,
+              "samples": 1722
+            },
+            "3": {
+              "maximum_ns": 264652,
+              "p50_ns": 139685,
+              "p99_ns": 224906,
+              "samples": 443
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 254372,
+              "p50_ns": 93808,
+              "p99_ns": 143893,
+              "samples": 1150
+            },
+            "attenuate": {
+              "maximum_ns": 250004,
+              "p50_ns": 70564,
+              "p99_ns": 123795,
+              "samples": 568
+            },
+            "defer": {
+              "maximum_ns": 264652,
+              "p50_ns": 169011,
+              "p99_ns": 227522,
+              "samples": 568
+            },
+            "deny": {
+              "maximum_ns": 5199433,
+              "p50_ns": 66747,
+              "p99_ns": 136169,
+              "samples": 6053
+            },
+            "rewrite": {
+              "maximum_ns": 274991,
+              "p50_ns": 92696,
+              "p99_ns": 141208,
+              "samples": 1661
+            }
+          },
+          "maximum_ns": 5199433,
+          "p50_ns": 75594,
+          "p999_ns": 254372,
+          "p99_ns": 212293,
+          "peak_rss_kib": 514292,
+          "signatures_verified": 569,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 10706.321705997805,
+          "verification_cache_hits": 16955,
+          "verification_count_failures": 0
+        },
+        "130363": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.09567,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 254493,
+              "p50_ns": 65304,
+              "p99_ns": 76896,
+              "samples": 5230
+            },
+            "1": {
+              "maximum_ns": 316270,
+              "p50_ns": 91614,
+              "p99_ns": 175373,
+              "samples": 2687
+            },
+            "2": {
+              "maximum_ns": 327691,
+              "p50_ns": 113766,
+              "p99_ns": 192515,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 257488,
+              "p50_ns": 138042,
+              "p99_ns": 227211,
+              "samples": 376
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 289319,
+              "p50_ns": 92646,
+              "p99_ns": 141448,
+              "samples": 1085
+            },
+            "attenuate": {
+              "maximum_ns": 132601,
+              "p50_ns": 69612,
+              "p99_ns": 127192,
+              "samples": 546
+            },
+            "defer": {
+              "maximum_ns": 327691,
+              "p50_ns": 167036,
+              "p99_ns": 229816,
+              "samples": 546
+            },
+            "deny": {
+              "maximum_ns": 270282,
+              "p50_ns": 65895,
+              "p99_ns": 134936,
+              "samples": 6133
+            },
+            "rewrite": {
+              "maximum_ns": 202915,
+              "p50_ns": 91073,
+              "p99_ns": 140267,
+              "samples": 1690
+            }
+          },
+          "maximum_ns": 327691,
+          "p50_ns": 70254,
+          "p999_ns": 248461,
+          "p99_ns": 209567,
+          "peak_rss_kib": 514348,
+          "signatures_verified": 551,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 10998.16476154202,
+          "verification_cache_hits": 16678,
+          "verification_count_failures": 0
+        },
+        "155921": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.12854,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 262308,
+              "p50_ns": 65764,
+              "p99_ns": 88067,
+              "samples": 5152
+            },
+            "1": {
+              "maximum_ns": 416479,
+              "p50_ns": 92816,
+              "p99_ns": 198066,
+              "samples": 2742
+            },
+            "2": {
+              "maximum_ns": 503816,
+              "p50_ns": 115218,
+              "p99_ns": 197385,
+              "samples": 1726
+            },
+            "3": {
+              "maximum_ns": 697643,
+              "p50_ns": 139374,
+              "p99_ns": 296141,
+              "samples": 380
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 261566,
+              "p50_ns": 93717,
+              "p99_ns": 152801,
+              "samples": 1123
+            },
+            "attenuate": {
+              "maximum_ns": 259312,
+              "p50_ns": 69913,
+              "p99_ns": 137511,
+              "samples": 570
+            },
+            "defer": {
+              "maximum_ns": 697643,
+              "p50_ns": 168560,
+              "p99_ns": 269832,
+              "samples": 570
+            },
+            "deny": {
+              "maximum_ns": 416479,
+              "p50_ns": 66386,
+              "p99_ns": 139314,
+              "samples": 6101
+            },
+            "rewrite": {
+              "maximum_ns": 503816,
+              "p50_ns": 92476,
+              "p99_ns": 153130,
+              "samples": 1636
+            }
+          },
+          "maximum_ns": 697643,
+          "p50_ns": 78690,
+          "p999_ns": 296572,
+          "p99_ns": 212854,
+          "peak_rss_kib": 514368,
+          "signatures_verified": 570,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 10705.804598823535,
+          "verification_cache_hits": 16764,
+          "verification_count_failures": 0
+        },
+        "196613": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.08496,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 270683,
+              "p50_ns": 65074,
+              "p99_ns": 75694,
+              "samples": 5135
+            },
+            "1": {
+              "maximum_ns": 345816,
+              "p50_ns": 91404,
+              "p99_ns": 172618,
+              "samples": 2826
+            },
+            "2": {
+              "maximum_ns": 394829,
+              "p50_ns": 113364,
+              "p99_ns": 192235,
+              "samples": 1707
+            },
+            "3": {
+              "maximum_ns": 325868,
+              "p50_ns": 137610,
+              "p99_ns": 223434,
+              "samples": 332
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 394829,
+              "p50_ns": 92505,
+              "p99_ns": 140737,
+              "samples": 1095
+            },
+            "attenuate": {
+              "maximum_ns": 285952,
+              "p50_ns": 69051,
+              "p99_ns": 126050,
+              "samples": 571
+            },
+            "defer": {
+              "maximum_ns": 377757,
+              "p50_ns": 166446,
+              "p99_ns": 224726,
+              "samples": 571
+            },
+            "deny": {
+              "maximum_ns": 294058,
+              "p50_ns": 65615,
+              "p99_ns": 133774,
+              "samples": 6097
+            },
+            "rewrite": {
+              "maximum_ns": 325868,
+              "p50_ns": 90923,
+              "p99_ns": 138974,
+              "samples": 1666
+            }
+          },
+          "maximum_ns": 394829,
+          "p50_ns": 70213,
+          "p999_ns": 270683,
+          "p99_ns": 208496,
+          "peak_rss_kib": 514236,
+          "signatures_verified": 575,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 11011.846497110651,
+          "verification_cache_hits": 16661,
+          "verification_count_failures": 0
+        },
+        "262147": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 2.08996,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 539834,
+              "p50_ns": 64793,
+              "p99_ns": 79571,
+              "samples": 5229
+            },
+            "1": {
+              "maximum_ns": 359542,
+              "p50_ns": 91073,
+              "p99_ns": 176144,
+              "samples": 2781
+            },
+            "2": {
+              "maximum_ns": 269642,
+              "p50_ns": 113255,
+              "p99_ns": 193276,
+              "samples": 1602
+            },
+            "3": {
+              "maximum_ns": 413805,
+              "p50_ns": 137501,
+              "p99_ns": 278478,
+              "samples": 388
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 278158,
+              "p50_ns": 92446,
+              "p99_ns": 141909,
+              "samples": 1119
+            },
+            "attenuate": {
+              "maximum_ns": 166586,
+              "p50_ns": 68961,
+              "p99_ns": 129416,
+              "samples": 552
+            },
+            "defer": {
+              "maximum_ns": 413805,
+              "p50_ns": 166336,
+              "p99_ns": 302735,
+              "samples": 552
+            },
+            "deny": {
+              "maximum_ns": 539834,
+              "p50_ns": 65314,
+              "p99_ns": 134014,
+              "samples": 6137
+            },
+            "rewrite": {
+              "maximum_ns": 244213,
+              "p50_ns": 90813,
+              "p99_ns": 139975,
+              "samples": 1640
+            }
+          },
+          "maximum_ns": 539834,
+          "p50_ns": 69142,
+          "p999_ns": 269642,
+          "p99_ns": 208996,
+          "peak_rss_kib": 514532,
+          "signatures_verified": 555,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 11075.307312948004,
+          "verification_cache_hits": 16594,
+          "verification_count_failures": 0
+        }
+      },
+      "worst_repetition": {
+        "p99_ns": 212854,
+        "seed": 155921
+      }
+    }
+  },
+  "corpus_fingerprint": "52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab",
+  "corpus_variants": {
+    "main": {
+      "chain_depths": {
+        "0": 42336,
+        "1": 22680,
+        "2": 13608,
+        "3": 3024
+      },
+      "expected_effects": {
+        "allow": 9072,
+        "attenuate": 4536,
+        "defer": 4536,
+        "deny": 49896,
+        "rewrite": 13608
+      },
+      "step_kinds": {
+        "allow": 4536,
+        "attenuate": 4536,
+        "defer": 4536,
+        "deny": 4536,
+        "rewrite": 4536,
+        "single": 58968
+      },
+      "steps": 81648,
+      "units": 63504
+    },
+    "scale_p1000_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p1000_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p1000_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p100_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p100_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p100_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p10_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p10_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p10_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p1_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p1_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p1_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "sint_subset": {
+      "chain_depths": {
+        "0": 18144,
+        "1": 4536,
+        "2": 4536
+      },
+      "expected_effects": {
+        "allow": 4536,
+        "deny": 18144,
+        "rewrite": 4536
+      },
+      "sint_expected": {
+        "allow": 4536,
+        "deny": 22680
+      },
+      "step_kinds": {
+        "single": 27216
+      },
+      "steps": 27216,
+      "units": 27216
+    }
+  },
+  "development_scale": 10,
+  "evidence_scope": "development run of the frozen harness; not C5 evidence",
+  "exp": "exp-22",
+  "preflight": {
+    "passed": true
+  },
+  "registered_checks": {
+    "C5_registered_thresholds": {
+      "all_repetitions_meet_checks": true,
+      "checks": [
+        "p99_at_most_1000_us",
+        "derived_occupancy_at_most_10_percent",
+        "zero_decision_mismatches",
+        "every_expected_stage_exercised",
+        "verification_counts_consistent",
+        "audit_complete",
+        "no_nonpositive_sample"
+      ],
+      "configurations": [
+        "full"
+      ],
+      "statement": "Every exp-22 repetition: p99 <= 1,000 us; derived p99/10 ms occupancy <= 10%; zero decision mismatch; every expected stage exercised; consistent signature/cache counts; complete audit; no non-positive sample. Preflight must pass."
+    }
+  },
+  "run_role": "development",
+  "seeds": [
+    104729,
+    130363,
+    155921,
+    196613,
+    262147
+  ],
+  "token_bytes_by_depth": {
+    "0": {
+      "count": 1042,
+      "maximum": 544,
+      "minimum": 472
+    },
+    "1": {
+      "count": 4066,
+      "maximum": 614,
+      "minimum": 516
+    },
+    "2": {
+      "count": 1798,
+      "maximum": 599,
+      "minimum": 525
+    },
+    "3": {
+      "count": 756,
+      "maximum": 609,
+      "minimum": 535
+    }
+  }
+}

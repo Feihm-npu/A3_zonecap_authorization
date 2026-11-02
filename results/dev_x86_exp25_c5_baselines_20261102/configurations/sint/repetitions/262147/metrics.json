@@ -1,0 +1,108 @@
+{
+  "affinity": {
+    "proc_cpus_allowed_list": "3-4",
+    "requested_cores": [
+      3,
+      4
+    ],
+    "verified": true
+  },
+  "audit_records": null,
+  "claim": "C5",
+  "configuration": "sint",
+  "configuration_role": "baseline",
+  "corpus_fingerprint": "52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab",
+  "decision_latency_ns": {
+    "maximum_ns": 27103835,
+    "mean_ns": 1922655.2987,
+    "median_absolute_deviation_ns": 81135,
+    "minimum_ns": 8135,
+    "p50_ns": 2204703,
+    "p95_ns": 2582589,
+    "p999_ns": 4323020,
+    "p99_ns": 2938244,
+    "samples": 10000,
+    "zero_or_negative_samples": 0
+  },
+  "decision_mismatches": 0,
+  "decision_reason_counts": {
+    "CONSTRAINT_VIOLATION": 1608,
+    "INSUFFICIENT_PERMISSIONS": 3371,
+    "None": 1679,
+    "TOKEN_EXPIRED": 1694,
+    "TOKEN_SUBJECT_MISMATCH": 1648
+  },
+  "derived_p99_scan_occupancy_percent": 29.38244,
+  "development_scale": 10,
+  "exp": "exp-25",
+  "latency_by_chain_depth_ns": {},
+  "latency_by_expected_effect_ns": {
+    "allow": {
+      "maximum_ns": 5189735,
+      "p50_ns": 2402217,
+      "p99_ns": 3557118,
+      "samples": 1679
+    },
+    "deny": {
+      "maximum_ns": 27103835,
+      "p50_ns": 2185295,
+      "p99_ns": 2753994,
+      "samples": 8321
+    }
+  },
+  "measured_decisions": 10000,
+  "measured_step_sequence_sha256": "ea5274603ee17b75b8522fd875accca41e345cc22a94a56e6f29145f513e463c",
+  "p99_us": 2938.244,
+  "peak_rss_kib": 275564,
+  "run_role": "development",
+  "seed": 262147,
+  "signatures_verified": null,
+  "sint_built_dist_tree_sha256": {
+    "packages/capability-tokens/dist": "70b51db3594b292c60674c78ae2ff39fd78507dab3fb9d0dd21f3d9f0ca3911d",
+    "packages/core/dist": "5ec9057b2a462ef1956a118322f6b47c927420bcac6c6572ac74d88e2092be28",
+    "packages/evidence-ledger/dist": "9c2b1f73a66c7bafc475b6845f154bc4f7f91766544d9991d33006deb1240369",
+    "packages/policy-gateway/dist": "bec5ba50ed9a6d17cd3b6ec82e6990a4919959562f6bc5a86e8e1b64ac9f33cc"
+  },
+  "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+  "sint_meta": {
+    "decision_counts": {
+      "allow": 1679,
+      "deny": 8321
+    },
+    "expired_twins": 126,
+    "measured": 10000,
+    "measured_loop_wall_ns": 19235669534,
+    "node": "v24.12.0",
+    "resource_scheme": "modbus://<target_zone>/<asset>",
+    "revoked_preloaded": 10000,
+    "setup_ns": 816236348,
+    "sint_commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+    "steps": 27216,
+    "timed_call": "await PolicyGateway.intercept(request)",
+    "tokens_issued": 252,
+    "v8": "13.6.233.17-node.37",
+    "warmup": 1000
+  },
+  "sint_source_hashes": {
+    "packages/capability-tokens/src/crypto.ts": "82203b7d73366017de464815a9d08fddce65f05b2a4fd3f1d0cbeb8952bf212d",
+    "packages/capability-tokens/src/delegator.ts": "009b413509cd7defee212fc7ceac74170f0286ed9a5a9359354e7bfbbb31f8db",
+    "packages/capability-tokens/src/issuer.ts": "060b120dcc718bdd76adb5cd0326517ece1f98cdcde6702994f188d11cc5b6dc",
+    "packages/capability-tokens/src/revocation.ts": "92cd7e580e82db831f7afcb309f347610b944b12285a1919b605c2392bb3f5a3",
+    "packages/capability-tokens/src/validator.ts": "7cc8d792644290d09ceddea2f405757250241be010cc9ee9b961e638bed30018",
+    "packages/policy-gateway/src/gateway.ts": "9625c6c6f8156e902a4d8bb59bea7415fd782af857e7c5652b660ddf3c54db8e",
+    "packages/policy-gateway/src/tier-assigner.ts": "98260b012b63f8662a32d7479697895575040f8ed33447cf9c2272015eda0ce8"
+  },
+  "stage_mask_failures": 0,
+  "system": "sint",
+  "threshold_checks": {
+    "affinity_verified": true,
+    "no_nonpositive_sample": true,
+    "zero_decision_mismatches": true
+  },
+  "throughput_decisions_per_s_decision_time": 520.1140322324799,
+  "throughput_decisions_per_s_wall": 519.8675295561978,
+  "variant": "sint_subset",
+  "verification_cache_hits": null,
+  "verification_count_failures": 0,
+  "warmup_decisions": 1000
+}

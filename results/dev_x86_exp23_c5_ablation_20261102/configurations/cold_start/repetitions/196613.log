@@ -1,0 +1,6 @@
+{"configuration": "cold_start", "seed": 196613, "p99_us": 265.714, "checks": {"p99_at_most_1000_us": true, "derived_occupancy_at_most_10_percent": true, "zero_decision_mismatches": true, "every_expected_stage_exercised": true, "verification_counts_consistent": true, "audit_complete": true, "no_nonpositive_sample": true}}
+audit queue reservation refused (attempt 1/30)
+audit queue reservation refused (attempt 2/30)
+audit queue reservation refused (attempt 3/30)
+audit queue reservation refused (attempt 4/30)
+audit queue reservation refused (attempt 5/30)

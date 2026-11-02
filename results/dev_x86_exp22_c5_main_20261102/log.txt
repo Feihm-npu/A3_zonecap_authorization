@@ -1,0 +1,13 @@
+experiment=exp-22
+run_role=development
+development_scale=10
+git_head=1be503b465b9e5ac512deeef96e251fe458e9ed3
+git_tree_clean_except_untracked_results=True
+preflight_returncode=0
+repetition configuration=full seed=104729 returncode=0 seconds=5.1
+repetition configuration=full seed=130363 returncode=0 seconds=4.7
+repetition configuration=full seed=155921 returncode=0 seconds=4.7
+repetition configuration=full seed=196613 returncode=0 seconds=4.9
+repetition configuration=full seed=262147 returncode=0 seconds=4.6
+configuration=full worst_p99_ns=212854 pooled_p99_ns=210349
+registered_check=C5_registered_thresholds all_repetitions_meet_checks=true

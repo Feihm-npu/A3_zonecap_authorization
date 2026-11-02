@@ -1,0 +1,92 @@
+{
+  "full_mask": 1023,
+  "full_missing_stages": [],
+  "full_stages": [
+    "parse",
+    "anchor",
+    "chain",
+    "signature",
+    "revocation",
+    "context",
+    "policy",
+    "binding",
+    "response",
+    "audit"
+  ],
+  "mutants": 10,
+  "mutants_killed": 10,
+  "probe_case": "cpwe_cip_security:g000:d2:v000:valid",
+  "probe_step": 39546,
+  "records": [
+    {
+      "detected": true,
+      "disabled_stage": "parse",
+      "missing_stages": [
+        "parse"
+      ]
+    },
+    {
+      "detected": true,
+      "disabled_stage": "anchor",
+      "missing_stages": [
+        "anchor"
+      ]
+    },
+    {
+      "detected": true,
+      "disabled_stage": "chain",
+      "missing_stages": [
+        "chain"
+      ]
+    },
+    {
+      "detected": true,
+      "disabled_stage": "signature",
+      "missing_stages": [
+        "signature"
+      ]
+    },
+    {
+      "detected": true,
+      "disabled_stage": "revocation",
+      "missing_stages": [
+        "revocation"
+      ]
+    },
+    {
+      "detected": true,
+      "disabled_stage": "context",
+      "missing_stages": [
+        "context"
+      ]
+    },
+    {
+      "detected": true,
+      "disabled_stage": "policy",
+      "missing_stages": [
+        "policy"
+      ]
+    },
+    {
+      "detected": true,
+      "disabled_stage": "binding",
+      "missing_stages": [
+        "binding"
+      ]
+    },
+    {
+      "detected": true,
+      "disabled_stage": "response",
+      "missing_stages": [
+        "response"
+      ]
+    },
+    {
+      "detected": true,
+      "disabled_stage": "audit",
+      "missing_stages": [
+        "audit"
+      ]
+    }
+  ]
+}

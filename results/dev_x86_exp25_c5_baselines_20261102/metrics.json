@@ -1,0 +1,1194 @@
+{
+  "claim": "C5",
+  "configurations": {
+    "sint": {
+      "every_repetition_passes": {
+        "affinity_verified": true,
+        "no_nonpositive_sample": true,
+        "zero_decision_mismatches": true
+      },
+      "pooled_decision_latency_ns": {
+        "maximum_ns": 34835752,
+        "mean_ns": 1926270.51072,
+        "median_absolute_deviation_ns": 81914,
+        "minimum_ns": 8135,
+        "p50_ns": 2203130,
+        "p95_ns": 2597327,
+        "p999_ns": 4936414,
+        "p99_ns": 3325107,
+        "samples": 50000,
+        "zero_or_negative_samples": 0
+      },
+      "repetitions": {
+        "104729": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 28.91475,
+          "latency_by_chain_depth_ns": {},
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 8062955,
+              "p50_ns": 2401496,
+              "p99_ns": 3097375,
+              "samples": 1654
+            },
+            "deny": {
+              "maximum_ns": 15380095,
+              "p50_ns": 2183252,
+              "p99_ns": 2834106,
+              "samples": 8346
+            }
+          },
+          "maximum_ns": 15380095,
+          "p50_ns": 2200133,
+          "p999_ns": 3792113,
+          "p99_ns": 2891475,
+          "peak_rss_kib": 275448,
+          "signatures_verified": null,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "affinity_verified": true,
+            "no_nonpositive_sample": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 524.2883626226217,
+          "verification_cache_hits": null,
+          "verification_count_failures": 0
+        },
+        "130363": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 36.46016,
+          "latency_by_chain_depth_ns": {},
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 19197096,
+              "p50_ns": 2410562,
+              "p99_ns": 3968338,
+              "samples": 1664
+            },
+            "deny": {
+              "maximum_ns": 8645971,
+              "p50_ns": 2189484,
+              "p99_ns": 3566385,
+              "samples": 8336
+            }
+          },
+          "maximum_ns": 19197096,
+          "p50_ns": 2205153,
+          "p999_ns": 5341282,
+          "p99_ns": 3646016,
+          "peak_rss_kib": 275568,
+          "signatures_verified": null,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "affinity_verified": true,
+            "no_nonpositive_sample": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 514.6381689645192,
+          "verification_cache_hits": null,
+          "verification_count_failures": 0
+        },
+        "155921": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 32.38283,
+          "latency_by_chain_depth_ns": {},
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 15118258,
+              "p50_ns": 2394623,
+              "p99_ns": 3620899,
+              "samples": 1643
+            },
+            "deny": {
+              "maximum_ns": 23165724,
+              "p50_ns": 2180887,
+              "p99_ns": 3221251,
+              "samples": 8357
+            }
+          },
+          "maximum_ns": 23165724,
+          "p50_ns": 2196627,
+          "p999_ns": 6723174,
+          "p99_ns": 3238283,
+          "peak_rss_kib": 275644,
+          "signatures_verified": null,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "affinity_verified": true,
+            "no_nonpositive_sample": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 521.6623700941929,
+          "verification_cache_hits": null,
+          "verification_count_failures": 0
+        },
+        "196613": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 34.291650000000004,
+          "latency_by_chain_depth_ns": {},
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 7621066,
+              "p50_ns": 2412557,
+              "p99_ns": 3703185,
+              "samples": 1655
+            },
+            "deny": {
+              "maximum_ns": 34835752,
+              "p50_ns": 2191177,
+              "p99_ns": 3348733,
+              "samples": 8345
+            }
+          },
+          "maximum_ns": 34835752,
+          "p50_ns": 2209321,
+          "p999_ns": 4661433,
+          "p99_ns": 3429165,
+          "peak_rss_kib": 276228,
+          "signatures_verified": null,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "affinity_verified": true,
+            "no_nonpositive_sample": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 514.1792161584121,
+          "verification_cache_hits": null,
+          "verification_count_failures": 0
+        },
+        "262147": {
+          "audit_records": null,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 29.38244,
+          "latency_by_chain_depth_ns": {},
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 5189735,
+              "p50_ns": 2402217,
+              "p99_ns": 3557118,
+              "samples": 1679
+            },
+            "deny": {
+              "maximum_ns": 27103835,
+              "p50_ns": 2185295,
+              "p99_ns": 2753994,
+              "samples": 8321
+            }
+          },
+          "maximum_ns": 27103835,
+          "p50_ns": 2204703,
+          "p999_ns": 4323020,
+          "p99_ns": 2938244,
+          "peak_rss_kib": 275564,
+          "signatures_verified": null,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "affinity_verified": true,
+            "no_nonpositive_sample": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 519.8675295561978,
+          "verification_cache_hits": null,
+          "verification_count_failures": 0
+        }
+      },
+      "worst_repetition": {
+        "p99_ns": 3646016,
+        "seed": 130363
+      }
+    },
+    "zonecap_cache_miss": {
+      "every_repetition_passes": {
+        "audit_complete": true,
+        "derived_occupancy_at_most_10_percent": true,
+        "every_expected_stage_exercised": true,
+        "no_nonpositive_sample": true,
+        "p99_at_most_1000_us": true,
+        "verification_counts_consistent": true,
+        "zero_decision_mismatches": true
+      },
+      "pooled_decision_latency_ns": {
+        "maximum_ns": 16555265,
+        "mean_ns": 189762.34266,
+        "median_absolute_deviation_ns": 4237,
+        "minimum_ns": 131579,
+        "p50_ns": 140366,
+        "p95_ns": 328042,
+        "p999_ns": 553851,
+        "p99_ns": 354522,
+        "samples": 50000,
+        "zero_or_negative_samples": 0
+      },
+      "repetitions": {
+        "104729": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 4.40105,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 16555265,
+              "p50_ns": 137932,
+              "p99_ns": 225538,
+              "samples": 6654
+            },
+            "1": {
+              "maximum_ns": 2428156,
+              "p50_ns": 232271,
+              "p99_ns": 383107,
+              "samples": 1675
+            },
+            "2": {
+              "maximum_ns": 1113722,
+              "p50_ns": 324566,
+              "p99_ns": 518343,
+              "samples": 1671
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 1502890,
+              "p50_ns": 140817,
+              "p99_ns": 441067,
+              "samples": 1654
+            },
+            "deny": {
+              "maximum_ns": 16555265,
+              "p50_ns": 138753,
+              "p99_ns": 438161,
+              "samples": 6716
+            },
+            "rewrite": {
+              "maximum_ns": 544233,
+              "p50_ns": 142330,
+              "p99_ns": 443942,
+              "samples": 1630
+            }
+          },
+          "maximum_ns": 16555265,
+          "p50_ns": 140687,
+          "p999_ns": 984848,
+          "p99_ns": 440105,
+          "peak_rss_kib": 197700,
+          "signatures_verified": 15017,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5026.94378529426,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "130363": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.372,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 3589219,
+              "p50_ns": 138302,
+              "p99_ns": 153762,
+              "samples": 6662
+            },
+            "1": {
+              "maximum_ns": 1429962,
+              "p50_ns": 232881,
+              "p99_ns": 252409,
+              "samples": 1661
+            },
+            "2": {
+              "maximum_ns": 1399615,
+              "p50_ns": 325246,
+              "p99_ns": 396272,
+              "samples": 1677
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 903644,
+              "p50_ns": 140947,
+              "p99_ns": 338322,
+              "samples": 1664
+            },
+            "deny": {
+              "maximum_ns": 3589219,
+              "p50_ns": 138493,
+              "p99_ns": 336218,
+              "samples": 6657
+            },
+            "rewrite": {
+              "maximum_ns": 714966,
+              "p50_ns": 142320,
+              "p99_ns": 342520,
+              "samples": 1679
+            }
+          },
+          "maximum_ns": 3589219,
+          "p50_ns": 140336,
+          "p999_ns": 477035,
+          "p99_ns": 337200,
+          "peak_rss_kib": 197736,
+          "signatures_verified": 15015,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5248.036156399679,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "155921": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.43792,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 3773829,
+              "p50_ns": 137741,
+              "p99_ns": 169221,
+              "samples": 6634
+            },
+            "1": {
+              "maximum_ns": 576845,
+              "p50_ns": 232120,
+              "p99_ns": 292646,
+              "samples": 1693
+            },
+            "2": {
+              "maximum_ns": 779799,
+              "p50_ns": 324435,
+              "p99_ns": 460634,
+              "samples": 1673
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 608594,
+              "p50_ns": 140346,
+              "p99_ns": 343392,
+              "samples": 1643
+            },
+            "deny": {
+              "maximum_ns": 3773829,
+              "p50_ns": 138002,
+              "p99_ns": 343451,
+              "samples": 6670
+            },
+            "rewrite": {
+              "maximum_ns": 515769,
+              "p50_ns": 141618,
+              "p99_ns": 345896,
+              "samples": 1687
+            }
+          },
+          "maximum_ns": 3773829,
+          "p50_ns": 139876,
+          "p999_ns": 507152,
+          "p99_ns": 343792,
+          "peak_rss_kib": 197784,
+          "signatures_verified": 15039,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5218.730882679796,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "196613": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.47889,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 3153331,
+              "p50_ns": 138572,
+              "p99_ns": 231469,
+              "samples": 6671
+            },
+            "1": {
+              "maximum_ns": 708855,
+              "p50_ns": 232972,
+              "p99_ns": 416620,
+              "samples": 1641
+            },
+            "2": {
+              "maximum_ns": 1219023,
+              "p50_ns": 325788,
+              "p99_ns": 489649,
+              "samples": 1688
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 876472,
+              "p50_ns": 141117,
+              "p99_ns": 356888,
+              "samples": 1655
+            },
+            "deny": {
+              "maximum_ns": 3153331,
+              "p50_ns": 138783,
+              "p99_ns": 347329,
+              "samples": 6664
+            },
+            "rewrite": {
+              "maximum_ns": 635866,
+              "p50_ns": 142560,
+              "p99_ns": 356536,
+              "samples": 1681
+            }
+          },
+          "maximum_ns": 3153331,
+          "p50_ns": 140616,
+          "p999_ns": 617782,
+          "p99_ns": 347889,
+          "peak_rss_kib": 197628,
+          "signatures_verified": 15017,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5191.728482111632,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        },
+        "262147": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 3.3638800000000004,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 517442,
+              "p50_ns": 138292,
+              "p99_ns": 155194,
+              "samples": 6665
+            },
+            "1": {
+              "maximum_ns": 384320,
+              "p50_ns": 232782,
+              "p99_ns": 256156,
+              "samples": 1657
+            },
+            "2": {
+              "maximum_ns": 2524519,
+              "p50_ns": 324756,
+              "p99_ns": 387885,
+              "samples": 1678
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 1145343,
+              "p50_ns": 141078,
+              "p99_ns": 337150,
+              "samples": 1679
+            },
+            "deny": {
+              "maximum_ns": 596702,
+              "p50_ns": 138543,
+              "p99_ns": 334705,
+              "samples": 6713
+            },
+            "rewrite": {
+              "maximum_ns": 2524519,
+              "p50_ns": 142430,
+              "p99_ns": 339424,
+              "samples": 1608
+            }
+          },
+          "maximum_ns": 2524519,
+          "p50_ns": 140387,
+          "p999_ns": 465142,
+          "p99_ns": 336388,
+          "peak_rss_kib": 197568,
+          "signatures_verified": 15013,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 5245.120516048357,
+          "verification_cache_hits": 0,
+          "verification_count_failures": 0
+        }
+      },
+      "worst_repetition": {
+        "p99_ns": 440105,
+        "seed": 104729
+      }
+    },
+    "zonecap_full": {
+      "every_repetition_passes": {
+        "audit_complete": true,
+        "derived_occupancy_at_most_10_percent": true,
+        "every_expected_stage_exercised": true,
+        "no_nonpositive_sample": true,
+        "p99_at_most_1000_us": true,
+        "verification_counts_consistent": true,
+        "zero_decision_mismatches": false
+      },
+      "pooled_decision_latency_ns": {
+        "maximum_ns": 64696967,
+        "mean_ns": 80664.3246,
+        "median_absolute_deviation_ns": 3517,
+        "minimum_ns": 59452,
+        "p50_ns": 66777,
+        "p95_ns": 115540,
+        "p999_ns": 271104,
+        "p99_ns": 130928,
+        "samples": 50000,
+        "zero_or_negative_samples": 0
+      },
+      "repetitions": {
+        "104729": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.24216,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 634774,
+              "p50_ns": 64723,
+              "p99_ns": 78229,
+              "samples": 6654
+            },
+            "1": {
+              "maximum_ns": 223553,
+              "p50_ns": 89710,
+              "p99_ns": 104628,
+              "samples": 1675
+            },
+            "2": {
+              "maximum_ns": 313264,
+              "p50_ns": 113115,
+              "p99_ns": 166015,
+              "samples": 1671
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 255084,
+              "p50_ns": 67157,
+              "p99_ns": 124746,
+              "samples": 1654
+            },
+            "deny": {
+              "maximum_ns": 634774,
+              "p50_ns": 64814,
+              "p99_ns": 122783,
+              "samples": 6716
+            },
+            "rewrite": {
+              "maximum_ns": 265815,
+              "p50_ns": 68360,
+              "p99_ns": 127803,
+              "samples": 1630
+            }
+          },
+          "maximum_ns": 634774,
+          "p50_ns": 66617,
+          "p999_ns": 245225,
+          "p99_ns": 124216,
+          "peak_rss_kib": 197616,
+          "signatures_verified": 1,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 12365.688803576848,
+          "verification_cache_hits": 15016,
+          "verification_count_failures": 0
+        },
+        "130363": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.22803,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 275743,
+              "p50_ns": 65153,
+              "p99_ns": 77287,
+              "samples": 6662
+            },
+            "1": {
+              "maximum_ns": 297184,
+              "p50_ns": 90171,
+              "p99_ns": 103696,
+              "samples": 1661
+            },
+            "2": {
+              "maximum_ns": 317693,
+              "p50_ns": 113696,
+              "p99_ns": 160895,
+              "samples": 1677
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 315098,
+              "p50_ns": 67568,
+              "p99_ns": 127031,
+              "samples": 1664
+            },
+            "deny": {
+              "maximum_ns": 305188,
+              "p50_ns": 65183,
+              "p99_ns": 121100,
+              "samples": 6657
+            },
+            "rewrite": {
+              "maximum_ns": 317693,
+              "p50_ns": 68550,
+              "p99_ns": 124776,
+              "samples": 1679
+            }
+          },
+          "maximum_ns": 317693,
+          "p50_ns": 67057,
+          "p999_ns": 270653,
+          "p99_ns": 122803,
+          "peak_rss_kib": 197640,
+          "signatures_verified": 2,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 12320.420203996884,
+          "verification_cache_hits": 15013,
+          "verification_count_failures": 0
+        },
+        "155921": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.22362,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 349803,
+              "p50_ns": 65605,
+              "p99_ns": 75804,
+              "samples": 6634
+            },
+            "1": {
+              "maximum_ns": 279871,
+              "p50_ns": 90782,
+              "p99_ns": 108365,
+              "samples": 1693
+            },
+            "2": {
+              "maximum_ns": 331278,
+              "p50_ns": 114357,
+              "p99_ns": 137761,
+              "samples": 1673
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 258701,
+              "p50_ns": 68160,
+              "p99_ns": 125819,
+              "samples": 1643
+            },
+            "deny": {
+              "maximum_ns": 349803,
+              "p50_ns": 65655,
+              "p99_ns": 121100,
+              "samples": 6670
+            },
+            "rewrite": {
+              "maximum_ns": 295471,
+              "p50_ns": 69221,
+              "p99_ns": 122613,
+              "samples": 1687
+            }
+          },
+          "maximum_ns": 349803,
+          "p50_ns": 67558,
+          "p999_ns": 258701,
+          "p99_ns": 122362,
+          "peak_rss_kib": 197828,
+          "signatures_verified": 2,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 12242.55871602473,
+          "verification_cache_hits": 15037,
+          "verification_count_failures": 0
+        },
+        "196613": {
+          "audit_records": 11000,
+          "decision_mismatches": 0,
+          "derived_p99_scan_occupancy_percent": 1.58961,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 818252,
+              "p50_ns": 64282,
+              "p99_ns": 99750,
+              "samples": 6671
+            },
+            "1": {
+              "maximum_ns": 735546,
+              "p50_ns": 89149,
+              "p99_ns": 136419,
+              "samples": 1641
+            },
+            "2": {
+              "maximum_ns": 576533,
+              "p50_ns": 112303,
+              "p99_ns": 217934,
+              "samples": 1688
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 312733,
+              "p50_ns": 66697,
+              "p99_ns": 158822,
+              "samples": 1655
+            },
+            "deny": {
+              "maximum_ns": 818252,
+              "p50_ns": 64483,
+              "p99_ns": 158711,
+              "samples": 6664
+            },
+            "rewrite": {
+              "maximum_ns": 735546,
+              "p50_ns": 67769,
+              "p99_ns": 159703,
+              "samples": 1681
+            }
+          },
+          "maximum_ns": 818252,
+          "p50_ns": 66497,
+          "p999_ns": 347669,
+          "p99_ns": 158961,
+          "peak_rss_kib": 197712,
+          "signatures_verified": 0,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": true
+          },
+          "throughput_decisions_per_s_wall": 11976.227074285764,
+          "verification_cache_hits": 15017,
+          "verification_count_failures": 0
+        },
+        "262147": {
+          "audit_records": 11000,
+          "decision_mismatches": 1,
+          "derived_p99_scan_occupancy_percent": 1.20729,
+          "latency_by_chain_depth_ns": {
+            "0": {
+              "maximum_ns": 64696967,
+              "p50_ns": 64252,
+              "p99_ns": 76645,
+              "samples": 6665
+            },
+            "1": {
+              "maximum_ns": 2532564,
+              "p50_ns": 89049,
+              "p99_ns": 105059,
+              "samples": 1657
+            },
+            "2": {
+              "maximum_ns": 296012,
+              "p50_ns": 111903,
+              "p99_ns": 161766,
+              "samples": 1678
+            }
+          },
+          "latency_by_expected_effect_ns": {
+            "allow": {
+              "maximum_ns": 314186,
+              "p50_ns": 66726,
+              "p99_ns": 124206,
+              "samples": 1679
+            },
+            "deny": {
+              "maximum_ns": 64696967,
+              "p50_ns": 64291,
+              "p99_ns": 118244,
+              "samples": 6713
+            },
+            "rewrite": {
+              "maximum_ns": 831467,
+              "p50_ns": 67809,
+              "p99_ns": 121931,
+              "samples": 1608
+            }
+          },
+          "maximum_ns": 64696967,
+          "p50_ns": 66156,
+          "p999_ns": 272717,
+          "p99_ns": 120729,
+          "peak_rss_kib": 197636,
+          "signatures_verified": 1,
+          "stage_mask_failures": 0,
+          "threshold_checks": {
+            "audit_complete": true,
+            "derived_occupancy_at_most_10_percent": true,
+            "every_expected_stage_exercised": true,
+            "no_nonpositive_sample": true,
+            "p99_at_most_1000_us": true,
+            "verification_counts_consistent": true,
+            "zero_decision_mismatches": false
+          },
+          "throughput_decisions_per_s_wall": 11275.344318684816,
+          "verification_cache_hits": 15012,
+          "verification_count_failures": 0
+        }
+      },
+      "worst_repetition": {
+        "p99_ns": 158961,
+        "seed": 196613
+      }
+    }
+  },
+  "corpus_fingerprint": "52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab",
+  "corpus_variants": {
+    "main": {
+      "chain_depths": {
+        "0": 42336,
+        "1": 22680,
+        "2": 13608,
+        "3": 3024
+      },
+      "expected_effects": {
+        "allow": 9072,
+        "attenuate": 4536,
+        "defer": 4536,
+        "deny": 49896,
+        "rewrite": 13608
+      },
+      "step_kinds": {
+        "allow": 4536,
+        "attenuate": 4536,
+        "defer": 4536,
+        "deny": 4536,
+        "rewrite": 4536,
+        "single": 58968
+      },
+      "steps": 81648,
+      "units": 63504
+    },
+    "scale_p1000_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p1000_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p1000_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p100_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p100_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p100_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p10_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p10_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p10_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p1_d0": {
+      "chain_depths": {
+        "0": 9360
+      },
+      "expected_effects": {
+        "allow": 720,
+        "deny": 7200,
+        "rewrite": 1440
+      },
+      "step_kinds": {
+        "single": 9360
+      },
+      "steps": 9360,
+      "units": 9360
+    },
+    "scale_p1_d1": {
+      "chain_depths": {
+        "1": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "scale_p1_d2": {
+      "chain_depths": {
+        "2": 2340
+      },
+      "expected_effects": {
+        "allow": 180,
+        "deny": 1800,
+        "rewrite": 360
+      },
+      "step_kinds": {
+        "single": 2340
+      },
+      "steps": 2340,
+      "units": 2340
+    },
+    "sint_subset": {
+      "chain_depths": {
+        "0": 18144,
+        "1": 4536,
+        "2": 4536
+      },
+      "expected_effects": {
+        "allow": 4536,
+        "deny": 18144,
+        "rewrite": 4536
+      },
+      "sint_expected": {
+        "allow": 4536,
+        "deny": 22680
+      },
+      "step_kinds": {
+        "single": 27216
+      },
+      "steps": 27216,
+      "units": 27216
+    }
+  },
+  "development_scale": 10,
+  "evidence_scope": "development run of the frozen harness; not C5 evidence",
+  "exp": "exp-25",
+  "preflight": {
+    "passed": true
+  },
+  "registered_checks": {},
+  "run_role": "development",
+  "seeds": [
+    104729,
+    130363,
+    155921,
+    196613,
+    262147
+  ],
+  "speedup_bug_signal": {
+    "comparisons": {
+      "zonecap_cache_miss": {
+        "audit_required": true,
+        "sint_over_zonecap": {
+          "p50_ns": 15.695610048017326,
+          "p99_ns": 9.379127388427234
+        }
+      },
+      "zonecap_full": {
+        "audit_required": true,
+        "sint_over_zonecap": {
+          "p50_ns": 32.99234766461506,
+          "p99_ns": 25.396454539899793
+        }
+      }
+    },
+    "ratio_limit": 10
+  },
+  "token_bytes_by_depth": {
+    "0": {
+      "count": 1042,
+      "maximum": 544,
+      "minimum": 472
+    },
+    "1": {
+      "count": 4066,
+      "maximum": 614,
+      "minimum": 516
+    },
+    "2": {
+      "count": 1798,
+      "maximum": 599,
+      "minimum": 525
+    },
+    "3": {
+      "count": 756,
+      "maximum": 609,
+      "minimum": 535
+    }
+  },
+  "unavailable_baselines": [
+    {
+      "name": "executable PLC ABAC/NGAC",
+      "status": "N/A unless a versioned executable artifact is supplied and frozen before the run"
+    }
+  ]
+}

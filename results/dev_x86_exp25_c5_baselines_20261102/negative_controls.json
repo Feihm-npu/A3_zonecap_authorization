@@ -1,0 +1,148 @@
+[
+  {
+    "control": "invalid_signature",
+    "expected_effect": "deny",
+    "observed": [
+      "deny",
+      null,
+      null,
+      null,
+      null,
+      "bad_signature"
+    ],
+    "passed": true,
+    "stage_mask": 775
+  },
+  {
+    "control": "revoked_token",
+    "expected_effect": "deny",
+    "observed": [
+      "deny",
+      null,
+      null,
+      null,
+      null,
+      "revoked"
+    ],
+    "passed": true,
+    "stage_mask": 783
+  },
+  {
+    "control": "out_of_scope_parameter",
+    "expected_effect": "rewrite",
+    "observed": [
+      "rewrite",
+      "read",
+      25,
+      null,
+      null,
+      "parameter_boundary"
+    ],
+    "passed": true,
+    "stage_mask": 1023
+  },
+  {
+    "control": "out_of_scope_action",
+    "expected_effect": "deny",
+    "observed": [
+      "deny",
+      null,
+      null,
+      null,
+      null,
+      "action"
+    ],
+    "passed": true,
+    "stage_mask": 1023
+  },
+  {
+    "control": "stale_context",
+    "expected_effect": "defer",
+    "observed": [
+      "defer",
+      "read",
+      25,
+      null,
+      null,
+      "context_unavailable"
+    ],
+    "passed": true,
+    "stage_mask": 1023
+  },
+  {
+    "control": "missing_context",
+    "expected_effect": "defer",
+    "observed": [
+      "defer",
+      "read",
+      25,
+      null,
+      null,
+      "context_unavailable"
+    ],
+    "passed": true,
+    "stage_mask": 1023
+  },
+  {
+    "control": "high_risk_context",
+    "expected_effect": "defer",
+    "observed": [
+      "defer",
+      "read",
+      25,
+      null,
+      null,
+      "high_risk"
+    ],
+    "passed": true,
+    "stage_mask": 1023
+  },
+  {
+    "control": "non_holder_presenter",
+    "expected_effect": "deny",
+    "observed": [
+      "deny",
+      null,
+      null,
+      null,
+      null,
+      "subject"
+    ],
+    "passed": true,
+    "stage_mask": 1023
+  },
+  {
+    "control": "audit_queue_full",
+    "expected_effect": "deny",
+    "observed": [
+      "deny",
+      null,
+      null,
+      null,
+      null,
+      "audit_unavailable"
+    ],
+    "passed": true,
+    "stage_mask": 511
+  },
+  {
+    "control": "audit_queue_closed",
+    "expected_effect": "deny",
+    "observed": [
+      "deny",
+      null,
+      null,
+      null,
+      null,
+      "audit_unavailable"
+    ],
+    "passed": true,
+    "stage_mask": 511
+  },
+  {
+    "control": "wrong_oracle_decision",
+    "expected_mismatches": 1,
+    "observed_mismatches": 1,
+    "passed": true
+  }
+]
