@@ -76,9 +76,10 @@ Pinned SINT profile & Exact & Exact & Partial & --- & Partial \\
 
 Table~\ref{tab:effect-mapping} shows the source-grounded mechanism correspondence. Lanotte/Roop maps pass, suppress, and correction to three of the five effects, but has no mapped capability-attenuation or approval-stutter analogue. Pinned SINT maps allow and deny exactly, provides partial delegation-time attenuation and approval escalation, and has no runtime rewrite: all 13,608 registered \zonecap{} rewrites project to denial in the pinned profile. This mapping isolates lifecycle and effect roles. It neither subsumes the formal guarantees of prior enforcers nor compares their implementation scale.
 
-% Conditional hardware subsection and Figure 6:
-% Insert only after exp-22--25 pass the frozen audit. Report all five repetitions,
-% worst-repetition p99, derived 10 ms scan occupancy (p99/10 ms, not an
-% independent measurement), throughput, RSS, decision mismatch,
-% ablations, scaling, and same-target executable baselines. If any repetition
-% misses the registered threshold, report the refutation without seed selection.
+% Conditional hardware subsection, Table IV, and Figure 6 (exp-22--25).
+% The text is fixed before the data return; numbers and the outcome case come
+% from figures/build_c5_results.py. All five repetitions are reported, and a
+% refutation is reported without selecting repetitions.
+\ifzonecaphardware
+\input{sections/07d_hardware}
+\fi

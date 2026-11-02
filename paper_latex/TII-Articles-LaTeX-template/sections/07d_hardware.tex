@@ -1,0 +1,41 @@
+\subsection{Prototype Decision-Path Cost on the Target}
+\label{sec:hardware}
+
+The study ran on a \cfive{module} with \cfive{jetpack} in the \cfive{powermode} power mode, with OpenPLC~\cfive{openplc} in the \cfive{topology} topology and a 10~ms task period. Every worker ran pinned to one verified core, and every raw sample was retained. Preflight measured a \cfive{timerres}~ns timer resolution, detected all \cfive{mutants} single-stage disabled-check mutants, and confirmed fail-closed decisions on all \cfive{controls} negative controls.
+
+\begin{table}[t]
+\caption{Full-path decision latency on the target, one row per fresh-process repetition. Occupancy is p99 divided by the 10~ms scan period, not a separate measurement.}
+\label{tab:hardware}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}rrrrrrrr@{}}
+\toprule
+Seed & p50 & p99 & Max & Occ. & Thr. & RSS & Mism. \\
+ & ($\mu$s) & ($\mu$s) & (ms) & (\%) & (k/s) & (MiB) & \\
+\midrule
+\cfivetablerows
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:hardware} lists every repetition of the full path, \cfive{decisions} measured decisions in total. \ifcase\cfiveoutcomecase
+All five repetitions met the preregistered criterion. The worst p99 was \cfive{worstpninetynine}~$\mu$s (derived occupancy \cfive{worstocc}\%), every decision matched the oracle, and every check ran on every decision. With the verification cache cleared before each decision, the worst p99 was \cfive{cachemissworst}~$\mu$s. At 1,000 requested policies, no cell exceeded \cfive{scalethousandworst}~$\mu$s. Passing therefore depended on neither a warm cache nor a small policy set.
+\or
+All five full-path repetitions met the preregistered criterion, with a worst p99 of \cfive{worstpninetynine}~$\mu$s (derived occupancy \cfive{worstocc}\%) and no decision mismatch. With the verification cache cleared before each decision, however, the worst repetition reached \cfive{cachemissworst}~$\mu$s. The registered threshold therefore holds only with a warm verification cache.
+\or
+All five full-path repetitions met the preregistered criterion, with a worst p99 of \cfive{worstpninetynine}~$\mu$s (derived occupancy \cfive{worstocc}\%) and no decision mismatch. At 1,000 requested policies, however, at least one delegation depth failed the criterion (worst \cfive{scalethousandworst}~$\mu$s). The registered threshold therefore holds only up to \cfive{policylimit} registered policies.
+\or
+All five full-path repetitions met the preregistered criterion, with a worst p99 of \cfive{worstpninetynine}~$\mu$s and no decision mismatch. Both the cache-cleared diagnostic (worst \cfive{cachemissworst}~$\mu$s) and the 1,000-policy cells (worst \cfive{scalethousandworst}~$\mu$s) failed it. The registered threshold therefore holds only with a warm verification cache and up to \cfive{policylimit} registered policies.
+\or
+The preregistered criterion failed. At least one repetition violated: \cfive{failedchecks}. The worst repetition had a p99 of \cfive{worstpninetynine}~$\mu$s. As registered, the refutation is reported without selecting repetitions.
+\fi
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generated/fig06_c5_feasibility}
+\caption{Decision-path cost on the prototype target. (a) p99 of each fresh-process repetition for the full path (filled) and with the verification cache cleared before every decision (open). The dashed line is the registered 1~ms threshold. (b) Upper tail of all full-path samples, with nearest-rank p95, p99, and p99.9. (c) Worst-repetition p99 by registered policy count and delegation depth; requests rotate across every registered policy. (d) Worst-repetition p99 on the common expressible subset on the same target. The systems verify different stages, so the bars do not show a like-for-like speedup.}
+\label{fig:hardware}
+\end{figure*}
+
+Fig.~\ref{fig:hardware} separates the cost components. Disabling the audit enqueue changed the median by \cfive{auditcost}~$\mu$s; this and the unsigned diagnostic are not deployable configurations. A Redis revocation lookup pinned on the target had a worst p99 of \cfive{remoteworst}~$\mu$s, and a revocation became visible \cfive{proppfifty}~$\mu$s after issuance at the median (p99 \cfive{proppninetynine}~$\mu$s). On the common expressible subset, pinned SINT had a worst p99 of \cfive{sintworstms}~ms. That is \cfive{ratiofull} times the full \zonecap{} path and \cfive{ratiomiss} times its cache-cleared variant. The ratio is not a like-for-like speedup. SINT verifies only its leaf token, with a JavaScript Ed25519 library on every request, and its timed call contains no context or audit stage. No executable PLC ABAC/NGAC artifact was available. \ifcsname cfive@etoepninetynine\endcsname End-to-end, from client send to OpenPLC acknowledgement, the median was \cfive{etoepfifty}~ms and p99 was \cfive{etoepninetynine}~ms, including up to one scan period of phase wait. The run had \cfive{etoeoverruns} overrun cycles, against \cfive{etoeoverrunsbypass} with the enforcement point bypassed.\fi

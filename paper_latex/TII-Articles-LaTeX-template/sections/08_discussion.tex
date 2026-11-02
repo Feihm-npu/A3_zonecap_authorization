@@ -24,4 +24,18 @@ The compiler evidence is intentionally bounded. The compiler and oracle use sepa
 
 The runtime evidence is bounded to actuation events and horizon-five compositions. Real PLC scans advance when no new command is emitted, so fixed-tick integration must define the held output, controller memory, timeout, and plant evolution before re-establishing parent realizability. The current theorem also trusts the physical history, mode, and common plant relation. Compromised sensors, stale context, model mismatch, and asynchronous distributed effects require separate contracts. Finally, the theorem is manually written rather than machine checked, and the baseline projections compare expressible dimensions rather than complete deployed products.
 
+\ifzonecaphardware
+The target-hardware evidence covers one prototype configuration: a \cfive{module} running the frozen reference enforcement point with every check enabled, and OpenPLC in the \cfive{topology} topology. \ifcase\cfiveoutcomecase
+Within that configuration, the registered threshold also held with the verification cache cleared and at 1,000 requested policies.
+\or
+Within that configuration, the registered threshold held only with a warm verification cache, so cold-start and cache-eviction behavior remain outside the result.
+\or
+Within that configuration, the registered threshold held only up to \cfive{policylimit} registered policies.
+\or
+Within that configuration, the registered threshold held only with a warm verification cache and up to \cfive{policylimit} registered policies.
+\or
+The prototype missed the registered threshold, so the paper makes no positive performance claim.
+\fi\ Scan occupancy was derived from p99 rather than measured on the PLC, and the end-to-end OpenPLC path is reported only descriptively. The results do not establish performance for other hardware, implementations, or policy sets, and the decision path authenticates the presenter through its transport session rather than through per-request signatures.
+\else
 No accepted target-hardware performance evidence is available at the current freeze. The local x86 run validated timer resolution, CPU affinity, forced-slow detection, and six disabled-check controls, but it did not measure the target Jetson Orin NX/OpenPLC path. It cannot support a latency, scan-occupancy, throughput, or memory claim. If the planned target-hardware study later passes its frozen raw-data and equivalence audits, it can be reported as prototype feasibility evidence; until then, the paper makes no performance claim.
+\fi

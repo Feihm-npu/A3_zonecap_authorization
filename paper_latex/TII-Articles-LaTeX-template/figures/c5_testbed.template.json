@@ -1,0 +1,8 @@
+{
+  "_instructions": "Copy to c5_testbed.json after the audit and fill every field from the returned execution note and environment manifests; these strings appear verbatim in Section VII-D.",
+  "module": "NVIDIA Jetson Orin NX 8GB Developer Kit",
+  "jetpack": "JetPack [version] (L4T [release])",
+  "power_mode": "[nvpmodel mode name]",
+  "topology": "[split-host or single-host]",
+  "openplc": "[OpenPLC version or commit]"
+}

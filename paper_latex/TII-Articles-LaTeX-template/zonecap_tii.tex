@@ -16,6 +16,17 @@
 \newcommand{\Reach}{\operatorname{Reach}}
 \newcommand{\NA}{\textnormal{N/A}}
 
+% Target-hardware study (exp-22--25). Set to true only after the returned
+% directories pass the research audit and the human accepts the S3 review;
+% then run figures/build_c5_results.py, which writes the numbers and the
+% mechanically selected outcome case used by every conditional passage.
+\newif\ifzonecaphardware
+\zonecaphardwarefalse
+\newcommand{\cfive}[1]{\ifcsname cfive@#1\endcsname\csname cfive@#1\endcsname\else\textbf{??#1}\fi}
+\ifzonecaphardware
+\input{figures/generated/c5_numbers}
+\fi
+
 \markboth{IEEE Transactions on Industrial Informatics, under review}{}
 
 \begin{document}

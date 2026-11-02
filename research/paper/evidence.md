@@ -49,6 +49,7 @@ Only C1, C6, and C7 are accepted claims. C4 is included solely as a rejected cla
 - Evidence tag: E26.
 - Allowed statement: the x86 harness distinguished timer, empty, full-sanity, and forced-slow paths; pinned/restored CPU affinity; and detected every registered disabled-check mutant.
 - Forbidden statement: any Jetson/OpenPLC latency, scan-cycle occupancy, throughput, memory, or C5 threshold conclusion.
+- Pending activation (2026-11-02): the LaTeX manuscript carries a switched-off insertion for Section VII-D, Table IV, and the hardware figure (`\zonecaphardwarefalse`). Its protocol text and its five outcome wordings follow the decision rules of `hardware_delivery/exp_requirements.md` v1.1. After exp-22--25 return and pass the audit, `figures/build_c5_results.py` computes every quoted number and the outcome case from the returned directories. The switch is turned on only after the S3 review and the human decision. Until then, the forbidden statement above stands, and the x86 development directories (`results/dev_x86_*_20261102`) may never be cited.
 
 ## Reverse map: display to claim and evidence
 

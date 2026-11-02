@@ -161,7 +161,30 @@ The base paper therefore carries five figures and three tables. Figure 5 is sing
 
 **Archetype:** quantitative grid.
 
-**Activation gate:** only after exp-22--25 return with raw samples, environment manifests, enabled-check evidence, all five repetitions, and zero oracle mismatch. Otherwise Figure 6 does not exist in the manuscript.
+**Activation gate:** only after exp-22--25 return with raw samples, environment manifests, enabled-check evidence, and all five repetitions, and after the research audit and S3 review. A refuted threshold is still reported. The display does not exist in the manuscript while `\zonecaphardwarefalse` is set.
+
+**Insertion kit (built 2026-11-02, switched off):**
+
+- `sections/07d_hardware.tex` contains Section VII-D, Table IV, and this figure.
+- Conditional passages live in the evaluation, abstract, discussion, and conclusion sections.
+- Each conditional passage has five preregistered outcome wordings, selected by `\cfiveoutcomecase`:
+
+  | Case | Outcome |
+  |---|---|
+  | 0 | supported |
+  | 1 | warm cache only |
+  | 2 | policy-count limited |
+  | 3 | both limitations |
+  | 4 | refuted |
+
+- `figures/build_c5_results.py --exp22 ... --exp25 ... --testbed figures/c5_testbed.json` audits the returned directories, then writes three outputs:
+  - `generated/c5_numbers.tex`, holding every quoted number, the Table IV rows, and the case;
+  - this figure;
+  - the panel source data.
+
+  The audit covers manifest hashes, the confirmatory role, preflight, frozen hashes, the corpus fingerprint, and raw-sample recomputation. Development directories are refused, except with `--preview`, which writes watermarked output outside the manuscript.
+- A preview build with development data ran at ten pages, and all five cases compiled with no missing number.
+- Because the figure floats before the revocation figure, it is numbered Fig. 5 when active. Labels keep every reference correct.
 
 **Final size:** 183 mm × approximately 85--95 mm.
 
@@ -235,4 +258,4 @@ This table is qualitative by design. Quantitative effect counts and service loss
 - The plotting source passes the publication preflight with no warning or failure.
 - SVG and PDF preserve editable text; the pdflatex build has no Type 3 fonts and embeds every font; TIFF is 600 dpi with lossless compression.
 - Visual QA checked title/panel-label separation, the narrow valid-case segment, zero-value revocation bars, and timeline label collisions.
-- With all five base figures and three tables inserted, the IEEE render is nine pages. Remaining display work is conditional Figure 6 activation after the target-hardware audit.
+- With all five base figures and three tables inserted, the IEEE render is nine pages. Remaining display work is conditional Figure 6 activation after the target-hardware audit; its insertion kit is built and switched off, and a preview with development data renders at ten pages.
