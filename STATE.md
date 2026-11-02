@@ -9,7 +9,7 @@ awaiting: none            # none | human
 since: 2026-08-31
 read: []                  # what the next session must read first
 options: []               # when awaiting human: allowed next states
-note: "Paper artifacts are complete (9-page IEEE TII LaTeX build). The accepted storyline uses C1/C6/C7; C4 is a reported negative result; C5 is an explicit limitation. C5 hardware requirements v1.1 (2026-11-02) freeze the reference PEP, corpus, harness, and decision rules in hardware_delivery/exp_requirements.md and configs/c5; the hardware group restarts exp-22–25 from v1.1, and returned data must be audited against v1.1. Before submission, supply the public repository/archive URL." # one line for the next session: pending request, where work stopped
+note: "Paper artifacts are complete (9-page IEEE TII LaTeX build). The accepted storyline uses C1/C6/C7; C4 is a reported negative result; C5 is an explicit limitation. C5 hardware requirements v1.1 (2026-11-02) freeze the reference PEP, corpus, harness, and decision rules in hardware_delivery/exp_requirements.md and configs/c5; the hardware group restarts exp-22–25 from v1.1, and returned data must be audited against v1.1; the LaTeX manuscript carries a switched-off C5 section (\\zonecaphardwarefalse) whose numbers and outcome case come from paper_latex/TII-Articles-LaTeX-template/figures/build_c5_results.py after the audit and S3 review. Before submission, supply the public repository/archive URL." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
