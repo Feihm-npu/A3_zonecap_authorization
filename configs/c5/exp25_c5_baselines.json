@@ -1,0 +1,151 @@
+{
+  "claim": "C5",
+  "configurations": [
+    {
+      "name": "zonecap_full",
+      "role": "baseline-comparison",
+      "variant": "sint_subset"
+    },
+    {
+      "cache_miss": true,
+      "name": "zonecap_cache_miss",
+      "role": "baseline-comparison:diagnostic",
+      "variant": "sint_subset"
+    },
+    {
+      "name": "sint",
+      "role": "baseline",
+      "system": "sint",
+      "variant": "sint_subset"
+    }
+  ],
+  "corpus_fingerprint": "f664f0049ceed76e91a791c1a914160934ab1925a3a79bb434ae39ecc8ecc83c",
+  "cpu": {
+    "audit_core": 4,
+    "benchmark_core": 3,
+    "monitor_core": 1,
+    "support_core": 5
+  },
+  "criteria": [],
+  "defaults": {
+    "audit_queue_bytes": 1048576,
+    "cache_miss": false,
+    "measured": 100000,
+    "pep": {
+      "audit_enabled": true,
+      "cache_capacity": 65536,
+      "max_context_age_ns": 50000000,
+      "max_deferrals": 2,
+      "verification_cache": true,
+      "verify_signatures": true
+    },
+    "registry": "main",
+    "retain_audit_log": false,
+    "revocation": {
+      "backend": "local",
+      "preloaded": 10000
+    },
+    "role": "main",
+    "scan_period_us": 10000,
+    "system": "zonecap",
+    "threshold_occupancy_percent": 10,
+    "threshold_p99_us": 1000,
+    "variant": "main",
+    "warmup": 10000
+  },
+  "environment_commands": [
+    "date -u +%Y-%m-%dT%H:%M:%SZ",
+    "uname -a",
+    "cat /etc/nv_tegra_release",
+    "cat /proc/device-tree/model",
+    "nvpmodel -q --verbose",
+    "jetson_clocks --show",
+    "lscpu",
+    "cat /proc/cpuinfo",
+    "free -m",
+    "df -h .",
+    "cat /proc/cmdline",
+    "cat /proc/sys/fs/pipe-max-size",
+    "cat /proc/sys/fs/pipe-user-pages-soft /proc/sys/fs/pipe-user-pages-hard",
+    "for c in /sys/devices/system/cpu/cpu[0-9]*; do echo $c $(cat $c/online 2>/dev/null) $(cat $c/cpufreq/scaling_governor) $(cat $c/cpufreq/scaling_min_freq) $(cat $c/cpufreq/scaling_cur_freq) $(cat $c/cpufreq/scaling_max_freq); done",
+    "swapon --show",
+    "systemctl list-units --type=service --state=running --no-pager",
+    "python3 --version",
+    "python3 -m pip freeze",
+    "node --version",
+    "redis-server --version",
+    "git rev-parse HEAD",
+    "git status --porcelain"
+  ],
+  "evidence_scope": "NVIDIA Jetson Orin NX 8GB Developer Kit with OpenPLC; server-side decision path of the frozen ZoneCap reference PEP (zonecap.c5)",
+  "exp": "exp-25",
+  "frozen_hashes": {
+    "hardware_delivery/exp_requirements.md": "a5f6293de8e88fe314c25ba870ecdf515cf4b4548feff20f87f56abe6e7d2ae0",
+    "research/heldout/exp07/policy_tables.json": "62af1979da1b463c82a9575b9da395e7284ccbe7b5314077bdf022f45f787345",
+    "results/exp07_heldout_equivalence_20260901/cases.jsonl.gz": "46197806deb7cdf7eb108ebaceecc68b574ddce40f625dd8948b46be6bb433b6",
+    "scripts/exp25_sint_runner.mjs": "407548933622f7bc03a4e5eef94fddc304176b93b9ae26f6ca39cc07eac20774",
+    "src/zonecap/c5/__init__.py": "c4b5cbefca2a8d0fe11ff7e53a762b7a233fcc3d5416f60dc67db70d79dc5e45",
+    "src/zonecap/c5/audit.py": "a040deca00ce49b9932b44a8b6e2de5bfa31774554656782f86c3abaf59cb0d1",
+    "src/zonecap/c5/corpus.py": "46b90ed299d9a975e42cc11a934d70f616c6c08b14a150b66a8d9e5dbfbd365c",
+    "src/zonecap/c5/freeze.py": "aadb013c95f01991f46a7b819b55fb4b851a731fb73906343cbf624d57d3e7b0",
+    "src/zonecap/c5/harness.py": "f901bd255d14701b8f2ac642eb7b374af094a81ee295722efafa3ef4cbcc3de8",
+    "src/zonecap/c5/matrix.py": "43de4f1289652a10d8d5812314eacdfb3ad97c574679158870c9195bb8c4de8e",
+    "src/zonecap/c5/oracle.py": "052579be447d8e17a3cdb21c49f8e3663b481f1491ba6cf020353b609a74e62e",
+    "src/zonecap/c5/pep.py": "2ae06237dda097d5569502ce8597fa8032756eee9269402400ccb1d5b0aee349",
+    "src/zonecap/c5/propagation.py": "8680c8748d303df8121cafb248b9233b9f7a67a10f07721e7e395047e3403913",
+    "src/zonecap/c5/resp.py": "74bb76d76c34ebbe4c71bb0022b6db928441c803c19f94fe65196b2ca429182a",
+    "src/zonecap/c5/wire.py": "8581992b9291970adc04ac4c1cad4617568c96b4f3da7edf5b4eb55c7dcc374f",
+    "src/zonecap/compiler.py": "0c96cd2eda5f29fc284f88c6c9e741ddc78347a04f70b8432554ef695d6c44bd",
+    "src/zonecap/effects.py": "a010919eb19db85a1baa4da70d603c538e5df965628a7f4ba4389ad2e375aaed",
+    "src/zonecap/engine.py": "4318b143482882547551a91da40610916498436b6c27a1b34be7451bbd00f237",
+    "src/zonecap/exp07_generator.py": "2d4e21b1f4263fe607ab5ef755c3c03899525428ca269898d3e865629e94c36e",
+    "src/zonecap/models.py": "36cd8b0038e8e4f557dee3d7c1871116cefcf7dfc4e0cf398ba437da9ef6d47b",
+    "tests/test_c5_corpus.py": "dbaef14bd8a36e3c737a1d9e3370b88034d55c38226094abf1c164acac94b7f1",
+    "tests/test_c5_harness.py": "33b91f4d2df79752d1a203dfb69f9d63050ed219e69c06d188d537bb293e3722",
+    "tests/test_c5_pep.py": "84b746f334eaea9cbf24f31566bbdb0e6e351f760db689ca2d1871ef8f7173c1"
+  },
+  "preflight": {
+    "empty_samples": 100000,
+    "forced_delay_ns": 5000000,
+    "forced_slow_minimum_ns": 4000000,
+    "forced_slow_samples": 100,
+    "forced_slow_warmup": 5,
+    "full_samples": 10000,
+    "timer_pairs": 100000,
+    "warmup": 1000
+  },
+  "protocol": "hardware_delivery/exp_requirements.md v1.1",
+  "run_id_prefix": "exp25_c5_baselines",
+  "seeds": [
+    104729,
+    130363,
+    155921,
+    196613,
+    262147
+  ],
+  "sint": {
+    "built_modules": [
+      "packages/capability-tokens/dist/index.js",
+      "packages/policy-gateway/dist/index.js"
+    ],
+    "commit": "2461a911b8c3d7ed9da3f7662b33678f688eb826",
+    "prepare_command": "git clone https://github.com/sint-ai/sint-protocol.git /opt/zonecap/sint-protocol && git -C /opt/zonecap/sint-protocol checkout --detach 2461a911b8c3d7ed9da3f7662b33678f688eb826 && cd /opt/zonecap/sint-protocol && npx --yes pnpm@9.15.0 install --frozen-lockfile && npx --yes pnpm@9.15.0 --filter @pshkv/gate-policy-gateway... build",
+    "repo": "/opt/zonecap/sint-protocol",
+    "source_hashes": {
+      "packages/capability-tokens/src/crypto.ts": "82203b7d73366017de464815a9d08fddce65f05b2a4fd3f1d0cbeb8952bf212d",
+      "packages/capability-tokens/src/delegator.ts": "009b413509cd7defee212fc7ceac74170f0286ed9a5a9359354e7bfbbb31f8db",
+      "packages/capability-tokens/src/issuer.ts": "060b120dcc718bdd76adb5cd0326517ece1f98cdcde6702994f188d11cc5b6dc",
+      "packages/capability-tokens/src/revocation.ts": "92cd7e580e82db831f7afcb309f347610b944b12285a1919b605c2392bb3f5a3",
+      "packages/capability-tokens/src/validator.ts": "7cc8d792644290d09ceddea2f405757250241be010cc9ee9b961e638bed30018",
+      "packages/policy-gateway/src/gateway.ts": "9625c6c6f8156e902a4d8bb59bea7415fd782af857e7c5652b660ddf3c54db8e",
+      "packages/policy-gateway/src/tier-assigner.ts": "98260b012b63f8662a32d7479697895575040f8ed33447cf9c2272015eda0ce8"
+    }
+  },
+  "speedup_bug_signal_ratio": 10,
+  "unavailable_baselines": [
+    {
+      "name": "executable PLC ABAC/NGAC",
+      "status": "N/A unless a versioned executable artifact is supplied and frozen before the run"
+    }
+  ]
+}

@@ -1,384 +1,859 @@
 ---
 title: ZoneCap C5 Hardware Experiment Requirements
-version: 1.0
-date: 2026-09-02
+version: 1.1
+date: 2026-11-02
+supersedes: 1.0 (2026-09-02); no v1.0 harness was frozen and no v1.0 data exist
 experiments: [exp-22, exp-23, exp-24, exp-25]
 execution_owner: hardware group
 approved_target: NVIDIA Jetson Orin NX 8GB Developer Kit
-status: protocol requirements frozen; implementation and corpus hashes must be frozen before confirmatory execution
+status: >-
+  protocol, system under test, corpus, oracle, harness, and decision rules are
+  frozen at the delivery commit; the hardware group adapts only the platform
+  items in Section 2.11 and builds the end-to-end OpenPLC path in Section 6
 ---
 
-# ZoneCap C5 Hardware Experiment Requirements
+# ZoneCap C5 Hardware Experiment Requirements (v1.1)
 
-## 1. Objective and decision rule
+Version 1.1 replaces version 1.0 in full. Appendix A lists every change and the
+audit finding it resolves (`hardware_delivery/exp_requirements_audit.md`). The
+hardware group starts from this version; nothing from version 1.0 is reused.
 
-The hardware group will execute exp-22 through exp-25 for C5:
+## 1. Objective and registered decision rules
+
+The hardware group executes exp-22 through exp-25 for C5:
 
 > On the approved OpenPLC/Jetson testbed, ZoneCap's p99 decision latency is at
 > most 1 ms and consumes at most 10% of a 10 ms PLC scan cycle while enforcing
 > the registered policy set.
 
-The registered thresholds apply to the **server-side ZoneCap decision path** on
-the Jetson. That path excludes client/network transit but includes request
-parsing, token-chain and signature verification, revocation lookup, context
-lookup, policy decision, and audit enqueue. OpenPLC end-to-end latency, including
-transport and PLC processing, must be measured and reported separately; it must
-not be substituted for the decision-path metric.
+### 1.1 What is measured
 
-C5 passes only if every one of the five exp-22 repetitions has:
+The registered thresholds apply to the **server-side decision path of the frozen
+reference policy enforcement point (PEP)**, `zonecap.c5.pep.ReferencePEP.decide`,
+running on the Jetson. The timer starts immediately before `decide` receives the
+serialized envelope and stops when `decide` returns, after the decision record
+has been accepted by the bounded audit queue. The timed region therefore
+contains all ten stages of Section 2.3: parsing and schema checks, root
+anchoring, delegation-chain validation, Ed25519 verification, revocation lookup,
+context lookup, policy evaluation, effect binding, response construction, and
+audit enqueue. It excludes client and network transit, transport-session
+authentication, context ingest, corpus iteration, and audit persistence. The
+end-to-end OpenPLC path (Section 6) is measured and reported separately; it never
+replaces the decision-path metric.
 
-- p99 decision latency no greater than `1,000 us`;
-- p99 scan-cycle occupancy no greater than `10%`, calculated as
-  `p99_decision_us / 10,000 us * 100`;
-- zero decision mismatch against the frozen oracle/corpus; and
-- every required check enabled and positively exercised.
+### 1.2 C5 rule (exp-22)
 
-Any failed repetition is reported. No repetition or seed may be selected,
-discarded, or silently rerun.
+C5's registered thresholds are met only if **every one of the five exp-22
+repetitions** satisfies all of the following, and the run's preflight passed:
 
-## 2. Scope boundary and prerequisites
+1. p99 decision latency at most `1,000 us`;
+2. derived scan occupancy at most `10%` (see the disclosure below);
+3. zero decision mismatches against the separate oracle;
+4. every measured decision carries the full ten-stage activation mask;
+5. for every measured decision, Ed25519 verifications plus verification-cache
+   hits equal the presented chain length;
+6. the audit drain received exactly one record per decision (warm-up plus
+   measured) and no decision was denied for audit unavailability; and
+7. no zero or negative timing sample.
 
-### 2.1 Approved hardware
+**Occupancy disclosure.** Occupancy is defined, as in version 1.0, as
+`p99_decision_us / 10,000 us * 100`. It is a ratio derived from item 1, not an
+independent measurement; items 1 and 2 are the same condition. The result files
+name it `derived_p99_scan_occupancy_percent`, and any report must describe it as
+derived. In the preferred `split_host` topology the decision does not execute on
+the PLC and consumes no PLC scan time. Quantities that do involve the scan cycle
+(end-to-end latency, observed scan period, and overruns) are registered as
+secondary descriptive metrics in Section 6 and do not enter this rule.
 
-- NVIDIA Jetson Orin NX 8GB Developer Kit, exactly as approved by the human.
+Items 3 to 6 make "while enforcing the registered policy set" checkable: the
+decisions must match the oracle, and every check must have run on every measured
+decision.
+
+### 1.3 Alternative A1 (exp-23)
+
+A1: *"The threshold is met only through warm caches or omitted
+signature/revocation checks."*
+
+- The omitted-check part is excluded by items 4 and 5 of Section 1.2 together
+  with negative controls 2 and 3 (Section 8).
+- The warm-cache part is ruled out only if **every** `cache_miss` repetition
+  (verification cache cleared before each timed decision, so every token
+  signature is verified) has p99 at most `1,000 us`, zero mismatches, the full
+  stage mask, verification count equal to chain length, complete audit, and no
+  non-positive sample.
+- If the exp-22 rule holds but this criterion fails, the result may be stated
+  only as holding with a warm verification cache, and the `cache_miss` result must
+  be reported next to it.
+
+### 1.4 Alternative A2 (exp-24)
+
+A2: *"The threshold is met only for a toy policy count."*
+
+- A2 is ruled out only if **every** repetition of the 1,000-policy cells
+  `p1000_d0`, `p1000_d1`, and `p1000_d2` (full path) has p99 at most `1,000 us`,
+  zero mismatches, the full stage mask, consistent verification counts, complete
+  audit, and no non-positive sample.
+- If this criterion fails, the result must be restricted to the largest
+  registered policy count (1, 10, or 100) at which all three depths pass.
+
+### 1.5 Reporting discipline
+
+The harness computes these rules mechanically and stores them under
+`registered_checks` in `metrics.json`. Interpretation belongs to the research
+review, not to the executor.
+
+- Report every repetition.
+- No repetition or seed may be selected, discarded, or silently rerun.
+- An aborted or failed repetition stays in the returned data.
+- A replacement run requires a logged infrastructure cause.
+
+## 2. System under test
+
+### 2.1 Identity
+
+The system under test is the Python package `src/zonecap/c5/` at the delivery
+commit, together with the modules it imports (`compiler.py`, `effects.py`,
+`engine.py`, `exp07_generator.py`, `models.py`).
+
+| Component | Registered version |
+|---|---|
+| Interpreter | CPython 3.10.x (JetPack 6.x / Ubuntu 22.04 system Python) |
+| Ed25519 | PyNaCl 1.5.0, whose wheel bundles libsodium 1.0.18 |
+| Everything else | Python standard library |
+| Baseline runtime | Node.js 22 or later (SINT's declared engine), used only to run pinned SINT in exp-25 |
+
+`configs/c5/*.json` store the SHA-256 of every frozen file. The harness refuses
+to run when any hash differs.
+
+No other implementation is registered. A port to another language, another
+cryptographic library, or any other change to the decision path is a different
+system and requires a new requirements version. Version 1.1 registers no
+optimized path. PLAN's "decision agreement before/after optimization" is
+therefore checked between two paths:
+
+- the pre-serialization reference path, `PolicyEngine` plus `EffectBinding` on
+  in-memory capabilities, which must agree with the oracle on every corpus step
+  when the corpus is built (`reference_engine_mismatches = 0`); and
+- the timed PEP, which must agree with the oracle on every measured decision.
+
+### 2.2 Wire format and tokens
+
+An envelope is
+`"ZCE1" | u8 n | n x (u16 len | token payload | 64-byte Ed25519 signature) | u16 len | request payload`,
+with big-endian integers. Limits:
+
+| Item | Limit |
+|---|---|
+| Chain length `n` | 1 to 8 |
+| One payload | 4,096 bytes |
+| One envelope | 65,536 bytes |
+
+Payloads are canonical JSON: ASCII, sorted keys, no insignificant whitespace,
+and no NaN or infinity.
+
+A token payload carries:
+
+- identifier `id`, policy identifier `pol`, issuer `iss`, depth `d`;
+- subject `sub` and the subject's Ed25519 public key `spk`;
+- zones `zs`/`zd`;
+- conduits `K`, assets `A`, operations `O`, parameter interval `Iu`, tick
+  window `It`, modes `M`, required event sequence `L`;
+- `prev`, the hex SHA-256 of the parent's signed bytes (payload plus
+  signature), which is `null` for a root.
+
+Who signs what:
+
+- A **root** is signed by the issuer's trust-anchor key.
+- A **child** is signed by its parent's subject key (`spk`).
+- The **request payload** (`zs`, `zd`, conduit, asset, operation, value, request
+  identifier) is not signed. Request origin is authenticated by the transport
+  session (CIP Security, an OPC UA secure channel, or mutual TLS), which hands
+  the authenticated subject to the PEP. Transport authentication is outside the
+  decision path.
+
+Serialized token sizes in the frozen corpus:
+
+| Depth | Tokens | Bytes (minimum to maximum) |
+|---|---|---|
+| 0 (root) | 42 | 472–544 |
+| 1 | 3,066 | 516–614 |
+| 2 | 798 | 525–599 |
+| 3 | 756 | 535–609 |
+
+Depth 3 occurs only for runtime-attenuated children of depth-2 grants (Section 3).
+
+### 2.3 Decision path
+
+`decide(authenticated_subject, envelope)` runs these stages in a fixed order.
+Each stage sets one bit in the per-decision activation mask. Stages 1 to 5 deny
+on failure.
+
+| # | Stage | Check |
+|---|---|---|
+| 1 | parse | envelope framing; JSON decoding of every payload; exact key sets, types, and finite numbers |
+| 2 | anchor | root issuer is a trust anchor; root names a registered policy; root depth 0; root subject equals the policy subject; root ⪯ registered compiled policy |
+| 3 | chain | every link: depth = index; `prev` equals the parent digest; same policy; child ⪯ parent (issuer and zone endpoints equal; K, A, O, M subsets; Iu, It subintervals; L extends the parent's sequence as a prefix) |
+| 4 | signature | every token: Ed25519 verification, or a hit in the verification cache (Section 2.4) |
+| 5 | revocation | every token identifier in the chain is looked up |
+| 6 | context | snapshot lookup by (target zone, asset) and freshness check (Section 2.6) |
+| 7 | policy | five effects in the registered `PolicyEngine` order (below) |
+| 8 | binding | the emitted action is re-checked against the effective capability before emission; deferrals are bounded (Section 2.8) |
+| 9 | response | exact canonical-JSON decision record |
+| 10 | audit | non-blocking enqueue of that record; failure turns the decision into a DENY (Section 2.7) |
+
+The policy stage evaluates, in order:
+
+1. missing, stale, or incomplete context gives `DEFER`;
+2. a registered high-risk flag gives `DEFER`;
+3. a failed subject, source-zone, target-zone, conduit, asset, operation, time,
+   mode, or event-sequence check gives `DENY`;
+4. a runtime envelope that strictly narrows `Iu` gives `ATTENUATE`, carrying the
+   narrowed child interval and executing nothing; a runtime envelope disjoint
+   from `Iu` gives `DENY`;
+5. a value outside `Iu` gives `REWRITE` to the nearest boundary;
+6. otherwise `ALLOW`.
+
+The registered hold for `DEFER` is the operation `read` at the lower bound of
+the effective `Iu`.
+
+### 2.4 Verification cache
+
+The PEP keeps one cross-request cache. It maps the SHA-256 digest of a token
+whose signature, linkage, and attenuation have been verified to "verified".
+
+- Tokens are immutable signed data, and a child's `prev` field binds its parent.
+- The capacity is 65,536 entries with first-in, first-out eviction.
+- A digest is still computed for every token on every request.
+
+Never cached, and evaluated on every request:
+
+- parsing;
+- root anchoring and registration;
+- revocation;
+- context;
+- policy;
+- binding;
+- the response; and
+- the audit enqueue.
+
+No parsed token, decision, or response is reused across requests.
+
+Static configuration loaded at start-up is not a cache: trust-anchor keys, the
+registered policy index, the revocation set, and the context store.
+
+The `cache_miss` diagnostic (exp-23 and exp-24) clears the cache before every
+timed decision, outside the timed region. Every token is then verified on every
+request. Changing trust-anchor keys requires clearing the cache.
+
+### 2.5 Revocation
+
+- The full path uses an in-process set of revoked token identifiers, preloaded
+  with 10,000 synthetic identifiers that match no corpus token.
+- Every token identifier in the presented chain is checked, so revoking a parent
+  revokes all of its descendants.
+- The `remote_revocation` diagnostic replaces the set with a Redis set on the
+  same Jetson. The PEP sends one pipelined batch of `SISMEMBER` commands per
+  decision, which is one round trip on any Redis version. A Redis error, or a
+  reply slower than the registered 100 ms timeout, denies the request
+  (fail-closed). The client then reconnects on the next lookup, and the number
+  of reconnects is recorded.
+- Revocation delivery into the local set is not part of the decision path. The
+  exp-19 finding (issuance-relative stale execution) remains a safety result, and
+  delivery-time measurements do not redefine it.
+
+### 2.6 Runtime context
+
+Context is an in-process, versioned snapshot keyed by (target zone, asset). A
+snapshot holds:
+
+- trusted tick, operating mode, and physical event history;
+- a completeness flag and a high-risk flag; and
+- an optional runtime parameter envelope.
+
+The context-ingest component publishes snapshots. The decision path performs one
+dictionary lookup and checks freshness against a maximum age of `50 ms` (five
+scan periods). A missing, stale, or incomplete snapshot yields `DEFER`.
+
+Reading PLC or plant state over a network belongs to ingest, not to the decision
+path. In the harness, the client publishes each corpus step's snapshot outside
+the timed region immediately before the decision. In the end-to-end path
+(Section 6), the server wrapper publishes it.
+
+### 2.7 Audit queue
+
+- **Queue.** The bounded audit queue is a pipe resized with `F_SETPIPE_SZ` to
+  1,048,576 bytes. The PEP writes each record plus a newline with one non-blocking
+  `write` of at most 4,096 bytes. POSIX makes such a write atomic: the whole
+  record is enqueued, or the write fails.
+- **Fail-closed.** A full queue (`EAGAIN`), a closed drain (`EPIPE`), or an
+  oversized record turns the decision into `DENY` with reason
+  `audit_unavailable`, emits nothing, and leaves the audit bit clear.
+- **Drain.** A separate drain process, pinned to another core, persists the
+  records. It reports the record count, bytes, SHA-256, and peak backlog, all
+  measured outside the timed region.
+- **Kernel limits.** The resize needs `fs.pipe-max-size` of at least 1,048,576
+  bytes (the Linux default). It also needs room under the per-user pipe budget
+  `fs.pipe-user-pages-soft`. If the kernel refuses, setup retries and then aborts
+  the repetition; the capacity is never reduced. Preflight checks that the
+  registered capacity can be granted. On a dedicated Jetson the defaults
+  suffice; any sysctl change must be recorded.
+
+### 2.8 Deferral bound
+
+The PEP denies the third consecutive `DEFER` for the same holder (`max_deferrals
+= 2`). Any other effect resets the holder's count. Composed corpus traces never
+contain consecutive deferrals for one holder, so a timeout in a measured run
+appears as a decision mismatch.
+
+### 2.9 Runtime settings
+
+- Garbage collection stays enabled with default thresholds.
+- After loading the corpus and building the PEP, the harness calls
+  `gc.freeze()`. This moves start-up objects out of collection. It is ordinary
+  deployment practice for long-running services and is recorded in every
+  repetition's metrics.
+- No other garbage-collector, interpreter, or allocator setting may be changed
+  for measurement. This includes disabling the collector, changing thresholds,
+  running `python -O`, and using a non-default allocator.
+- Swap stays off.
+
+### 2.10 Key material
+
+- Corpus keys are derived deterministically from public strings (domain
+  `zonecap-c5-test-keys-v1`). They are measurement fixtures and must never
+  authorize a real plant.
+- In a deployment, the PEP holds only trust-anchor public keys. No signing key
+  resides on the PEP.
+- An `ATTENUATE` response carries the narrowed interval. The holder signs the
+  runtime child itself.
+
+### 2.11 Platform items the hardware group may adapt
+
+Only the following may differ from the delivery commit. Each adaptation is
+committed before the confirmatory run and listed in the execution note.
+
+1. CPU core numbers in `configs/c5/*.json`. The defaults are:
+
+   | Use | Core |
+   |---|---|
+   | Benchmark worker | 3 |
+   | Audit drain | 4 |
+   | Redis and revocation authority | 5 |
+   | `tegrastats` | 1 |
+   | OpenPLC under `single_host` | 2 |
+   | OS and interrupts | 0 |
+
+   The benchmark core must not be core 0.
+2. The SINT checkout path, through `ZONECAP_C5_SINT_REPO`.
+3. The Redis host and port, through `ZONECAP_C5_REDIS_HOST` and
+   `ZONECAP_C5_REDIS_PORT`.
+4. Additional environment-capture commands.
+5. The end-to-end server wrapper, client, and OpenPLC program of Section 6, which
+   the hardware group implements and returns for review.
+
+Any other change is a deviation. It must be reported, and it may invalidate the
+run.
+
+## 3. Corpus and oracle
+
+### 3.1 Building and checking the corpus
+
+Build the corpus on the Jetson with
+`PYTHONPATH=src python3 -m zonecap.c5.corpus build --output-dir build/c5_corpus`.
+
+- The build is deterministic. Its fingerprint must equal
+  `f664f0049ceed76e91a791c1a914160934ab1925a3a79bb434ae39ecc8ecc83c`.
+- `PYTHONPATH=src python3 -m pytest tests/test_c5_*.py` checks the fingerprint
+  and must pass on the Jetson.
+- The builder reads only frozen inputs:
+  - `research/heldout/exp07/policy_tables.json`, SHA-256 `62af1979…7345`; and
+  - `results/exp07_heldout_equivalence_20260901/cases.jsonl.gz`, SHA-256
+    `46197806…33b6`.
+- The registered policy set is the frozen exp-07 table: a source-derived
+  zone/conduit topology plus the declared, source-independent evaluation overlay.
+  It is not a complete IEC 62443 policy and implies no conformance claim. The
+  compiler turns it into 42 registered root capabilities.
+
+### 3.2 Variants
+
+| Variant | Used by | Steps | Units | Expected effects | Chain depth (steps) |
+|---|---|---|---|---|---|
+| `main` | exp-22, exp-23 | 81,648 | 63,504 | allow 9,072; attenuate 4,536; defer 4,536; deny 49,896; rewrite 13,608 | d0 42,336; d1 22,680; d2 13,608; d3 3,024 |
+| `scale_d0` | exp-24 | 936 | 936 | allow 72; deny 720; rewrite 144 | d0 936 |
+| `scale_d1` | exp-24 | 234 | 234 | allow 18; deny 180; rewrite 36 | d1 234 |
+| `scale_d2` | exp-24 | 234 | 234 | allow 18; deny 180; rewrite 36 | d2 234 |
+| `sint_subset` | exp-25 | 27,216 | 27,216 | ZoneCap: allow 4,536; deny 18,144; rewrite 4,536. SINT: allow 4,536; deny 22,680 | d0 18,144; d1 4,536; d2 4,536 |
+
+**`main`.** This is the exp-12 policy-step corpus:
+
+- the 58,968 exp-07 one-request cases (every valid request and every
+  single-field mutation); plus
+- 4,536 five-step composed traces, `ATTENUATE, DEFER, ALLOW, REWRITE, DENY`.
+
+The composed traces are the only source of `DEFER` and `ATTENUATE`. Their steps
+2 to 5 present the holder-signed runtime child, which adds one level of depth.
+
+**`scale_d*`.** These contain the exp-07 cases of the registered grant
+`cpwe_cip_security:g001` (site operations to safety) at depth 0, 1, or 2.
+
+**`sint_subset`.** This contains the valid cases plus the subject, asset,
+operation, parameter-high, and tick-high mutations that pinned SINT can express.
+It is the fair subset of exp-10.
+
+### 3.3 Oracle
+
+`zonecap.c5.oracle` imports only the Python standard library. It computes each
+step's expected decision `[effect, operation, value, child_low, child_high]` from
+plain table data, as well as SINT's expected allow or deny. Expected decisions
+are fixed when the corpus is built and are included in the fingerprint.
+
+### 3.4 Order
+
+The seed controls only the order. The units of a variant are shuffled with
+Python's `random.Random(seed)`; a unit is one step, or one five-step composed
+trace kept contiguous. The flattened sequence is repeated cyclically to fill the
+warm-up and measured positions. Each repetition stores
+`measured_step_sequence_sha256`.
+
+### 3.5 Stratified reporting
+
+Every repetition also reports p50, p99, and maximum by expected effect and by
+chain depth.
+
+## 4. Hardware, topology, and environment
+
+### 4.1 Approved hardware
+
+- Use the NVIDIA Jetson Orin NX 8GB Developer Kit, exactly as approved by the
+  human, running JetPack 6.x (L4T R36.x, Ubuntu 22.04).
 - The S1 plan assumed an AGX Orin-class device. Orin NX 8GB is an explicit human
-  replacement, not an equivalence claim. Record the exact module SKU, carrier
-  board, storage, power supply, cooling, and memory size in every environment
-  manifest.
-- No GPU workload is required. Report GPU utilization to demonstrate that GPU
-  acceleration was not silently introduced.
+  replacement, not an equivalence claim.
+- Record the exact module SKU, carrier board, storage, power supply, cooling, and
+  memory size.
+- No GPU workload is used. Report GPU utilization to show that no GPU
+  acceleration was introduced.
 
-### 2.2 OpenPLC topology
+### 4.2 OpenPLC topology
 
-One of the following must be selected before implementation freeze and retained
-for all main/baseline measurements:
+Select one topology before the freeze and keep it for every measurement:
 
-1. `split_host` (preferred): ZoneCap runs on the Jetson and communicates over a
-   dedicated wired link with a separate OpenPLC v4-capable PLC or Raspberry Pi.
-2. `single_host`: ZoneCap and OpenPLC v4 run as separate pinned processes on the
-   Jetson. This remains a Jetson/OpenPLC software path, but the report must state
-   that it does not measure a separate PLC or network hop.
+1. `split_host` (preferred): the PEP runs on the Jetson and talks over a
+   dedicated wired link to a separate OpenPLC v4-capable PLC or Raspberry Pi.
+2. `single_host`: the PEP and OpenPLC v4 run as separate pinned processes on the
+   Jetson. The report must state that this measures neither a separate PLC nor a
+   network hop.
 
-Record the topology. Do not mix topologies within a repetition or pool results
-across topologies. Wi-Fi is not permitted for confirmatory measurements.
+Do not mix topologies or pool across them. Wi-Fi is not permitted.
 
-### 2.3 Required software freeze
+### 4.3 Power, thermal, and environment control
 
-No confirmatory measurement may begin until all of the following are committed
-and SHA-256 hashes are placed in the run configuration:
+**Power and thermal setup.**
 
-- ZoneCap source and hardware benchmark runner;
-- exp-22/23/24/25 configuration files;
-- exact request corpus and independent expected-decision oracle output;
-- token/signature, revocation, context, and audit implementations;
-- OpenPLC program/configuration and scan-period setting;
-- SINT runner at commit
-  `2461a911b8c3d7ed9da3f7662b33678f688eb826`;
-- executable PLC ABAC/NGAC adapters, if available; and
-- aggregation/percentile code and its unit tests.
+- Use a fixed sustained-performance `nvpmodel` mode, applied with
+  `jetson_clocks`. Never change it after seeing a result.
+- Use stable external power and active cooling.
+- Disable automatic updates, screen blanking, and scheduled jobs.
+- Keep swap off.
 
-The current repository has development decision timing but no frozen C5 hardware
-runner. The hardware group may implement the adapter/harness from this document,
-but must return it for code review and a clean pre-run freeze. Measurements made
-while developing the harness are `development` only and cannot support C5.
+**Environment capture.** `environment_manifest.json` records the
+`environment_commands` of each configuration, and every repetition records:
 
-## 3. Environment control and preflight
+- interpreter and library versions, including the SHA-256 of the libsodium
+  binary;
+- the CPU model and load average;
+- the benchmark core's governor and frequencies before and after the measured
+  loop;
+- the activation mask and observed affinity; and
+- RSS at every phase.
 
-Capture these items before every fresh process launch:
+The hardware group adds:
 
-- UTC timestamp; repository commit; `git status --porcelain`;
-- JetPack, L4T, Ubuntu, kernel, Python, Node, OpenPLC, Redis (if used), and
-  compiler/package versions;
-- `/proc/cpuinfo`, `lscpu`, total RAM, storage type, and free space;
-- exact `nvpmodel` mode, `jetson_clocks --show`, CPU governor, online cores,
-  current/min/max frequencies, fan mode, and ambient temperature if available;
-- process CPU affinity, scheduler policy/niceness, and cgroup/container limits;
-- OpenPLC topology, runtime commit/version, task period, and wired-network link
-  speed when using `split_host`;
-- background services intentionally left running; and
-- `tegrastats` sampled throughout the run at no slower than 1 Hz.
+- photographs or console captures identifying the module, power and cooling
+  mode, and topology;
+- the background services intentionally left running; and
+- the ambient temperature, if available.
 
-Use a fixed sustained-performance power mode supported by the device and lock
-clocks with the standard Jetson controls. Do not change the mode after seeing a
-result. Connect stable external power and active cooling. Disable automatic
-updates, screen blanking, and unrelated scheduled jobs for the measurement
-window. Do not enable swap during a run.
+`tegrastats` is sampled at 1 Hz throughout each repetition when available.
 
-Pin the benchmark worker to one named CPU core. Pin OpenPLC, Redis, audit drain,
-and monitoring processes to other cores. Verify affinity from `/proc/<pid>/status`
-after launch; merely requesting affinity is insufficient.
+**Throttling abort (operational definition).** A repetition is invalid if, during
+its measured loop, either of the following occurs:
 
-Before exp-22, run the timer sanity suite equivalent to exp-26 on the Jetson.
-Abort confirmatory execution if any of these occur:
+- `tegrastats` reports a benchmark-core frequency below the locked value, or a
+  thermal or power throttle flag; or
+- the benchmark core's `scaling_cur_freq` before or after the loop differs from
+  the locked frequency.
 
-- requested affinity is not observed;
-- timer resolution is greater than or equal to the reported p99;
-- full-check timing is not slower than the empty-call lower bound;
-- the forced-slow detector or disabled-check detector does not fire;
-- thermal/power throttling occurs;
-- the 10 ms OpenPLC task period is not observed;
-- a required dependency, source hash, or commit differs; or
-- a decision-equivalence check fails during preflight.
+Retain the invalid repetition and record the cause. A replacement requires that
+logged cause.
 
-Retain the aborted run directory and reason. A replacement run requires a logged
-infrastructure cause; it does not erase the aborted attempt.
+### 4.4 Affinity
 
-## 4. Common workload and measurement contract
+- The benchmark worker pins itself and verifies both `sched_getaffinity` and
+  `/proc/self/status`.
+- The audit drain, Redis, the propagation processes, `tegrastats`, and (under
+  `single_host`) OpenPLC run on other cores.
+- For the SINT runner, the harness verifies the child process's
+  `Cpus_allowed_list` after launch.
 
-### 4.1 Repetitions and ordering
+### 4.5 Preflight
 
-Use these five fixed repetition/order seeds, one fresh process launch per seed:
+`zonecap.c5.matrix` runs the preflight automatically in a fresh process before
+any repetition. Execution aborts, with the run directory retained, if any of the
+following occurs:
 
-`104729, 130363, 155921, 196613, 262147`
-
-For each standard configuration and seed:
-
-1. start a fresh benchmark worker and verify environment/affinity;
-2. execute `10,000` unrecorded warm-up decisions;
-3. execute `100,000` measured decisions sequentially;
-4. store every raw duration in integer nanoseconds;
-5. store the request ID, expected decision, observed decision, and enabled-check
-   bitmask for every measured decision; and
-6. stop the process before the next seed.
-
-The seed controls only deterministic request ordering. Report all seeds. Do not
-use S1 development seed `7`.
-
-### 4.2 Corpus
-
-The corpus must be generated once from the frozen held-out IEC 62443 policy
-tables used in exp-07. It must include allowed and denied cases and must exercise
-zone, conduit, asset, action, parameter, time, operating mode, and pre-action
-sequence decisions. The generator, corpus, and oracle must be independent of
-the timed engine and hashed before use.
-
-Cycle through the same frozen request-ID sequence for all comparable systems.
-Do not regenerate, remove, or rebalance cases after observing performance.
-Exp-25 uses the frozen **common expressible subset** for direct decision/latency
-comparison and separately reports each baseline's unsupported dimensions as
-`N/A`; it must not treat unsupported cases as allows or denies.
-
-### 4.3 Timed region
-
-Start the timer immediately before parsing the serialized request and stop it
-after the audit record has been accepted by the bounded audit queue. The timed
-region must include:
-
-- serialized-request parse and schema checks;
-- full token/delegation-chain validation;
-- real Ed25519 signature verification on the full configuration;
-- revocation and runtime-context lookup;
-- policy evaluation/effect selection;
-- exact response construction; and
-- bounded audit enqueue with backpressure/failure handling.
-
-It must exclude corpus iteration, sample serialization, percentile calculation,
-client transit, OpenPLC transit, and offline audit persistence. Measure audit
-drain/persistence separately. Prevent dead-code elimination by consuming and
-hashing decisions after the timed region.
-
-Use a monotonic high-resolution clock and integer nanoseconds. Percentiles use
-nearest-rank on sorted samples (`ceil(p*N)`, one-indexed); do not interpolate.
-Report per repetition and across the pooled 500,000 samples:
-
-- p50, p95, p99, p99.9, maximum, arithmetic mean, and median absolute deviation;
-- throughput from measured wall time, not the reciprocal of a percentile;
-- p99 occupancy against the fixed 10 ms scan cycle;
-- peak RSS and RSS after warm-up;
-- serialized root/depth-1/depth-2 token bytes; and
-- decision mismatch count and mismatch records.
-
-Also report worst-repetition p99. The C5 threshold is evaluated per repetition,
-not only on pooled samples.
-
-### 4.4 End-to-end OpenPLC path
-
-Use a frozen OpenPLC program with a 10 ms periodic task. The request carries a
-monotonic correlation ID; the PEP response and PLC acknowledgement must retain
-it. Measure at least `100,000` end-to-end commands per repetition after the same
-warm-up, recording:
-
-- client-send to PEP-decision;
-- PEP-decision to OpenPLC receipt;
-- OpenPLC receipt to application/acknowledgement;
-- total client-send to acknowledgement; and
-- observed OpenPLC scan-period distribution and missed/overrun cycles.
-
-If clocks cross hosts, use hardware/PTP synchronization or measure round trips
-from one clock. NTP-only one-way subtraction is not acceptable. Do not combine
-end-to-end durations with server-side decision samples.
+- the requested affinity is not observed;
+- the clock is not monotonic, or moves backwards;
+- the empirical timer resolution is not below the empty-call median;
+- the full probe is not slower than an empty call, at both p50 and p99;
+- the 5 ms forced-slow probe is not detected (minimum at least 4 ms) or is not
+  the slowest;
+- any of the ten single-stage disabled-check mutants is not detected;
+- any negative control of Section 8 fails;
+- the corpus fingerprint or any frozen source hash differs; or
+- the 10 ms OpenPLC task period is not observed (end-to-end preflight,
+  Section 6).
 
 ## 5. Experiment matrix
 
-### exp-22 — full-path main experiment
+**Common contract.**
 
-Run the common contract for all five seeds with:
+- Seeds `104729, 130363, 155921, 196613, 262147`, one fresh process per
+  configuration and seed.
+- 10,000 unrecorded warm-up decisions, then 100,000 measured decisions.
+- Raw durations stored as integer nanoseconds.
+- One decision record per measured decision.
+- Percentiles use nearest rank (`ceil(p*N)`, one-indexed) without interpolation.
 
-- signature verification enabled;
-- complete delegation-chain validation enabled;
-- revocation lookup enabled and populated with both hit/miss probes outside the
-  timed main request mix;
-- runtime-context lookup enabled;
-- audit enqueue enabled and its consumer active;
-- all compiler-generated policy dimensions enabled; and
-- OpenPLC fixed at a 10 ms task period.
+**Execution order.** Configurations run seed-major. For seed index `i`, the
+registered configuration list is rotated by `i`, which spreads thermal drift
+across configurations.
 
-Required outputs are per-repetition and pooled decision latency, occupancy,
-throughput, memory, token bytes, exact decision agreement, enabled-check proof,
-and separately measured OpenPLC end-to-end timing.
+**Run commands.** One `matrix` invocation per experiment:
 
-### exp-23 — check/cache/revocation diagnostics
+```text
+PYTHONPATH=src python3 -m zonecap.c5.matrix --config configs/c5/<exp>.json \
+    --corpus-dir build/c5_corpus --output-dir results/<run_id>
+```
 
-Use the same corpus and five seeds. The `full` configuration is exp-22 and must
-not be rerun or replaced merely because a diagnostic is faster. Run:
+Confirmatory runs require a clean, committed tree. The `--development` flag marks
+a dry run that can never support C5.
+
+### exp-22: full path (`configs/c5/exp22_c5_main.json`)
+
+- One configuration, `full`, on `main` with every stage enabled.
+- The verification cache is on; the local revocation set holds 10,000 entries.
+- The audit drain is active, and its log is retained as `audit.jsonl.gz`.
+- Decision rule: Section 1.2.
+
+### exp-23: diagnostics (`configs/c5/exp23_c5_ablation.json`)
+
+The `full` configuration is exp-22. It must not be rerun or replaced because a
+diagnostic is faster.
 
 | Configuration | Change from full | Evidence role |
 |---|---|---|
-| `cache_miss` | invalidate only policy/token/context application caches before each timed decision; do not drop the OS page cache | cold-cache diagnostic |
-| `unsigned` | bypass only signature verification and set an explicit disabled-check bit | diagnostic only; cannot support C5 |
-| `remote_revocation` | replace local lookup with pinned Redis on the selected topology | propagation/lookup diagnostic |
-| `audit_disabled` | bypass only audit enqueue and set an explicit disabled-check bit | diagnostic only; cannot support C5 |
+| `cache_miss` | verification cache cleared before every timed decision | A1 rule (Section 1.3) |
+| `cold_start` | fresh process, no warm-up, first 10,000 decisions measured | descriptive; reported separately, never pooled |
+| `unsigned` | signature stage disabled; its mask bit stays clear | diagnostic only; cannot support C5 |
+| `remote_revocation` | Redis set on the Jetson (pinned, loopback) | diagnostic only |
+| `audit_disabled` | audit stage disabled; its mask bit stays clear | diagnostic only; cannot support C5 |
 
-For `cache_miss`, use five launches and 10,000 measured decisions per seed with
-no warm-up; report it separately and do not pool with warm results. For every
-other configuration use the standard 10,000/100,000 contract. Verify that all
-variants preserve exact decisions. Report component-level deltas without
-claiming that unsigned or audit-disabled latency is the deployable result.
+Report component deltas, such as full minus unsigned, as descriptive values. Do
+not present them as deployable results.
 
-For remote revocation, additionally issue 1,000 revocations and record
-authority-issuance to resolver-visible propagation delay, including p50/p99/max.
-The issuer-relative stale-execution finding from exp-19 remains a safety result;
-delivery-time measurements do not redefine it.
+**Revocation propagation.** `zonecap.c5.propagation` issues 1,000 revocations:
 
-### exp-24 — policy-count and delegation-depth scaling
+- The measurement runs after the exp-23 repetitions. The authority (core 3,
+  the idle benchmark core), the resolver (core 4), and Redis (core 5) run on the
+  Jetson and read the same system-wide `CLOCK_MONOTONIC`.
+- For each revocation, the authority waits a seeded 1–10 ms delay, records
+  `t_issue` immediately before `SADD`, and the resolver records `t_visible` on its
+  first `SISMEMBER` hit.
+- Report p50, p99, and maximum of `t_visible - t_issue`. The resolution is one
+  resolver round trip.
+- If the authority must run on another host, use PTP hardware timestamping or a
+  single-clock round-trip measurement. NTP-only one-way subtraction is not
+  acceptable.
 
-Run the Cartesian product:
+### exp-24: policy count and delegation depth (`configs/c5/exp24_c5_scaling.json`)
 
-- policy count: `1, 10, 100, 1000`;
-- delegation depth: `0, 1, 2`; and
-- all five seeds/repetitions.
+- The 12 full-path cells are `p{1,10,100,1000}_d{0,1,2}`. The registry holds the
+  matching grant `cpwe_cip_security:g001` plus `P - 1` deterministic, non-matching
+  synthetic policies.
+- Three diagnostic `cache_miss` cells `p1000_d{0,1,2}_cache_miss` expose the
+  signature cost of each depth.
+- The registered policy index is a hash map keyed by policy identifier (one
+  lookup per request). It must not change after results are seen.
+- Report every cell. Do not report only a fitted trend.
+- Decision rule: Section 1.4.
 
-Use full checks and the standard 10,000/100,000 contract for all 12
-configurations. The matching policy and request semantics remain fixed; extra
-policies are deterministic nonmatching policies generated before the freeze.
-Record how policies are indexed and do not change the indexing algorithm after
-results are seen. Each delegation level must contain real signed parent/child
-tokens and validate the complete chain.
+### exp-25: baseline comparison (`configs/c5/exp25_c5_baselines.json`)
 
-Report latency, throughput, peak/RSS memory, serialized token bytes, and exact
-decision agreement for every cell. Do not report only a fitted trend line.
+- **Workload.** Three configurations run on the same `sint_subset` steps, in
+  the same per-seed order, with the same warm-up, measured count, seeds, and
+  benchmark core:
+  - `zonecap_full`, the full path;
+  - `zonecap_cache_miss`, with the verification cache cleared before every timed
+    decision, so that ZoneCap verifies every chain signature on every request,
+    as SINT verifies its leaf signature on every request; and
+  - `sint`.
+- **SINT.** SINT is pinned at commit
+  `2461a911b8c3d7ed9da3f7662b33678f688eb826`, prepared with the
+  `prepare_command` in the configuration and verified against the recorded
+  source hashes. `scripts/exp25_sint_runner.mjs` times one
+  `await PolicyGateway.intercept(request)` per measured step. It uses the exp-20
+  gateway configuration (an in-memory token resolver and a local
+  `RevocationStore` preloaded with 10,000 identifiers). Tokens are issued and
+  delegated before the run.
+- **Mapping.** A tick-high mutation uses an already-expired twin token, because
+  SINT expresses time only as wall-clock expiry. The parameter is mapped to
+  `maxVelocityMps` and `currentVelocityMps`.
+- **Agreement.** Each system is compared with its own expected decisions:
+  - ZoneCap: allow, deny, or rewrite;
+  - SINT: allow or deny.
 
-### exp-25 — baseline comparison
+  The 4,536 parameter-high cases are registered as a semantic difference
+  (ZoneCap rewrites them; SINT denies them), not as mismatches.
+- **PLC ABAC/NGAC.** Report it as `N/A` with the availability reason unless a
+  versioned executable artifact is supplied and frozen before the run. Never
+  copy published numbers into measured-result columns.
 
-Run ZoneCap and each available baseline on the identical common-subset corpus,
-request order, topology, affinity policy, warm-up, measured count, and five
-seeds:
+Stage correspondence (report this table with the results; never report a single
+like-for-like speedup without it):
 
-- ZoneCap full path;
-- SINT at commit `2461a911b8c3d7ed9da3f7662b33678f688eb826`;
-- a versioned executable PLC ABAC/NGAC implementation, if supplied and frozen.
+| Stage | ZoneCap reference PEP | Pinned SINT gateway |
+|---|---|---|
+| Request parse and schema | envelope framing, JSON, schema checks | zod request-schema validation |
+| Token acquisition | parsed from the request envelope | in-memory map lookup by `tokenId` (no deserialization) |
+| Delegation chain | linkage and attenuation of every link | not re-verified per request; leaf token only |
+| Signatures | every chain token, or a verification-cache hit; libsodium (C) | leaf token on every request, no cache; `@noble/ed25519` (JavaScript) |
+| Subject binding | authenticated subject equals leaf subject | `agentId` equals token subject |
+| Revocation | every chain token identifier, local set | leaf token identifier, `RevocationStore` |
+| Context | trusted snapshot lookup and freshness | N/A: physical context is taken from the request |
+| Policy | five effects | allow, deny, or escalate tiers; constraint checks |
+| Audit | bounded queue enqueue inside the timed region | N/A: no ledger configured, events only |
+| Runtime | CPython 3.10 | Node.js (version recorded) |
 
-Do not call the repository's functional projections an external implementation
-benchmark. If no executable PLC ABAC/NGAC artifact is supplied before the
-freeze, report its performance as `N/A` with the availability reason. Never copy
-published numbers into measured-result columns.
+A ZoneCap speedup greater than 10x over SINT is a bug signal. The audit of
+Section 8 must be completed before the result is interpreted. The development
+runs already exceed this ratio. The audit must attribute it stage by stage
+before any interpretation: compare `zonecap_cache_miss` with `zonecap_full`,
+and the JavaScript signature verification with libsodium.
 
-For each system report p50/p99/max, throughput, memory, exact agreement on its
-expressible subset, number/fraction of full-corpus cases expressible, and an
-explicit feature-scope table. A speedup greater than 10x over SINT is a bug
-signal requiring the audit in Section 7 before interpretation.
+## 6. End-to-end OpenPLC path (secondary, descriptive)
 
-## 6. Required result layout
+**Who builds what.** The hardware group implements a server wrapper around the
+unmodified `ReferencePEP.decide`, a client, and a frozen OpenPLC program with a
+10 ms periodic task. All three are returned for review before the confirmatory
+run.
 
-Return one immutable directory per experiment:
+- The wrapper receives envelopes over a wired link, publishes the step's context
+  snapshot (ingest), calls `decide`, and forwards an emitted action to OpenPLC.
+- Record the transport and whether it is authenticated (for example TLS). An
+  unauthenticated transport is acceptable for this descriptive measurement, but
+  must be stated.
+
+**Each command** carries a monotonic correlation identifier. Measure at least
+100,000 commands per repetition after the same warm-up. Record:
+
+- client send to PEP receipt;
+- the PEP decision duration (as in Section 1.1);
+- PEP decision to OpenPLC receipt;
+- OpenPLC receipt to application or acknowledgement;
+- the total, from client send to acknowledgement; and
+- the observed OpenPLC scan-period distribution and missed or overrun cycles.
+
+**Arrival process.** The client releases commands at a seeded, uniformly random
+phase within the 10 ms scan period. Each record logs its phase relative to the
+PLC scan start, so that scan-phase waiting (0 to 10 ms) can be separated from
+processing.
+
+**Overrun comparison.** Run the same command stream once with the PEP bypassed.
+Report overruns with and without ZoneCap. These quantities are secondary
+descriptive metrics. They do not enter the C5 rule and are never combined with
+server-side samples.
+
+**Clocks.** If clocks cross hosts, use hardware/PTP synchronization or measure
+round trips on one clock. NTP-only one-way subtraction is not acceptable.
+
+Return the end-to-end data as `results/exp22_c5_e2e_<YYYYMMDD>/`. It must
+contain the raw per-command records, the configuration, the command, the seeds,
+the environment, and a manifest of SHA-256 hashes.
+
+## 7. Result layout and return package
+
+`zonecap.c5.matrix` writes one immutable directory per experiment:
 
 ```text
 results/<run_id>/
-  config.json
-  command.txt
-  seeds.txt
-  log.txt
-  metrics.json
-  repetitions/<seed>/metrics.json
-  repetitions/<seed>/raw_samples_ns.bin.gz
-  repetitions/<seed>/decisions.jsonl.gz
-  repetitions/<seed>/environment.json
-  repetitions/<seed>/tegrastats.log
-  decision_mismatches.jsonl
-  environment_manifest.json
-  source_manifest.json
-  check_activation.json
-  timer_sanity.json
-  manifest.json
+  config.json  command.txt  seed.txt  log.txt  metrics.json
+  timer_sanity.json  check_activation.json  negative_controls.json  preflight_stdout.log
+  environment_manifest.json  source_manifest.json  decision_mismatches.jsonl  manifest.json
+  configurations/<configuration>/repetitions/<seed>.log
+  configurations/<configuration>/repetitions/<seed>/
+    metrics.json  environment.json  raw_samples_ns.bin.gz  decisions.jsonl.gz
+    decision_mismatches.jsonl  audit_summary.json  tegrastats.log  [audit.jsonl.gz]
+  propagation/metrics.json  propagation/propagation_delay_ns.bin.gz       (exp-23)
 ```
 
-Use run IDs `exp22_c5_main_<YYYYMMDD>`, `exp23_c5_ablation_<YYYYMMDD>`,
-`exp24_c5_scaling_<YYYYMMDD>`, and `exp25_c5_baselines_<YYYYMMDD>`. Every reported
-number must be derivable from returned raw samples. `manifest.json` contains
-SHA-256 for every input and output, including empty logs. Record the exact shell
-command; a prose description is insufficient.
+**File formats.**
 
-The hardware group returns:
+- `raw_samples_ns.bin.gz` is the gzip of consecutive little-endian unsigned
+  64-bit integers, one per measured decision, in measured order.
+- Each line of `decisions.jsonl.gz` is
+  `[measured_index, step, expected_effect, [effect, operation, value, child_low, child_high, reason], stage_mask, signatures_verified, cache_hits, all_checks_passed]`.
+- The aggregator recomputes every repetition's percentiles from the raw samples
+  and refuses to proceed if they differ. Pooled statistics come from the
+  concatenated raw samples.
 
-1. the four complete result directories;
-2. all harness/config/OpenPLC changes as a commit or patch;
-3. a one-page execution note listing invalid/aborted attempts and deviations;
-4. photographs or console captures sufficient to identify the Jetson module,
-   power/cooling mode, and OpenPLC topology; and
+**Run identifiers.** Use `exp22_c5_main_<YYYYMMDD>`, `exp23_c5_ablation_<YYYYMMDD>`,
+`exp24_c5_scaling_<YYYYMMDD>`, `exp25_c5_baselines_<YYYYMMDD>`, and
+`exp22_c5_e2e_<YYYYMMDD>`.
+
+**The hardware group returns:**
+
+1. the four matrix directories and the end-to-end directory;
+2. one commit or patch containing the platform adaptations (Section 2.11), the
+   end-to-end wrapper, the client, and the OpenPLC program;
+3. a one-page execution note listing every aborted or invalid attempt and every
+   deviation;
+4. the photographs or console captures of Section 4.3; and
 5. a SHA-256 checksum file for the transfer archive.
 
 Do not edit `research/PLAN.md`, `research/CLAIMS.md`, `research/NOTEBOOK.md`, or
-`STATE.md`. The research-loop executor will audit and integrate returned data.
+`STATE.md`. The research side audits and integrates the returned data.
 
-## 7. Mandatory bug and integrity audits
+## 8. Integrity audits and negative controls
 
-Stop interpretation and retain the run if any result is unexpectedly strong,
-including p99 below measured timer resolution or a greater-than-10x SINT
-speedup. Before any rerun, check and record:
+**Stop conditions.** Stop interpretation, and retain the run, if any result is
+unexpectedly strong. This includes a p99 below the measured timer resolution and
+a more-than-10x speedup over SINT.
 
-- raw sample count and uniqueness;
-- clock source/resolution and unit conversion;
-- process affinity actually applied;
-- thermal/power throttling and frequency drift;
-- request parsing and output consumption were inside/after the correct boundary;
-- signature, revocation, context, and audit checks were called and their
-  negative probes failed closed;
-- corpus/oracle independence and request-ID completeness;
-- no compiled-out checks, memoized final decisions, replayed timestamps, or
-  dead-code elimination;
-- identical common-subset request order across baselines; and
-- manifest/source hashes against the pre-run clean commit.
+**Audit before any rerun.** Check and record:
 
-Inject and detect at least these controls before accepting any latency result:
+- the raw sample count and its uniqueness;
+- the clock source, resolution, and unit conversion;
+- the affinity actually applied;
+- throttling and frequency drift;
+- that the timer boundary is placed as in Section 1.1;
+- the activation masks and the signature/cache counts;
+- corpus/oracle independence and request-identifier completeness;
+- that there are no compiled-out checks, memoized decisions, or replayed
+  timestamps;
+- the identical common-subset order across baselines; and
+- the manifest and source hashes against the pre-run commit.
 
-1. a forced `>=5 ms` sleep inside the timed check;
-2. an invalid signature;
-3. a revoked token;
-4. an out-of-scope parameter/action;
-5. a stale/missing runtime context;
-6. an unavailable/full audit queue; and
-7. a deliberately wrong oracle decision.
+**Automated preflight controls.** Each must behave as stated before any latency
+result is accepted:
 
-The full path must fail closed on controls 2–6, the evaluation must detect
-control 7, and the timer must expose control 1. Diagnostic variants may disable
-only their named check; all other controls remain active.
+1. a forced 5 ms sleep inside `decide` is exposed by the timer;
+2. an invalid leaf signature gives `DENY` (`bad_signature`);
+3. a revoked chain token gives `DENY` (`revoked`);
+4. an out-of-scope parameter gives `REWRITE` inside the leaf interval, and an
+   out-of-scope operation gives `DENY`;
+5. a stale or a missing context gives `DEFER` with only the registered `read`
+   hold;
+6. a full or a closed audit queue gives `DENY` (`audit_unavailable`) with no
+   emission; and
+7. a deliberately wrong oracle decision is detected as exactly one mismatch.
 
-## 8. Acceptance checklist
+Diagnostic configurations disable only their named stage, which is visible in
+the stage mask. Every other control remains active.
+
+## 9. Acceptance checklist
 
 The handoff is ready for research review only when all items are true:
 
-- [ ] exact Orin NX 8GB and OpenPLC topology recorded;
-- [ ] clean frozen commit and all input/source hashes recorded;
-- [ ] Jetson timer/affinity/check sanity passed;
-- [ ] five seeds and five fresh launches present for every standard cell;
-- [ ] 10,000 warm-up plus 100,000 raw measured decisions per standard launch;
-- [ ] raw server-side and end-to-end samples kept separate;
-- [ ] all exp-22 full checks enabled and positively exercised;
-- [ ] exp-23 diagnostic disablement explicitly labeled;
-- [ ] all 12 exp-24 scale/depth cells present;
-- [ ] exp-25 baselines use the identical expressible corpus or are `N/A`;
-- [ ] per-seed, pooled, and worst-repetition metrics reported;
-- [ ] every decision mismatch and invalid/aborted attempt retained;
-- [ ] thermal/power/affinity/scan-period evidence included; and
+- [ ] exact Orin NX 8GB, JetPack/L4T, power mode, and topology recorded;
+- [ ] `pytest tests/test_c5_*.py` passed on the Jetson, and the corpus
+      fingerprint matches;
+- [ ] a development dry run (`--development`) of each experiment on the Jetson
+      was sent for review before the confirmatory runs;
+- [ ] confirmatory runs were made from a clean commit with all frozen hashes
+      matching;
+- [ ] preflight passed for every experiment;
+- [ ] five seeds and five fresh launches are present for every registered
+      configuration;
+- [ ] each standard launch has 10,000 warm-up decisions plus 100,000 raw measured
+      decisions;
+- [ ] every exp-22 decision carries the full stage mask and consistent
+      signature/cache counts;
+- [ ] exp-23 diagnostics are labelled, and the propagation measurement is present;
+- [ ] all 15 exp-24 cells are present;
+- [ ] exp-25 uses the identical subset and order for all three configurations,
+      and its stage table is reported;
+- [ ] end-to-end data are kept separate from server-side samples;
+- [ ] every mismatch and every invalid or aborted attempt is retained; and
 - [ ] manifests and transfer checksums verify.
 
+## 10. Process and review
+
+**Before confirmatory execution:**
+
+1. Build the corpus, run the tests, and execute every experiment once with
+   `--development` on the Jetson.
+2. Return those directories together with the platform-adaptation commit for
+   review.
+3. Execute the confirmatory runs from the reviewed commit.
+
+**Execution note.** Record every deviation from this document in the execution
+note, with its date and reason.
+
+**Contacts.** The project lead names the research-side reviewer and the hardware
+contact when issuing this version. Questions about the protocol go to the
+research-side reviewer before execution, not after results are seen.
+
+**Indicative cost on the target:**
+
+| Item | Estimate |
+|---|---|
+| Corpus build | about 1 minute |
+| exp-22 | about 10 minutes |
+| exp-23 | about 30 minutes |
+| exp-24 | about 30 minutes |
+| exp-25 | about 1–1.5 hours; pinned SINT dominates, at milliseconds per decision |
+| End-to-end path | as designed by the hardware group |
+
+## Appendix A. Changes from version 1.0
+
+| Item | v1.0 | v1.1 | Audit finding |
+|---|---|---|---|
+| System under test | not defined; hardware group could implement it (v1.0 L80–82) | frozen reference PEP, wire format, stores, and harness delivered (Sections 2 and 5) | B1 |
+| Caching and optimization | `cache_miss` implied caches without defining them | one verification cache defined; nothing else reused; `cache_miss` clears it; no optimized path registered (Sections 2.1 and 2.4) | B2 |
+| A1/A2 decision rules | diagnostics without criteria | preregistered criteria and restricted wording (Sections 1.3 and 1.4) | B3 |
+| Occupancy | p99/10 ms presented as a second threshold | kept, but disclosed as derived; scan-cycle quantities registered as secondary (Sections 1.2 and 6) | B4 (option a) |
+| Timing workload | "cycle the corpus"; DEFER/ATTENUATE never timed | exp-12 corpus with all five effects; stratified reporting (Section 3) | I1 |
+| Context source | unspecified | in-process snapshot; ingest outside the timed path (Section 2.6) | I2 |
+| SINT comparison | totals only | stage table, runner, and mapping delivered (Section 5) | I3 |
+| Propagation timing | clock rule missing | same-host monotonic method, or PTP/round trip (Section 5) | I4 |
+| End-to-end arrival | unspecified | seeded random phase with phase logged; bypass overrun comparison (Section 6) | I5 |
+| Runtime settings | unspecified | GC rules, `gc.freeze()` recorded, no measurement-only settings (Section 2.9) | I6 |
+| Binary format | unspecified | little-endian uint64 (Section 7) | minor |
+| Seed file | `seeds.txt` | `seed.txt`, the repository convention (Section 7) | minor |
+| Policy wording | "IEC 62443 policy tables" | frozen exp-07 table: source-derived topology plus declared overlay (Section 3) | minor |
+| Throttling | undefined | operational definition (Section 4.3) | minor |
+| Configuration order | unspecified | seed-major with rotation (Section 5) | minor |
+| Keys | unspecified | deterministic test keys; no signing key on the PEP (Section 2.10) | minor |
+| Process | no review step | development dry run on the Jetson, review, then confirmatory runs (Section 10) | process |
+
+## Appendix B. Quick start on the Jetson
+
+```text
+# 1. Environment (JetPack 6.x, Python 3.10)
+python3 -m venv ~/zonecap-c5 && . ~/zonecap-c5/bin/activate
+pip install pynacl==1.5.0 pytest
+# 2. Corpus and tests
+PYTHONPATH=src python3 -m zonecap.c5.corpus build --output-dir build/c5_corpus
+PYTHONPATH=src python3 -m pytest -q tests/test_c5_pep.py tests/test_c5_harness.py tests/test_c5_corpus.py
+# 3. SINT (exp-25) and Redis (exp-23)
+#    run the prepare_command in configs/c5/exp25_c5_baselines.json; install redis-server
+export ZONECAP_C5_SINT_REPO=/opt/zonecap/sint-protocol
+# 4. Development dry run, then review, then the confirmatory runs from a clean commit
+PYTHONPATH=src python3 -m zonecap.c5.matrix --config configs/c5/exp22_c5_main.json \
+    --corpus-dir build/c5_corpus --output-dir results/dev_exp22_c5_main_<YYYYMMDD> --development
+```
+
+Dry runs on the Jetson use the full registered counts, so that memory,
+thermal, and audit-backpressure behavior is exercised at full scale. The
+`--development-scale` option divides the decision counts for quick
+research-side checks only, and is refused without `--development`.

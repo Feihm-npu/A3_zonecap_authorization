@@ -9,7 +9,7 @@ awaiting: none            # none | human
 since: 2026-08-31
 read: []                  # what the next session must read first
 options: []               # when awaiting human: allowed next states
-note: "Paper artifacts are complete and the draft/evidence cold read passed. The accepted storyline uses C1/C6/C7; C4 is a reported negative result; C5 is an explicit limitation. External exp-22–25 may be audited later but are not part of this DONE evidence set. Before submission, supply the public repository/archive URL and compress the rendered manuscript to the IEEE TII page budget." # one line for the next session: pending request, where work stopped
+note: "Paper artifacts are complete (9-page IEEE TII LaTeX build). The accepted storyline uses C1/C6/C7; C4 is a reported negative result; C5 is an explicit limitation. C5 hardware requirements v1.1 (2026-11-02) freeze the reference PEP, corpus, harness, and decision rules in hardware_delivery/exp_requirements.md and configs/c5; the hardware group restarts exp-22–25 from v1.1, and returned data must be audited against v1.1. Before submission, supply the public repository/archive URL." # one line for the next session: pending request, where work stopped
 ```
 
 ## Log
