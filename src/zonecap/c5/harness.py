@@ -35,7 +35,7 @@ from typing import Any
 import nacl
 
 from . import audit as audit_queue
-from .corpus import load_variant, synthetic_policies, verify
+from .corpus import SCALE_ARCHITECTURE, load_variant, scale_policy_ids, verify
 from .pep import (
     ALLOW,
     AUDIT,
@@ -219,11 +219,12 @@ def load_registry(corpus_dir: Path, setting: dict[str, Any]) -> dict[str, Regist
     documents = json.loads((corpus_dir / "registry.json").read_text(encoding="utf-8"))
     selection = setting.get("registry", "main")
     if selection == "main":
-        selected = list(documents.values())
+        selected = [
+            item for policy_id, item in documents.items()
+            if not policy_id.startswith(SCALE_ARCHITECTURE + ":")
+        ]
     elif selection == "scale":
-        size = int(setting["registry_size"])
-        manifest = json.loads((corpus_dir / "manifest.json").read_text(encoding="utf-8"))
-        selected = [documents[manifest["scale_policy_id"]], *synthetic_policies(size - 1)]
+        selected = [documents[policy_id] for policy_id in scale_policy_ids(int(setting["registry_size"]))]
     else:
         raise ValueError(f"unknown registry selection {selection!r}")
     return {
@@ -605,6 +606,28 @@ def run_repetition(
     return metrics
 
 
+def _cpu_list(text: str) -> set[int]:
+    cores: set[int] = set()
+    for part in text.split(","):
+        low, _, high = part.partition("-")
+        cores.update(range(int(low), int(high or low) + 1))
+    return cores
+
+
+def dist_tree_sha256(directory: Path) -> str:
+    """SHA-256 over the sorted ``path sha256`` lines of every built ``.js`` file."""
+
+    lines = [
+        f"{path.relative_to(directory).as_posix()} {sha256_file(path)}\n"
+        for path in sorted(directory.rglob("*.js"))
+    ]
+    return hashlib.sha256("".join(lines).encode("utf-8")).hexdigest()
+
+
+def _mutation_kind(case_id: str) -> str:
+    return case_id.split(":mutation:", 1)[1] if ":mutation:" in case_id else "valid"
+
+
 def run_sint_repetition(
     config: dict[str, Any],
     configuration: str,
@@ -614,7 +637,12 @@ def run_sint_repetition(
     run_role: str,
     development_scale: int = 1,
 ) -> dict[str, Any]:
-    """Run the pinned-SINT Node runner on the same ordered common subset."""
+    """Run the pinned-SINT Node runner on the same ordered common subset.
+
+    The Node process receives the benchmark core plus the audit-drain core:
+    the same two-core budget as ZoneCap's worker plus its audit drain, so V8's
+    helper threads do not compete with the main thread on a single core.
+    """
 
     setting = scaled_setting(config, configuration, run_role, development_scale)
     output_dir.mkdir(parents=True, exist_ok=False)
@@ -632,7 +660,11 @@ def run_sint_repetition(
     source_hashes = {relative: sha256_file(repo / relative) for relative in sint["source_hashes"]}
     if source_hashes != sint["source_hashes"]:
         raise RuntimeError("pinned SINT source hash mismatch")
-    built = {relative: sha256_file(repo / relative) for relative in sint["built_modules"]}
+    built = {relative: dist_tree_sha256(repo / relative) for relative in sint["built_dist_tree_sha256"]}
+    if built != sint["built_dist_tree_sha256"]:
+        raise RuntimeError(
+            "SINT dist differs from the reference build; rebuild with the registered prepare_command"
+        )
 
     _, steps = load_variant(corpus_dir, setting["variant"])
     warmup = int(setting["warmup"])
@@ -644,10 +676,11 @@ def run_sint_repetition(
     if sys.byteorder != "little":
         order.byteswap()
     order_path.write_bytes(order.tobytes())
-    core = config["cpu"]["benchmark_core"]
+    cores = config["cpu"]
+    allowed_cores = {cores["benchmark_core"], cores["audit_core"]}
 
     def _pin() -> None:
-        os.sched_setaffinity(0, {core})
+        os.sched_setaffinity(0, allowed_cores)
 
     root = Path(__file__).resolve().parents[3]
     command = [
@@ -656,14 +689,23 @@ def run_sint_repetition(
         "--output-dir", str(output_dir), "--warmup", str(warmup), "--measured", str(measured),
         "--revoked", str(int(setting["revocation"]["preloaded"])),
     ]
+    environment_before = environment(cores["benchmark_core"])
+    tegrastats = _start_tegrastats(output_dir / "tegrastats.log", cores.get("monitor_core"))
     with (output_dir / "runner.log").open("w", encoding="utf-8") as log:
         process = subprocess.Popen(command, stdout=log, stderr=subprocess.STDOUT, preexec_fn=_pin)
-        status_path = Path(f"/proc/{process.pid}/status")
         allowed = None
-        for line in status_path.read_text(encoding="utf-8").splitlines():
+        for line in Path(f"/proc/{process.pid}/status").read_text(encoding="utf-8").splitlines():
             if line.startswith("Cpus_allowed_list:"):
                 allowed = line.partition(":")[2].strip()
+        if allowed is None or _cpu_list(allowed) != allowed_cores:
+            process.kill()
+            process.wait()
+            raise RuntimeError(f"SINT runner affinity not observed: {allowed}")
         returncode = process.wait()
+    if tegrastats is not None:
+        tegrastats.terminate()
+        tegrastats.wait(timeout=10)
+    environment_after = environment(cores["benchmark_core"])
     if returncode != 0:
         raise RuntimeError(f"SINT runner exited with {returncode}")
     child_peak_rss_kib = resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss
@@ -673,23 +715,35 @@ def run_sint_repetition(
     samples.frombytes(gzip.decompress((output_dir / "raw_samples_ns.bin.gz").read_bytes()))
     if sys.byteorder != "little":
         samples.byteswap()
+    if len(samples) != measured:
+        raise AssertionError(f"SINT runner returned {len(samples)} samples, expected {measured}")
     meta = json.loads((output_dir / "sint_meta.json").read_text(encoding="utf-8"))
+    expected_reasons = sint["expected_reasons"]
     mismatches = []
     by_effect: dict[str, list[int]] = {}
+    reasons: dict[str, int] = {}
+    records = 0
     with gzip.open(output_dir / "sint_decisions.jsonl.gz", "rt", encoding="utf-8") as handle:
         for line in handle:
             index, step_index, action, reason = json.loads(line)
-            if step_index != positions[warmup + index]:
+            records += 1
+            if index != records - 1 or step_index != positions[warmup + index]:
                 raise AssertionError("SINT runner did not follow the registered order")
             step = steps[step_index]
+            expected_reason = expected_reasons[_mutation_kind(step["case"])]
             by_effect.setdefault(step["sint_expected"], []).append(samples[index])
-            if action != step["sint_expected"]:
+            reasons[str(reason)] = reasons.get(str(reason), 0) + 1
+            if action != step["sint_expected"] or reason != expected_reason:
                 mismatches.append(
                     {"measured_index": index, "step": step_index, "case": step["case"],
-                     "expected": step["sint_expected"], "observed": action, "reason": reason}
+                     "expected": [step["sint_expected"], expected_reason],
+                     "observed": [action, reason]}
                 )
+    if records != measured:
+        raise AssertionError(f"SINT runner returned {records} decisions, expected {measured}")
     stats = distribution(samples)
     scan_period_ns = int(setting["scan_period_us"]) * 1000
+    affinity_ok = _cpu_list(allowed) == allowed_cores
     metrics = {
         "exp": config["exp"],
         "claim": config["claim"],
@@ -704,13 +758,14 @@ def run_sint_repetition(
         "development_scale": development_scale,
         "sint_commit": head,
         "sint_source_hashes": source_hashes,
-        "sint_built_module_hashes": built,
+        "sint_built_dist_tree_sha256": built,
         "sint_meta": meta,
         "decision_latency_ns": stats,
         "latency_by_expected_effect_ns": {
             effect: _summary(values) for effect, values in sorted(by_effect.items())
         },
         "latency_by_chain_depth_ns": {},
+        "decision_reason_counts": dict(sorted(reasons.items())),
         "p99_us": stats["p99_ns"] / 1000,
         "derived_p99_scan_occupancy_percent": stats["p99_ns"] / scan_period_ns * 100,
         "throughput_decisions_per_s_wall": measured / (meta["measured_loop_wall_ns"] / 1e9),
@@ -722,8 +777,8 @@ def run_sint_repetition(
         "signatures_verified": None,
         "verification_cache_hits": None,
         "audit_records": None,
-        "affinity": {"requested_core": core, "proc_cpus_allowed_list": allowed,
-                     "verified": allowed == str(core)},
+        "affinity": {"requested_cores": sorted(allowed_cores), "proc_cpus_allowed_list": allowed,
+                     "verified": affinity_ok},
         "measured_step_sequence_sha256": hashlib.sha256(
             array("I", positions[warmup:]).tobytes()
         ).hexdigest(),
@@ -731,11 +786,11 @@ def run_sint_repetition(
     }
     metrics["threshold_checks"] = {
         "zero_decision_mismatches": not mismatches,
-        "affinity_verified": allowed == str(core),
+        "affinity_verified": affinity_ok,
         "no_nonpositive_sample": stats["zero_or_negative_samples"] == 0,
     }
     write_json(output_dir / "metrics.json", metrics)
-    write_json(output_dir / "environment.json", {"before": environment(core)})
+    write_json(output_dir / "environment.json", {"before": environment_before, "after": environment_after})
     with (output_dir / "decision_mismatches.jsonl").open("w", encoding="utf-8") as handle:
         for item in mismatches:
             handle.write(json.dumps(item, sort_keys=True) + "\n")
@@ -965,6 +1020,22 @@ def run_preflight(
     pep, store, _ = make_pep()
     result = pep.decide(probe["subject"], envelopes[probe_index])
     control("missing_context", DEFER, result, result[1] == "read" and result[5] == "context_unavailable")
+    pep, store, _ = make_pep()
+    store.publish(
+        probe_key,
+        ContextSnapshot(tick=probe_snapshot.tick, mode=probe_snapshot.mode,
+                        history=probe_snapshot.history, high_risk=True),
+    )
+    result = pep.decide(probe["subject"], envelopes[probe_index])
+    control("high_risk_context", DEFER, result, result[1] == "read" and result[5] == "high_risk")
+    pep, store, _ = make_pep()
+    store.publish(probe_key, probe_snapshot, published_ns=time.monotonic_ns() - stale_age)
+    result = pep.decide("subject:not-the-holder", envelopes[probe_index])
+    holder = pep.decide(probe["subject"], envelopes[probe_index])
+    control(
+        "non_holder_presenter", DENY, result,
+        result[5] == "subject" and result[1] is None and holder[0] == DEFER and pep.deferrals == {probe["subject"]: 1},
+    )
 
     read_fd, write_fd, _ = audit_queue.open_queue(65536)
     filler = b"x" * 4095 + b"\n"

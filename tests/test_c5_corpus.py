@@ -28,10 +28,30 @@ def test_main_variant_reproduces_exp12_effect_mix(corpus):
     assert manifest["reference_engine_mismatches"] == 0
 
 
-def test_scaling_and_sint_variants(corpus):
+def test_scaling_cells_share_effect_mix_and_request_every_policy(corpus):
+    directory, manifest = corpus
+    variants = manifest["variants"]
+    for depth, steps, mix in (
+        (0, 9360, {"allow": 720, "deny": 7200, "rewrite": 1440}),
+        (1, 2340, {"allow": 180, "deny": 1800, "rewrite": 360}),
+        (2, 2340, {"allow": 180, "deny": 1800, "rewrite": 360}),
+    ):
+        for count in (1, 10, 100, 1000):
+            summary = variants[f"scale_p{count}_d{depth}"]
+            assert summary["steps"] == steps
+            assert summary["expected_effects"] == mix
+            assert summary["chain_depths"] == {str(depth): steps}
+    _, steps = load_variant(directory, "scale_p1000_d2")
+    policies = {step["leaf"].rsplit(":", 1)[0] for step in steps}
+    assert len(policies) == 1000
+    registry = json.loads((directory / "registry.json").read_text())
+    assert sum(not key.startswith("synthetic_scale:") for key in registry) == 42
+    assert "issuer:synthetic_scale" in json.loads((directory / "anchors.json").read_text())
+
+
+def test_sint_subset_variant(corpus):
     _, manifest = corpus
     variants = manifest["variants"]
-    assert [variants[f"scale_d{depth}"]["steps"] for depth in range(3)] == [936, 234, 234]
     assert variants["sint_subset"]["steps"] == 27216
     assert variants["sint_subset"]["sint_expected"] == {"allow": 4536, "deny": 22680}
 

@@ -3,8 +3,10 @@ from __future__ import annotations
 """Exp-23 revocation propagation: authority issuance to resolver visibility.
 
 The authority (this process) and the resolver (a child process) run on the
-same host, pinned to different non-benchmark cores, so both read the same
-system-wide ``CLOCK_MONOTONIC``.  For each revocation the resolver first
+same host as Redis, each pinned to its own core (registered: authority on the
+monitor core, resolver on the audit-drain core, Redis on the support core), so
+both read the same system-wide ``CLOCK_MONOTONIC``.  The measurement runs after
+the exp-23 repetitions, when no benchmark worker is active.  For each revocation the resolver first
 confirms that it is polling, the authority waits a seeded 1-10 ms delay,
 records ``t_issue`` immediately before ``SADD``, and the resolver records
 ``t_visible`` when its next ``SISMEMBER`` returns 1.  The delay is

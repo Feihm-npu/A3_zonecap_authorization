@@ -12,12 +12,18 @@ fail-closed order is:
    verification cache;
 5. look up every token identifier in the revocation store;
 6. look up and freshness-check the runtime-context snapshot;
-7. evaluate the five-effect policy with the registered ``PolicyEngine`` order;
+7. bind the authenticated subject to the leaf, then evaluate the five-effect
+   policy in the registered ``PolicyEngine`` order;
 8. bind the effect, re-check the emitted action, and bound consecutive DEFERs;
 9. construct the exact response record; and
 10. enqueue that record in the bounded audit queue, or deny on failure.
 
-Steps 1-5 deny on failure.  The verification cache stores only digests of
+Steps 1-5 deny on failure, and step 1 denies on any exception.  Step 7 checks
+the presenter before context: ``PolicyEngine`` receives an already
+authenticated subject, whereas the PEP must first establish that the presenter
+holds the leaf, so that a non-holder can neither obtain a hold nor change the
+holder's deferral count.  On the registered corpus both orders give identical
+decisions.  The verification cache stores only digests of
 immutable tokens whose signature, linkage, and attenuation have already been
 checked.  Revocation, root registration, context, policy, binding, and audit
 are evaluated on every request.  No parsed token, decision, or response is
@@ -92,13 +98,22 @@ def _strings(value: Any) -> bool:
     return type(value) is list and all(type(item) is str for item in value)
 
 
+MAX_EXACT_INTEGER = 2**53
+
+
+def _number(value: Any) -> bool:
+    """A finite float, or an integer exactly representable as a float."""
+
+    if type(value) is int:
+        return -MAX_EXACT_INTEGER <= value <= MAX_EXACT_INTEGER
+    return type(value) is float and math.isfinite(value)
+
+
 def _interval(value: Any) -> tuple[float, float]:
     if type(value) is not list or len(value) != 2:
         raise WireError("interval must have two endpoints")
     low, high = value
-    if type(low) not in (int, float) or type(high) not in (int, float):
-        raise WireError("interval endpoints must be numbers")
-    if not (math.isfinite(low) and math.isfinite(high)) or low > high:
+    if not (_number(low) and _number(high)) or low > high:
         raise WireError("invalid interval")
     return (low, high)
 
@@ -130,7 +145,12 @@ class Token:
 def parse_token(payload: bytes, signature: bytes, *, check_schema: bool = True) -> Token:
     doc = json.loads(payload, parse_constant=_reject_constant)
     if check_schema:
-        if type(doc) is not dict or doc.keys() != TOKEN_KEYS or doc["v"] != WIRE_VERSION:
+        if (
+            type(doc) is not dict
+            or doc.keys() != TOKEN_KEYS
+            or type(doc["v"]) is not int
+            or doc["v"] != WIRE_VERSION
+        ):
             raise WireError("token schema")
         for key in ("id", "pol", "iss", "sub", "zs", "zd", "spk"):
             if type(doc[key]) is not str:
@@ -172,13 +192,17 @@ def parse_token(payload: bytes, signature: bytes, *, check_schema: bool = True) 
 def parse_request(payload: bytes, *, check_schema: bool = True) -> dict[str, Any]:
     doc = json.loads(payload, parse_constant=_reject_constant)
     if check_schema:
-        if type(doc) is not dict or doc.keys() != REQUEST_KEYS or doc["v"] != WIRE_VERSION:
+        if (
+            type(doc) is not dict
+            or doc.keys() != REQUEST_KEYS
+            or type(doc["v"]) is not int
+            or doc["v"] != WIRE_VERSION
+        ):
             raise WireError("request schema")
         for key in ("a", "k", "o", "rid", "zd", "zs"):
             if type(doc[key]) is not str:
                 raise WireError(f"request field {key}")
-        value = doc["u"]
-        if type(value) not in (int, float) or not math.isfinite(value):
+        if not _number(doc["u"]):
             raise WireError("request value")
     return doc
 
@@ -478,7 +502,9 @@ class ReferencePEP:
             ]
             request = parse_request(raw_request, check_schema=self._schema)
             request_id = request["rid"]
-        except (WireError, ValueError, KeyError, TypeError):
+        except Exception:
+            # Malformed input of any kind (including RecursionError from deep
+            # nesting) is denied, never propagated.
             return self._finish(
                 mask, None, DENY, None, None, None, "malformed", chain_ids, None, 0, 0
             )
@@ -583,12 +609,12 @@ class ReferencePEP:
         operation = request["o"]
         if self._policy:
             low, high = leaf.parameter
-            if not context_ok:
+            if subject != leaf.subject:
+                effect, reason = DENY, "subject"
+            elif not context_ok:
                 effect, reason = DEFER, "context_unavailable"
             elif snapshot.high_risk:
                 effect, reason = DEFER, "high_risk"
-            elif subject != leaf.subject:
-                effect, reason = DENY, "subject"
             elif request["zs"] != leaf.source_zone:
                 effect, reason = DENY, "source_zone"
             elif request["zd"] != leaf.target_zone:
@@ -629,14 +655,16 @@ class ReferencePEP:
         else:
             emitted = None
         if self._binding:
-            if effect is DEFER:
-                count = self.deferrals.get(leaf.subject, 0)
-                if count >= self.options.max_deferrals:
-                    effect, reason, emitted = DENY, "defer_timeout", None
+            # Only the holder's own decisions count toward, or reset, its bound.
+            if subject == leaf.subject:
+                if effect is DEFER:
+                    count = self.deferrals.get(leaf.subject, 0)
+                    if count >= self.options.max_deferrals:
+                        effect, reason, emitted = DENY, "defer_timeout", None
+                    else:
+                        self.deferrals[leaf.subject] = count + 1
                 else:
-                    self.deferrals[leaf.subject] = count + 1
-            else:
-                self.deferrals.pop(leaf.subject, None)
+                    self.deferrals.pop(leaf.subject, None)
             if emitted is not None and not (
                 emitted[0] in leaf.actions
                 and leaf.parameter[0] <= emitted[1] <= leaf.parameter[1]

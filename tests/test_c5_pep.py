@@ -252,3 +252,34 @@ def test_each_disabled_stage_is_visible_in_the_mask():
         pep, _ = _pep(anchor, disabled_stages=frozenset({name}))
         mask = pep.decide(CHILD_SUBJECT, encode_envelope(chain, _request()))[6]
         assert mask == FULL_MASK & ~bit, name
+
+
+def test_hostile_numbers_nesting_and_version_types_are_denied_not_raised():
+    anchor, chain = _chain()
+    pep, _ = _pep(anchor)
+    huge = _request().replace(b'"u":50', b'"u":' + b"9" * 400)
+    assert pep.decide(CHILD_SUBJECT, encode_envelope(chain, huge))[5] == "malformed"
+    nested = b"[" * 2000 + b"]" * 2000
+    assert pep.decide(CHILD_SUBJECT, encode_envelope(chain, nested))[5] == "malformed"
+    boolean_version = _request().replace(b'"v":1', b'"v":true')
+    assert pep.decide(CHILD_SUBJECT, encode_envelope(chain, boolean_version))[5] == "malformed"
+
+
+def test_non_holder_cannot_obtain_a_hold_or_touch_the_holder_deferral_count():
+    anchor, chain = _chain()
+    pep, store = _pep(anchor, max_deferrals=2)
+    store.publish(KEY, ContextSnapshot(tick=150, mode="normal", history=(), complete=False))
+    assert pep.decide(CHILD_SUBJECT, encode_envelope(chain, _request()))[0] == DEFER
+    stolen = pep.decide("subject:mallory", encode_envelope(chain, _request()))
+    assert stolen[0] == DENY and stolen[5] == "subject" and stolen[1] is None
+    assert pep.deferrals == {CHILD_SUBJECT: 1}
+    effects = [pep.decide(CHILD_SUBJECT, encode_envelope(chain, _request()))[0] for _ in range(2)]
+    assert effects == [DEFER, DENY]
+
+
+def test_high_risk_context_defers_with_registered_hold():
+    anchor, chain = _chain()
+    pep, store = _pep(anchor)
+    store.publish(KEY, ContextSnapshot(tick=150, mode="normal", history=("authenticate", "authorize"),
+                                       high_risk=True))
+    assert pep.decide(CHILD_SUBJECT, encode_envelope(chain, _request()))[:3] == (DEFER, "read", 10)

@@ -25,6 +25,7 @@ FROZEN_FILES = (
     "research/heldout/exp07/policy_tables.json",
     "results/exp07_heldout_equivalence_20260901/cases.jsonl.gz",
     "scripts/exp25_sint_runner.mjs",
+    "src/zonecap/__init__.py",
     "src/zonecap/compiler.py",
     "src/zonecap/effects.py",
     "src/zonecap/engine.py",

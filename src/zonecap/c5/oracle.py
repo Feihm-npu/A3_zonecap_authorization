@@ -51,6 +51,9 @@ def expected_decision(
     ``context`` is ``None`` when no fresh snapshot exists.
     """
 
+    # The presenter is bound to the leaf before context (see pep.py).
+    if subject != scope["subject"]:
+        return ["deny", None, None, None, None]
     if context is None or not context["complete"] or context.get("stale", False):
         return _hold(scope)
     if context["high_risk"]:
@@ -58,7 +61,6 @@ def expected_decision(
     low, high = scope["parameter"]
     tick_low, tick_high = scope["ticks"]
     structural = (
-        subject == scope["subject"],
         request["zs"] == scope["source_zone"],
         request["zd"] == scope["target_zone"],
         request["k"] in scope["conduits"],

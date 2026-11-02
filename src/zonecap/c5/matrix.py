@@ -150,21 +150,15 @@ def run_matrix(
     if output_dir.exists():
         raise FileExistsError(f"refusing to overwrite result directory: {output_dir}")
     config = json.loads(config_path.read_text(encoding="utf-8"))
-    status = _git("status", "--porcelain")
-    if status and not development:
-        raise RuntimeError("confirmatory C5 runs require a clean, committed tree")
     run_role = "development" if development else "confirmatory"
     if development_scale != 1 and not development:
         raise RuntimeError("--development-scale requires --development")
-    hash_mismatches = sorted(
-        path for path, expected in config["frozen_hashes"].items() if _sha256(ROOT / path) != expected
-    )
-    if hash_mismatches:
-        raise RuntimeError(f"frozen source hash mismatch: {hash_mismatches}")
-    manifest = verify(corpus_dir)
-    if manifest["fingerprint"] != config["corpus_fingerprint"]:
-        raise RuntimeError("corpus fingerprint differs from the frozen configuration")
+    status = _git("status", "--porcelain")
+    # Untracked result directories from earlier experiments are allowed, so the
+    # four experiments can run back to back from one committed tree.
+    blocking = [line for line in status.splitlines() if not line.startswith("?? results/")]
 
+    # The run directory exists before any check, so an aborted attempt is retained.
     output_dir.mkdir(parents=True)
     command = " ".join(shlex.quote(part) for part in [sys.executable, "-m", "zonecap.c5.matrix", *sys.argv[1:]])
     write_json(output_dir / "config.json", config)
@@ -172,7 +166,28 @@ def run_matrix(
     (output_dir / "seed.txt").write_text("".join(f"{seed}\n" for seed in config["seeds"]), encoding="utf-8")
     log_lines = [f"experiment={config['exp']}", f"run_role={run_role}",
                  f"development_scale={development_scale}",
-                 f"git_head={_git('rev-parse', 'HEAD')}", f"git_status_clean={not status}"]
+                 f"git_head={_git('rev-parse', 'HEAD')}",
+                 f"git_tree_clean_except_untracked_results={not blocking}"]
+
+    def abort(reason: str, detail: str) -> None:
+        (output_dir / "log.txt").write_text(
+            "\n".join([*log_lines, f"aborted={reason}", f"detail={detail}"]) + "\n", encoding="utf-8"
+        )
+        raise RuntimeError(f"{reason}: {detail}; the aborted run directory is retained")
+
+    if blocking and not development:
+        abort("dirty_tree", " | ".join(blocking))
+    hash_mismatches = sorted(
+        path for path, expected in config["frozen_hashes"].items() if _sha256(ROOT / path) != expected
+    )
+    if hash_mismatches:
+        abort("frozen_hash_mismatch", ", ".join(hash_mismatches))
+    try:
+        manifest = verify(corpus_dir)
+    except RuntimeError as error:
+        abort("corpus_hash_mismatch", str(error))
+    if manifest["fingerprint"] != config["corpus_fingerprint"]:
+        abort("corpus_fingerprint_mismatch", manifest["fingerprint"])
     write_json(
         output_dir / "environment_manifest.json",
         {"commands": _environment_commands(config.get("environment_commands", [])),
@@ -230,9 +245,10 @@ def run_matrix(
                     raise RuntimeError(f"repetition {name}/{seed} failed; directory retained")
         propagation = config.get("propagation")
         if propagation is not None:
+            host = environment.get("ZONECAP_C5_REDIS_HOST", "127.0.0.1")
             port = environment.get("ZONECAP_C5_REDIS_PORT", "6379")
             completed = subprocess.run(
-                [*_python(), "zonecap.c5.propagation", "--port", port,
+                [*_python(), "zonecap.c5.propagation", "--host", host, "--port", port,
                  "--count", str(propagation["revocations"]), "--seed", str(propagation["seed"]),
                  "--authority-core", str(propagation["authority_core"]),
                  "--resolver-core", str(propagation["resolver_core"]),
@@ -270,6 +286,19 @@ def run_matrix(
         )
     if config.get("unavailable_baselines"):
         metrics["unavailable_baselines"] = config["unavailable_baselines"]
+    ratio_limit = config.get("speedup_bug_signal_ratio")
+    if ratio_limit is not None:
+        configurations = summary["configurations"]
+        baseline = configurations["sint"]["pooled_decision_latency_ns"]
+        signals = {}
+        for name in ("zonecap_full", "zonecap_cache_miss"):
+            pooled = configurations[name]["pooled_decision_latency_ns"]
+            ratios = {stat: baseline[stat] / pooled[stat] for stat in ("p50_ns", "p99_ns")}
+            signals[name] = {
+                "sint_over_zonecap": ratios,
+                "audit_required": any(value > ratio_limit for value in ratios.values()),
+            }
+        metrics["speedup_bug_signal"] = {"ratio_limit": ratio_limit, "comparisons": signals}
     write_json(output_dir / "metrics.json", metrics)
     with (output_dir / "decision_mismatches.jsonl").open("w", encoding="utf-8") as sink:
         for path in sorted((output_dir / "configurations").rglob("decision_mismatches.jsonl")):
@@ -280,6 +309,7 @@ def run_matrix(
     write_json(
         output_dir / "source_manifest.json",
         {"git_head": _git("rev-parse", "HEAD"), "git_status_before_run": status,
+         "blocking_tree_changes": blocking,
          "frozen_hashes": config["frozen_hashes"], "corpus_manifest_sha256": _sha256(corpus_dir / "manifest.json")},
     )
     for name, item in summary["configurations"].items():

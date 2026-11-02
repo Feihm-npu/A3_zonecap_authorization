@@ -16,8 +16,10 @@ Variants:
 
 * ``main``: all 58,968 exp-07 one-request cases plus 4,536 five-step composed
   traces (81,648 policy steps, exp-12 effect mix);
-* ``scale_d0``/``scale_d1``/``scale_d2``: the exp-07 cases of one registered
-  grant at delegation depth 0, 1, or 2 (exp-24);
+* ``scale_p{P}_d{D}`` for P in 1, 10, 100, 1000 and D in 0, 1, 2 (exp-24):
+  ten passes over the exp-07 case template at depth D, rotated across P
+  registered, anchored synthetic grants with the frozen overlay, so every
+  cell has the same effect mix and every registered policy is requested;
 * ``sint_subset``: valid cases plus the subject, asset, action, parameter-high,
   and tick-high mutations that pinned SINT can express (exp-25).
 """
@@ -35,7 +37,7 @@ from nacl.bindings import crypto_sign, crypto_sign_seed_keypair
 from ..compiler import Architecture
 from ..effects import EffectBinding, EffectContractError
 from ..engine import PolicyEngine
-from ..exp07_generator import architecture_document, expand_scopes
+from ..exp07_generator import architecture_document, expand_scopes, generate_cases
 from ..models import ActionRequest, Capability, Interval
 from . import oracle
 from .wire import encode_envelope, request_payload, token_digest, token_payload
@@ -43,10 +45,17 @@ from .wire import encode_envelope, request_payload, token_digest, token_payload
 
 CORPUS_VERSION = 1
 KEY_DOMAIN = "zonecap-c5-test-keys-v1"
-SCALE_POLICY_ID = "cpwe_cip_security:g001"
+SCALE_ARCHITECTURE = "synthetic_scale"
+SCALE_GRANTS = 1000
+SCALE_POLICY_COUNTS = (1, 10, 100, 1000)
+SCALE_DEPTHS = (0, 1, 2)
+SCALE_PASSES = 10
 SINT_MUTATIONS = frozenset({"subject", "asset", "action", "parameter_high", "tick_high"})
 COMPOSED_KINDS = ("attenuate", "defer", "allow", "rewrite", "deny")
-VARIANTS = ("main", "scale_d0", "scale_d1", "scale_d2", "sint_subset")
+SCALE_VARIANTS = tuple(
+    f"scale_p{count}_d{depth}" for count in SCALE_POLICY_COUNTS for depth in SCALE_DEPTHS
+)
+VARIANTS = ("main", *SCALE_VARIANTS, "sint_subset")
 DEFAULT_POLICY_TABLE = "research/heldout/exp07/policy_tables.json"
 DEFAULT_EXP07_CASES = "results/exp07_heldout_equivalence_20260901/cases.jsonl.gz"
 
@@ -90,29 +99,32 @@ def strict_runtime_envelope(parameter: list[float], value: float) -> list[float]
     return envelope
 
 
-def synthetic_policies(count: int) -> list[dict[str, Any]]:
-    """Deterministic non-matching registered policies for exp-24."""
+def synthetic_scale_architecture(overlay_table: dict[str, Any]) -> dict[str, Any]:
+    """One synthetic architecture with ``SCALE_GRANTS`` disjoint one-way grants.
 
-    policies = []
-    for index in range(count):
+    Every grant uses the frozen evaluation overlay, so its compiled root and
+    depth-1/2 delegations have exactly the exp-07 shape.  Used only by exp-24.
+    """
+
+    zones = []
+    grants = []
+    for index in range(SCALE_GRANTS):
         tag = f"{index:04d}"
-        policies.append(
-            {
-                "policy_id": f"synthetic:p{tag}",
-                "issuer": "issuer:synthetic",
-                "subject": f"subject:synthetic:p{tag}",
-                "source_zone": f"synthetic_source_{tag}",
-                "target_zone": f"synthetic_target_{tag}",
-                "conduits": [f"c_synthetic_{tag}"],
-                "assets": [f"synthetic_asset_{tag}"],
-                "actions": ["read", "write"],
-                "parameter": [0, 100],
-                "ticks": [100, 200],
-                "modes": ["normal", "maintenance"],
-                "required_sequence": ["authenticate"],
-            }
+        zones.append({"id": f"syn_src_{tag}", "asset": f"syn_src_{tag}_asset"})
+        zones.append({"id": f"syn_dst_{tag}", "asset": f"syn_dst_{tag}_asset"})
+        grants.append(
+            {"source_zone": f"syn_src_{tag}", "target_zone": f"syn_dst_{tag}", "conduit": f"c_syn_{tag}"}
         )
-    return policies
+    return {
+        "id": SCALE_ARCHITECTURE,
+        "zones": zones,
+        "grants": grants,
+        "source_file": "synthetic: exp-24 policy-count scaling only",
+    }
+
+
+def scale_policy_ids(count: int) -> list[str]:
+    return [f"{SCALE_ARCHITECTURE}:g{index:03d}" for index in range(count)]
 
 
 def _scope_fields(scope: dict[str, Any]) -> dict[str, Any]:
@@ -362,7 +374,8 @@ def build(
     cases_path = root / exp07_cases
     table = json.loads(table_path.read_text(encoding="utf-8"))
     output_dir.mkdir(parents=True)
-    builder = _Builder(table, output_dir / "compiled_inputs")
+    extended = {**table, "architectures": [*table["architectures"], synthetic_scale_architecture(table)]}
+    builder = _Builder(extended, output_dir / "compiled_inputs")
 
     variants: dict[str, list[dict[str, Any]]] = {name: [] for name in VARIANTS}
     reference_mismatches: list[dict[str, Any]] = []
@@ -416,8 +429,6 @@ def build(
         scope_id = record["scope_id"]
         capability = builder.capabilities[scope_id]
         selected = ["main"]
-        if scope_id.startswith(SCALE_POLICY_ID + ":d"):
-            selected.append(f"scale_d{record['depth']}")
         if record["mutation"] is None or record["mutation"] in SINT_MUTATIONS:
             selected.append("sint_subset")
         for variant in selected:
@@ -466,6 +477,35 @@ def build(
                 "main", unit=unit, case_id=trace_id, kind=kind, leaf=child_id,
                 subject=subject, request=request, context=context, capability=derived,
             )
+
+    for count in SCALE_POLICY_COUNTS:
+        for depth in SCALE_DEPTHS:
+            variant = f"scale_p{count}_d{depth}"
+            template_size = 936 if depth == 0 else 234
+            needed: dict[int, list[tuple[int, int]]] = {}
+            for position in range(SCALE_PASSES * template_size):
+                needed.setdefault(position % count, []).append((position, position % template_size))
+            chosen: list[dict[str, Any] | None] = [None] * (SCALE_PASSES * template_size)
+            for grant, items in needed.items():
+                scope_id = f"{SCALE_ARCHITECTURE}:g{grant:03d}:d{depth}"
+                cases = list(generate_cases(builder.scope_by_id[scope_id]))
+                if len(cases) != template_size:
+                    raise AssertionError(f"{scope_id}: unexpected template size {len(cases)}")
+                for position, template_index in items:
+                    chosen[position] = cases[template_index]
+            for record in chosen:
+                add_step(
+                    variant,
+                    unit=unit_counter[variant],
+                    case_id=record["case_id"],
+                    kind="single",
+                    leaf=record["scope_id"],
+                    subject=record["request"]["subject"],
+                    request=_request_fields(record["request"]),
+                    context=_context(record["request"]),
+                    capability=builder.capabilities[record["scope_id"]],
+                )
+                unit_counter[variant] += 1
 
     files: dict[str, str] = {}
     variant_summary: dict[str, Any] = {}
@@ -523,7 +563,7 @@ def build(
         "key_domain": KEY_DOMAIN,
         "inputs": {policy_table: _sha256(table_path), exp07_cases: _sha256(cases_path)},
         "exp07_cases": case_count,
-        "scale_policy_id": SCALE_POLICY_ID,
+        "scale_architecture": SCALE_ARCHITECTURE,
         "registered_policies": len(builder.registry),
         "issued_tokens": len(builder.tokens),
         "token_bytes_by_depth": {

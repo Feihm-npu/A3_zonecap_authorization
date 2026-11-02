@@ -149,11 +149,12 @@ with big-endian integers. Limits:
 | One envelope | 65,536 bytes |
 
 Payloads are canonical JSON: ASCII, sorted keys, no insignificant whitespace,
-and no NaN or infinity.
+and no NaN or infinity. Every number is a finite float or an integer within
+±2^53, and the version `v` is the integer 1.
 
 A token payload carries:
 
-- identifier `id`, policy identifier `pol`, issuer `iss`, depth `d`;
+- version `v`, identifier `id`, policy identifier `pol`, issuer `iss`, depth `d`;
 - subject `sub` and the subject's Ed25519 public key `spk`;
 - zones `zs`/`zd`;
 - conduits `K`, assets `A`, operations `O`, parameter interval `Iu`, tick
@@ -165,19 +166,20 @@ Who signs what:
 
 - A **root** is signed by the issuer's trust-anchor key.
 - A **child** is signed by its parent's subject key (`spk`).
-- The **request payload** (`zs`, `zd`, conduit, asset, operation, value, request
-  identifier) is not signed. Request origin is authenticated by the transport
+- The **request payload** (`v`, `zs`, `zd`, conduit `k`, asset `a`, operation
+  `o`, value `u`, request identifier `rid`) is not signed. Request origin is authenticated by the transport
   session (CIP Security, an OPC UA secure channel, or mutual TLS), which hands
   the authenticated subject to the PEP. Transport authentication is outside the
   decision path.
 
-Serialized token sizes in the frozen corpus:
+Serialized token sizes in the frozen corpus, including the 1,000 synthetic
+exp-24 grants (Section 3):
 
 | Depth | Tokens | Bytes (minimum to maximum) |
 |---|---|---|
-| 0 (root) | 42 | 472–544 |
-| 1 | 3,066 | 516–614 |
-| 2 | 798 | 525–599 |
+| 0 (root) | 1,042 | 472–544 |
+| 1 | 4,066 | 516–614 |
+| 2 | 1,798 | 525–599 |
 | 3 | 756 | 535–609 |
 
 Depth 3 occurs only for runtime-attenuated children of depth-2 grants (Section 3).
@@ -186,7 +188,8 @@ Depth 3 occurs only for runtime-attenuated children of depth-2 grants (Section 3
 
 `decide(authenticated_subject, envelope)` runs these stages in a fixed order.
 Each stage sets one bit in the per-decision activation mask. Stages 1 to 5 deny
-on failure.
+on failure. Stage 1 denies on any exception, including oversized integers and
+deep nesting, so hostile input can never crash the PEP.
 
 | # | Stage | Check |
 |---|---|---|
@@ -196,25 +199,39 @@ on failure.
 | 4 | signature | every token: Ed25519 verification, or a hit in the verification cache (Section 2.4) |
 | 5 | revocation | every token identifier in the chain is looked up |
 | 6 | context | snapshot lookup by (target zone, asset) and freshness check (Section 2.6) |
-| 7 | policy | five effects in the registered `PolicyEngine` order (below) |
+| 7 | policy | presenter binding, then the five effects in the registered `PolicyEngine` order (below) |
 | 8 | binding | the emitted action is re-checked against the effective capability before emission; deferrals are bounded (Section 2.8) |
 | 9 | response | exact canonical-JSON decision record |
 | 10 | audit | non-blocking enqueue of that record; failure turns the decision into a DENY (Section 2.7) |
 
 The policy stage evaluates, in order:
 
-1. missing, stale, or incomplete context gives `DEFER`;
-2. a registered high-risk flag gives `DEFER`;
-3. a failed subject, source-zone, target-zone, conduit, asset, operation, time,
-   mode, or event-sequence check gives `DENY`;
-4. a runtime envelope that strictly narrows `Iu` gives `ATTENUATE`, carrying the
+1. an authenticated subject that differs from the leaf subject gives `DENY`;
+2. missing, stale, or incomplete context gives `DEFER`;
+3. a registered high-risk flag gives `DEFER`;
+4. a failed source-zone, target-zone, conduit, asset, operation, time, mode, or
+   event-sequence check gives `DENY`;
+5. a runtime envelope that strictly narrows `Iu` gives `ATTENUATE`, carrying the
    narrowed child interval and executing nothing; a runtime envelope disjoint
    from `Iu` gives `DENY`;
-5. a value outside `Iu` gives `REWRITE` to the nearest boundary;
-6. otherwise `ALLOW`.
+6. a value outside `Iu` gives `REWRITE` to the nearest boundary;
+7. otherwise `ALLOW`.
 
-The registered hold for `DEFER` is the operation `read` at the lower bound of
-the effective `Iu`.
+**Why presenter binding comes first.** `PolicyEngine` evaluates context before
+the subject because its requests carry an already authenticated subject. The PEP
+must first establish that the presenter holds the leaf. Otherwise, a non-holder
+who replays a valid chain against missing context would receive the `read` hold
+and could change the holder's deferral count. The two orders give identical
+decisions on every corpus step, which the corpus build checks
+(`reference_engine_mismatches = 0`).
+
+**Hold value.** The registered hold for `DEFER` is the operation `read` at the
+lower bound of the effective `Iu`, as in exp-12's one-request binding. exp-12's
+composed traces held at the request value, so C5's composed `DEFER` steps differ
+from exp-12 only in the hold value (1,512 of 4,536 traces).
+
+**Exact comparisons.** The PEP and the oracle compare intervals exactly.
+`PolicyEngine` tolerates `1e-12`. No corpus value lies within `1e-12` of a bound.
 
 ### 2.4 Verification cache
 
@@ -301,8 +318,11 @@ the timed region immediately before the decision. In the end-to-end path
 ### 2.8 Deferral bound
 
 The PEP denies the third consecutive `DEFER` for the same holder (`max_deferrals
-= 2`). Any other effect resets the holder's count. Composed corpus traces never
-contain consecutive deferrals for one holder, so a timeout in a measured run
+= 2`). Only decisions that reach the binding stage, and whose presenter is the
+holder, count toward or reset the holder's bound. Any other holder effect resets
+it. Denials in stages 1 to 5, and presenter-binding denials, neither count nor
+reset. Composed corpus traces never contain consecutive deferrals for one holder,
+so a timeout in a measured run
 appears as a decision mismatch.
 
 ### 2.9 Runtime settings
@@ -338,12 +358,16 @@ committed before the confirmatory run and listed in the execution note.
    |---|---|
    | Benchmark worker | 3 |
    | Audit drain | 4 |
-   | Redis and revocation authority | 5 |
+   | Pinned SINT process (exp-25) | 3 and 4, its two-core budget |
+   | Redis server | 5 |
+   | Propagation authority / resolver (exp-23) | 1 / 4 |
    | `tegrastats` | 1 |
    | OpenPLC under `single_host` | 2 |
    | OS and interrupts | 0 |
 
-   The benchmark core must not be core 0.
+   The benchmark core must not be core 0. The harness pins its own processes.
+   Redis is started by the hardware group pinned to its core (Section 5,
+   exp-23).
 2. The SINT checkout path, through `ZONECAP_C5_SINT_REPO`.
 3. The Redis host and port, through `ZONECAP_C5_REDIS_HOST` and
    `ZONECAP_C5_REDIS_PORT`.
@@ -362,7 +386,7 @@ Build the corpus on the Jetson with
 `PYTHONPATH=src python3 -m zonecap.c5.corpus build --output-dir build/c5_corpus`.
 
 - The build is deterministic. Its fingerprint must equal
-  `f664f0049ceed76e91a791c1a914160934ab1925a3a79bb434ae39ecc8ecc83c`.
+  `52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab`.
 - `PYTHONPATH=src python3 -m pytest tests/test_c5_*.py` checks the fingerprint
   and must pass on the Jetson.
 - The builder reads only frozen inputs:
@@ -372,16 +396,17 @@ Build the corpus on the Jetson with
 - The registered policy set is the frozen exp-07 table: a source-derived
   zone/conduit topology plus the declared, source-independent evaluation overlay.
   It is not a complete IEC 62443 policy and implies no conformance claim. The
-  compiler turns it into 42 registered root capabilities.
+  compiler turns it into 42 registered root capabilities. exp-24 additionally
+  uses 1,000 synthetic grants (below).
 
 ### 3.2 Variants
 
 | Variant | Used by | Steps | Units | Expected effects | Chain depth (steps) |
 |---|---|---|---|---|---|
 | `main` | exp-22, exp-23 | 81,648 | 63,504 | allow 9,072; attenuate 4,536; defer 4,536; deny 49,896; rewrite 13,608 | d0 42,336; d1 22,680; d2 13,608; d3 3,024 |
-| `scale_d0` | exp-24 | 936 | 936 | allow 72; deny 720; rewrite 144 | d0 936 |
-| `scale_d1` | exp-24 | 234 | 234 | allow 18; deny 180; rewrite 36 | d1 234 |
-| `scale_d2` | exp-24 | 234 | 234 | allow 18; deny 180; rewrite 36 | d2 234 |
+| `scale_p{P}_d0` (P = 1, 10, 100, 1000) | exp-24 | 9,360 each | 9,360 | allow 720; deny 7,200; rewrite 1,440 | d0 9,360 |
+| `scale_p{P}_d1` | exp-24 | 2,340 each | 2,340 | allow 180; deny 1,800; rewrite 360 | d1 2,340 |
+| `scale_p{P}_d2` | exp-24 | 2,340 each | 2,340 | allow 180; deny 1,800; rewrite 360 | d2 2,340 |
 | `sint_subset` | exp-25 | 27,216 | 27,216 | ZoneCap: allow 4,536; deny 18,144; rewrite 4,536. SINT: allow 4,536; deny 22,680 | d0 18,144; d1 4,536; d2 4,536 |
 
 **`main`.** This is the exp-12 policy-step corpus:
@@ -393,8 +418,19 @@ Build the corpus on the Jetson with
 The composed traces are the only source of `DEFER` and `ATTENUATE`. Their steps
 2 to 5 present the holder-signed runtime child, which adds one level of depth.
 
-**`scale_d*`.** These contain the exp-07 cases of the registered grant
-`cpwe_cip_security:g001` (site operations to safety) at depth 0, 1, or 2.
+**`scale_p{P}_d{D}`.** The corpus adds one synthetic architecture,
+`synthetic_scale`. It has 1,000 disjoint one-way grants under the anchored issuer
+`issuer:synthetic_scale`, all with the frozen overlay. The compiler turns them
+into registered roots, and each has depth-1 and depth-2 delegations of exactly
+the exp-07 shape.
+
+Cell (P, D) contains ten passes over the exp-07 case template at depth D. Step
+`j` uses template case `j mod T_D` (T_0 = 936, T_1 = T_2 = 234) of grant
+`j mod P`. As a result:
+
+- every cell has the same effect mix;
+- every one of the P registered policies is requested; and
+- the 1,000-policy cells reach 1,000 distinct roots and chains.
 
 **`sint_subset`.** This contains the valid cases plus the subject, asset,
 operation, parameter-high, and tick-high mutations that pinned SINT can express.
@@ -492,8 +528,10 @@ logged cause.
   `/proc/self/status`.
 - The audit drain, Redis, the propagation processes, `tegrastats`, and (under
   `single_host`) OpenPLC run on other cores.
-- For the SINT runner, the harness verifies the child process's
-  `Cpus_allowed_list` after launch.
+- The SINT runner receives the benchmark and audit-drain cores. This is the
+  same two-core budget as ZoneCap's worker plus drain, so V8's helper threads do
+  not compete with its main thread on one core. The harness verifies the child
+  process's `Cpus_allowed_list` after launch, and aborts on a mismatch.
 
 ### 4.5 Preflight
 
@@ -509,6 +547,7 @@ following occurs:
   the slowest;
 - any of the ten single-stage disabled-check mutants is not detected;
 - any negative control of Section 8 fails;
+- the kernel cannot grant the registered 1 MiB audit queue;
 - the corpus fingerprint or any frozen source hash differs; or
 - the 10 ms OpenPLC task period is not observed (end-to-end preflight,
   Section 6).
@@ -535,8 +574,9 @@ PYTHONPATH=src python3 -m zonecap.c5.matrix --config configs/c5/<exp>.json \
     --corpus-dir build/c5_corpus --output-dir results/<run_id>
 ```
 
-Confirmatory runs require a clean, committed tree. The `--development` flag marks
-a dry run that can never support C5.
+Confirmatory runs require a clean, committed tree. Untracked directories under
+`results/` are allowed, so the four experiments can run back to back. The
+`--development` flag marks a dry run that can never support C5.
 
 ### exp-22: full path (`configs/c5/exp22_c5_main.json`)
 
@@ -555,17 +595,24 @@ diagnostic is faster.
 | `cache_miss` | verification cache cleared before every timed decision | A1 rule (Section 1.3) |
 | `cold_start` | fresh process, no warm-up, first 10,000 decisions measured | descriptive; reported separately, never pooled |
 | `unsigned` | signature stage disabled; its mask bit stays clear | diagnostic only; cannot support C5 |
-| `remote_revocation` | Redis set on the Jetson (pinned, loopback) | diagnostic only |
+| `remote_revocation` | Redis set on the Jetson (pinned, loopback), 100 ms timeout | diagnostic only |
 | `audit_disabled` | audit stage disabled; its mask bit stays clear | diagnostic only; cannot support C5 |
 
 Report component deltas, such as full minus unsigned, as descriptive values. Do
 not present them as deployable results.
 
+**Redis.** Before exp-23, start Redis pinned to its core, without persistence,
+and record the command and `redis-server --version`:
+`taskset -c 5 redis-server --port 6379 --save "" --appendonly no`. The harness
+loads the 10,000-identifier set itself. It reads the host and port from
+`ZONECAP_C5_REDIS_HOST` and `ZONECAP_C5_REDIS_PORT`, which also drive the
+propagation step.
+
 **Revocation propagation.** `zonecap.c5.propagation` issues 1,000 revocations:
 
-- The measurement runs after the exp-23 repetitions. The authority (core 3,
-  the idle benchmark core), the resolver (core 4), and Redis (core 5) run on the
-  Jetson and read the same system-wide `CLOCK_MONOTONIC`.
+- The measurement runs after the exp-23 repetitions. The authority (core 1),
+  the resolver (core 4), and Redis (core 5) run on the Jetson and read the same
+  system-wide `CLOCK_MONOTONIC`. No benchmark worker is active at that point.
 - For each revocation, the authority waits a seeded 1–10 ms delay, records
   `t_issue` immediately before `SADD`, and the resolver records `t_visible` on its
   first `SISMEMBER` hit.
@@ -577,11 +624,12 @@ not present them as deployable results.
 
 ### exp-24: policy count and delegation depth (`configs/c5/exp24_c5_scaling.json`)
 
-- The 12 full-path cells are `p{1,10,100,1000}_d{0,1,2}`. The registry holds the
-  matching grant `cpwe_cip_security:g001` plus `P - 1` deterministic, non-matching
-  synthetic policies.
+- The 12 full-path cells are `p{1,10,100,1000}_d{0,1,2}` on the variants
+  `scale_p{P}_d{D}` (Section 3.2). The registry holds the first P synthetic
+  grants. All of them are anchored, registered, issued, and requested, and the
+  requests rotate across them.
 - Three diagnostic `cache_miss` cells `p1000_d{0,1,2}_cache_miss` expose the
-  signature cost of each depth.
+  signature cost of each depth when all 1,000 policies are requested.
 - The registered policy index is a hash map keyed by policy identifier (one
   lookup per request). It must not change after results are seen.
 - Report every cell. Do not report only a fitted trend.
@@ -599,8 +647,11 @@ not present them as deployable results.
   - `sint`.
 - **SINT.** SINT is pinned at commit
   `2461a911b8c3d7ed9da3f7662b33678f688eb826`, prepared with the
-  `prepare_command` in the configuration and verified against the recorded
-  source hashes. `scripts/exp25_sint_runner.mjs` times one
+  `prepare_command` in the configuration. Before each repetition the harness
+  verifies the recorded source hashes and the tree hashes of the four built
+  `dist` directories that SINT loads at run time. `dist/` is not versioned, so a
+  stale build is refused. The Node process receives the two-core budget of
+  Section 4.4. `scripts/exp25_sint_runner.mjs` times one
   `await PolicyGateway.intercept(request)` per measured step. It uses the exp-20
   gateway configuration (an in-memory token resolver and a local
   `RevocationStore` preloaded with 10,000 identifiers). Tokens are issued and
@@ -610,7 +661,18 @@ not present them as deployable results.
   `maxVelocityMps` and `currentVelocityMps`.
 - **Agreement.** Each system is compared with its own expected decisions:
   - ZoneCap: allow, deny, or rewrite;
-  - SINT: allow or deny.
+  - SINT: allow or deny, together with the registered denial code for each
+    mutation kind:
+
+    | Mutation | SINT denial code |
+    |---|---|
+    | subject | `TOKEN_SUBJECT_MISMATCH` |
+    | asset | `INSUFFICIENT_PERMISSIONS` |
+    | operation | `INSUFFICIENT_PERMISSIONS` |
+    | parameter-high | `CONSTRAINT_VIOLATION` |
+    | tick-high | `TOKEN_EXPIRED` |
+
+    A SINT denial for any other reason is a mismatch.
 
   The 4,536 parameter-high cases are registered as a semantic difference
   (ZoneCap rewrites them; SINT denies them), not as mismatches.
@@ -635,7 +697,9 @@ like-for-like speedup without it):
 | Runtime | CPython 3.10 | Node.js (version recorded) |
 
 A ZoneCap speedup greater than 10x over SINT is a bug signal. The audit of
-Section 8 must be completed before the result is interpreted. The development
+Section 8 must be completed before the result is interpreted. The aggregator
+computes pooled p50 and p99 ratios for both ZoneCap configurations and records
+`speedup_bug_signal` in `metrics.json`. The development
 runs already exceed this ratio. The audit must attribute it stage by stage
 before any interpretation: compare `zonecap_cache_miss` with `zonecap_full`,
 and the JavaScript signature verification with libsodium.
@@ -693,8 +757,14 @@ results/<run_id>/
   configurations/<configuration>/repetitions/<seed>/
     metrics.json  environment.json  raw_samples_ns.bin.gz  decisions.jsonl.gz
     decision_mismatches.jsonl  audit_summary.json  tegrastats.log  [audit.jsonl.gz]
+  configurations/sint/repetitions/<seed>/                                 (exp-25)
+    metrics.json  environment.json  raw_samples_ns.bin.gz  sint_decisions.jsonl.gz
+    sint_meta.json  runner.log  decision_mismatches.jsonl  tegrastats.log
   propagation/metrics.json  propagation/propagation_delay_ns.bin.gz       (exp-23)
 ```
+
+An aborted run keeps its directory, including `log.txt` with the `aborted=`
+reason.
 
 **File formats.**
 
@@ -751,11 +821,13 @@ result is accepted:
 3. a revoked chain token gives `DENY` (`revoked`);
 4. an out-of-scope parameter gives `REWRITE` inside the leaf interval, and an
    out-of-scope operation gives `DENY`;
-5. a stale or a missing context gives `DEFER` with only the registered `read`
-   hold;
+5. a stale, missing, or high-risk context gives `DEFER` with only the
+   registered `read` hold;
 6. a full or a closed audit queue gives `DENY` (`audit_unavailable`) with no
-   emission; and
-7. a deliberately wrong oracle decision is detected as exactly one mismatch.
+   emission;
+7. a deliberately wrong oracle decision is detected as exactly one mismatch; and
+8. a non-holder presenting a valid chain gets `DENY` (`subject`) with no hold,
+   even against stale context, and leaves the holder's deferral count unchanged.
 
 Diagnostic configurations disable only their named stage, which is visible in
 the stage mask. Every other control remains active.
@@ -807,10 +879,10 @@ research-side reviewer before execution, not after results are seen.
 
 | Item | Estimate |
 |---|---|
-| Corpus build | about 1 minute |
+| Corpus build | a few minutes; about 250 MB of disk |
 | exp-22 | about 10 minutes |
 | exp-23 | about 30 minutes |
-| exp-24 | about 30 minutes |
+| exp-24 | about 1 hour (15 configurations) |
 | exp-25 | about 1–1.5 hours; pinned SINT dominates, at milliseconds per decision |
 | End-to-end path | as designed by the hardware group |
 
@@ -835,6 +907,9 @@ research-side reviewer before execution, not after results are seen.
 | Configuration order | unspecified | seed-major with rotation (Section 5) | minor |
 | Keys | unspecified | deterministic test keys; no signing key on the PEP (Section 2.10) | minor |
 | Process | no review step | development dry run on the Jetson, review, then confirmatory runs (Section 10) | process |
+| Policy-count scaling | extra policies never requested | 1,000 anchored, registered synthetic grants; requests rotate across all P (Sections 3.2 and 5) | B3, pre-delivery review |
+| Presenter binding | not specified | authenticated subject bound before context; deferral bound scoped to the holder (Sections 2.3 and 2.8) | B1, pre-delivery review |
+| SINT controls | none | two-core budget, enforced affinity, denial-code and `dist` tree-hash checks (Sections 4.4 and 5) | I3, pre-delivery review |
 
 ## Appendix B. Quick start on the Jetson
 
@@ -846,7 +921,8 @@ pip install pynacl==1.5.0 pytest
 PYTHONPATH=src python3 -m zonecap.c5.corpus build --output-dir build/c5_corpus
 PYTHONPATH=src python3 -m pytest -q tests/test_c5_pep.py tests/test_c5_harness.py tests/test_c5_corpus.py
 # 3. SINT (exp-25) and Redis (exp-23)
-#    run the prepare_command in configs/c5/exp25_c5_baselines.json; install redis-server
+#    run the prepare_command in configs/c5/exp25_c5_baselines.json (Node.js 22+)
+#    install redis-server, then: taskset -c 5 redis-server --port 6379 --save "" --appendonly no
 export ZONECAP_C5_SINT_REPO=/opt/zonecap/sint-protocol
 # 4. Development dry run, then review, then the confirmatory runs from a clean commit
 PYTHONPATH=src python3 -m zonecap.c5.matrix --config configs/c5/exp22_c5_main.json \
