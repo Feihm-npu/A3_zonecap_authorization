@@ -294,6 +294,35 @@ tsbuildinfo 的强制干净重建，20 个 .js）稳定产出
 登记时的单字符抄写笔误（`bd`↔`cd`）。其余三个包的 dist 树哈希与 7 个
 源文件哈希全部匹配；SINT 仓库 HEAD = pinned commit、`git status` 干净。
 `harness.py` L663–667 会因该笔误拒绝 exp-25（错误信息会误导为需要重建）。
+**交叉铁证（2026-11-03 补）**：课题组自己的 x86 开发运行
+`results/dev_x86_exp25_c5_baselines_20261102/…/sint/repetitions/*/metrics.json`
+里 `sint_built_dist_tree_sha256` **实算记录的就是 `…cd…`**，与板端构建
+完全一致——笔误是 x86 dev run 之后、freeze 登记时引入的。
 **处置**：按 §10 属执行前协议问题，提请课题组在 `main` 上修复该哈希
-（一笔提交），硬件组拉取后再跑 exp-25；exp-22/23/24 不受影响。
+（一笔提交，`bd`→`cd`），硬件组拉取后再跑 exp-25；exp-22/23/24 不受影响。
 硬件组不自行改配置（不在 §2.11 可改清单内）。
+
+### 开发干跑结果（2026-11-03，板端，`--development` 全量规模）
+
+| 运行 | 时长 | 结果 |
+|---|---|---|
+| `dev_exp22_c5_main_20261103`（第 1 次） | 2.5 min | **中止（preflight）**：`pin(3)` 报 CPU 3 不可用——`isolcpus=3` 遗留配置把核 3 移出默认亲和掩码。目录按 §1.5 保留 |
+| `dev_exp22_c5_main_20261103_r2` | 2.0 min | ✅ 五种子全过注册检查；p50≈92µs，p99≈259–261µs，占用≈2.6%，零不一致，每种子 100,000 样本（已独立复核计数） |
+| `dev_exp23_c5_ablation_20261103` | 9.7 min | ✅ 25 重复 + 传播测量全过；cache_miss p99 590µs（**A1 排除成立**）、cold_start 291µs、unsigned 177µs、remote_revocation 352µs、audit_disabled 248µs |
+| `dev_exp24_c5_scaling_20261103` | 25.6 min | ✅ 15 格子全过；p1000 全路径 p99：d0 93µs / d1 127µs / d2 159µs（**A2 在 1000 策略下排除成立**）；策略数 1→1000 影响 ≈5µs；cache_miss 每深度签名成本 ~130µs/令牌 |
+| `dev_exp25_c5_baselines_*` | — | ⛔ **被 F-1 阻塞**，等课题组修复配置后补跑 |
+
+### 平台适配记录（§2.11 之外的平台事实，写入执行记录）
+
+1. **移除 `isolcpus=3`**（`/boot/extlinux/extlinux.conf` 主 APPEND 行，
+   备份 `extlinux.conf.bak-pre-c5-20261103`，已重启生效）。原因：上轮
+   ScanCap 项目的遗留配置使冻结 harness 的 `pin(3)` 失败（"requested
+   CPU 3 is unavailable"）。移除后板卡恢复出厂 JetPack 形态（6 核默认
+   掩码），注册命令逐字可跑；`/proc/cmdline` 逐重复采集留痕。
+   `nohz_full=3 rcu_nocbs=3` 为该内核上的无效残留（未编
+   `CONFIG_NO_HZ_FULL`），未动、在此注明。
+2. swap：测量期 `swapoff -a`；`nvzramconfig.service` + `swapfile.swap`
+   开机重建，**每次重启后须重跑**（已列入每阶段前检查）。
+3. apt/fstrim 定时器 `systemctl disable --now`（§4.3 授权的"禁用计划任务"）。
+4. Redis 常驻（绑核 5，注册命令拉起）；Node v22.23.4 官方 arm64 tarball
+   装入 `/usr/local`；SINT 在 `/opt/zonecap/sint-protocol`（pinned commit）。
