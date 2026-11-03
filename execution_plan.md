@@ -85,9 +85,9 @@ Developer Kit**（`ssh jetson` → `169.254.226.10`，直连网线，RTT ~0.6 ms
 | 电源模式 | 固定持续性能模式 | MAXN（`nvpmodel -m 0`）+ `jetson_clocks` 锁频 1984 MHz 当前已生效 | ✅（**重启会丢，每阶段前重验**） |
 | 内存/盘 | 语料 ~250 MB + 运行 | 7.4 GB RAM（可用 5.7 GB）/ NVMe 233 GB（余 169 GB） | ✅ |
 | swap | **必须关** | ❌ **开启**：zram×6（各 635M）+ /swapfile 8G | ⛔ 测量前 `swapoff` |
-| Redis | exp-23 remote_revocation + 传播测量 | ❌ 未安装（可经 WiFi apt 出网装） | ⛔ 待装 |
-| Node.js 22+ | exp-25 SINT runner | ❌ 未安装 | ⛔ 待装 |
-| SINT 仓库 | pinned commit `2461a911b8c3d7ed9da3f7662b33678f688eb826` | ❌ `/opt/zonecap` 不存在 | ⛔ 待取 |
+| Redis | exp-23 remote_revocation + 传播测量 | ✅ 已装 6.0.16（系统服务停用，按注册命令手动拉起） | ✅ |
+| Node.js 22+ | exp-25 SINT runner | ✅ v22.23.4 + npm 10.9.9（官方 arm64 tarball） | ✅ |
+| SINT 仓库 | pinned commit `2461a911b8c3d7ed9da3f7662b33678f688eb826` | ✅ 已按配置内 `prepare_command` 构建成功；⚠️ 但发现**冻结配置笔误**（见 §6 F-1） | ⚠️ |
 | 交付代码 | `src/zonecap/c5/`、`configs/c5/`、`tests/test_c5_*.py`、`research/heldout/exp07/policy_tables.json`、`results/exp07_heldout_equivalence_20260901/cases.jsonl.gz`、`scripts/exp25_sint_runner.mjs` 等 | ✅ 2026-11-03 从 GitHub 检出（交付链 `23a68de`→`f7e164b`→`1be503b`），**24/24 冻结哈希核验通过** | ✅ |
 | tegrastats | 1 Hz 采样 | 板上有 | ✅ |
 
@@ -261,7 +261,7 @@ PYTHONPATH=src python3 -m zonecap.c5.matrix --config configs/c5/exp22_c5_main.js
 
 ---
 
-## 6. 决定记录与待办
+## 6. 决定记录与发现
 
 - **2026-11-03 板卡确认**：本机直连的即 Orin NX（批准平台）；
   "jetsonNano" 是上一轮 ScanCap 项目的命名惯性，本轮无关。
@@ -274,5 +274,26 @@ PYTHONPATH=src python3 -m zonecap.c5.matrix --config configs/c5/exp22_c5_main.js
   （clone sint-ai/sint-protocol → checkout `2461a91…` → pnpm build）准备。
 - **2026-11-03 Phase 0 通过**：24/24 冻结文件 SHA-256 与 `configs/c5/*.json`
   登记值一致（含需求书引用的两个 exp-07 冻结输入）。
-- 待办：Phase 1（venv / Redis / Node 22+ / OpenPLC v4 / 锁频 / 关 swap）；
-  之后 Phase 2 语料 + 测试（板端）。
+- **2026-11-03 Phase 1 完成**：venv（PyNaCl 1.5.0 + pytest）、Redis 6.0.16、
+  Node v22.23.4、SINT 构建就绪；swap 已关（注意 `nvzramconfig.service`
+  开机重建 zram，**每次重启后重跑 `swapoff -a`**）；MAXN + 核 3 锁频
+  1984 MHz；apt/fstrim 定时器已停。板端仓库 `~/zonecap-c5-repo`
+  （`hardware-delivery` @ `160361a`，干净树）。
+- **2026-11-03 Phase 2 通过**：语料 45 s 构建完成，指纹
+  `52971a47…97ab` 一致；`pytest tests/test_c5_*.py` 36/36 全绿（板端）。
+
+### F-1（阻塞 exp-25，需课题组修复）：SINT dist 树哈希配置笔误
+
+`configs/c5/exp25_c5_baselines.json` → `sint.built_dist_tree_sha256` →
+`packages/policy-gateway/dist` 登记值为
+`bec5ba50ed9a6d17bd3b6ec82e6990a4919959562f6bc5a86e8e1b64ac9f33cc`，
+而注册 `prepare_command` 在板子上的确定性构建（两次独立构建 + 一次删
+tsbuildinfo 的强制干净重建，20 个 .js）稳定产出
+`bec5ba50ed9a6d17cd3b6ec82e6990a4919959562f6bc5a86e8e1b64ac9f33cc`。
+**63/64 个十六进制位相同**——雪崩效应排除任何真实构建差异，只能是
+登记时的单字符抄写笔误（`bd`↔`cd`）。其余三个包的 dist 树哈希与 7 个
+源文件哈希全部匹配；SINT 仓库 HEAD = pinned commit、`git status` 干净。
+`harness.py` L663–667 会因该笔误拒绝 exp-25（错误信息会误导为需要重建）。
+**处置**：按 §10 属执行前协议问题，提请课题组在 `main` 上修复该哈希
+（一笔提交），硬件组拉取后再跑 exp-25；exp-22/23/24 不受影响。
+硬件组不自行改配置（不在 §2.11 可改清单内）。
