@@ -179,7 +179,7 @@ def main() -> None:
                 target = clock() + phases[cmd_id]
                 while clock() < target:
                     pass
-            phase_us = 0 if bypass else (clock() - boundary) / 1_000
+            phase_us = 0 if bypass else (clock() - (boundary + k * period_ns)) / 1_000
 
             t_send = clock()
             if bypass:

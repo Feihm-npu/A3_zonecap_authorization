@@ -157,7 +157,7 @@ def main() -> None:
             bypass_cmd = [
                 python, str(repo / "e2e" / "client.py"),
                 "--corpus-dir", args.corpus_dir, "--e2e-config", args.e2e_config,
-                "--seed", str(seed), "--warmup", "0", "--measured", str(measured),
+                "--seed", str(seed), "--warmup", str(warmup), "--measured", str(measured),
                 "--bypass", "--out", str(byp_dir / "client_records.jsonl"),
             ]
             done_b = subprocess.run(bypass_cmd, capture_output=True, text=True,
