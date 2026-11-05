@@ -328,6 +328,11 @@ PYTHONPATH=src python3 -m zonecap.c5.matrix --config configs/c5/exp22_c5_main.js
   （`hardware-delivery` @ `160361a`，干净树）。
 - **2026-11-03 Phase 2 通过**：语料 45 s 构建完成，指纹
   `52971a47…97ab` 一致；`pytest tests/test_c5_*.py` 36/36 全绿（板端）。
+- **2026-11-05 Phase 3/4（e2e）完成**：OpenPLC Runtime v4.3.2 原生安装并
+  绑核 2；冻结程序经 Editor v4.3.4 无头 CLI 生成并上传（10ms 任务实测
+  99.9 Hz）；wrapper/client/编排器就绪；e2e 全量干跑 5 种子全过（§3.2）。
+  11 个开发运行目录（~400 MB）已回传主机 `results/`（按 §5 保持未跟踪，
+  返回时归档 + SHA-256）。**全部开发干跑完成，具备送审条件。**
 
 ### F-1R（**撤回**，2026-11-05）：Nov 3 报告的"SINT dist 树哈希配置笔误"为误报
 
@@ -357,6 +362,36 @@ Nov 3 我报告 `configs/c5/exp25_c5_baselines.json` 登记的
 | `dev_exp23_c5_ablation_20261103` | 9.7 min | ✅ 25 重复 + 传播测量全过；cache_miss p99 590µs（**A1 排除成立**）、cold_start 291µs、unsigned 177µs、remote_revocation 352µs、audit_disabled 248µs |
 | `dev_exp24_c5_scaling_20261103` | 25.6 min | ✅ 15 格子全过；p1000 全路径 p99：d0 93µs / d1 127µs / d2 159µs（**A2 在 1000 策略下排除成立**）；策略数 1→1000 影响 ≈5µs；cache_miss 每深度签名成本 ~130µs/令牌 |
 | `dev_exp25_c5_baselines_20261105` | 24.9 min | ✅ 15/15 重复全过；p99：zonecap_full 154µs / cache_miss 471µs / sint 3071µs；**bug 信号归因**：同类可比（cache_miss vs sint，双方每请求验签）6.53x < 10x，成本差=JS @noble/ed25519 vs libsodium + zod；full 的 20.02x = 验证缓存收益（Δ≈317µs）叠加，与 x86 开发运行形态一致（§5 预期内，§8 审计归因已记录） |
+| `dev_exp22_c5_main_20261103` | 2.5 min | **中止（preflight）**：isolcpus 遗留（见平台适配 1），目录按 §1.5 保留 |
+| `dev_exp22_c5_e2e_20261105`（v3） | 3.4 h | ✅ 5 种子 × (instrumented + bypass) 全过；见 §3.1 结果摘要 |
+| `dev_exp22_c5_e2e_20261105_shakeout1` | 3.4 h | 留档：第一轮试跑，暴露 bypass 未锚定 / 端点无统计，已修正（客户端无缺陷数据） |
+
+#### 3.2 e2e 开发运行结果（`dev_exp22_c5_e2e_20261105`，v3，2026-11-05）
+
+**instrumented（550,000 命令，5 种子）**：65.0–65.1/s；零 oracle 不一致、
+零 ack 超时；total(send→ack) **p50 = 5.76 ms，p99 = 10.74 ms**（max ≤ 14 ms，
+≤ 1.1 个扫描周期——扫描相位等待 0–10 ms 可分离）；decide 段（环内）
+p50 = 140 µs / p99 = 312 µs；审计恰 110,000 条/种子（10k 预热 + 100k 测量）、
+峰值积压 0 字节、drain 绑核 4。
+
+**bypass（同一命令流、同锚定、含预热）**：total p50 = 5.53 ms / p99 = 10.45 ms。
+**ZoneCap 端到端边际 ≈ +0.23 ms（p50）/ +0.29 ms（p99）**，且总数被扫描
+节奏（0–10 ms 相位等待）支配。
+
+**扫描周期分布（心跳外部观测）+ 空闲基线对照**：
+
+| 场景 | 均值 | p50 | >12ms 迟到 tick |
+|---|---|---|---|
+| **空闲基线**（30 s，无任何客户端负载） | **10.00 ms** | 10.00 ms | **0.0%** |
+| bypass 负载（Client 直写 PLC） | 10.13 ms | 10.33 ms | 20.1–20.3% |
+| instrumented（PEP 在环） | 10.05 ms | 10.96 ms | 27.3–27.5% |
+
+结论：runtime v4.3.2 调度器空闲时完美锁频 10 ms；负载下的"拉伸 + 追赶
+突发"（p99 ≈ 21 ms、最大 22 ms、突发 0.8 ms、均值守恒）由 Python
+modbus_slave 插件与调度器同核竞争引入；**ZoneCap 在环的边际 = 迟到比例
++7.3 pp（20.1%→27.4%），均值偏移 +0.08 ms**——无丢周期（追赶保持均值），
+观测间隙 2.1–2.9% 单列不计 overrun。观测粒度（Modbus 轮询 ~0.7 ms）与
+负载依赖均已披露。
 
 ### 平台适配记录（§2.11 之外的平台事实，写入执行记录）
 
