@@ -167,6 +167,7 @@ def main() -> None:
 
     ack_timeouts = 0
     last_k = -1
+    last_epoch_boundary = 0
     try:
         for cmd_id, step_index in enumerate(positions):
             step = steps[step_index]
@@ -176,9 +177,14 @@ def main() -> None:
             else:
                 emitted = None  # decided by the wrapper; known after the response
             boundary = monitor.last_boundary
-            # next window after the latest observed scan start; exactly one
-            # command per scan window (the k sequence strictly increases)
-            k = max((clock() - boundary) // period_ns + 1, last_k + 1)
+            # Window index within the current boundary epoch: exactly one
+            # command per scan window.  A newly observed boundary restarts the
+            # index at the current window; within an epoch it strictly grows.
+            if boundary != last_epoch_boundary:
+                k = (clock() - boundary) // period_ns + 1
+                last_epoch_boundary = boundary
+            else:
+                k = last_k + 1
             last_k = k
             phase = random.Random((args.seed, cmd_id)).uniform(0, period_ns)
             target = boundary + k * period_ns + int(phase)
