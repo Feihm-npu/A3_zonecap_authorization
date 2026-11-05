@@ -37,6 +37,20 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 RUN_TEMPLATE = "exp22_c5_e2e_{date}"
 
+RUNTIME_LOG_SNIPPET = (
+    "import json,ssl,urllib.request\n"
+    "ctx = ssl.create_default_context(); ctx.check_hostname=False; ctx.verify_mode=ssl.CERT_NONE\n"
+    "def call(path, payload=None, token=None):\n"
+    "    req = urllib.request.Request('https://127.0.0.1:8443' + path,\n"
+    "        data=json.dumps(payload).encode() if payload else None,\n"
+    "        headers={'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token if token else ''})\n"
+    "    return urllib.request.urlopen(req, context=ctx, timeout=30).read().decode()\n"
+    "token = json.loads(call('/api/login', {'username': 'hardware', 'password': 'zonecap-e2e-2026'}))['access_token']\n"
+    "print(call('/api/status', token=token))\n"
+    "print(call('/api/runtime-logs', token=token)[-20000:])\n"
+)
+
+
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -168,6 +182,10 @@ def main() -> None:
             (byp_dir / "client_records.jsonl").unlink()
             log(f"seed {seed}: bypass returncode={done_b.returncode} "
                 f"seconds={time.time() - started - seconds:.1f}")
+
+            done_logs = subprocess.run(
+                [python, "-c", RUNTIME_LOG_SNIPPET], capture_output=True, text=True)
+            (out_dir / f"openplc_runtime_logs_seed{seed}.txt").write_text(done_logs.stdout + done_logs.stderr)
         finally:
             wrapper.terminate()
             try:
@@ -178,20 +196,8 @@ def main() -> None:
             tegrastats.terminate()
             time.sleep(2)  # let the audit drain see EOF and write its summary
 
-    # OpenPLC runtime logs (scan statistics and overruns)
-    done = subprocess.run(
-        [python, "-c",
-         "import json,ssl,urllib.request\n"
-         "ctx = ssl.create_default_context(); ctx.check_hostname=False; ctx.verify_mode=ssl.CERT_NONE\n"
-         "def call(path, payload=None, token=None):\n"
-         "    req = urllib.request.Request('https://127.0.0.1:8443' + path,\n"
-         "        data=json.dumps(payload).encode() if payload else None,\n"
-         "        headers={'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token if token else ''})\n"
-         "    return urllib.request.urlopen(req, context=ctx, timeout=30).read().decode()\n"
-         "token = json.loads(call('/api/login', {'username': 'hardware', 'password': 'zonecap-e2e-2026'}))['access_token']\n"
-         "print(call('/api/status', token=token))\n"
-         "print(call('/api/runtime-logs', token=token)[-20000:])\n"],
-        capture_output=True, text=True)
+    # final OpenPLC runtime logs (latest window, after all seeds)
+    done = subprocess.run([python, "-c", RUNTIME_LOG_SNIPPET], capture_output=True, text=True)
     (out_dir / "openplc_runtime_logs.txt").write_text(done.stdout + done.stderr)
 
     (out_dir / "log.txt").write_text("\n".join(log_lines) + "\n")
