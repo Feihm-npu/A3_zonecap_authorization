@@ -183,6 +183,53 @@ PYTHONPATH=src python3 -m pytest tests/test_c5_*.py
 4. **通过判据**：适配提交完成；e2e 三件套 + 设计说明送研究方评审
    （确认性运行前必须返回评审，§6/§10）。
 
+#### 3.1 e2e 具体设计（2026-11-05 定稿，送审材料）
+
+**组件版本锁定**（全部记入 e2e config 与 environment manifest）：
+
+| 组件 | 版本 | 位置 |
+|---|---|---|
+| OpenPLC Runtime | **v4.3.2**（git tag） | 板端原生安装（`install.sh --native`），绑核 2 |
+| OpenPLC Editor | **v4.3.4**（AppImage，SHA-256 `b8186372…c75fa0`） | **仅主机侧**，无头 CLI 生成程序，不装板 |
+| strucpp ABI | v0.4.5（runtime 镜像头） | 程序 zip 由 Editor 管线生成，无需手写 |
+| modbus_slave 插件 | 随 runtime v4.3.2 | `127.0.0.1:5020`，pymodbus |
+
+**冻结 OpenPLC 程序**（源码 + 生成的 program.zip 均入仓库、SHA-256 登记）：
+- 生成路径（主机、完全可复现）：`openplc-cli create --from-json` 脚手架
+  → ST 源码 → `openplc-cli compile <project> --target "OpenPLC Runtime v4"`
+  （Editor CLI 与 GUI 走同一代码路径，`--ozone-platform=headless`）；
+- 任务：`TASK task0(INTERVAL := T#10ms)`（周期写在程序里，随程序冻结）；
+- ST 逻辑（寄存器经 Modbus Holding Registers ↔ int_output 映射）：
+  `%QW0` cmd_seq、`%QW1` cmd_value（wrapper 写）；`%QW2` ack_seq、
+  `%QW3` applied_value、`%QW4` heartbeat（每扫描 +1）、`%QW5` applied_count
+  （程序写）。新 seq → 锁存 applied_value、回 ack_seq——
+  "application/acknowledgement" 由 ack_seq 翻转定义，扫描活性由 heartbeat 观测。
+
+**server wrapper**（不改动 `ReferencePEP.decide`）：
+- 回环 TCP 收 envelope（**未认证传输，报告必须声明**）；发布该步
+  context 快照（ingest）；调 `decide`；**仅当决策产生 emitted action**
+  （ALLOW/REWRITE）时写 `%QW0/%QW1`（Modbus FC16）；DENY/DEFER/ATTENUATE
+  不写 PLC（DEFER 的 read hold 不产生 PLC 写入）；
+- 每条命令记录 `CLOCK_MONOTONIC` 时戳：client send、PEP receipt、
+  decision start/stop、Modbus write 完成（OpenPLC receipt）、ack 观测、
+  总计；未发射动作的命令记录到 decision 返回为止。
+
+**client**：同一 main 语料、种子序（与 exp-22 同种子集）；每个 10 ms
+扫描窗口内按种子均匀随机相位释放一条命令（≈100 Hz）；相位戳相对
+PLC 扫描起点（heartbeat 寄存器观测推算）；≥10,000 预热 + ≥100,000
+测量命令/重复。
+
+**bypass 对照**：同一命令流、同相位过程，client 直写 Modbus（PEP 旁路），
+报告有无 ZoneCap 的扫描 overrun 对比。
+
+**扫描周期分布与 overrun**：runtime 自带 stats（每 5 s 记录
+min/max/avg scan、cycle time、latency、overruns；经 `/api/runtime-logs`
+采集）+ heartbeat 外部观测交叉验证；同板单时钟，无需 PTP。
+
+**产物**：`results/exp22_c5_e2e_<YYYYMMDD>/`（逐命令原始记录 jsonl.gz、
+config、command、seeds、environment、SHA-256 manifest），与服务器侧
+样本**永不混合**；报告必须声明 single_host 既非独立 PLC 也无网络跳。
+
 ### Phase 4 —— 开发干跑（`--development`，全量规模）
 
 ```bash
@@ -309,7 +356,7 @@ Nov 3 我报告 `configs/c5/exp25_c5_baselines.json` 登记的
 | `dev_exp22_c5_main_20261103_r2` | 2.0 min | ✅ 五种子全过注册检查；p50≈92µs，p99≈259–261µs，占用≈2.6%，零不一致，每种子 100,000 样本（已独立复核计数） |
 | `dev_exp23_c5_ablation_20261103` | 9.7 min | ✅ 25 重复 + 传播测量全过；cache_miss p99 590µs（**A1 排除成立**）、cold_start 291µs、unsigned 177µs、remote_revocation 352µs、audit_disabled 248µs |
 | `dev_exp24_c5_scaling_20261103` | 25.6 min | ✅ 15 格子全过；p1000 全路径 p99：d0 93µs / d1 127µs / d2 159µs（**A2 在 1000 策略下排除成立**）；策略数 1→1000 影响 ≈5µs；cache_miss 每深度签名成本 ~130µs/令牌 |
-| `dev_exp25_c5_baselines_20261105` | 待跑 | Nov 5 启动（Nov 3 报告的"阻塞"系误报，已撤回 F-1R） |
+| `dev_exp25_c5_baselines_20261105` | 24.9 min | ✅ 15/15 重复全过；p99：zonecap_full 154µs / cache_miss 471µs / sint 3071µs；**bug 信号归因**：同类可比（cache_miss vs sint，双方每请求验签）6.53x < 10x，成本差=JS @noble/ed25519 vs libsodium + zod；full 的 20.02x = 验证缓存收益（Δ≈317µs）叠加，与 x86 开发运行形态一致（§5 预期内，§8 审计归因已记录） |
 
 ### 平台适配记录（§2.11 之外的平台事实，写入执行记录）
 
