@@ -166,6 +166,7 @@ def main() -> None:
         sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 
     ack_timeouts = 0
+    last_k = -1
     try:
         for cmd_id, step_index in enumerate(positions):
             step = steps[step_index]
@@ -175,8 +176,10 @@ def main() -> None:
             else:
                 emitted = None  # decided by the wrapper; known after the response
             boundary = monitor.last_boundary
-            # next window after the latest observed scan start
-            k = (clock() - boundary) // period_ns + 1
+            # next window after the latest observed scan start; exactly one
+            # command per scan window (the k sequence strictly increases)
+            k = max((clock() - boundary) // period_ns + 1, last_k + 1)
+            last_k = k
             phase = random.Random((args.seed, cmd_id)).uniform(0, period_ns)
             target = boundary + k * period_ns + int(phase)
             while clock() < target:
