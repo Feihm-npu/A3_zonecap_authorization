@@ -87,7 +87,7 @@ Developer Kit**（`ssh jetson` → `169.254.226.10`，直连网线，RTT ~0.6 ms
 | swap | **必须关** | ❌ **开启**：zram×6（各 635M）+ /swapfile 8G | ⛔ 测量前 `swapoff` |
 | Redis | exp-23 remote_revocation + 传播测量 | ✅ 已装 6.0.16（系统服务停用，按注册命令手动拉起） | ✅ |
 | Node.js 22+ | exp-25 SINT runner | ✅ v22.23.4 + npm 10.9.9（官方 arm64 tarball） | ✅ |
-| SINT 仓库 | pinned commit `2461a911b8c3d7ed9da3f7662b33678f688eb826` | ✅ 已按配置内 `prepare_command` 构建成功；⚠️ 但发现**冻结配置笔误**（见 §6 F-1） | ⚠️ |
+| SINT 仓库 | pinned commit `2461a911b8c3d7ed9da3f7662b33678f688eb826` | ✅ 构建/配置/x86 记录三方哈希一致（Nov 5 复核；Nov 3 报的"配置笔误"系我方手抄期望值时的转录错误，已正式撤回，见 F-1R） | ✅ |
 | 交付代码 | `src/zonecap/c5/`、`configs/c5/`、`tests/test_c5_*.py`、`research/heldout/exp07/policy_tables.json`、`results/exp07_heldout_equivalence_20260901/cases.jsonl.gz`、`scripts/exp25_sint_runner.mjs` 等 | ✅ 2026-11-03 从 GitHub 检出（交付链 `23a68de`→`f7e164b`→`1be503b`），**24/24 冻结哈希核验通过** | ✅ |
 | tegrastats | 1 Hz 采样 | 板上有 | ✅ |
 
@@ -282,25 +282,24 @@ PYTHONPATH=src python3 -m zonecap.c5.matrix --config configs/c5/exp22_c5_main.js
 - **2026-11-03 Phase 2 通过**：语料 45 s 构建完成，指纹
   `52971a47…97ab` 一致；`pytest tests/test_c5_*.py` 36/36 全绿（板端）。
 
-### F-1（阻塞 exp-25，需课题组修复）：SINT dist 树哈希配置笔误
+### F-1R（**撤回**，2026-11-05）：Nov 3 报告的"SINT dist 树哈希配置笔误"为误报
 
-`configs/c5/exp25_c5_baselines.json` → `sint.built_dist_tree_sha256` →
-`packages/policy-gateway/dist` 登记值为
-`bec5ba50ed9a6d17bd3b6ec82e6990a4919959562f6bc5a86e8e1b64ac9f33cc`，
-而注册 `prepare_command` 在板子上的确定性构建（两次独立构建 + 一次删
-tsbuildinfo 的强制干净重建，20 个 .js）稳定产出
-`bec5ba50ed9a6d17cd3b6ec82e6990a4919959562f6bc5a86e8e1b64ac9f33cc`。
-**63/64 个十六进制位相同**——雪崩效应排除任何真实构建差异，只能是
-登记时的单字符抄写笔误（`bd`↔`cd`）。其余三个包的 dist 树哈希与 7 个
-源文件哈希全部匹配；SINT 仓库 HEAD = pinned commit、`git status` 干净。
-`harness.py` L663–667 会因该笔误拒绝 exp-25（错误信息会误导为需要重建）。
-**交叉铁证（2026-11-03 补）**：课题组自己的 x86 开发运行
-`results/dev_x86_exp25_c5_baselines_20261102/…/sint/repetitions/*/metrics.json`
-里 `sint_built_dist_tree_sha256` **实算记录的就是 `…cd…`**，与板端构建
-完全一致——笔误是 x86 dev run 之后、freeze 登记时引入的。
-**处置**：按 §10 属执行前协议问题，提请课题组在 `main` 上修复该哈希
-（一笔提交，`bd`→`cd`），硬件组拉取后再跑 exp-25；exp-22/23/24 不受影响。
-硬件组不自行改配置（不在 §2.11 可改清单内）。
+Nov 3 我报告 `configs/c5/exp25_c5_baselines.json` 登记的
+`packages/policy-gateway/dist` 树哈希为 `…6d17bd…`、与实算 `…6d17cd…`
+差一字符，判为冻结配置笔误并请求课题组修复。**2026-11-05 复核证明该
+报告错误，正式撤回**：
+
+- 配置文件（工作树与 Nov 3 基线 commit `2dd5c0b` 的 blob）登记的
+  **从来都是 `…cd…`**；
+- 全仓库检索 `6d17bd` **零命中**——该字符串只存在于我 Nov 3 验证脚本里
+  **手抄的期望值**（及据其写成的本计划文件）。笔误出在我方转录，
+  不在冻结配置；
+- 板端三次构建（含强制干净重建）与课题组 x86 运行记录实算值均为
+  `…cd…`，三方一致，**exp-25 从未被阻塞**。
+
+教训（即刻生效）：验证脚本的期望值一律从源文件程序化读取，禁止手抄；
+"63/64 位相同"这种形态本身就该先怀疑自己这端的抄写。
+**对课题组的修复请求撤回：main 无需任何改动。**
 
 ### 开发干跑结果（2026-11-03，板端，`--development` 全量规模）
 
@@ -310,7 +309,7 @@ tsbuildinfo 的强制干净重建，20 个 .js）稳定产出
 | `dev_exp22_c5_main_20261103_r2` | 2.0 min | ✅ 五种子全过注册检查；p50≈92µs，p99≈259–261µs，占用≈2.6%，零不一致，每种子 100,000 样本（已独立复核计数） |
 | `dev_exp23_c5_ablation_20261103` | 9.7 min | ✅ 25 重复 + 传播测量全过；cache_miss p99 590µs（**A1 排除成立**）、cold_start 291µs、unsigned 177µs、remote_revocation 352µs、audit_disabled 248µs |
 | `dev_exp24_c5_scaling_20261103` | 25.6 min | ✅ 15 格子全过；p1000 全路径 p99：d0 93µs / d1 127µs / d2 159µs（**A2 在 1000 策略下排除成立**）；策略数 1→1000 影响 ≈5µs；cache_miss 每深度签名成本 ~130µs/令牌 |
-| `dev_exp25_c5_baselines_*` | — | ⛔ **被 F-1 阻塞**，等课题组修复配置后补跑 |
+| `dev_exp25_c5_baselines_20261105` | 待跑 | Nov 5 启动（Nov 3 报告的"阻塞"系误报，已撤回 F-1R） |
 
 ### 平台适配记录（§2.11 之外的平台事实，写入执行记录）
 
