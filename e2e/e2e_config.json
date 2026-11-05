@@ -1,0 +1,52 @@
+{
+  "claim": "C5",
+  "exp": "exp22-e2e",
+  "protocol": "hardware_delivery/exp_requirements.md v1.1 (Section 6, secondary descriptive)",
+  "corpus_fingerprint": "52971a47b69a6c252461570366cbe52234b7164dd66beb9b8da3a24568bb97ab",
+  "variant": "main",
+  "warmup": 10000,
+  "measured": 100000,
+  "scan_period_us": 10000,
+  "audit_queue_bytes": 1048576,
+  "ack_timeout_ms": 50,
+  "pep": {
+    "audit_enabled": true,
+    "cache_capacity": 65536,
+    "max_context_age_ns": 50000000,
+    "max_deferrals": 2,
+    "verification_cache": true,
+    "verify_signatures": true
+  },
+  "revocation": {
+    "backend": "local",
+    "preloaded": 10000
+  },
+  "cpu": {
+    "benchmark_core": 3,
+    "audit_core": 4,
+    "monitor_core": 1,
+    "openplc_core": 2
+  },
+  "wrapper": {
+    "host": "127.0.0.1",
+    "port": 8600,
+    "transport": "unauthenticated loopback TCP (must be stated in reports)",
+    "frame": "ZCE2 magic | u64 cmd_id | u32 env_len | envelope | u32 subj_len | subject | u32 snap_len | snapshot_json"
+  },
+  "modbus": {
+    "host": "127.0.0.1",
+    "port": 5020,
+    "slave_id": 1,
+    "registers": "cmd_seq=%QW0, cmd_value=%QW1, ack_seq=%QW2, applied_value=%QW3, heartbeat=%QW4, applied_count=%QW5",
+    "value_encoding": "clamp(round(value*100), 0, 65535)"
+  },
+  "emit_effects": ["allow", "rewrite"],
+  "openplc": {
+    "runtime_version": "v4.3.2 (git tag, commit 9fb5e1a29b574806f5aea3a4e78202c7a5d658ee)",
+    "install": "/opt/zonecap/openplc-runtime-v4.3.2 (native build, systemd unit openplc-runtime, CPUAffinity=2)",
+    "editor_version": "v4.3.4 (host-side only, program generation)",
+    "program": "e2e/openplc_program (zonecap-e2e project, task0 INTERVAL := T#10ms)"
+  },
+  "seeds": [104729, 130363, 155921, 196613, 262147],
+  "disclosure": "single_host topology: the PEP wrapper and OpenPLC v4 run as separate pinned processes on the same Jetson; this measures neither a separate PLC nor a network hop. The loopback transport is unauthenticated."
+}
