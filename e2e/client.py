@@ -65,6 +65,9 @@ class ScanMonitor(threading.Thread):
         self.last_value = -1
         self.last_boundary = 0
         self.reads = 0
+        self.deltas: list[int] = []
+        self.late_ticks = 0
+        self.multi_jumps = 0
 
     def run(self) -> None:
         clock = time.perf_counter_ns
@@ -75,6 +78,15 @@ class ScanMonitor(threading.Thread):
             now = clock()
             self.reads += 1
             if value != self.last_value:
+                if self.last_boundary:
+                    delta = now - self.last_boundary
+                    steps = (value - self.last_value) & 0xFFFF
+                    if steps == 1:
+                        self.deltas.append(delta)
+                        if delta > 12_000_000:
+                            self.late_ticks += 1
+                    else:
+                        self.multi_jumps += 1  # observation gap, not an overrun
                 self.last_value = value
                 self.last_boundary = now
             time.sleep(0.0005)
@@ -139,16 +151,12 @@ def main() -> None:
         time.sleep(0.02)
 
     monitor = ScanMonitor(modbus, threading.Event(), modbus_lock)
-    if not bypass:
-        monitor.start()
-        # wait for the first observed boundary
-        while monitor.last_boundary == 0:
-            time.sleep(0.001)
+    monitor.start()
+    # wait for the first observed scan boundary
+    while monitor.last_boundary == 0:
+        time.sleep(0.001)
 
     out = sys.stdout if args.out == "-" else open(args.out, "w", buffering=1)
-    if bypass:
-        rng = random.Random(args.seed)
-        phases = [rng.uniform(0, period_ns) for _ in range(warmup + measured)]
 
     sock = None
     if not bypass:
@@ -166,20 +174,14 @@ def main() -> None:
                 emitted = expected_effect in EMIT_EFFECTS
             else:
                 emitted = None  # decided by the wrapper; known after the response
-            if not bypass:
-                boundary = monitor.last_boundary
-                # next window after the latest observed scan start
-                k = (clock() - boundary) // period_ns + 1
-                phase = random.Random((args.seed, cmd_id)).uniform(0, period_ns)
-                target = boundary + k * period_ns + int(phase)
-                while clock() < target:
-                    pass
-            else:
-                boundary = clock()
-                target = clock() + phases[cmd_id]
-                while clock() < target:
-                    pass
-            phase_us = 0 if bypass else (clock() - (boundary + k * period_ns)) / 1_000
+            boundary = monitor.last_boundary
+            # next window after the latest observed scan start
+            k = (clock() - boundary) // period_ns + 1
+            phase = random.Random((args.seed, cmd_id)).uniform(0, period_ns)
+            target = boundary + k * period_ns + int(phase)
+            while clock() < target:
+                pass
+            phase_us = (clock() - (boundary + k * period_ns)) / 1_000
 
             t_send = clock()
             if bypass:
@@ -253,9 +255,32 @@ def main() -> None:
             sock.close()
         if args.out != "-":
             out.close()
+        deltas = sorted(monitor.deltas)
+        stats = {
+            "observed_scans": len(deltas),
+            "monitor_reads": monitor.reads,
+            "observation_gaps": monitor.multi_jumps,
+            "late_ticks_over_12ms": monitor.late_ticks,
+            "scan_period_ns": {
+                "min": deltas[0] if deltas else 0,
+                "p50": deltas[len(deltas) // 2] if deltas else 0,
+                "p99": deltas[min(len(deltas) - 1, int(0.99 * len(deltas)))] if deltas else 0,
+                "max": deltas[-1] if deltas else 0,
+                "mean": int(sum(deltas) / len(deltas)) if deltas else 0,
+            },
+            "histogram_100us_bins": {
+                str(i * 100): sum(1 for d in deltas if i * 100_000 <= d < (i + 1) * 100_000)
+                for i in range(80, 200)
+            },
+        }
+        stats_path = args.out + ".scan_stats.json"
+        if stats_path != "-.scan_stats.json":
+            with open(stats_path, "w") as handle:
+                handle.write(json.dumps(stats, indent=2) + "\n")
         sys.stderr.write(json.dumps({
             "commands": warmup + measured, "ack_timeouts": ack_timeouts,
-            "monitor_reads": monitor.reads if not bypass else 0,
+            "observed_scans": stats["observed_scans"],
+            "late_ticks_over_12ms": monitor.late_ticks,
         }) + "\n")
 
 
