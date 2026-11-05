@@ -39,7 +39,7 @@ sys.path.insert(0, str(REPO / "src"))
 from zonecap.c5 import audit as audit_queue  # noqa: E402
 from zonecap.c5 import corpus as corpus_mod  # noqa: E402
 from zonecap.c5 import harness  # noqa: E402
-from zonecap.c5.pep import ContextSnapshot, ReferencePEP  # noqa: E402
+from zonecap.c5.pep import ContextSnapshot, ContextStore, ReferencePEP  # noqa: E402
 
 REQ_MAGIC = b"ZCE2"
 RESP_MAGIC = b"ZCD2"

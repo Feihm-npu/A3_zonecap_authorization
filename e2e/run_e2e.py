@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import gzip
 import hashlib
+import socket
 import json
 import os
 import shutil
@@ -112,23 +113,27 @@ def main() -> None:
         tegrastats = subprocess.Popen(
             ["tegrastats", "--interval", "1000"],
             stdout=open(rep_dir / "tegrastats.log", "w"), stderr=subprocess.DEVNULL)
+        wrapper_log = open(rep_dir / "wrapper.log", "w")
         wrapper = subprocess.Popen(
-            wrapper_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
+            wrapper_cmd, stdout=wrapper_log, stderr=subprocess.STDOUT,
             env=wrapper_env)
         ready = False
         deadline = time.time() + 120
+        port = int(setting["wrapper"]["port"])
         while time.time() < deadline:
-            line = wrapper.stderr.readline().decode(errors="replace") if wrapper.stderr else ""
-            if "wrapper listening" in line:
-                ready = True
-                break
             if wrapper.poll() is not None:
                 break
+            try:
+                probe = socket.create_connection((setting["wrapper"]["host"], port), timeout=1)
+                probe.close()
+                ready = True
+                break
+            except OSError:
+                time.sleep(0.5)
         if not ready:
             log(f"seed {seed}: wrapper failed to start; aborting repetition")
+            wrapper_log.close()
             tegrastats.terminate()
-            (rep_dir / "wrapper.log").write_text(
-                wrapper.stderr.read().decode(errors="replace") if wrapper.stderr else "")
             continue
 
         try:
@@ -169,6 +174,7 @@ def main() -> None:
                 wrapper.wait(timeout=15)
             except subprocess.TimeoutExpired:
                 wrapper.kill()
+            wrapper_log.close()
             tegrastats.terminate()
             time.sleep(2)  # let the audit drain see EOF and write its summary
 
