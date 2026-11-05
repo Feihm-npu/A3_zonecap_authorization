@@ -38,7 +38,7 @@ from zonecap.c5 import harness  # noqa: E402
 
 REQ_MAGIC = b"ZCE2"
 REQ_HDR = struct.Struct("<4sQII")
-RESP_HDR = struct.Struct("<4sQBQII")
+RESP_HDR = struct.Struct("<4sQBI")
 EMIT_EFFECTS = frozenset(("allow", "rewrite"))
 HEARTBEAT_ADDR = 4
 CMD_ADDR = 0
@@ -216,7 +216,7 @@ def main() -> None:
                     if not chunk:
                         raise ConnectionError("wrapper closed the link")
                     header.extend(chunk)
-                magic, rid, emitted_u8, body_len, _ = RESP_HDR.unpack(header)
+                magic, rid, emitted_u8, body_len = RESP_HDR.unpack(header)
                 body = bytearray()
                 while len(body) < body_len:
                     chunk = sock.recv(body_len - len(body))

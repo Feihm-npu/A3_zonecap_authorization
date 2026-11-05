@@ -44,7 +44,7 @@ from zonecap.c5.pep import ContextSnapshot, ContextStore, PipeAuditSink, Referen
 REQ_MAGIC = b"ZCE2"
 RESP_MAGIC = b"ZCD2"
 REQ_HDR = struct.Struct("<4sQII")
-RESP_HDR = struct.Struct("<4sQBQII")
+RESP_HDR = struct.Struct("<4sQBI")
 EMIT_EFFECTS = frozenset(("allow", "rewrite"))
 
 
@@ -133,7 +133,7 @@ class Wrapper:
             "t_modbus_done": t_modbus,
         }
         body = json.dumps(record, separators=(",", ":")).encode("ascii")
-        return RESP_HDR.pack(RESP_MAGIC, cmd_id, emitted, len(body), 0) + body
+        return RESP_HDR.pack(RESP_MAGIC, cmd_id, emitted, len(body)) + body
 
 
 def recv_exactly(conn: socket.socket, size: int) -> bytes:
