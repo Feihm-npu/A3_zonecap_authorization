@@ -39,7 +39,7 @@ sys.path.insert(0, str(REPO / "src"))
 from zonecap.c5 import audit as audit_queue  # noqa: E402
 from zonecap.c5 import corpus as corpus_mod  # noqa: E402
 from zonecap.c5 import harness  # noqa: E402
-from zonecap.c5.pep import ContextSnapshot, ContextStore, ReferencePEP  # noqa: E402
+from zonecap.c5.pep import ContextSnapshot, ContextStore, PipeAuditSink, ReferencePEP  # noqa: E402
 
 REQ_MAGIC = b"ZCE2"
 RESP_MAGIC = b"ZCD2"
@@ -71,7 +71,7 @@ class Wrapper:
         if granted < int(setting["audit_queue_bytes"]):
             raise RuntimeError(f"audit queue capacity {granted} below the registered size")
         audit_queue.start_drain(read_fd, Path(args.audit_log), int(setting["cpu"]["audit_core"]))
-        sink = audit_queue.PipeAuditSink(write_fd)
+        sink = PipeAuditSink(write_fd)
         self.pep = ReferencePEP(
             anchors=anchors, registry=registry, revocation=revocation,
             context=self.context, audit=sink, options=options,
@@ -121,7 +121,7 @@ class Wrapper:
             if self.cmd_seq == 0:
                 self.cmd_seq = 1
             self.modbus.write_registers(
-                address=0, values=[self.cmd_seq, encode_value(float(value))], slave=1)
+                address=0, values=[self.cmd_seq, encode_value(float(value))], device_id=1)
             t_modbus = self.clock()
             emitted = 1
         record = {

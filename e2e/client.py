@@ -71,7 +71,7 @@ class ScanMonitor(threading.Thread):
         while not self.stop.is_set():
             with self.lock:
                 value = self.client.read_holding_registers(
-                    address=HEARTBEAT_ADDR, count=1, slave=SLAVE_ID).registers[0]
+                    address=HEARTBEAT_ADDR, count=1, device_id=SLAVE_ID).registers[0]
             now = clock()
             self.reads += 1
             if value != self.last_value:
@@ -135,7 +135,7 @@ def main() -> None:
         # anchor the PLC-side sequence to the seed so every bypass repetition
         # starts from the same state
         plc_seq = args.seed & 0xFF or 1
-        modbus.write_registers(address=CMD_ADDR, values=[0, 0], slave=SLAVE_ID)  # noqa (single-threaded here)
+        modbus.write_registers(address=CMD_ADDR, values=[0, 0], device_id=SLAVE_ID)  # noqa (single-threaded here)
         time.sleep(0.02)
 
     monitor = ScanMonitor(modbus, threading.Event(), modbus_lock)
@@ -189,7 +189,7 @@ def main() -> None:
                         modbus.write_registers(
                             address=CMD_ADDR,
                             values=[plc_seq, encode_value(float(step["expected"][2]))],
-                            slave=SLAVE_ID)
+                            device_id=SLAVE_ID)
                     t_modbus = clock()
                 else:
                     t_modbus = t_send
@@ -237,7 +237,7 @@ def main() -> None:
                 while clock() < deadline:
                     with modbus_lock:
                         ack = modbus.read_holding_registers(
-                            address=ACK_ADDR, count=1, slave=SLAVE_ID).registers[0]
+                            address=ACK_ADDR, count=1, device_id=SLAVE_ID).registers[0]
                     if ack == want:
                         t_ack = clock()
                         break
