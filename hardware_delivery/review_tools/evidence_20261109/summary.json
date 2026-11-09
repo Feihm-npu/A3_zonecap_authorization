@@ -1,0 +1,112 @@
+{
+  "fakeplc_t0_ns": 7452602762908747,
+  "period_ns": 10000000,
+  "scan": {
+    "idle": {
+      "observed_scans": 1998,
+      "late_ticks_pct": 0.05,
+      "observation_gaps_pct": 0.05,
+      "p50_ms": 10.0,
+      "p99_ms": 10.43,
+      "min_ms": 2.48,
+      "max_ms": 15.0,
+      "mean_ms": 9.99
+    },
+    "bypass": {
+      "observed_scans": 4145,
+      "late_ticks_pct": 23.64,
+      "observation_gaps_pct": 2.1,
+      "p50_ms": 10.75,
+      "p99_ms": 20.81,
+      "min_ms": 0.61,
+      "max_ms": 21.56,
+      "mean_ms": 10.09
+    },
+    "instrumented": {
+      "observed_scans": 4405,
+      "late_ticks_pct": 29.49,
+      "observation_gaps_pct": 1.78,
+      "p50_ms": 10.76,
+      "p99_ms": 20.97,
+      "min_ms": 0.6,
+      "max_ms": 22.15,
+      "mean_ms": 10.04
+    }
+  },
+  "phase": {
+    "bypass": {
+      "commands": 3000,
+      "error_p50_ms": 2.15,
+      "error_p90_ms": 4.44,
+      "error_p99_ms": 4.93,
+      "error_max_ms": 5.0,
+      "true_phase_histogram_1ms": [
+        303,
+        317,
+        302,
+        287,
+        322,
+        305,
+        263,
+        299,
+        334,
+        268
+      ]
+    },
+    "instrumented": {
+      "commands": 3000,
+      "error_p50_ms": 2.56,
+      "error_p90_ms": 4.57,
+      "error_p99_ms": 4.94,
+      "error_max_ms": 5.0,
+      "true_phase_histogram_1ms": [
+        314,
+        304,
+        308,
+        289,
+        309,
+        284,
+        278,
+        321,
+        308,
+        285
+      ]
+    }
+  },
+  "sanity": {
+    "bypass": {
+      "commands": 3000,
+      "ack_timeouts": 0,
+      "emitted": 848
+    },
+    "instrumented": {
+      "commands": 3000,
+      "ack_timeouts": 0,
+      "emitted": 848,
+      "effect_mismatches": 0
+    }
+  },
+  "reference_observer": {
+    "idle": {
+      "boundaries": 2057,
+      "lag_p50_ms": 0.329,
+      "lag_p99_ms": 0.628,
+      "lag_max_ms": 6.221,
+      "late_ticks_pct": 0.15
+    },
+    "bypass": {
+      "boundaries": 4596,
+      "lag_p50_ms": 0.335,
+      "lag_p99_ms": 0.66,
+      "lag_max_ms": 8.333,
+      "late_ticks_pct": 0.37
+    },
+    "instrumented": {
+      "boundaries": 4833,
+      "lag_p50_ms": 0.335,
+      "lag_p99_ms": 0.649,
+      "lag_max_ms": 8.675,
+      "late_ticks_pct": 0.23
+    }
+  }
+}

@@ -1,0 +1,15 @@
+date: 2026-11-09T07:54:21Z
+host: Linux feihm 5.15.0-1101-nvidia #102-Ubuntu SMP Thu Apr 16 20:52:16 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+python: Python 3.10.12 (/home/feihm/llm-fei/.llm/bin/python3)
+e2e commit: 841914f7727c83109532d5aabce1a0361d879afd
+2a87139e608d8c281d15403f91433c55299569679b882bdd8ce261621b091f75  client.py
+8dc69af64ce6a2f49841b147c2d2fa726bc7a66a89b01b25eb490fc2880bea35  wrapper.py
+754d01afe7e0172f7ab2816415f3663de9ddf4aab392e87e73cc0616c56d8a69  e2e_config.json
+f60ab39a4dd76f1cd7fddf3f86716522d09d13e80b094e1258f36d5455ffa027  fakeplc.py
+eae5580f4181c8128168552c8e541d131e1f387bf51ed49bd962599e5331deef  pymodbus_shim/pymodbus/client.py
+dbce862a930985ecbde0d3e46bc497784aacd5e21e5306f9b4cdb17edae71e7d  idle_monitor.py
+8ee06d690c54f56cd35c78e25de010a2c9cea836b7a3e1c37a269ff5365c8976  reference_observer.py
+b0d999700c7c5a9fa7c1a1bfa8131398dda235033c65a77bc4a4ae3fa77cbd6b  summarize.py
+a05edd68cf2cef7734d6803b0ef931fdd903ac2c8f47aafa5609210a2bc81ef8  observer_check.sh
+commands per mode: 3000, idle seconds: 20, seed: 104729
+cores: client 200, fakeplc 201, wrapper 202, audit drain 203, reference observer 204

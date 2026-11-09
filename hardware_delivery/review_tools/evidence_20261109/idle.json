@@ -1,0 +1,14 @@
+{
+  "mode": "idle: ScanMonitor alone, main thread sleeping",
+  "observed_scans": 1998,
+  "monitor_reads": 32872,
+  "observation_gaps": 1,
+  "late_ticks_over_12ms": 1,
+  "scan_period_ns": {
+    "min": 2480255,
+    "p50": 9995630,
+    "p99": 10433281,
+    "max": 14997910,
+    "mean": 9994925
+  }
+}
